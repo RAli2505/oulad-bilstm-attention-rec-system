@@ -19,6 +19,15 @@ from config import (TABLES_DIR, SEED, BATCH_TRAIN, BATCH_TEST,
 from data import build_flat_features
 from models import StaticBaseline, DynamicBaseline, HybridModel
 from training import train_and_evaluate, truncate_dynamic
+from protocol import folds
+
+
+def classifier_scores(clf, X):
+    """AUC needs ranking scores, so SVM does not need internal Platt CV."""
+    if isinstance(clf, SVC):
+        return clf.decision_function(X), clf.predict(X), 'decision_function'
+    probability = clf.predict_proba(X)[:, 1]
+    return probability, (probability >= 0.5).astype(int), 'probability'
 
 
 def _save_csv(df, name):
@@ -51,8 +60,8 @@ def table1_comparative(metrics_static, metrics_dynamic, metrics_hybrid):
 
 def table2_baselines(splits, hybrid_metrics):
     """Classical ML baselines on flat features (static + clickstream summaries)."""
-    Xtr = build_flat_features(splits['X_s_tr'], splits['X_d_tr'])
-    Xte = build_flat_features(splits['X_s_te'], splits['X_d_te'])
+    Xtr = build_flat_features(splits['X_s_raw_tr'], splits['X_d_raw_tr'])
+    Xte = build_flat_features(splits['X_s_raw_te'], splits['X_d_raw_te'])
     y_tr, y_te = splits['y_tr'], splits['y_te']
 
     sc = StandardScaler()
@@ -74,7 +83,7 @@ def table2_baselines(splits, hybrid_metrics):
     candidates = [
         ('Logistic Regression', LogisticRegression(max_iter=2000, n_jobs=-1, random_state=SEED)),
         ('Random Forest',       RandomForestClassifier(n_estimators=300, n_jobs=-1, random_state=SEED)),
-        ('SVM',                 SVC(kernel='rbf', probability=True, random_state=SEED)),
+        ('SVM',                 SVC(kernel='rbf', probability=False, cache_size=1024, random_state=SEED)),
     ]
     if xgb  is not None: candidates.append(('XGBoost',  xgb))
     if lgbm is not None: candidates.append(('LightGBM', lgbm))
@@ -85,8 +94,14 @@ def table2_baselines(splits, hybrid_metrics):
     for name, clf in candidates:
         t0 = time.time()
         clf.fit(Xtr, y_tr)
-        probs = clf.predict_proba(Xte)[:, 1]
-        preds = (probs >= 0.5).astype(int)
+        probs, preds, score_type = classifier_scores(clf, Xte)
+        import joblib
+        model_dir = os.path.join(TABLES_DIR, '..', 'checkpoints')
+        os.makedirs(model_dir, exist_ok=True)
+        joblib.dump({'model': clf, 'scaler': sc}, os.path.join(model_dir, f'{name}-holdout.joblib'))
+        pd.DataFrame({'target': y_te, 'score': probs, 'score_type': score_type,
+                      'prediction': preds}).to_csv(
+            os.path.join(TABLES_DIR, f'{name}-holdout-predictions.csv'), index=False)
         rows.append({
             'Model':        name,
             'ROC-AUC':      roc_auc_score(y_te, probs),
@@ -115,35 +130,45 @@ def _make_loader(X_s, X_d, y_, batch, shuffle=False):
     return DataLoader(ds, batch_size=batch, shuffle=shuffle)
 
 
-def _kfold_classical(name, clf_factory, X_flat, y, splits_n):
-    skf = StratifiedKFold(n_splits=splits_n, shuffle=True, random_state=SEED)
+def _kfold_classical(name, clf_factory, X_flat, y, splits_n, groups):
     aucs, f1s = [], []
-    for tr, te in skf.split(X_flat, y):
+    for fold, (tr, te) in enumerate(folds(y, groups, splits_n, SEED), 1):
         sc = StandardScaler()
         Xtr = sc.fit_transform(X_flat[tr])
         Xte = sc.transform(X_flat[te])
         clf = clf_factory()
         clf.fit(Xtr, y[tr])
-        probs = clf.predict_proba(Xte)[:, 1]
-        preds = (probs >= 0.5).astype(int)
+        probs, preds, score_type = classifier_scores(clf, Xte)
         aucs.append(roc_auc_score(y[te], probs))
         f1s.append(f1_score(y[te], preds, average='weighted'))
+        import joblib
+        model_dir = os.path.join(TABLES_DIR, '..', 'checkpoints')
+        os.makedirs(model_dir, exist_ok=True)
+        joblib.dump({'model': clf, 'scaler': sc}, os.path.join(model_dir, f'{name}-fold{fold}.joblib'))
+        pd.DataFrame({'development_row': te, 'target': y[te], 'score': probs,
+                      'score_type': score_type, 'prediction': preds}).to_csv(
+            os.path.join(TABLES_DIR, f'{name}-fold{fold}-predictions.csv'), index=False)
     return name, np.array(aucs), np.array(f1s)
 
 
-def _kfold_hybrid(static_dim, seq_len, X_s, X_d, y, splits_n, epochs):
-    skf = StratifiedKFold(n_splits=splits_n, shuffle=True, random_state=SEED)
+def _kfold_hybrid(static_dim, seq_len, X_s, X_d, y, splits_n, epochs, groups):
     aucs, f1s = [], []
-    for fold, (tr, te) in enumerate(skf.split(X_s, y), 1):
+    for fold, (tr, te) in enumerate(folds(y, groups, splits_n, SEED), 1):
         print(f"  fold {fold}/{splits_n}")
         sc_s = StandardScaler(); sc_d = RobustScaler()
-        Xstr = sc_s.fit_transform(X_s[tr]); Xste = sc_s.transform(X_s[te])
-        Xdtr = sc_d.fit_transform(X_d[tr]); Xdte = sc_d.transform(X_d[te])
-
-        # carve a small val out of train for early stopping
-        from sklearn.model_selection import train_test_split
-        Xstr2, Xsva, Xdtr2, Xdva, ytr2, yva = train_test_split(
-            Xstr, Xdtr, y[tr], test_size=0.15, stratify=y[tr], random_state=SEED)
+        # Split first, then fit transforms only on the inner training learners.
+        fit_rel, val_rel = next(folds(y[tr], groups[tr], 7, SEED + fold))
+        fit_idx, val_idx = tr[fit_rel], tr[val_rel]
+        Xstr2 = sc_s.fit_transform(X_s[fit_idx]); Xsva = sc_s.transform(X_s[val_idx])
+        Xste = sc_s.transform(X_s[te])
+        Xdtr2 = sc_d.fit_transform(X_d[fit_idx]); Xdva = sc_d.transform(X_d[val_idx])
+        Xdte = sc_d.transform(X_d[te])
+        ytr2, yva = y[fit_idx], y[val_idx]
+        torch.manual_seed(SEED + fold)
+        import joblib
+        joblib.dump({'static_scaler': sc_s, 'dynamic_scaler': sc_d,
+                     'fit_idx': fit_idx, 'val_idx': val_idx, 'test_idx': te},
+                    os.path.join(TABLES_DIR, f'hybrid-fold{fold}-preprocessing.joblib'))
 
         train_loader = _make_loader(Xstr2, Xdtr2, ytr2, BATCH_TRAIN, shuffle=True)
         val_loader   = _make_loader(Xsva,  Xdva,  yva,  BATCH_TEST)
@@ -161,7 +186,15 @@ def _kfold_hybrid(static_dim, seq_len, X_s, X_d, y, splits_n, epochs):
 
 def table3_kfold(X_s_raw, X_d_raw, y, static_dim, seq_len,
                  splits_n=KFOLD_SPLITS, include_hybrid=True,
-                 hybrid_epochs=KFOLD_EPOCHS):
+                 hybrid_epochs=KFOLD_EPOCHS, groups=None, row_ids=None):
+    if groups is None:
+        raise ValueError('Student groups are required for article cross-validation')
+    fold_id = np.full(len(y), -1)
+    for fold, (_, te) in enumerate(folds(y, groups, splits_n, SEED), 1):
+        fold_id[te] = fold
+    pd.DataFrame({'row': np.arange(len(y)) if row_ids is None else row_ids,
+                  'student': groups, 'fold': fold_id, 'target': y}).to_csv(
+        os.path.join(TABLES_DIR, 'fold_manifest.csv'), index=False)
     X_flat = build_flat_features(X_s_raw, X_d_raw)
     print(f"\n[k-fold CV with {splits_n} folds] ...")
 
@@ -181,7 +214,7 @@ def table3_kfold(X_s_raw, X_d_raw, y, static_dim, seq_len,
     classical = [
         ('Logistic Regression', lambda: LogisticRegression(max_iter=2000, n_jobs=-1, random_state=SEED)),
         ('Random Forest',       lambda: RandomForestClassifier(n_estimators=300, n_jobs=-1, random_state=SEED)),
-        ('SVM',                 lambda: SVC(kernel='rbf', probability=True, random_state=SEED)),
+        ('SVM',                 lambda: SVC(kernel='rbf', probability=False, cache_size=1024, random_state=SEED)),
     ]
     if _xgb  is not None: classical.append(('XGBoost',  _xgb))
     if _lgbm is not None: classical.append(('LightGBM', _lgbm))
@@ -190,14 +223,18 @@ def table3_kfold(X_s_raw, X_d_raw, y, static_dim, seq_len,
 
     rows = []
     for name, factory in classical:
-        n, aucs, f1s = _kfold_classical(name, factory, X_flat, y, splits_n)
+        n, aucs, f1s = _kfold_classical(name, factory, X_flat, y, splits_n, groups)
+        pd.DataFrame({'fold': np.arange(1, splits_n + 1), 'ROC-AUC': aucs,
+                      'Weighted F1': f1s}).to_csv(os.path.join(TABLES_DIR, f'{name}-fold-metrics.csv'), index=False)
         rows.append({'Model': n,
                      'ROC-AUC (mean ± std)': f"{aucs.mean():.4f} ± {aucs.std():.4f}",
                      'Weighted F1 (mean ± std)': f"{f1s.mean():.4f} ± {f1s.std():.4f}"})
 
     if include_hybrid:
         n, aucs, f1s = _kfold_hybrid(static_dim, seq_len,
-                                     X_s_raw, X_d_raw, y, splits_n, hybrid_epochs)
+                                     X_s_raw, X_d_raw, y, splits_n, hybrid_epochs, groups)
+        pd.DataFrame({'fold': np.arange(1, splits_n + 1), 'ROC-AUC': aucs,
+                      'Weighted F1': f1s}).to_csv(os.path.join(TABLES_DIR, 'hybrid-fold-metrics.csv'), index=False)
         rows.append({'Model': n,
                      'ROC-AUC (mean ± std)': f"{aucs.mean():.4f} ± {aucs.std():.4f}",
                      'Weighted F1 (mean ± std)': f"{f1s.mean():.4f} ± {f1s.std():.4f}"})
@@ -239,6 +276,7 @@ def table5_ablation(splits, full_metrics, static_dim, seq_len,
                                 BATCH_TEST)
 
     for n_weeks in weeks_kept:
+        torch.manual_seed(SEED)
         Xd_tr_t = truncate_dynamic(splits['X_d_tr'], n_weeks)
         Xd_va_t = truncate_dynamic(splits['X_d_va'], n_weeks)
         Xd_te_t = truncate_dynamic(splits['X_d_te'], n_weeks)
@@ -251,7 +289,7 @@ def table5_ablation(splits, full_metrics, static_dim, seq_len,
             HybridModel(static_dim, seq_len),
             tr, va, te, splits['y_tr'], use_weights=True)
         rows.append({
-            'Model':       'Early model'  if n_weeks == 18 else 'Mid model',
+            'Model':       f'Temporal input: {n_weeks} bins (static unchanged)',
             'Weeks used':  '0-15' if n_weeks == 18 else '0-20',
             'ROC-AUC':     m['ROC-AUC'],
             'Weighted F1': m['F1-Score'],
@@ -265,6 +303,6 @@ def table5_ablation(splits, full_metrics, static_dim, seq_len,
     })
 
     df = pd.DataFrame(rows).round(4)
-    _print("TABLE 5: Ablation for early prediction capability", df)
+    _print("TABLE 5: Temporal-input ablation (retrospective static features)", df)
     _save_csv(df, 'table5_ablation.csv')
     return df

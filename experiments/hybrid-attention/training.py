@@ -2,6 +2,9 @@
 on validation weighted F1 (patience=7), up to 100 epochs."""
 import copy
 import time
+import json
+import re
+from pathlib import Path
 
 import numpy as np
 import torch
@@ -13,6 +16,25 @@ from sklearn.utils import class_weight
 from tqdm.auto import tqdm
 
 from config import device, LR, EPOCHS, PATIENCE, MODEL_PATH, SEQ_LEN
+
+
+class ResidentLoader:
+    """Keep small TensorDataset tensors on the device; preserve batch sampler."""
+    def __init__(self, loader):
+        self.batch_sampler = loader.batch_sampler
+        self.tensors = tuple(t.to(device) for t in loader.dataset.tensors)
+
+    def __len__(self):
+        return len(self.batch_sampler)
+
+    def __iter__(self):
+        batches = list(self.batch_sampler)
+        indices = torch.as_tensor([i for batch in batches for i in batch], device=device)
+        ordered = tuple(t.index_select(0, indices) for t in self.tensors)
+        offset = 0
+        for batch in batches:
+            yield tuple(t.narrow(0, offset, len(batch)) for t in ordered)
+            offset += len(batch)
 
 
 def truncate_dynamic(matrix, n_weeks_kept):
@@ -32,19 +54,21 @@ def _inverse_freq_weights(y, num_classes=2):
 
 def _evaluate(model, loader, criterion):
     model.eval()
-    loss_sum, all_p, all_pr, all_t = 0.0, [], [], []
-    with torch.no_grad():
+    loss_sum = torch.zeros((), device=device)
+    all_p, all_pr, all_t = [], [], []
+    with torch.inference_mode():
         for s_b, d_b, y_b in loader:
             s_b, d_b, y_b = s_b.to(device), d_b.to(device), y_b.to(device)
             out = model(s_b, d_b)
-            loss_sum += criterion(out, y_b).item()
+            loss_sum += criterion(out, y_b)
             probs = torch.softmax(out, dim=1)[:, 1]
             preds = torch.argmax(out, dim=1)
-            all_pr.extend(probs.cpu().numpy())
-            all_p.extend(preds.cpu().numpy())
-            all_t.extend(y_b.cpu().numpy())
-    return (loss_sum / max(len(loader), 1),
-            np.array(all_t), np.array(all_p), np.array(all_pr))
+            all_pr.append(probs)
+            all_p.append(preds)
+            all_t.append(y_b)
+    return (loss_sum.item() / max(len(loader), 1),
+            torch.cat(all_t).cpu().numpy(), torch.cat(all_p).cpu().numpy(),
+            torch.cat(all_pr).cpu().numpy())
 
 
 def train_and_evaluate(model_name, model, train_loader, val_loader, test_loader,
@@ -52,6 +76,8 @@ def train_and_evaluate(model_name, model, train_loader, val_loader, test_loader,
     print(f"\nRun: {model_name}")
     t0 = time.time()
     model = model.to(device)
+    train_loader, val_loader, test_loader = (
+        ResidentLoader(loader) for loader in (train_loader, val_loader, test_loader))
     optimizer = optim.AdamW(model.parameters(), lr=LR)
 
     if use_weights:
@@ -69,15 +95,15 @@ def train_and_evaluate(model_name, model, train_loader, val_loader, test_loader,
     pbar = tqdm(range(epochs), desc=model_name, leave=True)
     for epoch in pbar:
         model.train()
-        ep_loss = 0.0
+        ep_loss = torch.zeros((), device=device)
         for s_b, d_b, y_b in train_loader:
             s_b, d_b, y_b = s_b.to(device), d_b.to(device), y_b.to(device)
-            optimizer.zero_grad()
+            optimizer.zero_grad(set_to_none=True)
             loss = criterion(model(s_b, d_b), y_b)
             loss.backward()
             optimizer.step()
-            ep_loss += loss.item()
-        avg_loss = ep_loss / len(train_loader)
+            ep_loss += loss.detach()
+        avg_loss = ep_loss.item() / len(train_loader)
 
         v_loss, v_t, v_p, _ = _evaluate(model, val_loader, criterion)
         v_f1 = f1_score(v_t, v_p, average='weighted')
@@ -117,7 +143,17 @@ def train_and_evaluate(model_name, model, train_loader, val_loader, test_loader,
         'Stopped_At': stopped_at,
         'Best_Val_F1': best_val_f1,
     }
-    if "Hybrid (Balanced)" in model_name:
+    # Every model/fold has its own checkpoint. Only this exact run owns MODEL_PATH.
+    slug = re.sub(r'[^A-Za-z0-9_-]+', '_', model_name).strip('_')
+    checkpoint_dir = Path(MODEL_PATH).parent / 'checkpoints'
+    checkpoint_dir.mkdir(parents=True, exist_ok=True)
+    checkpoint = checkpoint_dir / f'{slug}.pth'
+    torch.save(model.state_dict(), checkpoint)
+    metrics['Checkpoint'] = str(checkpoint)
+    checkpoint.with_suffix('.json').write_text(json.dumps(metrics, indent=2), encoding='utf-8')
+    np.savez_compressed(checkpoint.with_suffix('.predictions.npz'),
+                        target=t_targets, probability=t_probs, prediction=t_preds)
+    if model_name == "Hybrid (Balanced)":
         torch.save(model.state_dict(), MODEL_PATH)
 
     print(f"   Done. Test F1={metrics['F1-Score']:.4f}, "

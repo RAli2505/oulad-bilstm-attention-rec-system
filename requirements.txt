@@ -6,3 +6,7 @@ torch
 lightgbm
 xgboost
 pytest
+scipy
+joblib
+threadpoolctl
+matplotlib

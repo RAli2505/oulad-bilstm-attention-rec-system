@@ -3,6 +3,9 @@ __pycache__/
 .pytest_cache/
 .test-tmp/
 test-artifacts/
+runs/
+.risk-cache/
+pytest-cache-files-*/
 .venv/
 data/oulad/raw/
 data/oulad/processed/

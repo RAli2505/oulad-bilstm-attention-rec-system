@@ -1,6 +1,12 @@
 # Сохранённые эксперименты по фолдам
 
-Код: `experiments/hybrid-attention/tables.py`, функции `_kfold_classical`, `_kfold_hybrid`, `table3_kfold`.
+## Новые запуски (протокол v2)
+
+Команда `rtk proxy py -3.12 -u run_article.py` выполняет пять `StratifiedGroupKFold` по `id_student` на development; отдельный holdout test в CV не участвует. Внутренняя validation также отделена по ученикам; scaler обучается только на внутренней fit-части. Все сравнительные модели используют один внешний fold manifest. Максимум эпох для гибридной модели — 100 с patience 7; исторический лимит 30 больше не применяется в новом launcher. Веса и метрики каждого фолда сохраняются отдельно. Новые результаты не являются буквальным повторением исторической таблицы ниже.
+
+## Исторические результаты до исправления протокола
+
+Исторический код находился в `experiments/hybrid-attention/tables.py`, функции `_kfold_classical`, `_kfold_hybrid`, `table3_kfold`; затем исправлен для протокола v2.
 
 Параметры в `config.py`: `KFOLD_SPLITS = 5`, `KFOLD_EPOCHS = 30`, `SEED = 42`. Разбиение: `StratifiedKFold(n_splits=5, shuffle=True, random_state=42)`. Масштабирование выполняется внутри внешнего train-фолда; для гибридной модели из него выделяется 15% на раннюю остановку.
 

@@ -10,9 +10,10 @@ warnings.filterwarnings('ignore')
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # Reuse the repository's locally verified OULAD source files.
 DATA_PATH = os.path.abspath(os.path.join(PROJECT_ROOT, '..', '..', 'data', 'oulad', 'raw'))
-FIG_DIR      = os.path.join(PROJECT_ROOT, "figures")
-TABLES_DIR   = os.path.join(PROJECT_ROOT, "tables")
-MODEL_PATH   = os.path.join(PROJECT_ROOT, "best_model.pth")
+OUTPUT_ROOT = os.environ.get('OULAD_RUN_DIR', PROJECT_ROOT)
+FIG_DIR      = os.path.join(OUTPUT_ROOT, "figures")
+TABLES_DIR   = os.path.join(OUTPUT_ROOT, "tables")
+MODEL_PATH   = os.path.join(OUTPUT_ROOT, "best_model.pth")
 
 os.makedirs(DATA_PATH,  exist_ok=True)
 os.makedirs(FIG_DIR,    exist_ok=True)

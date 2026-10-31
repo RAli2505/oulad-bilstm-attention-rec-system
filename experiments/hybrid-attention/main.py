@@ -6,6 +6,8 @@ Reproduces:
 """
 import numpy as np
 import torch
+import pandas as pd
+import os
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, RobustScaler
 from torch.utils.data import DataLoader, TensorDataset
@@ -24,6 +26,8 @@ from figures import (figure_class_distribution,
                      figure_learning_curves, figure_val_f1,
                      figure_cm_roc, figure_tsne, figure_pca, figure_umap,
                      figure_attention)
+from protocol import outer_split
+from config import OUTPUT_ROOT
 
 print(f"Device: {device}"
       f"{' (' + torch.cuda.get_device_name(0) + ')' if device.type == 'cuda' else ''}")
@@ -43,11 +47,18 @@ figure_engagement_gap(uid_target, vle_daily)
 figure_engagement_gap_smoothed(uid_target, vle_daily)
 
 
-# 2. Stratified 64/16/20 split (train/val/test)
-X_s_tv, X_s_te, X_d_tv, X_d_te, y_tv, y_te = train_test_split(
-    X_s_raw, X_d_raw, y, test_size=0.20, stratify=y, random_state=SEED)
-X_s_tr, X_s_va, X_d_tr, X_d_va, y_tr, y_va = train_test_split(
-    X_s_tv, X_d_tv, y_tv, test_size=0.20, stratify=y_tv, random_state=SEED)
+# 2. Learner-disjoint approximately 64/16/20 split, shared by all models.
+groups = np.array([str(uid).split('_')[0] for uid in uid_target.index])
+dev_idx, te_idx, tr_idx, va_idx = outer_split(y, groups, seed=SEED)
+X_s_tr, X_s_va, X_s_te = (X_s_raw[i] for i in (tr_idx, va_idx, te_idx))
+X_d_tr, X_d_va, X_d_te = (X_d_raw[i] for i in (tr_idx, va_idx, te_idx))
+y_tr, y_va, y_te = (y[i] for i in (tr_idx, va_idx, te_idx))
+roles = np.full(len(y), 'train', dtype=object)
+roles[va_idx] = 'validation'
+roles[te_idx] = 'test'
+pd.DataFrame({'row': np.arange(len(y)), 'uid': uid_target.index,
+              'student': groups, 'target': y, 'role': roles}).to_csv(
+    os.path.join(OUTPUT_ROOT, 'split_manifest.csv'), index=False)
 print(f"Split sizes: train={len(y_tr)}, val={len(y_va)}, test={len(y_te)}")
 
 scaler_s = StandardScaler()
@@ -59,11 +70,17 @@ scaler_d = RobustScaler()
 X_d_tr = scaler_d.fit_transform(X_d_tr)
 X_d_va = scaler_d.transform(X_d_va)
 X_d_te = scaler_d.transform(X_d_te)
+import joblib
+joblib.dump({'static_scaler': scaler_s, 'dynamic_scaler': scaler_d,
+             'train_idx': tr_idx, 'val_idx': va_idx, 'test_idx': te_idx},
+            os.path.join(OUTPUT_ROOT, 'holdout_preprocessing.joblib'))
 
 splits = {
     'X_s_tr': X_s_tr, 'X_s_va': X_s_va, 'X_s_te': X_s_te,
     'X_d_tr': X_d_tr, 'X_d_va': X_d_va, 'X_d_te': X_d_te,
     'y_tr':   y_tr,   'y_va':   y_va,   'y_te':   y_te,
+    'X_s_raw_tr': X_s_raw[tr_idx], 'X_s_raw_te': X_s_raw[te_idx],
+    'X_d_raw_tr': X_d_raw[tr_idx], 'X_d_raw_te': X_d_raw[te_idx],
 }
 
 
@@ -84,18 +101,22 @@ seq_len    = X_d_tr.shape[1]
 
 # 3. Train 4 deep models — up to 100 epochs, early stopping on val_loss
 # with patience=7 (article setup).
+torch.manual_seed(SEED)
 metrics_static = train_and_evaluate(
     'Static (Demo)',     StaticBaseline(static_dim),
     train_loader, val_loader, test_loader, y_tr)
 
+torch.manual_seed(SEED)
 metrics_dynamic = train_and_evaluate(
     'Dynamic (VLE)',     DynamicBaseline(seq_len),
     train_loader, val_loader, test_loader, y_tr)
 
+torch.manual_seed(SEED)
 metrics_imbal = train_and_evaluate(
     'Hybrid (Imbalanced)', HybridModel(static_dim, seq_len),
     train_loader, val_loader, test_loader, y_tr, use_weights=False)
 
+torch.manual_seed(SEED)
 metrics_hybrid = train_and_evaluate(
     'Hybrid (Balanced)',   HybridModel(static_dim, seq_len),
     train_loader, val_loader, test_loader, y_tr, use_weights=True)
@@ -124,7 +145,8 @@ if RUN_BASELINE_ML:
 
 # 6. Table 3 - k-fold CV
 if RUN_KFOLD:
-    table3_kfold(X_s_raw, X_d_raw, y, static_dim, seq_len)
+    table3_kfold(X_s_raw[dev_idx], X_d_raw[dev_idx], y[dev_idx],
+                 static_dim, seq_len, groups=groups[dev_idx], row_ids=dev_idx)
 
 
 # 7. Table 5 - ablation
