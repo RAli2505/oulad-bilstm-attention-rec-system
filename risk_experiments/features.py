@@ -47,9 +47,11 @@ def load_data(raw: Path, cache: Path, hashes: dict):
         target.to_parquet(cache / 'target.parquet', index=False)
         daily.to_parquet(cache / 'daily.parquet', index=False)
         marker.write_text(json.dumps(signature, indent=2), encoding='utf-8')
+    catalog = pd.read_csv(raw / 'assessments.csv')
     assess = pd.read_csv(raw / 'studentAssessment.csv').merge(
-        pd.read_csv(raw / 'assessments.csv')[['id_assessment', 'code_module', 'code_presentation', 'date']],
+        catalog,
         on='id_assessment', how='left', validate='many_to_one')
+    assess.attrs['assessment_catalog'] = catalog.to_dict('records')
     return target, daily, assess
 
 
@@ -133,16 +135,18 @@ def build_window(target, daily, assess, days: int, score_lag: int = 7, score_pol
 
 class FoldTransform:
     def fit(self, window: Window, indices):
+        self.cat_cols = getattr(self, 'cat_cols', CAT)
+        self.num_cols = getattr(self, 'num_cols', NUM)
         self.channels = np.flatnonzero(window.counts[indices].sum(axis=(0, 1)) > 0)
         if not len(self.channels):
             raise ValueError('Training fold contains no observable activity types')
         self.channel_names = [window.channels[i] for i in self.channels]
         self.static = ColumnTransformer([
             ('cat', make_pipeline(SimpleImputer(strategy='most_frequent', keep_empty_features=True),
-                                  OneHotEncoder(handle_unknown='ignore', sparse_output=False)), CAT),
+                                  OneHotEncoder(handle_unknown='ignore', sparse_output=False)), self.cat_cols),
             ('num', make_pipeline(SimpleImputer(strategy='median', add_indicator=True, keep_empty_features=True),
-                                  StandardScaler()), NUM)], sparse_threshold=0)
-        self.static.fit(window.frame.iloc[indices][CAT + NUM])
+                                  StandardScaler()), self.num_cols)], sparse_threshold=0)
+        self.static.fit(window.frame.iloc[indices][self.cat_cols + self.num_cols])
         x = np.log1p(window.counts[indices][:, :, self.channels])
         self.mean = x.mean(axis=(0, 1), keepdims=True)
         self.std = np.maximum(x.std(axis=(0, 1), keepdims=True), 1e-5)
@@ -157,7 +161,7 @@ class FoldTransform:
 
     def _flat(self, window, indices):
         x = window.counts[indices][:, :, self.channels]
-        static = self.static.transform(window.frame.iloc[indices][CAT + NUM])
+        static = self.static.transform(window.frame.iloc[indices][self.cat_cols + self.num_cols])
         last = x[:, -7:].sum(axis=1)
         prev = x[:, -14:-7].sum(axis=1) if window.days >= 14 else np.zeros_like(last)
         chunks = [np.log1p(x.sum(axis=1)), np.log1p(x.mean(axis=1)), np.log1p(x.std(axis=1)),
@@ -167,7 +171,7 @@ class FoldTransform:
     def transform(self, window, indices):
         indices = np.asarray(indices)
         return {'x': ((np.log1p(window.counts[indices][:, :, self.channels]) - self.mean) / self.std).astype('float32'),
-                's': self.static.transform(window.frame.iloc[indices][CAT + NUM]).astype('float32'),
+                's': self.static.transform(window.frame.iloc[indices][self.cat_cols + self.num_cols]).astype('float32'),
                 'flat': self.flat_scaler.transform(self._flat(window, indices)).astype('float32'),
                 'weekly': self.week_scaler.transform(self._weekly(window, indices)).astype('float32'),
                 'y': window.y[indices], 'time': window.time[indices], 'event': window.event[indices]}

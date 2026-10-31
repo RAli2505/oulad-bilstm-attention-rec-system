@@ -62,6 +62,9 @@ def classical_model(name, seed, threads, iterations=200):
 
 
 def _score(model, x):
+    if hasattr(model, 'feature_name_'):
+        import pandas as pd
+        x = pd.DataFrame(x, columns=model.feature_name_)
     if isinstance(model, SVC):
         return model.decision_function(x)
     p = np.clip(model.predict_proba(x)[:, 1], 1e-6, 1 - 1e-6)
@@ -112,6 +115,7 @@ def fit_predict(name, fit, val, held, test, directory: Path, seed: int, config: 
         warnings.simplefilter('always')
         if name in CLASSICAL:
             model = classical_model(name, seed, config['threads'], config.get('mlp_iterations', 200))
+            model.set_params(**config.get('model_params', {}))
             fit_start = time.perf_counter()
             model.fit(fit['flat'], fit['y'])
             fit_seconds = time.perf_counter() - fit_start
@@ -127,9 +131,11 @@ def fit_predict(name, fit, val, held, test, directory: Path, seed: int, config: 
             joblib.dump(model, directory / 'model.joblib')
         else:
             model = make_model(name, fit['x'].shape[2], fit['s'].shape[1], fit['x'].shape[1]).to(device)
+            apply_dropout(model, config.get('dropout_scale', 1.))
             parameters = sum(p.numel() for p in model.parameters())
             train_data, val_data = _tensors(fit, device), _tensors(val, device)
-            optimizer = torch.optim.Adam(model.parameters(), lr=config['learning_rate'], fused=device.type == 'cuda')
+            optimizer = torch.optim.Adam(model.parameters(), lr=config['learning_rate'],
+                                         weight_decay=config.get('weight_decay', 0.), fused=device.type == 'cuda')
             bce = nn.BCEWithLogitsLoss()
             best_loss, best_state, bad, best_epoch = float('inf'), None, 0, 0
             probe_ids_np = np.random.default_rng(seed).choice(len(fit['y']), min(512, len(fit['y'])), replace=False)
@@ -194,6 +200,7 @@ def fit_predict(name, fit, val, held, test, directory: Path, seed: int, config: 
                 risk_held = (raw_risk_held - center) / scale
                 risk_test = (raw_risk_test - center) / scale if test is not None else None
             hyperparameters = {**config, 'model_name': name, 'features': fit['x'].shape[2],
+                               'effective_cox_weight': config['cox_weight'] if name in COX else 0.,
                                'static_features': fit['s'].shape[1], 'days': fit['x'].shape[1],
                                'best_epoch': best_epoch, 'best_val_log_loss_raw': best_loss,
                                'network': str(model), 'parameter_count': parameters, 'risk_standardization': risk_stats}
@@ -241,7 +248,7 @@ def fit_predict(name, fit, val, held, test, directory: Path, seed: int, config: 
         pd.DataFrame(bin_rows).to_csv(directory / 'calibration_bins.csv', index=False)
         if trace:
             pd.DataFrame(trace).to_csv(directory / 'learning_curve.csv', index=False)
-            if name not in CLASSICAL:
+            if name not in CLASSICAL and config.get('plot_learning_curves', True):
                 import matplotlib
                 matplotlib.use('Agg')
                 import matplotlib.pyplot as plt
@@ -286,3 +293,11 @@ def fit_predict(name, fit, val, held, test, directory: Path, seed: int, config: 
         del model
         torch.cuda.empty_cache()
     return pred, report
+
+
+def apply_dropout(model, scale):
+    for module in model.modules():
+        if isinstance(module, nn.Dropout):
+            module.p = min(.6, max(.05, module.p * scale))
+        elif isinstance(module, nn.LSTM) and module.num_layers > 1:
+            module.dropout = min(.6, max(.05, module.dropout * scale))

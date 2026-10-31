@@ -15,6 +15,8 @@ from .features import FoldTransform, build_window, temporal_split, KEYS
 from .metrics import metrics, bootstrap_auc, make_plots, calibration_stats
 from .networks import MODELS
 from .training import fit_predict
+from .enhanced_features import enhanced_window, EnhancedTransform
+from .tuning import ENSEMBLES, MATCHED_ABLATIONS, tune_and_predict, fit_ensemble
 
 
 def sha256(path):
@@ -38,6 +40,16 @@ def grouped_folds(y, groups, seed, n=5):
         yield fit, held
 
 
+def holdout_student_groups(target, seed):
+    """Fixed 70/30 learner split before landmark eligibility filtering."""
+    labels = target.final_result.isin(['Fail', 'Withdrawn']).to_numpy(dtype=int)
+    groups = target.id_student.to_numpy()
+    partitions = list(grouped_folds(labels, groups, seed, n=10))
+    validation_rows = np.concatenate([held for _, held in partitions[:3]])
+    validation_groups = np.unique(groups[validation_rows])
+    return validation_groups
+
+
 def permutation_p(y, proposed, reference, groups, repeats, seed=42):
     from sklearn.metrics import roc_auc_score
     _, inverse = np.unique(groups, return_inverse=True)
@@ -53,6 +65,9 @@ def permutation_p(y, proposed, reference, groups, repeats, seed=42):
 
 def run_window(target, daily, assess, config, output: Path, signature: str, prepare_only=False):
     output.mkdir(parents=True, exist_ok=True)
+    improved = config.get('improved', False)
+    holdout = config.get('split_scheme') == 'holdout'
+    names = list(config.get('models', MODELS))
     evaluate_test = config.get('evaluate_test', False)
     if not evaluate_test:
         # Do not construct 2014 features, predictions, or label-based reports.
@@ -60,7 +75,9 @@ def run_window(target, daily, assess, config, output: Path, signature: str, prep
         target = target[target.code_presentation.isin(presentations)]
         daily = daily[daily.code_presentation.isin(presentations)]
         assess = assess[assess.code_presentation.isin(presentations)]
-    window = build_window(target, daily, assess, config['days'], config['score_lag'], config['score_policy'])
+    fixed_validation_groups = holdout_student_groups(target, config['split_seed']) if holdout else None
+    builder = enhanced_window if config.get('feature_profile') == 'rich' else build_window
+    window = builder(target, daily, assess, config['days'], config['score_lag'], config['score_policy'])
     dev, test, overlap = temporal_split(window)
     if not len(dev) or (evaluate_test and not len(test)):
         raise ValueError('Development cohort is required; test cohort is required only when enabled')
@@ -70,7 +87,17 @@ def run_window(target, daily, assess, config, output: Path, signature: str, prep
     manifest['target'], manifest['time_from_landmark'], manifest['event_withdrawal'] = window.y, window.time, window.event
     manifest['role'] = roles
     manifest['oof_fold'] = -1
-    outer = list(grouped_folds(window.y[dev], window.groups[dev], config['split_seed']))
+    if holdout:
+        validation_mask = np.isin(window.groups[dev], fixed_validation_groups)
+        outer = [(np.flatnonzero(~validation_mask), np.flatnonzero(validation_mask))]
+        if len(np.unique(window.y[dev][outer[0][1]])) != 2:
+            raise ValueError('Validation cohort must contain both outcome classes')
+        manifest.loc[dev[outer[0][0]], 'role'] = 'train_pool_2013'
+        manifest.loc[dev[outer[0][1]], 'role'] = 'validation_2013'
+    else:
+        outer = list(grouped_folds(window.y[dev], window.groups[dev], config['split_seed']))
+    evaluation_rel = np.sort(np.concatenate([held for _, held in outer]))
+    evaluation_ids = dev[evaluation_rel]
     for fold, (_, held_rel) in enumerate(outer, 1):
         manifest.loc[dev[held_rel], 'oof_fold'] = fold
     manifest.to_csv(output / 'cohort_and_folds.csv', index=False)
@@ -86,15 +113,19 @@ def run_window(target, daily, assess, config, output: Path, signature: str, prep
     write_json(output / 'cohort_audit.json', {**window.audit, 'development': len(dev), 'external_test': len(test),
                                             'test_removed_repeated_2013_students': overlap,
                                             '2013_prevalence': float(window.y[dev].mean()),
+                                            'split_scheme': 'single_grouped_holdout' if holdout else 'five_fold_grouped_cv',
+                                            'evaluation_validation_records': len(evaluation_ids),
+                                            'actual_validation_fraction': len(evaluation_ids) / len(dev),
+                                            'nominal_validation_fraction': .3 if holdout else 1.,
                                             'external_test_evaluated': evaluate_test})
     print(f"Day {window.days}: development={len(dev)}, external test={len(test)}, zero-history={window.audit['zero_history_enrollments']}", flush=True)
     if prepare_only:
         return
     nseed = len(config['seeds'])
-    oof = {name: np.full((nseed, len(dev)), np.nan) for name in MODELS}
-    test_sum = {name: np.zeros((nseed, len(test))) for name in MODELS}
-    oof_raw = {name: np.full((nseed, len(dev)), np.nan) for name in MODELS}
-    test_raw = {name: np.zeros((nseed, len(test))) for name in MODELS}
+    oof = {name: np.full((nseed, len(dev)), np.nan) for name in names}
+    test_sum = {name: np.zeros((nseed, len(test))) for name in names}
+    oof_raw = {name: np.full((nseed, len(dev)), np.nan) for name in names}
+    test_raw = {name: np.zeros((nseed, len(test))) for name in names}
     oof_risk, test_risk = {}, {}
     fold_rows = []
     diagnostic_rows = []
@@ -102,10 +133,18 @@ def run_window(target, daily, assess, config, output: Path, signature: str, prep
         outer_fit, held_idx = dev[outer_fit_rel], dev[held_rel]
         fit_rel, val_rel = next(grouped_folds(window.y[outer_fit], window.groups[outer_fit], config['split_seed'] + fold))
         fit_idx, val_idx = outer_fit[fit_rel], outer_fit[val_rel]
+        calibration_idx = None
+        if improved:
+            selection_rel, calibration_rel = next(grouped_folds(window.y[val_idx], window.groups[val_idx],
+                                                                config['split_seed'] + 100 + fold, n=2))
+            calibration_idx, val_idx = val_idx[calibration_rel], val_idx[selection_rel]
+            assert not set(window.groups[val_idx]) & set(window.groups[calibration_idx])
         fold_dir = output / f'fold_{fold}'
         fold_dir.mkdir(exist_ok=True)
-        np.savez_compressed(fold_dir / 'indices.npz', fit=fit_idx, validation=val_idx, held=held_idx, external_test=test)
-        transform = FoldTransform().fit(window, fit_idx)
+        np.savez_compressed(fold_dir / 'indices.npz', fit=fit_idx, validation=val_idx, held=held_idx,
+                            calibration=calibration_idx if improved else np.array([], dtype=int), external_test=test)
+        transform_type = EnhancedTransform if config.get('feature_profile') == 'rich' else FoldTransform
+        transform = transform_type().fit(window, fit_idx)
         joblib.dump(transform, fold_dir / 'preprocessing.joblib')
         static_names = transform.static.get_feature_names_out().tolist()
         write_json(fold_dir / 'features.json', {'activity_channels': transform.channel_names,
@@ -119,8 +158,12 @@ def run_window(target, daily, assess, config, output: Path, signature: str, prep
                    'normalization_fitted_on': 'inner_fit_only'})
         partitions = [transform.transform(window, idx) for idx in (fit_idx, val_idx, held_idx)]
         partitions.append(transform.transform(window, test) if evaluate_test else None)
+        calibration_partition = transform.transform(window, calibration_idx) if improved else None
         for si, seed in enumerate(config['seeds']):
-            for name in MODELS:
+            fold_predictions = {}
+            selected_main = None
+            order = ['proposed'] + [n for n in names if n != 'proposed'] if improved else names
+            for name in order:
                 directory = fold_dir / f'seed_{seed}' / name
                 status_path = directory / 'status.json'
                 complete = False
@@ -139,10 +182,24 @@ def run_window(target, daily, assess, config, output: Path, signature: str, prep
                     directory.mkdir(parents=True, exist_ok=True)
                     write_json(status_path, {'status': 'running', 'signature': signature})
                     print(f'Day {window.days} fold {fold} seed {seed} {name}: training', flush=True)
-                    pred, report = fit_predict(name, *partitions, directory, seed, config)
-                    artifacts = {p.name: sha256(p) for p in directory.iterdir() if p.is_file() and p.name != 'status.json'}
+                    if improved and name in ENSEMBLES:
+                        pred, report = fit_ensemble(name, fold_predictions, partitions[1]['y'],
+                                                   calibration_partition['y'], partitions[2]['y'], directory)
+                    elif improved:
+                        matched = selected_main if name in MATCHED_ABLATIONS else None
+                        if name in MATCHED_ABLATIONS and matched is None:
+                            raise RuntimeError('Matched ablations require the selected main configuration')
+                        pred, report = tune_and_predict(name, partitions[0], partitions[1], calibration_partition,
+                                                       partitions[2], directory, seed, config, matched=matched)
+                    else:
+                        pred, report = fit_predict(name, *partitions, directory, seed, config)
+                    artifacts = {p.relative_to(directory).as_posix(): sha256(p) for p in directory.rglob('*')
+                                 if p.is_file() and p != status_path}
                     write_json(status_path, {'status': 'completed', 'signature': signature, 'artifacts_sha256': artifacts})
                     print(f'  completed in {time.perf_counter() - start:.1f}s', flush=True)
+                fold_predictions[name] = pred
+                if improved and name == 'proposed':
+                    selected_main = report['selected_configuration']
                 oof[name][si, held_rel] = pred['held_probability']
                 if evaluate_test:
                     test_sum[name][si] += pred['test_probability'] / len(outer)
@@ -168,16 +225,21 @@ def run_window(target, daily, assess, config, output: Path, signature: str, prep
                                   'gpu_peak_bytes': report['gpu_peak_allocated_bytes']})
                 pd.DataFrame(fold_rows).to_csv(output / 'fold_metrics.csv', index=False)
         del partitions
-    for name in MODELS:
-        assert np.isfinite(oof[name]).all(), f'Incomplete OOF coverage for {name}'
+    for name in names:
+        assert np.isfinite(oof[name][:, evaluation_rel]).all(), f'Incomplete validation coverage for {name}'
     pd.DataFrame(fold_rows).groupby('model').agg(
         roc_auc_mean=('roc_auc', 'mean'), roc_auc_std=('roc_auc', 'std'),
         pr_auc_mean=('pr_auc', 'mean'), pr_auc_std=('pr_auc', 'std'),
         log_loss_mean=('log_loss', 'mean'), log_loss_std=('log_loss', 'std'),
-        mean_training_seconds=('training_seconds', 'mean')).to_csv(output / 'cv_mean_std.csv')
+        mean_training_seconds=('training_seconds', 'mean')).to_csv(
+            output / ('validation_across_seeds.csv' if holdout else 'cv_mean_std.csv'))
     # External labels are used for metrics only after all predeclared models are fitted.
     all_summary, comparisons, calibration_rows, bin_rows = [], [], [], []
-    evaluation_sets = [('oof_2013', dev, oof, oof_risk, oof_raw)]
+    validation_split = 'validation_2013' if holdout else 'oof_2013'
+    evaluation_sets = [(validation_split, evaluation_ids,
+                        {k: v[:, evaluation_rel] for k, v in oof.items()},
+                        {k: v[:, evaluation_rel] for k, v in oof_risk.items()},
+                        {k: v[:, evaluation_rel] for k, v in oof_raw.items()})]
     if evaluate_test:
         evaluation_sets.append(('test_2014', test, test_sum, test_risk, test_raw))
     for split_name, ids, probabilities, risks, raw_probabilities in evaluation_sets:
@@ -219,8 +281,8 @@ def run_window(target, daily, assess, config, output: Path, signature: str, prep
     pd.DataFrame(calibration_rows).to_csv(output / 'calibration_before_after.csv', index=False)
     pd.DataFrame(bin_rows).to_csv(output / 'reliability_bins.csv', index=False)
     write_json(output / 'selection_on_development.json', {
-        'criterion': 'pooled OOF ROC-AUC, averaged across predeclared seeds',
-        'ranking': sorted([r for r in all_summary if r['split'] == 'oof_2013'], key=lambda r: r['roc_auc'], reverse=True),
+        'criterion': 'fixed validation ROC-AUC' if holdout else 'pooled OOF ROC-AUC, averaged across predeclared seeds',
+        'ranking': sorted([r for r in all_summary if r['split'] == validation_split], key=lambda r: r['roc_auc'], reverse=True),
         'note': 'Descriptive development ranking; the primary proposed-vs-no_cox contrast remains predeclared regardless of rank.'})
     write_json(output / 'status.json', {'status': 'completed', 'signature': signature})
 
