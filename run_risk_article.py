@@ -20,8 +20,8 @@ class Tee:
         self.terminal, self.file = terminal, file
 
     def write(self, value):
-        self.terminal.write(value)
         self.file.write(value)
+        return self.terminal.write(value)
 
     def flush(self):
         self.terminal.flush()
@@ -36,7 +36,16 @@ def experiment_signature(identity):
     return hashlib.sha256(json.dumps({**identity, 'config': common_config}, sort_keys=True).encode()).hexdigest()
 
 
+def configure_utf8_output():
+    """RTK's Windows console bridge expects UTF-8, including Cyrillic paths."""
+    os.environ['PYTHONIOENCODING'] = 'utf-8'
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, 'reconfigure'):
+            stream.reconfigure(encoding='utf-8', errors='backslashreplace')
+
+
 def main():
+    configure_utf8_output()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--windows', type=int, nargs='+', default=[28, 56, 112])
     parser.add_argument('--primary-day', type=int, default=56)

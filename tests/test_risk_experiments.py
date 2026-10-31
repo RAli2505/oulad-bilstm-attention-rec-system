@@ -161,3 +161,23 @@ def test_appending_seeds_preserves_job_signature_but_not_other_changes():
     changed = {'config': {'seeds': [42], 'epochs': 50}, 'source': 'same'}
     assert experiment_signature(one) == experiment_signature(five)
     assert experiment_signature(one) != experiment_signature(changed)
+
+
+def test_windows_output_uses_utf8_for_cyrillic_paths(monkeypatch):
+    import io
+    import sys
+    from run_risk_article import configure_utf8_output, Tee
+    output, errors = io.BytesIO(), io.BytesIO()
+    console = io.TextIOWrapper(output, encoding='cp1251')
+    error_console = io.TextIOWrapper(errors, encoding='cp1251')
+    monkeypatch.setattr(sys, 'stdout', console)
+    monkeypatch.setattr(sys, 'stderr', error_console)
+    configure_utf8_output()
+    log = io.StringIO()
+    tee = Tee(console, log)
+    path = 'C:/Diser/система/model'
+    tee.write(path)
+    tee.flush()
+    assert output.getvalue() == path.encode('utf-8')
+    assert log.getvalue() == path
+    assert error_console.encoding == 'utf-8'
