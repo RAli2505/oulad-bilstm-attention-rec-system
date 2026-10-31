@@ -133,3 +133,31 @@ def test_calibration_diagnostics_return_counts_and_finite_measures():
     measures, bins = calibration_stats(y, p)
     assert sum(b['n'] for b in bins) == len(y)
     assert np.isfinite(list(measures.values())).all()
+
+
+def test_development_only_preparation_never_includes_2014(tmp_path):
+    from risk_experiments.pipeline import run_window
+    run_window(*synthetic_data(), {'days': 28, 'score_lag': 7, 'score_policy': 'omit',
+               'split_seed': 42, 'evaluate_test': False}, tmp_path, 'proof', prepare_only=True)
+    manifest = pd.read_csv(tmp_path / 'cohort_and_folds.csv')
+    assert set(manifest.code_presentation) == {'2013J'}
+    assert not any('test_2014' in str(p) for p in tmp_path.rglob('*'))
+
+
+def test_no_external_predictions_when_test_is_disabled(tmp_path):
+    from risk_experiments.training import fit_predict
+    w = build_window(*synthetic_data(), 28)
+    transform = FoldTransform().fit(w, np.arange(140))
+    fit, val, held = [transform.transform(w, ids) for ids in (np.arange(140), np.arange(140, 200), np.arange(200, 280))]
+    prediction, _ = fit_predict('lr', fit, val, held, None, tmp_path, 42,
+                                {'device': 'cpu', 'threads': 1, 'mlp_iterations': 200})
+    assert not any(k.startswith('test_') for k in prediction)
+
+
+def test_appending_seeds_preserves_job_signature_but_not_other_changes():
+    from run_risk_article import experiment_signature
+    one = {'config': {'seeds': [42], 'epochs': 100}, 'source': 'same'}
+    five = {'config': {'seeds': [42, 13, 7, 23, 101], 'epochs': 100}, 'source': 'same'}
+    changed = {'config': {'seeds': [42], 'epochs': 50}, 'source': 'same'}
+    assert experiment_signature(one) == experiment_signature(five)
+    assert experiment_signature(one) != experiment_signature(changed)

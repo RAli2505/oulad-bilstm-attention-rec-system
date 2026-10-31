@@ -117,7 +117,8 @@ def fit_predict(name, fit, val, held, test, directory: Path, seed: int, config: 
             fit_seconds = time.perf_counter() - fit_start
             score_fit = _score(model, fit['flat'])
             score_val = _score(model, val['flat'])
-            score_held, score_test = _score(model, held['flat']), _score(model, test['flat'])
+            score_held = _score(model, held['flat'])
+            score_test = _score(model, test['flat']) if test is not None else None
             hyperparameters = model.get_params()
             if hasattr(model, 'coefs_'):
                 parameters = sum(a.size for a in model.coefs_) + sum(a.size for a in model.intercepts_)
@@ -178,9 +179,11 @@ def fit_predict(name, fit, val, held, test, directory: Path, seed: int, config: 
             held_data = _tensors(held, device)
             score_held, raw_risk_held = _predict(model, held_data)
             del held_data
-            test_data = _tensors(test, device)
-            score_test, raw_risk_test = _predict(model, test_data)
-            del test_data
+            score_test = raw_risk_test = None
+            if test is not None:
+                test_data = _tensors(test, device)
+                score_test, raw_risk_test = _predict(model, test_data)
+                del test_data
             risk_stats = None
             fit_data = _tensors(fit, device)
             score_fit, reference_risk = _predict(model, fit_data)
@@ -188,7 +191,8 @@ def fit_predict(name, fit, val, held, test, directory: Path, seed: int, config: 
             if name in COX:
                 center, scale = float(reference_risk.mean()), max(float(reference_risk.std()), 1e-6)
                 risk_stats = {'training_mean': center, 'training_std': scale}
-                risk_held, risk_test = (raw_risk_held - center) / scale, (raw_risk_test - center) / scale
+                risk_held = (raw_risk_held - center) / scale
+                risk_test = (raw_risk_test - center) / scale if test is not None else None
             hyperparameters = {**config, 'model_name': name, 'features': fit['x'].shape[2],
                                'static_features': fit['s'].shape[1], 'days': fit['x'].shape[1],
                                'best_epoch': best_epoch, 'best_val_log_loss_raw': best_loss,
@@ -197,11 +201,15 @@ def fit_predict(name, fit, val, held, test, directory: Path, seed: int, config: 
                         'parameters': hyperparameters}, directory / 'model.pt')
         calibration = Calibration().fit(score_val, val['y'])
         joblib.dump(calibration, directory / 'calibration.joblib')
-        pred = {'held_score': score_held, 'test_score': score_test,
-                'held_probability': calibration.predict(score_held), 'test_probability': calibration.predict(score_test),
+        pred = {'held_score': score_held,
+                'held_probability': calibration.predict(score_held),
                 'val_score': score_val, 'val_target': val['y'], 'fit_score': score_fit, 'fit_target': fit['y']}
+        if test is not None:
+            pred.update(test_score=score_test, test_probability=calibration.predict(score_test))
         if risk_held is not None:
-            pred.update(held_risk=risk_held, test_risk=risk_test)
+            pred['held_risk'] = risk_held
+            if test is not None:
+                pred['test_risk'] = risk_test
         np.savez_compressed(directory / 'predictions.npz', **pred)
         from .metrics import metrics, calibration_stats
         raw_fit, raw_val = metrics(fit['y'], expit(score_fit)), metrics(val['y'], expit(score_val))

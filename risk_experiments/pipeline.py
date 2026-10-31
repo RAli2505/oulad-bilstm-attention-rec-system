@@ -53,10 +53,17 @@ def permutation_p(y, proposed, reference, groups, repeats, seed=42):
 
 def run_window(target, daily, assess, config, output: Path, signature: str, prepare_only=False):
     output.mkdir(parents=True, exist_ok=True)
+    evaluate_test = config.get('evaluate_test', False)
+    if not evaluate_test:
+        # Do not construct 2014 features, predictions, or label-based reports.
+        presentations = ['2013B', '2013J']
+        target = target[target.code_presentation.isin(presentations)]
+        daily = daily[daily.code_presentation.isin(presentations)]
+        assess = assess[assess.code_presentation.isin(presentations)]
     window = build_window(target, daily, assess, config['days'], config['score_lag'], config['score_policy'])
     dev, test, overlap = temporal_split(window)
-    if not len(dev) or not len(test):
-        raise ValueError('Both 2013 development and unseen-learner 2014 test cohorts are required')
+    if not len(dev) or (evaluate_test and not len(test)):
+        raise ValueError('Development cohort is required; test cohort is required only when enabled')
     roles = np.full(len(window.frame), 'excluded_other_or_overlap', dtype=object)
     roles[dev], roles[test] = 'development_2013', 'test_2014'
     manifest = window.frame[KEYS].copy()
@@ -79,7 +86,7 @@ def run_window(target, daily, assess, config, output: Path, signature: str, prep
     write_json(output / 'cohort_audit.json', {**window.audit, 'development': len(dev), 'external_test': len(test),
                                             'test_removed_repeated_2013_students': overlap,
                                             '2013_prevalence': float(window.y[dev].mean()),
-                                            '2014_prevalence': float(window.y[test].mean())})
+                                            'external_test_evaluated': evaluate_test})
     print(f"Day {window.days}: development={len(dev)}, external test={len(test)}, zero-history={window.audit['zero_history_enrollments']}", flush=True)
     if prepare_only:
         return
@@ -110,7 +117,8 @@ def run_window(target, daily, assess, config, output: Path, signature: str, prep
                    'classical_features': 'same static + per-channel total/mean/std/max/last7/previous7/trend',
                    'paper_features': 'same static + observed typed channels summed into weekly total counts',
                    'normalization_fitted_on': 'inner_fit_only'})
-        partitions = [transform.transform(window, idx) for idx in (fit_idx, val_idx, held_idx, test)]
+        partitions = [transform.transform(window, idx) for idx in (fit_idx, val_idx, held_idx)]
+        partitions.append(transform.transform(window, test) if evaluate_test else None)
         for si, seed in enumerate(config['seeds']):
             for name in MODELS:
                 directory = fold_dir / f'seed_{seed}' / name
@@ -136,9 +144,11 @@ def run_window(target, daily, assess, config, output: Path, signature: str, prep
                     write_json(status_path, {'status': 'completed', 'signature': signature, 'artifacts_sha256': artifacts})
                     print(f'  completed in {time.perf_counter() - start:.1f}s', flush=True)
                 oof[name][si, held_rel] = pred['held_probability']
-                test_sum[name][si] += pred['test_probability'] / len(outer)
+                if evaluate_test:
+                    test_sum[name][si] += pred['test_probability'] / len(outer)
                 oof_raw[name][si, held_rel] = expit(pred['held_score'])
-                test_raw[name][si] += expit(pred['test_score']) / len(outer)
+                if evaluate_test:
+                    test_raw[name][si] += expit(pred['test_score']) / len(outer)
                 diagnostic_rows.append({'model': name, 'fold': fold, 'seed': seed,
                     **{k: v for k, v in report['diagnostics'].items() if not isinstance(v, dict)}})
                 pd.DataFrame(diagnostic_rows).to_csv(output / 'fit_diagnostics.csv', index=False)
@@ -147,7 +157,8 @@ def run_window(target, daily, assess, config, output: Path, signature: str, prep
                         oof_risk[name] = np.full((nseed, len(dev)), np.nan)
                         test_risk[name] = np.zeros((nseed, len(test)))
                     oof_risk[name][si, held_rel] = pred['held_risk']
-                    test_risk[name][si] += pred['test_risk'] / len(outer)
+                    if evaluate_test:
+                        test_risk[name][si] += pred['test_risk'] / len(outer)
                 fold_rows.append({'model': name, 'fold': fold, 'seed': seed,
                                   **metrics(window.y[held_idx], pred['held_probability'], pred.get('held_risk'),
                                             window.time[held_idx], window.event[held_idx]),
@@ -166,7 +177,10 @@ def run_window(target, daily, assess, config, output: Path, signature: str, prep
         mean_training_seconds=('training_seconds', 'mean')).to_csv(output / 'cv_mean_std.csv')
     # External labels are used for metrics only after all predeclared models are fitted.
     all_summary, comparisons, calibration_rows, bin_rows = [], [], [], []
-    for split_name, ids, probabilities, risks, raw_probabilities in [('oof_2013', dev, oof, oof_risk, oof_raw), ('test_2014', test, test_sum, test_risk, test_raw)]:
+    evaluation_sets = [('oof_2013', dev, oof, oof_risk, oof_raw)]
+    if evaluate_test:
+        evaluation_sets.append(('test_2014', test, test_sum, test_risk, test_raw))
+    for split_name, ids, probabilities, risks, raw_probabilities in evaluation_sets:
         means = {name: a.mean(axis=0) for name, a in probabilities.items()}
         prediction_table = window.frame.iloc[ids][KEYS].copy()
         prediction_table['target'], prediction_table['time'], prediction_table['event'] = window.y[ids], window.time[ids], window.event[ids]

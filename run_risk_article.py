@@ -31,11 +31,16 @@ class Tee:
         return False
 
 
+def experiment_signature(identity):
+    common_config = {k: v for k, v in identity['config'].items() if k != 'seeds'}
+    return hashlib.sha256(json.dumps({**identity, 'config': common_config}, sort_keys=True).encode()).hexdigest()
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--windows', type=int, nargs='+', default=[28, 56, 112])
     parser.add_argument('--primary-day', type=int, default=56)
-    parser.add_argument('--seeds', type=int, nargs='+', default=[42, 13, 7])
+    parser.add_argument('--seeds', type=int, nargs='+', default=[42])
     parser.add_argument('--epochs', type=int, default=100)
     parser.add_argument('--patience', type=int, default=20)
     parser.add_argument('--batch-size', type=int, default=256)
@@ -102,6 +107,7 @@ def main():
               'split_seed': 42, 'folds': 5, 'min_delta': 1e-4, 'precision': 'FP32', 'deterministic': True,
               'inference_batch_size': 512, 'train_probe_max_rows': 512,
               'optimizer': 'Adam', 'optimizer_fused': device == 'cuda',
+              'evaluate_test': False,
               'mlp_iterations': 2 if args.smoke else 200, 'synthetic': args.smoke,
               'models': MODELS, 'protocol': 'oulad_landmark_composite_risk_bce_cox_v1'}
     print(f"Device: {torch.cuda.get_device_name(0) if device == 'cuda' else 'CPU'}", flush=True)
@@ -114,12 +120,16 @@ def main():
              root / 'models/oulad_hybrid_attention.py', root / 'data/oulad_loader.py', root / 'evaluation_metrics.py']
     sources = {str(p.relative_to(root)): sha256(p) for p in paths}
     identity = {'config': config, 'data_sha256': hashes, 'source_sha256': sources, 'versions': versions}
-    signature = hashlib.sha256(json.dumps(identity, sort_keys=True).encode()).hexdigest()
+    # Seeds identify independent job directories, not common feature/model settings.
+    # Excluding the list lets a later invocation append seeds without refitting seed 42.
+    signature = experiment_signature(identity)
     output = resume or root / 'runs' / ('risk_' + datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ'))
     if resume:
         previous = json.loads((output / 'run_manifest.json').read_text())
         if previous['signature'] != signature:
             raise ValueError('Cannot resume: code, data, packages, device or experiment settings differ. Use the original flags.')
+        if not set(previous['config']['seeds']).issubset(config['seeds']):
+            raise ValueError('Keep completed seeds in --seeds when appending new seeds')
     else:
         output.mkdir(parents=True, exist_ok=False)
     for relative in sources:
@@ -134,7 +144,7 @@ def main():
     write_json(output / 'environment.json', environment)
     manifest = {**identity, 'signature': signature, 'status': 'running', 'command': sys.argv,
                 'output': str(output), 'started_utc': datetime.now(timezone.utc).isoformat(),
-                'primary_contrast': 'proposed vs no_cox, external 2014 test, day 56 (or selected primary day)',
+                'primary_contrast': 'proposed vs no_cox on development OOF; external 2014 test disabled',
                 'score_availability_assumption': 'Scores omitted in primary analysis. Optional proxy=max(submission_date, due_date)+score_lag; not an observed release timestamp.',
                 'cox_objective': 'minibatch partial likelihood, Breslow ties, lambda=cox_weight; event=withdrawal only',
                 'selection': 'fixed hyperparameters; neural early stop on inner validation raw BCE; no test-driven model selection'}
@@ -142,7 +152,7 @@ def main():
     (output / 'experiment_card.md').write_text(
         '# OULAD BCE + Cox experiment\n\n'
         'Primary endpoint: Fail + Withdrawn vs Pass + Distinction. Survival event: withdrawal.\n\n'
-        'Learner-disjoint 2013 development CV; unseen-learner 2014 external test. '
+        'Learner-disjoint 2013 development CV only. External 2014 test disabled. '
         'Primary contrast: proposed vs no_cox at the predeclared primary day. '
         'Numerical assessment scores are omitted unless an availability proxy was explicitly requested.\n\n'
         'Resolved settings:\n\n```json\n' + json.dumps(config, indent=2) + '\n```\n\n'
