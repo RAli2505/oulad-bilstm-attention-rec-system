@@ -1,0 +1,22 @@
+# Article (out of scope for code repo)
+*.pdf
+_article.txt
+
+# OULAD dataset (auto-downloaded by data.py)
+oulad/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Trained model weights (regenerable)
+best_model.pth
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

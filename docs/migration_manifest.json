@@ -1,0 +1,596 @@
+{
+  "source_repository": "C:\\Users\\user\\Documents\\Diser\\система\\oulad-assistments-research",
+  "date": "2026-10-31",
+  "files": [
+    {
+      "source": "archive/legacy_code_20260929/models/pred_oulad.py",
+      "destination": "models/pred_oulad.py",
+      "sha256": "6325dd279a9ab9c4db04a5c4200e91b313ebdd170f82f6a70eb47175de3ed0f2",
+      "action": "move",
+      "destination_sha256": "934b61c7d5fafd79b3f36a1539bf07add1593d229f8d7ccf0f6d24b1992dd5d3"
+    },
+    {
+      "source": "archive/legacy_code_20260929/tests/test_pred_oulad.py",
+      "destination": "tests/test_pred_oulad.py",
+      "sha256": "7ca4c71b482be55547183d214ad3e3bff3c09f916bc6193895fb1e175603b919",
+      "action": "move",
+      "destination_sha256": "7ca4c71b482be55547183d214ad3e3bff3c09f916bc6193895fb1e175603b919"
+    },
+    {
+      "source": "archive/legacy_code_20260929/root_files/evaluation_metrics.py",
+      "destination": "evaluation_metrics.py",
+      "sha256": "f979d438ef9d604e9b1916cf9a8a68faddac10db4e8b1ee6b307dbcd0a56958f",
+      "action": "copy_shared",
+      "destination_sha256": "f979d438ef9d604e9b1916cf9a8a68faddac10db4e8b1ee6b307dbcd0a56958f"
+    },
+    {
+      "source": "archive/legacy_code_20260929/tests/test_evaluation_metrics.py",
+      "destination": "tests/test_evaluation_metrics.py",
+      "sha256": "7288dbe966fa2ec96d1e07b16c09a82a8d00390dc9a09986348baa964330ea3b",
+      "action": "copy_shared",
+      "destination_sha256": "7288dbe966fa2ec96d1e07b16c09a82a8d00390dc9a09986348baa964330ea3b"
+    },
+    {
+      "source": "archive/legacy_code_20260929/data/oulad_loader.py",
+      "destination": "data/oulad_loader.py",
+      "sha256": "1a2402ba974dca66dad310f0f5462e8e211b7c9cde28a36fa74031cc3300679a",
+      "action": "copy_shared",
+      "destination_sha256": "bdfe112f0d847ac5e15c5a8343c287cdf3f6807a41ce02eb2858126a466d5529"
+    },
+    {
+      "source": "results/oulad/pred_metrics.json",
+      "destination": "results/oulad/pred_metrics.json",
+      "sha256": "c760a914c08d87897dd71dad4e6217a05c49c6ba5f77178f53db408fe0052b52",
+      "action": "move",
+      "destination_sha256": "c760a914c08d87897dd71dad4e6217a05c49c6ba5f77178f53db408fe0052b52"
+    },
+    {
+      "source": "results/oulad/pred_metrics_bilstm_attention.json",
+      "destination": "results/oulad/pred_metrics_bilstm_attention.json",
+      "sha256": "9c2d60dd5e967f62c78ef4f4982bb1d3b5a7030608fb65f7698c6fdaea533426",
+      "action": "move",
+      "destination_sha256": "9c2d60dd5e967f62c78ef4f4982bb1d3b5a7030608fb65f7698c6fdaea533426"
+    },
+    {
+      "source": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d120_demographics_total_s42.json",
+      "destination": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d120_demographics_total_s42.json",
+      "sha256": "a3193814d0d9be52cad41e598d39a47b456ec093b39b8376f0752f7d830e8f88",
+      "action": "move",
+      "destination_sha256": "a3193814d0d9be52cad41e598d39a47b456ec093b39b8376f0752f7d830e8f88"
+    },
+    {
+      "source": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d120_demographics_typed_s42.json",
+      "destination": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d120_demographics_typed_s42.json",
+      "sha256": "1b52ff1ddc8b359719fbb84e40c0e2bb287406725488f71529669bf0ec2359fa",
+      "action": "move",
+      "destination_sha256": "1b52ff1ddc8b359719fbb84e40c0e2bb287406725488f71529669bf0ec2359fa"
+    },
+    {
+      "source": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d120_full_total_s42.json",
+      "destination": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d120_full_total_s42.json",
+      "sha256": "0121f4d1c744379c9bf4eca289e6b73e11eb29a37c42a7a417bdf5f5299b53df",
+      "action": "move",
+      "destination_sha256": "0121f4d1c744379c9bf4eca289e6b73e11eb29a37c42a7a417bdf5f5299b53df"
+    },
+    {
+      "source": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d120_full_typed_s42.json",
+      "destination": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d120_full_typed_s42.json",
+      "sha256": "797d6be74ec711b1544d66206c3883b5a2711f6595bc0e2018c27d33543e0052",
+      "action": "move",
+      "destination_sha256": "797d6be74ec711b1544d66206c3883b5a2711f6595bc0e2018c27d33543e0052"
+    },
+    {
+      "source": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d28_demographics_total_s42.json",
+      "destination": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d28_demographics_total_s42.json",
+      "sha256": "551ad32a102bb9416172cdfadc8b192c63c885dd881a08f13fcae39c1d6002fc",
+      "action": "move",
+      "destination_sha256": "551ad32a102bb9416172cdfadc8b192c63c885dd881a08f13fcae39c1d6002fc"
+    },
+    {
+      "source": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d28_demographics_typed_s42.json",
+      "destination": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d28_demographics_typed_s42.json",
+      "sha256": "d4e8bc94d626334815604941be4d2a85c791da426e394b54ed87e7f3486561d1",
+      "action": "move",
+      "destination_sha256": "d4e8bc94d626334815604941be4d2a85c791da426e394b54ed87e7f3486561d1"
+    },
+    {
+      "source": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d28_full_total_s42.json",
+      "destination": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d28_full_total_s42.json",
+      "sha256": "c3f11f5aeba0e1d7cf969c236749a9ccee897935aac6fc8a9c68f9159ba6cf18",
+      "action": "move",
+      "destination_sha256": "c3f11f5aeba0e1d7cf969c236749a9ccee897935aac6fc8a9c68f9159ba6cf18"
+    },
+    {
+      "source": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d28_full_typed_s42.json",
+      "destination": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d28_full_typed_s42.json",
+      "sha256": "902e0f9f8a2b89437bfb1ff25326de2491cef609c60247281f931f419bb28330",
+      "action": "move",
+      "destination_sha256": "902e0f9f8a2b89437bfb1ff25326de2491cef609c60247281f931f419bb28330"
+    },
+    {
+      "source": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d56_demographics_total_s42.json",
+      "destination": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d56_demographics_total_s42.json",
+      "sha256": "6719a3faf84431646e6c645e8c917c74b4cb4a63a8d0efb024efbb19b5bd1768",
+      "action": "move",
+      "destination_sha256": "6719a3faf84431646e6c645e8c917c74b4cb4a63a8d0efb024efbb19b5bd1768"
+    },
+    {
+      "source": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d56_demographics_typed_s42.json",
+      "destination": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d56_demographics_typed_s42.json",
+      "sha256": "2279895af7b5dd48ea354dc2ae33fa6af9a3c47ec5d3b23bd93ce253495d49cd",
+      "action": "move",
+      "destination_sha256": "2279895af7b5dd48ea354dc2ae33fa6af9a3c47ec5d3b23bd93ce253495d49cd"
+    },
+    {
+      "source": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d56_full_total_s42.json",
+      "destination": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d56_full_total_s42.json",
+      "sha256": "aee86215b95289c08e5783e7e8a4e5b5d092d71b0bd099488d842f6060d0567b",
+      "action": "move",
+      "destination_sha256": "aee86215b95289c08e5783e7e8a4e5b5d092d71b0bd099488d842f6060d0567b"
+    },
+    {
+      "source": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d56_full_typed_s42.json",
+      "destination": "results/oulad/pred_metrics_bilstm_attention_bilstm_attention_d56_full_typed_s42.json",
+      "sha256": "a292cd21eae5a401cbe7ff81e8d59d40c917aa52e5e37a801ffebae78648b8ca",
+      "action": "move",
+      "destination_sha256": "a292cd21eae5a401cbe7ff81e8d59d40c917aa52e5e37a801ffebae78648b8ca"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble.json",
+      "destination": "results/oulad/pred_metrics_ensemble.json",
+      "sha256": "b31539473b4a7d351abd7190f49f4306294faad6bfcf9581be4fc8894cce71b8",
+      "action": "move",
+      "destination_sha256": "b31539473b4a7d351abd7190f49f4306294faad6bfcf9581be4fc8894cce71b8"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_d120_demographics_total_s42.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_d120_demographics_total_s42.json",
+      "sha256": "b06d32888cf7009e3bfe5b1a11f034505ddfe213863de4f86ba754a0693990c9",
+      "action": "move",
+      "destination_sha256": "b06d32888cf7009e3bfe5b1a11f034505ddfe213863de4f86ba754a0693990c9"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_d120_demographics_typed_s42.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_d120_demographics_typed_s42.json",
+      "sha256": "57254fd36678bd685b9168dfabbe8f5ceef490479cfcf21400bcc0a63ab6fbeb",
+      "action": "move",
+      "destination_sha256": "57254fd36678bd685b9168dfabbe8f5ceef490479cfcf21400bcc0a63ab6fbeb"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_d120_full_total_s42.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_d120_full_total_s42.json",
+      "sha256": "77a8b7844fd83ce98278ab8a58efb57e1048b238e8dcb9eedd3527ecbd0a9c9d",
+      "action": "move",
+      "destination_sha256": "77a8b7844fd83ce98278ab8a58efb57e1048b238e8dcb9eedd3527ecbd0a9c9d"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_d120_full_typed_s42.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_d120_full_typed_s42.json",
+      "sha256": "fc3e02644eb28097135150f56d7b7cf004cdf995ef74dad1dd9e6744acce1f8a",
+      "action": "move",
+      "destination_sha256": "fc3e02644eb28097135150f56d7b7cf004cdf995ef74dad1dd9e6744acce1f8a"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_d28_demographics_total_s42.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_d28_demographics_total_s42.json",
+      "sha256": "6466f6b7f6da417c128dc73c3466ed2f5c36218c07a377ba675b578f169968c6",
+      "action": "move",
+      "destination_sha256": "6466f6b7f6da417c128dc73c3466ed2f5c36218c07a377ba675b578f169968c6"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_d28_demographics_typed_s42.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_d28_demographics_typed_s42.json",
+      "sha256": "9582b2c0544af89837ae8ab0b41024fa3b18348f6e7d27b5f2b7ee9fc269b727",
+      "action": "move",
+      "destination_sha256": "9582b2c0544af89837ae8ab0b41024fa3b18348f6e7d27b5f2b7ee9fc269b727"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_d28_full_total_s42.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_d28_full_total_s42.json",
+      "sha256": "b0e99b30ae7c7981163e55afd70a3e694e8351fc8c4f9adae86d207f573b26f9",
+      "action": "move",
+      "destination_sha256": "b0e99b30ae7c7981163e55afd70a3e694e8351fc8c4f9adae86d207f573b26f9"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_d28_full_typed_s42.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_d28_full_typed_s42.json",
+      "sha256": "bc05e3e405cb2f903a8cdf99a5c78283606cf48d998bee4bcbaee42fb56aada5",
+      "action": "move",
+      "destination_sha256": "bc05e3e405cb2f903a8cdf99a5c78283606cf48d998bee4bcbaee42fb56aada5"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_d56_demographics_total_s42.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_d56_demographics_total_s42.json",
+      "sha256": "8e91a3044ee31747c909c292d95fa7214576bc556144d5fdacf48518e911521c",
+      "action": "move",
+      "destination_sha256": "8e91a3044ee31747c909c292d95fa7214576bc556144d5fdacf48518e911521c"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_d56_demographics_typed_s42.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_d56_demographics_typed_s42.json",
+      "sha256": "012fc57643f27a1aa2186d34b93f74f5a3de2fb42bc1ff6ac8ea72cafe31b48d",
+      "action": "move",
+      "destination_sha256": "012fc57643f27a1aa2186d34b93f74f5a3de2fb42bc1ff6ac8ea72cafe31b48d"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_d56_full_total_s42.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_d56_full_total_s42.json",
+      "sha256": "4e3e852fd1f7a430a68e8354bf7f7842a7c6c56536dd378e061ea212bbe70fe6",
+      "action": "move",
+      "destination_sha256": "4e3e852fd1f7a430a68e8354bf7f7842a7c6c56536dd378e061ea212bbe70fe6"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_d56_full_typed_s42.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_d56_full_typed_s42.json",
+      "sha256": "6239508844612024498b1153acf7aebb2a261a424252fb680e7d2ca0d7715995",
+      "action": "move",
+      "destination_sha256": "6239508844612024498b1153acf7aebb2a261a424252fb680e7d2ca0d7715995"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_w05_fixed.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_w05_fixed.json",
+      "sha256": "4b7ced284f3f21864b76cf3415799fa9d3f540bcb7f394e62bad43fb5fd6517d",
+      "action": "move",
+      "destination_sha256": "4b7ced284f3f21864b76cf3415799fa9d3f540bcb7f394e62bad43fb5fd6517d"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_w07_fixed.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_w07_fixed.json",
+      "sha256": "d873802525e79c93d0005672203aae648c1046020bbf24b52ac764ac59e8933e",
+      "action": "move",
+      "destination_sha256": "d873802525e79c93d0005672203aae648c1046020bbf24b52ac764ac59e8933e"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_w07_xgboost_features.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_w07_xgboost_features.json",
+      "sha256": "38692c2176357a244d1d19a16d888e70489254e1563bc96e404cfa33c9aa550c",
+      "action": "move",
+      "destination_sha256": "38692c2176357a244d1d19a16d888e70489254e1563bc96e404cfa33c9aa550c"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_w07_xgboost_s101.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_w07_xgboost_s101.json",
+      "sha256": "572b6f6c866170fe30001175537d961f4545960b9cfa6c4a9d4e619f0b28b294",
+      "action": "move",
+      "destination_sha256": "572b6f6c866170fe30001175537d961f4545960b9cfa6c4a9d4e619f0b28b294"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_w07_xgboost_s13.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_w07_xgboost_s13.json",
+      "sha256": "4063f3f94c5afd0809979eefdd91b98d6a97c5857277b040ddb7268726121211",
+      "action": "move",
+      "destination_sha256": "4063f3f94c5afd0809979eefdd91b98d6a97c5857277b040ddb7268726121211"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_w07_xgboost_s42.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_w07_xgboost_s42.json",
+      "sha256": "38692c2176357a244d1d19a16d888e70489254e1563bc96e404cfa33c9aa550c",
+      "action": "move",
+      "destination_sha256": "38692c2176357a244d1d19a16d888e70489254e1563bc96e404cfa33c9aa550c"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_w07_xgboost_s7.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_w07_xgboost_s7.json",
+      "sha256": "2c0aecb18bd55a5366f89e4bd6db3e1bb1fee6a65c7fbaa2d463929c2ff10b4d",
+      "action": "move",
+      "destination_sha256": "2c0aecb18bd55a5366f89e4bd6db3e1bb1fee6a65c7fbaa2d463929c2ff10b4d"
+    },
+    {
+      "source": "results/oulad/pred_metrics_ensemble_ensemble_w07_xgboost_s77.json",
+      "destination": "results/oulad/pred_metrics_ensemble_ensemble_w07_xgboost_s77.json",
+      "sha256": "4a6c9a459b10a85dedf8cef0d8240deda3e84a20041b117eae284324ebb48ea1",
+      "action": "move",
+      "destination_sha256": "4a6c9a459b10a85dedf8cef0d8240deda3e84a20041b117eae284324ebb48ea1"
+    },
+    {
+      "source": "results/oulad/pred_metrics_lstm_smoke_ablation.json",
+      "destination": "results/oulad/pred_metrics_lstm_smoke_ablation.json",
+      "sha256": "f9a401ac6066d50953d0e5aba66d3ae1b3ceabc3ffcfba5ab41ffa4bde121045",
+      "action": "move",
+      "destination_sha256": "f9a401ac6066d50953d0e5aba66d3ae1b3ceabc3ffcfba5ab41ffa4bde121045"
+    },
+    {
+      "source": "results/oulad/pred_metrics_tcn_bilstm_attention.json",
+      "destination": "results/oulad/pred_metrics_tcn_bilstm_attention.json",
+      "sha256": "42df526227305cb8f999071393a7630c8bb780d0051c12df9a20d12192b45c56",
+      "action": "move",
+      "destination_sha256": "42df526227305cb8f999071393a7630c8bb780d0051c12df9a20d12192b45c56"
+    },
+    {
+      "source": "data/oulad/processed/daily_vle.parquet",
+      "destination": "data/oulad/processed/daily_vle.parquet",
+      "sha256": "1496c29ab4021312185978c4bd57ac80644981ffae3240585b6762923a5360c6",
+      "action": "copy_shared",
+      "destination_sha256": "1496c29ab4021312185978c4bd57ac80644981ffae3240585b6762923a5360c6"
+    },
+    {
+      "source": "data/oulad/processed/student_target.parquet",
+      "destination": "data/oulad/processed/student_target.parquet",
+      "sha256": "cb49c9cd4fe39a6964a315c0fa505e05579ec40f3968d0a233dc75a7069ed02b",
+      "action": "copy_shared",
+      "destination_sha256": "cb49c9cd4fe39a6964a315c0fa505e05579ec40f3968d0a233dc75a7069ed02b"
+    },
+    {
+      "source": "data/oulad/splits/test.parquet",
+      "destination": "data/oulad/splits/test.parquet",
+      "sha256": "deb3abaec0530a137e48a9ccda7d143d83375eba3038f67a1b560212715a935f",
+      "action": "copy_shared",
+      "destination_sha256": "deb3abaec0530a137e48a9ccda7d143d83375eba3038f67a1b560212715a935f"
+    },
+    {
+      "source": "data/oulad/splits/train.parquet",
+      "destination": "data/oulad/splits/train.parquet",
+      "sha256": "0e26924cd5f136dbc3e858d15219dcfed0d5fceda59012a0a0ebd27752de1e9f",
+      "action": "copy_shared",
+      "destination_sha256": "0e26924cd5f136dbc3e858d15219dcfed0d5fceda59012a0a0ebd27752de1e9f"
+    },
+    {
+      "source": "data/oulad/splits/val.parquet",
+      "destination": "data/oulad/splits/val.parquet",
+      "sha256": "afeca05dc77d73fc5cc071479db22d41d6f24b95515fb0a98f631aed719afba3",
+      "action": "copy_shared",
+      "destination_sha256": "afeca05dc77d73fc5cc071479db22d41d6f24b95515fb0a98f631aed719afba3"
+    },
+    {
+      "source": "data/oulad/raw/assessments.csv",
+      "destination": "data/oulad/raw/assessments.csv",
+      "sha256": "8cc738fb88ad760571d6f2a23059bfee0ffcae3bcd830514c9cbd5c6d5a046f1",
+      "action": "copy_shared",
+      "destination_sha256": "8cc738fb88ad760571d6f2a23059bfee0ffcae3bcd830514c9cbd5c6d5a046f1"
+    },
+    {
+      "source": "data/oulad/raw/courses.csv",
+      "destination": "data/oulad/raw/courses.csv",
+      "sha256": "4f16eee7454b15e109b0a21a0e43be820e6846ed6f9301bb7feb5ab5ad737a75",
+      "action": "copy_shared",
+      "destination_sha256": "4f16eee7454b15e109b0a21a0e43be820e6846ed6f9301bb7feb5ab5ad737a75"
+    },
+    {
+      "source": "data/oulad/raw/studentAssessment.csv",
+      "destination": "data/oulad/raw/studentAssessment.csv",
+      "sha256": "fd5320786328d05af841ee7dd4b5871b9dada3b9fe9d6a3642b2f42635510a6e",
+      "action": "copy_shared",
+      "destination_sha256": "fd5320786328d05af841ee7dd4b5871b9dada3b9fe9d6a3642b2f42635510a6e"
+    },
+    {
+      "source": "data/oulad/raw/studentInfo.csv",
+      "destination": "data/oulad/raw/studentInfo.csv",
+      "sha256": "7e6f3e474a5eee00639d2a414a6c7e928745823c2d2c2563ca1780145f99b0d6",
+      "action": "copy_shared",
+      "destination_sha256": "7e6f3e474a5eee00639d2a414a6c7e928745823c2d2c2563ca1780145f99b0d6"
+    },
+    {
+      "source": "data/oulad/raw/studentRegistration.csv",
+      "destination": "data/oulad/raw/studentRegistration.csv",
+      "sha256": "0d32676285372aaf2e7a80304e5b274b4fba24313e2ca4c04317225e1ec90170",
+      "action": "copy_shared",
+      "destination_sha256": "0d32676285372aaf2e7a80304e5b274b4fba24313e2ca4c04317225e1ec90170"
+    },
+    {
+      "source": "data/oulad/raw/studentVle.csv",
+      "destination": "data/oulad/raw/studentVle.csv",
+      "sha256": "52668253d876c5becbcb72185977152700cecab2942aca807fecc3dd54b937f0",
+      "action": "copy_shared",
+      "destination_sha256": "52668253d876c5becbcb72185977152700cecab2942aca807fecc3dd54b937f0"
+    },
+    {
+      "source": "data/oulad/raw/vle.csv",
+      "destination": "data/oulad/raw/vle.csv",
+      "sha256": "d1b28303dea802ad87b4484e1196e878e06824850b9a4fe8aa34693439fe87e9",
+      "action": "copy_shared",
+      "destination_sha256": "d1b28303dea802ad87b4484e1196e878e06824850b9a4fe8aa34693439fe87e9"
+    },
+    {
+      "source": "docs/superpowers/specs/2026-06-21-oulad-pred-design.md",
+      "destination": "docs/history/2026-06-21-oulad-pred-design.md",
+      "sha256": "9d2abf08d5e6cf2a128a2ff606a9698395ab1dd99b6624abbfe371a491aefe59",
+      "action": "copy_shared",
+      "destination_sha256": "9d2abf08d5e6cf2a128a2ff606a9698395ab1dd99b6624abbfe371a491aefe59"
+    },
+    {
+      "source": "docs/superpowers/specs/2026-06-21-oulad-pred-fusion-design.md",
+      "destination": "docs/history/2026-06-21-oulad-pred-fusion-design.md",
+      "sha256": "321926c5a65ec78799fc459b89004ad31a15509bcc1816aefcfc724697e5fd9e",
+      "action": "copy_shared",
+      "destination_sha256": "321926c5a65ec78799fc459b89004ad31a15509bcc1816aefcfc724697e5fd9e"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/.gitignore",
+      "destination": "experiments/hybrid-attention/.gitignore",
+      "sha256": "67dd2792afab806ba9095e7c98e1cfd6b3065e204ff9840d41f1335c2b31de1b",
+      "action": "move",
+      "destination_sha256": "67dd2792afab806ba9095e7c98e1cfd6b3065e204ff9840d41f1335c2b31de1b"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/config.py",
+      "destination": "experiments/hybrid-attention/config.py",
+      "sha256": "d35ed398b7dfbf77c27eaa03014b3f864d1a61b75215945718e8137fcee39d7e",
+      "action": "move",
+      "destination_sha256": "71fea7819d140ee7647f97c04f00d84bfa2ba76f252011be915c6cd43313be75"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/data.py",
+      "destination": "experiments/hybrid-attention/data.py",
+      "sha256": "c123f74acb81218bead03c42db3cfbdb75dd53519e2e875365c523585ce5addb",
+      "action": "move",
+      "destination_sha256": "c123f74acb81218bead03c42db3cfbdb75dd53519e2e875365c523585ce5addb"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/export_inference_bundle.py",
+      "destination": "experiments/hybrid-attention/export_inference_bundle.py",
+      "sha256": "4fe9b8e7c7e19de262bcbf93b25de3a908c85b04e634acd55825316151a44bfc",
+      "action": "move",
+      "destination_sha256": "4fe9b8e7c7e19de262bcbf93b25de3a908c85b04e634acd55825316151a44bfc"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/figures/fig01_class_distribution.png",
+      "destination": "experiments/hybrid-attention/figures/fig01_class_distribution.png",
+      "sha256": "510d6d3e77c9fed9d722952851516b8ece50f747f9c09543de467b8a66c311a5",
+      "action": "move",
+      "destination_sha256": "510d6d3e77c9fed9d722952851516b8ece50f747f9c09543de467b8a66c311a5"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/figures/fig03_engagement_daily.png",
+      "destination": "experiments/hybrid-attention/figures/fig03_engagement_daily.png",
+      "sha256": "b06fbb7ab82285a1ca3ded651c987974b3f8966fea14c0640027df6d6cf0a499",
+      "action": "move",
+      "destination_sha256": "b06fbb7ab82285a1ca3ded651c987974b3f8966fea14c0640027df6d6cf0a499"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/figures/fig04_07_learning_curves.png",
+      "destination": "experiments/hybrid-attention/figures/fig04_07_learning_curves.png",
+      "sha256": "b919800bb1e6584a2f989b603b61264d2e1d0723ac3766bc908689d5eb28691f",
+      "action": "move",
+      "destination_sha256": "b919800bb1e6584a2f989b603b61264d2e1d0723ac3766bc908689d5eb28691f"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/figures/fig05_engagement_gap.png",
+      "destination": "experiments/hybrid-attention/figures/fig05_engagement_gap.png",
+      "sha256": "6bae4b5f856fa4e2f72021b51c79df627bdcd22680c9f429cf12863020c2ad5d",
+      "action": "move",
+      "destination_sha256": "6bae4b5f856fa4e2f72021b51c79df627bdcd22680c9f429cf12863020c2ad5d"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/figures/fig06_engagement_gap_smoothed.png",
+      "destination": "experiments/hybrid-attention/figures/fig06_engagement_gap_smoothed.png",
+      "sha256": "adc1d46f257bd34af9c6fbdda0a1b23f0e6355a2938718976dfcc1165cb6972b",
+      "action": "move",
+      "destination_sha256": "adc1d46f257bd34af9c6fbdda0a1b23f0e6355a2938718976dfcc1165cb6972b"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/figures/fig07_val_f1.png",
+      "destination": "experiments/hybrid-attention/figures/fig07_val_f1.png",
+      "sha256": "ce9bf592450e525e3a8627fcd3c6de911b14729c64882491400b8e8064785d99",
+      "action": "move",
+      "destination_sha256": "ce9bf592450e525e3a8627fcd3c6de911b14729c64882491400b8e8064785d99"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/figures/fig08_09_cm_roc.png",
+      "destination": "experiments/hybrid-attention/figures/fig08_09_cm_roc.png",
+      "sha256": "04edfb80531c42b479c9552a2008376c451677a91aead7a7d321a37fca9f4084",
+      "action": "move",
+      "destination_sha256": "04edfb80531c42b479c9552a2008376c451677a91aead7a7d321a37fca9f4084"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/figures/fig10_tsne.png",
+      "destination": "experiments/hybrid-attention/figures/fig10_tsne.png",
+      "sha256": "e7a741d4d405015e3943e7af66e73ff3ee9a4f0578381ae3f98e77e5d31dae7c",
+      "action": "move",
+      "destination_sha256": "e7a741d4d405015e3943e7af66e73ff3ee9a4f0578381ae3f98e77e5d31dae7c"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/figures/fig11_pca.png",
+      "destination": "experiments/hybrid-attention/figures/fig11_pca.png",
+      "sha256": "fbf88be89386875a964e69ef3d7d62c91652245078e0604d7005ce7b2d8d690d",
+      "action": "move",
+      "destination_sha256": "fbf88be89386875a964e69ef3d7d62c91652245078e0604d7005ce7b2d8d690d"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/figures/fig12_umap.png",
+      "destination": "experiments/hybrid-attention/figures/fig12_umap.png",
+      "sha256": "44d3afa13ef97291909ec81f1fb71b17219f426d5ca0eb2cf68f88a2428a144f",
+      "action": "move",
+      "destination_sha256": "44d3afa13ef97291909ec81f1fb71b17219f426d5ca0eb2cf68f88a2428a144f"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/figures/fig13_attention.png",
+      "destination": "experiments/hybrid-attention/figures/fig13_attention.png",
+      "sha256": "baec43dbac033277d2d388b4f708aa35899e33134a3be4bb5869949565036389",
+      "action": "move",
+      "destination_sha256": "baec43dbac033277d2d388b4f708aa35899e33134a3be4bb5869949565036389"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/figures.py",
+      "destination": "experiments/hybrid-attention/figures.py",
+      "sha256": "379b38891095d440a6709e4f0ee0cb3fc88fdd7a337062a00be9b3992658b440",
+      "action": "move",
+      "destination_sha256": "379b38891095d440a6709e4f0ee0cb3fc88fdd7a337062a00be9b3992658b440"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/main.py",
+      "destination": "experiments/hybrid-attention/main.py",
+      "sha256": "8fcb26b24ff6d10d29607078e70a53e46f08035f4db65ee1291fe433eb4128ac",
+      "action": "move",
+      "destination_sha256": "8fcb26b24ff6d10d29607078e70a53e46f08035f4db65ee1291fe433eb4128ac"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/models.py",
+      "destination": "experiments/hybrid-attention/models.py",
+      "sha256": "39b4c38b88c7406d4fa483e2bbcce1aa7d763ca6233b516a553cbc11ef373dab",
+      "action": "move",
+      "destination_sha256": "39b4c38b88c7406d4fa483e2bbcce1aa7d763ca6233b516a553cbc11ef373dab"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/README.md",
+      "destination": "experiments/hybrid-attention/README.md",
+      "sha256": "ed89ecca12c517fbd7534e0d5cb2adc5cf2ed1927f8475a2733fc2cc0179bea7",
+      "action": "move",
+      "destination_sha256": "ed89ecca12c517fbd7534e0d5cb2adc5cf2ed1927f8475a2733fc2cc0179bea7"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/tables/table1_comparative.csv",
+      "destination": "experiments/hybrid-attention/tables/table1_comparative.csv",
+      "sha256": "63359928d0e883d61545dcd0e25b89e83b982d045f7b94717b20ed1807b57bf3",
+      "action": "move",
+      "destination_sha256": "63359928d0e883d61545dcd0e25b89e83b982d045f7b94717b20ed1807b57bf3"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/tables/table2_baselines.csv",
+      "destination": "experiments/hybrid-attention/tables/table2_baselines.csv",
+      "sha256": "0429346f2f431b0246092c5c11cb3a10335f7f92d3e626f64bb015585f590958",
+      "action": "move",
+      "destination_sha256": "0429346f2f431b0246092c5c11cb3a10335f7f92d3e626f64bb015585f590958"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/tables/table3_kfold.csv",
+      "destination": "experiments/hybrid-attention/tables/table3_kfold.csv",
+      "sha256": "1dac3773a1d94c09d86642edc954e13c99beaf53dc69b45bfdc3b0f5a15a041a",
+      "action": "move",
+      "destination_sha256": "1dac3773a1d94c09d86642edc954e13c99beaf53dc69b45bfdc3b0f5a15a041a"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/tables/table4_balancing.csv",
+      "destination": "experiments/hybrid-attention/tables/table4_balancing.csv",
+      "sha256": "697e790040e5c555984cd9c815be7ee461e2c85a89dc9c69a5e220fc7f3b3583",
+      "action": "move",
+      "destination_sha256": "697e790040e5c555984cd9c815be7ee461e2c85a89dc9c69a5e220fc7f3b3583"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/tables/table5_ablation.csv",
+      "destination": "experiments/hybrid-attention/tables/table5_ablation.csv",
+      "sha256": "7d6ea2bdb5630e2857cd054185820d9ab699318de714fc596a5ca7f6fdd31630",
+      "action": "move",
+      "destination_sha256": "7d6ea2bdb5630e2857cd054185820d9ab699318de714fc596a5ca7f6fdd31630"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/tables.py",
+      "destination": "experiments/hybrid-attention/tables.py",
+      "sha256": "d58326747a2fefeabebaabafe7ff9b90cb374a0cec3a47865d4b899b4fa36d1d",
+      "action": "move",
+      "destination_sha256": "d58326747a2fefeabebaabafe7ff9b90cb374a0cec3a47865d4b899b4fa36d1d"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/training.py",
+      "destination": "experiments/hybrid-attention/training.py",
+      "sha256": "6c5be3f9082022495148febceb6fd152025036f90cd607bf871ead92aec11b3b",
+      "action": "move",
+      "destination_sha256": "6c5be3f9082022495148febceb6fd152025036f90cd607bf871ead92aec11b3b"
+    },
+    {
+      "source": "archive/legacy_code_20260929/baselines/oulad-hybrid-attention/Untitled6.ipynb",
+      "destination": "experiments/hybrid-attention/Untitled6.ipynb",
+      "sha256": "ece0ea2188f87cef632104f00199743843545e545778a401e7563ff39048f01e",
+      "action": "move",
+      "destination_sha256": "ece0ea2188f87cef632104f00199743843545e545778a401e7563ff39048f01e"
+    },
+    {
+      "source": "archive/legacy_code_20260929/models/oulad_hybrid_attention.py",
+      "destination": "models/oulad_hybrid_attention.py",
+      "sha256": "e343c453c94e099c0cd29ed92b49bef8f3a7d60cbe587128db926080b37a596d",
+      "action": "move",
+      "destination_sha256": "e343c453c94e099c0cd29ed92b49bef8f3a7d60cbe587128db926080b37a596d"
+    }
+  ],
+  "status": "completed",
+  "moved_file_count": 67
+}

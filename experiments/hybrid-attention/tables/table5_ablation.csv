@@ -1,0 +1,4 @@
+Model,Weeks used,ROC-AUC,Weighted F1
+Early model,0-15,0.9167,0.856
+Mid model,0-20,0.9234,0.86
+Full model,0-32,0.9582,0.901

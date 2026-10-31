@@ -1,0 +1,5 @@
+Metric,Static Vector,Behavioral Vector,Hybrid Model
+Accuracy,0.833,0.8898,0.901
+F1-Score (W),0.8347,0.8866,0.901
+ROC-AUC,0.9098,0.9097,0.9582
+Train Time (s),20.1012,22.7325,62.8403

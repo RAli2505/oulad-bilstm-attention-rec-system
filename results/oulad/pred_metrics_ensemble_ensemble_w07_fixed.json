@@ -1,0 +1,48 @@
+{
+  "dropout_auc": 0.8945435308964835,
+  "c_index": 0.8739616957750115,
+  "brier": 0.11703150583990887,
+  "pr_auc": 0.8464920217821914,
+  "ece": 0.036855202818348434,
+  "mce": 0.13883457058352505,
+  "precision_top_5pct": 0.9196675900277008,
+  "recall_top_5pct": 0.2091997479521109,
+  "precision_top_10pct": 0.817174515235457,
+  "recall_top_10pct": 0.37177063642091995,
+  "precision_top_20pct": 0.6292446292446292,
+  "recall_top_20pct": 0.5721487082545683,
+  "n_intervention_eligible": 7214,
+  "n_excluded_pre_cutoff": 1482,
+  "calibration_method": "isotonic",
+  "calibration_brier_monitor": {
+    "raw": 0.10882946434369212,
+    "platt": 0.10881648859940422,
+    "isotonic": 0.10277310905420625
+  },
+  "calibration_brier": {
+    "raw": 0.11470019085339737,
+    "platt": 0.11926596438135188,
+    "isotonic": 0.11703150583990887
+  },
+  "architecture": "ensemble",
+  "observation_days": null,
+  "static_mode": "full",
+  "sequence_mode": "typed",
+  "seed": 42,
+  "ensemble_components": [
+    "lstm",
+    "bilstm_attention",
+    "LGBMClassifier"
+  ],
+  "ensemble_weights": {
+    "lstm": 0.4,
+    "bilstm_attention": 0.30000000000000004,
+    "gbdt": 0.29999999999999993
+  },
+  "ensemble_monitor_auc": 0.9096036572786613,
+  "ensemble_monitor_brier": 0.10882946434369212,
+  "n_train": 6893,
+  "n_test": 8696,
+  "n_pos": 2381,
+  "n_static": 48
+}

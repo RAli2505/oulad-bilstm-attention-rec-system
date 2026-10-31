@@ -1,0 +1,3 @@
+Processing Pipeline,Recall (Class 0 - Fail),Weighted F1-Score,Class 0 Support
+Baseline (Imbalanced Loss),0.7558,0.9051,1335.0
+OULAD-Ultimate (Weighted Loss),0.8375,0.901,1335.0

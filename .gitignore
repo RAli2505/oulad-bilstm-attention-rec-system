@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.test-tmp/
+test-artifacts/
+.venv/
+data/oulad/raw/
+data/oulad/processed/
+data/oulad/splits/
+*.pt
+*.pth
+catboost_info/

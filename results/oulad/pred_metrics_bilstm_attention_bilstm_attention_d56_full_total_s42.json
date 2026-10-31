@@ -1,0 +1,36 @@
+{
+  "dropout_auc": 0.7011769697409785,
+  "c_index": 0.6848547188325158,
+  "brier": 0.21234340965747833,
+  "pr_auc": 0.5200609337821736,
+  "ece": 0.05298847374150731,
+  "mce": 0.3296925010596825,
+  "precision_top_5pct": 0.3553008595988539,
+  "recall_top_5pct": 0.0924683072334079,
+  "precision_top_10pct": 0.3472022955523673,
+  "recall_top_10pct": 0.18046234153616703,
+  "precision_top_20pct": 0.3235294117647059,
+  "recall_top_20pct": 0.33631618195376584,
+  "n_intervention_eligible": 6968,
+  "n_excluded_pre_cutoff": 1728,
+  "calibration_method": "isotonic",
+  "calibration_brier_monitor": {
+    "raw": 0.1895948052406311,
+    "platt": 0.19014562324934295,
+    "isotonic": 0.18408285081386566
+  },
+  "calibration_brier": {
+    "raw": 0.20848307013511658,
+    "platt": 0.207080282311192,
+    "isotonic": 0.21234340965747833
+  },
+  "architecture": "bilstm_attention",
+  "observation_days": 56,
+  "static_mode": "full",
+  "sequence_mode": "total",
+  "seed": 42,
+  "n_train": 6893,
+  "n_test": 8696,
+  "n_pos": 2381,
+  "n_static": 48
+}

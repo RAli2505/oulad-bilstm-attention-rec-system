@@ -1,0 +1,27 @@
+{
+  "dropout_auc": 0.8749748614054925,
+  "c_index": 0.8493355208264863,
+  "brier": 0.12910403311252594,
+  "pr_auc": 0.8349786778144931,
+  "ece": 0.022824378141070086,
+  "mce": 0.08583873369663059,
+  "precision_top_5pct": 0.9313984168865436,
+  "recall_top_5pct": 0.18111852231913803,
+  "precision_top_10pct": 0.8047493403693932,
+  "recall_top_10pct": 0.31298101590559263,
+  "precision_top_20pct": 0.6563324538258575,
+  "recall_top_20pct": 0.5105182144689584,
+  "n_intervention_eligible": 7576,
+  "n_excluded_pre_cutoff": 1120,
+  "calibration_method": "raw",
+  "calibration_brier": {
+    "raw": 0.12910403311252594,
+    "platt": 0.13209914654859936,
+    "isotonic": 0.13043701648712158
+  },
+  "architecture": "bilstm_attention",
+  "n_train": 6893,
+  "n_test": 8696,
+  "n_pos": 2381,
+  "n_static": 48
+}

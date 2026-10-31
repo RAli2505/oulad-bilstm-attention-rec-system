@@ -1,0 +1,8 @@
+Model,ROC-AUC (mean ± std),Weighted F1 (mean ± std)
+Logistic Regression,0.8960 ± 0.0023,0.8425 ± 0.0045
+Random Forest,0.9293 ± 0.0042,0.8701 ± 0.0042
+SVM,0.9093 ± 0.0016,0.8646 ± 0.0044
+XGBoost,0.9263 ± 0.0039,0.8698 ± 0.0046
+LightGBM,0.9323 ± 0.0044,0.8738 ± 0.0042
+MLP,0.9070 ± 0.0030,0.8571 ± 0.0051
+Proposed Hybrid,0.9576 ± 0.0035,0.9039 ± 0.0071

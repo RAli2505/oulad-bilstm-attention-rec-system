@@ -1,0 +1,32 @@
+{
+  "dropout_auc": 0.868377677727185,
+  "c_index": 0.8478198498126656,
+  "brier": 0.1319972723722458,
+  "pr_auc": 0.8069424402673863,
+  "ece": 0.039083803044164055,
+  "mce": 0.16292778849601752,
+  "precision_top_5pct": 0.9340369393139841,
+  "recall_top_5pct": 0.18163160595177014,
+  "precision_top_10pct": 0.8113456464379947,
+  "recall_top_10pct": 0.3155464340687532,
+  "precision_top_20pct": 0.6576517150395779,
+  "recall_top_20pct": 0.5115443817342227,
+  "n_intervention_eligible": 7576,
+  "n_excluded_pre_cutoff": 1120,
+  "calibration_method": "isotonic",
+  "calibration_brier_monitor": {
+    "raw": 0.1241658553481102,
+    "platt": 0.11562254989786389,
+    "isotonic": 0.11015164107084274
+  },
+  "calibration_brier": {
+    "raw": 0.13545282185077667,
+    "platt": 0.13177329233355958,
+    "isotonic": 0.1319972723722458
+  },
+  "architecture": "tcn_bilstm_attention",
+  "n_train": 6893,
+  "n_test": 8696,
+  "n_pos": 2381,
+  "n_static": 48
+}
