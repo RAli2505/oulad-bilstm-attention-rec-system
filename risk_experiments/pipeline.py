@@ -177,11 +177,11 @@ def run_window(target, daily, assess, config, output: Path, signature: str, prep
                 if complete:
                     pred = dict(np.load(directory / 'predictions.npz'))
                     report = json.loads((directory / 'training.json').read_text())
-                    print(f'Day {window.days} fold {fold} seed {seed} {name}: reuse', flush=True)
+                    print(f'Day {window.days} train/validation seed {seed} {name}: reuse', flush=True)
                 else:
                     directory.mkdir(parents=True, exist_ok=True)
                     write_json(status_path, {'status': 'running', 'signature': signature})
-                    print(f'Day {window.days} fold {fold} seed {seed} {name}: training', flush=True)
+                    print(f'Day {window.days} train/validation seed {seed} {name}: training', flush=True)
                     if improved and name in ENSEMBLES:
                         pred, report = fit_ensemble(name, fold_predictions, partitions[1]['y'],
                                                    calibration_partition['y'], partitions[2]['y'], directory)

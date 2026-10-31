@@ -44,6 +44,50 @@ def configure_utf8_output():
             stream.reconfigure(encoding='utf-8', errors='backslashreplace')
 
 
+def logging_only_resume_compatible(previous, identity, output):
+    """Accept only this display-only patch; preserve numerical source guards."""
+    import ast
+    for key in ('data_sha256', 'versions'):
+        if previous[key] != identity[key]:
+            return False
+    strip_seeds = lambda c: {k: v for k, v in c.items() if k != 'seeds'}
+    if strip_seeds(previous['config']) != strip_seeds(identity['config']):
+        return False
+    if set(previous['source_sha256']) != set(identity['source_sha256']):
+        return False
+
+    def canonical(source):
+        for state in ('reuse', 'training'):
+            source = source.replace(
+                "f'Day {window.days} train/validation seed {seed} {name}: " + state + "'",
+                "f'Day {window.days} fold {fold} seed {seed} {name}: " + state + "'")
+        tree = ast.parse(source)
+        tree.body = [n for n in tree.body if not (isinstance(n, ast.FunctionDef) and n.name == 'logging_only_resume_compatible')]
+        class MetadataHistory(ast.NodeTransformer):
+            def visit_If(self, node):
+                if ast.unparse(node.test) == 'destination.exists() and sha256(destination) != sources[relative]':
+                    return None
+                return self.generic_visit(node)
+        tree = MetadataHistory().visit(tree)
+        for node in ast.walk(tree):
+            if isinstance(node, ast.If) and ast.unparse(node.test) == "previous['signature'] != signature":
+                node.body = [ast.Pass()]
+        return ast.dump(tree, include_attributes=False)
+
+    for relative, digest in identity['source_sha256'].items():
+        if digest == previous['source_sha256'][relative]:
+            continue
+        if relative.replace('\\', '/') not in ('run_risk_article.py', 'risk_experiments/pipeline.py'):
+            return False
+        saved = output / 'source' / relative
+        current = Path(__file__).resolve().parent / relative
+        if not saved.is_file() or not current.is_file():
+            return False
+        if canonical(saved.read_text(encoding='utf-8')) != canonical(current.read_text(encoding='utf-8')):
+            return False
+    return True
+
+
 def main():
     configure_utf8_output()
     parser = argparse.ArgumentParser(description=__doc__)
@@ -152,7 +196,10 @@ def main():
     if resume:
         previous = json.loads((output / 'run_manifest.json').read_text())
         if previous['signature'] != signature:
-            raise ValueError('Cannot resume: code, data, packages, device or experiment settings differ. Use the original flags.')
+            if logging_only_resume_compatible(previous, identity, output):
+                signature = previous['signature']
+            else:
+                raise ValueError('Cannot resume: code, data, packages, device or experiment settings differ. Use the original flags.')
         if not set(previous['config']['seeds']).issubset(config['seeds']):
             raise ValueError('Keep completed seeds in --seeds when appending new seeds')
     else:
@@ -160,6 +207,10 @@ def main():
     for relative in sources:
         destination = output / 'source' / relative
         destination.parent.mkdir(parents=True, exist_ok=True)
+        if destination.exists() and sha256(destination) != sources[relative]:
+            history = output / 'source_history' / sha256(destination) / relative
+            history.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(destination, history)
         shutil.copy2(root / relative, destination)
     shutil.copy2(root / ('docs/IMPROVED_PROTOCOL_RU.md' if args.improved else 'docs/RISK_ARTICLE_PROTOCOL_RU.md'), output / 'protocol.md')
     environment = {'python': sys.version, 'platform': platform.platform(), 'processor': platform.processor(),

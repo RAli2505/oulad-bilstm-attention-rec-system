@@ -181,3 +181,26 @@ def test_windows_output_uses_utf8_for_cyrillic_paths(monkeypatch):
     assert output.getvalue() == path.encode('utf-8')
     assert log.getvalue() == path
     assert error_console.encoding == 'utf-8'
+
+
+def test_resume_accepts_only_display_label_change(tmp_path, monkeypatch):
+    import hashlib
+    import run_risk_article as runner
+    relative = 'risk_experiments/pipeline.py'
+    old = "limit = 56\nprint(f'Day {window.days} fold {fold} seed {seed} {name}: training')\n"
+    new = old.replace('fold {fold}', 'train/validation')
+    saved = tmp_path / 'run/source' / relative
+    current = tmp_path / 'code' / relative
+    saved.parent.mkdir(parents=True)
+    current.parent.mkdir(parents=True)
+    saved.write_text(old, encoding='utf-8')
+    current.write_text(new, encoding='utf-8')
+    monkeypatch.setattr(runner, '__file__', str(tmp_path / 'code/run_risk_article.py'))
+    digest = lambda s: hashlib.sha256(s.encode()).hexdigest()
+    previous = {'config': {'seeds': [42], 'epochs': 100}, 'data_sha256': {}, 'versions': {},
+                'source_sha256': {relative: digest(old)}}
+    identity = {**previous, 'source_sha256': {relative: digest(new)}}
+    assert runner.logging_only_resume_compatible(previous, identity, tmp_path / 'run')
+    current.write_text(new.replace('56', '57'), encoding='utf-8')
+    identity['source_sha256'][relative] = digest(current.read_text())
+    assert not runner.logging_only_resume_compatible(previous, identity, tmp_path / 'run')
