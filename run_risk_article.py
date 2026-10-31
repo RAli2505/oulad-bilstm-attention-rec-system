@@ -91,7 +91,7 @@ def logging_only_resume_compatible(previous, identity, output):
 def main():
     configure_utf8_output()
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--windows', type=int, nargs='+', default=[7, 14, 28, 56, 84, 112, 140, 168])
+    parser.add_argument('--windows', type=int, nargs='+', default=list(range(7, 169, 7)))
     parser.add_argument('--primary-day', type=int, default=56)
     parser.add_argument('--seeds', type=int, nargs='+', default=[42])
     parser.add_argument('--epochs', type=int, default=100)
