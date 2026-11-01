@@ -28,6 +28,8 @@ def build_parser():
     parser.add_argument('--permutations', type=int, default=1000)
     parser.add_argument('--horizon', type=int, default=7)
     parser.add_argument('--ks', type=int, nargs='+', default=[5, 10, 20])
+    parser.add_argument('--feature-engine', choices=['batched', 'reference'], default='batched')
+    parser.add_argument('--feature-batch-size', type=int, default=256, help='Memory batch, not a sample; all queries/candidates are retained')
     parser.add_argument('--output', type=Path)
     parser.add_argument('--risk-run', type=Path, help='Skip forecast training and read this completed source run')
     parser.add_argument('--resume-risk', type=Path, help='Resume forecast training with matching original settings')
@@ -138,7 +140,7 @@ def main(argv=None):
     if len(set(args.seeds)) != len(args.seeds) or not args.seeds or min(args.ks) < 1 or 10 not in args.ks:
         parser.error('Use unique seeds and positive K including 10')
     if min(args.threads, args.epochs, args.patience, args.batch_size, args.tuning_trials,
-           args.screen_epochs, args.bootstrap, args.permutations, args.horizon) < 1:
+           args.screen_epochs, args.bootstrap, args.permutations, args.horizon, args.feature_batch_size) < 1:
         parser.error('All numeric budgets must be positive')
     if args.max_learners is not None and args.max_learners < 1:
         parser.error('--max-learners must be positive')
@@ -190,7 +192,8 @@ def main(argv=None):
         write_json(output / 'system_manifest.json', state)
         recommendations = run_recommendations(risk_run, output / 'recommendations', args.windows, args.seeds,
                           horizon=args.horizon, ks=tuple(args.ks), bootstrap=args.bootstrap,
-                          threads=args.threads, max_learners=args.max_learners, methods=['hybrid_risk'])
+                          threads=args.threads, max_learners=args.max_learners, methods=['hybrid_risk'],
+                          feature_engine=args.feature_engine, feature_batch_size=args.feature_batch_size)
         state.update(status='completed', recommendations=str(recommendations))
     except BaseException as exc:
         state.update(status='failed', error=repr(exc))

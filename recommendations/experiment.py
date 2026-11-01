@@ -108,7 +108,18 @@ def reconstructed_risk(day_dir, seed, indices):
     return result, {r: expit(scores[r]) for r in ROLES}, config
 
 
-def make_candidates(resources, events, frame, indices, day, horizon, courses, max_learners=None, include_no_decay=True):
+def make_candidates(resources, events, frame, indices, day, horizon, courses, max_learners=None, include_no_decay=True,
+                    feature_engine='batched', feature_batch_size=256, progress=False):
+    if feature_engine == 'batched':
+        from .batch_features import make_candidates_batched
+        return make_candidates_batched(resources, events, frame, indices, day, horizon, courses,
+                                       max_learners, include_no_decay, feature_batch_size, progress)
+    if feature_engine != 'reference':
+        raise ValueError('Unknown feature engine')
+    return make_candidates_reference(resources, events, frame, indices, day, horizon, courses, max_learners, include_no_decay)
+
+
+def make_candidates_reference(resources, events, frame, indices, day, horizon, courses, max_learners=None, include_no_decay=True):
     """One shared candidate universe and label vector for every method/seed."""
     event_groups = events.groupby(ENROLLMENT, sort=False).indices
     catalog_groups = {key: group for key, group in resources.groupby(['code_module', 'code_presentation'], sort=False)}
@@ -303,12 +314,15 @@ def evaluate_method(name, score, probability, data, queries, ks, repeats, seed, 
     return summary, row_frame
 
 
-def run_recommendations(risk_run, output, windows, seeds, *, horizon=7, ks=(5, 10, 20), bootstrap=1000, threads=6, max_learners=None, raw=None, methods=None):
+def run_recommendations(risk_run, output, windows, seeds, *, horizon=7, ks=(5, 10, 20), bootstrap=1000, threads=6, max_learners=None, raw=None, methods=None,
+                        feature_engine='batched', feature_batch_size=256):
     risk_run, output = Path(risk_run).resolve(), Path(output).resolve()
     methods = list(METHODS) if methods is None else list(methods)
     if not methods or len(methods) != len(set(methods)) or set(methods) - set(METHODS):
         raise ValueError('Select unique known recommendation methods')
     has_contrast = {'hybrid_risk', 'hybrid_no_risk'}.issubset(methods)
+    if feature_engine not in ['batched', 'reference'] or feature_batch_size < 1:
+        raise ValueError('Use batched/reference feature engine and positive batch size')
     manifest = json.loads((risk_run / 'run_manifest.json').read_text(encoding='utf-8'))
     if manifest.get('status') != 'completed':
         raise ValueError('Source forecast run must be completed')
@@ -334,6 +348,7 @@ def run_recommendations(risk_run, output, windows, seeds, *, horizon=7, ks=(5, 1
               'pilot_not_for_publication': max_learners is not None, 'external_test_used': False,
               'primary_day': 56, 'primary_metric': 'NDCG@10',
               'methods': methods, 'primary_contrast': 'hybrid_risk minus hybrid_no_risk' if has_contrast else None,
+              'feature_engine': feature_engine, 'feature_batch_size': feature_batch_size,
               'source_manifest_sha256': sha256(risk_run / 'run_manifest.json'),
               'raw_source': str(raw), 'verified_raw_sha256': verified_raw,
               'source_code_sha256': {str(p.relative_to(root)): sha256(p) for p in [*Path(__file__).parent.glob('*.py'), root / 'run_system_experiment.py']},
@@ -355,14 +370,19 @@ def run_recommendations(risk_run, output, windows, seeds, *, horizon=7, ks=(5, 1
                 frame, indices = source_splits(day_dir)
                 with ResourceMonitor() as features_monitor:
                     data, queries, splits, latency = make_candidates(resources, events, frame, indices, day, horizon, courses,
-                                                                      max_learners, include_no_decay='no_decay' in methods)
+                                                                      max_learners, include_no_decay='no_decay' in methods,
+                                                                      feature_engine=feature_engine, feature_batch_size=feature_batch_size, progress=True)
                 if not len(data) or any(not (queries.role == role).any() for role in ROLES):
                     raise ValueError('Each split needs eligible recommendation queries')
                 data.to_parquet(destination / 'candidate_features_and_labels.parquet', index=False)
                 queries.to_csv(destination / 'queries.csv', index=False)
                 splits.to_csv(destination / 'split_membership.csv', index=False)
                 write_json(destination / 'feature_runtime.json', {**features_monitor.result,
-                           'query_latency_p50': float(np.quantile(latency, .5)), 'query_latency_p95': float(np.quantile(latency, .95)),
+                           'query_latency_p50': float(np.quantile(latency, .5)) if latency else None,
+                           'query_latency_p95': float(np.quantile(latency, .95)) if latency else None,
+                           'amortized_seconds_per_query': features_monitor.result['wall_seconds'] / len(queries),
+                           'feature_engine': feature_engine, 'feature_batch_size': feature_batch_size,
+                           'independent_per_query_feature_latencies_measured': bool(latency),
                            'n_queries': len(queries), 'n_candidate_pairs': len(data), 'future_horizon': horizon})
                 roles = data['query'].map(queries.set_index('query').role).to_numpy()
                 x = data[FEATURES].to_numpy(dtype=float)
