@@ -16,7 +16,7 @@ WINDOWS = [7, 14, 21, 28, 56, 84, 112, 140, 168]
 def build_parser():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--windows', type=int, nargs='+', default=WINDOWS.copy())
-    parser.add_argument('--seeds', type=int, nargs='+', default=[42, 13, 7, 23, 101])
+    parser.add_argument('--seeds', type=int, nargs='+', default=[42])
     parser.add_argument('--threads', type=int, default=min(6, os.cpu_count() or 1))
     parser.add_argument('--device', choices=['auto', 'cpu', 'cuda'], default='auto')
     parser.add_argument('--epochs', type=int, default=100)
@@ -38,7 +38,7 @@ def build_parser():
 
 def risk_command(args):
     root = Path(__file__).resolve().parent
-    command = [sys.executable, '-X', 'utf8', '-u', str(root / 'run_improved_article.py'), '--improved',
+    command = [sys.executable, '-X', 'utf8', '-u', str(root / 'run_improved_article.py'), '--improved', '--system-only',
                '--windows', *map(str, args.windows), '--seeds', *map(str, args.seeds),
                '--threads', str(args.threads), '--device', args.device, '--epochs', str(args.epochs),
                '--patience', str(args.patience), '--batch-size', str(args.batch_size),
@@ -110,7 +110,7 @@ def main(argv=None):
         write_json(output / 'system_manifest.json', state)
         recommendations = run_recommendations(risk_run, output / 'recommendations', args.windows, args.seeds,
                           horizon=args.horizon, ks=tuple(args.ks), bootstrap=args.bootstrap,
-                          threads=args.threads, max_learners=args.max_learners)
+                          threads=args.threads, max_learners=args.max_learners, methods=['hybrid_risk'])
         state.update(status='completed', recommendations=str(recommendations))
     except BaseException as exc:
         state.update(status='failed', error=repr(exc))

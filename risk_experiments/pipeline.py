@@ -261,7 +261,7 @@ def run_window(target, daily, assess, config, output: Path, signature: str, prep
             ci = bootstrap_auc(window.y[ids], p, window.groups[ids], config['bootstrap'])
             all_summary.append({'split': split_name, 'model': name, **result,
                                 'roc_auc_ci_low': ci[0], 'roc_auc_ci_high': ci[1]})
-            if name != 'proposed':
+            if name != 'proposed' and not config.get('system_only', False):
                 ci_delta = bootstrap_auc(window.y[ids], means['proposed'], window.groups[ids],
                                          config['bootstrap'], comparator=p)
                 comparison = {'split': split_name, 'reference': name,
@@ -283,7 +283,9 @@ def run_window(target, daily, assess, config, output: Path, signature: str, prep
     write_json(output / 'selection_on_development.json', {
         'criterion': 'fixed validation ROC-AUC' if holdout else 'pooled OOF ROC-AUC, averaged across predeclared seeds',
         'ranking': sorted([r for r in all_summary if r['split'] == validation_split], key=lambda r: r['roc_auc'], reverse=True),
-        'note': 'Descriptive development ranking; the primary proposed-vs-no_cox contrast remains predeclared regardless of rank.'})
+        'note': ('System-only component diagnostics; no validation-based choice between systems and no ablation contrast.'
+                 if config.get('system_only', False) else
+                 'Descriptive development ranking; the primary proposed-vs-no_cox contrast remains predeclared regardless of rank.')})
     write_json(output / 'status.json', {'status': 'completed', 'signature': signature})
 
 

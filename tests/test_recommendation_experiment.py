@@ -64,9 +64,15 @@ def test_experiment_config_is_validation_only_and_exact_windows():
     command = risk_command(args)
     assert args.windows == [7, 14, 21, 28, 56, 84, 112, 140, 168]
     assert '--improved' in command
+    assert '--system-only' in command
     assert '--score-policy' in command
     assert '--test' not in command
-    assert args.seeds == [42, 13, 7, 23, 101]
+    assert args.seeds == [42]
+
+
+def test_system_forecast_scope_is_only_three_components_and_one_ensemble():
+    from run_risk_article import system_model_names
+    assert system_model_names() == ['proposed', 'lstm', 'lightgbm', 'ensemble_lstm_attention_lgbm_weighted']
 
 
 def test_probability_validation_rejects_nonfinite_and_out_of_range():
@@ -172,10 +178,16 @@ def test_complete_experiment_on_small_fixture(tmp_path):
         'split_scheme': 'holdout', 'seeds': [42], 'windows': [14]}, 'status': 'completed',
         'data_sha256': {name: sha256(raw / name) for name in ['vle.csv', 'courses.csv', 'studentVle.csv']}}), encoding='utf-8')
     baseline = sha256(model / 'predictions.npz')
-    run_recommendations(source, output, [14], [42], raw=raw, bootstrap=10, threads=1)
+    run_recommendations(source, output, [14], [42], raw=raw, bootstrap=10, threads=1, methods=['hybrid_risk'])
     assert json.loads((output / 'manifest.json').read_text(encoding='utf-8'))['status'] == 'completed'
     summary = pd.read_csv(output / 'ranking_summary.csv')
     assert {'precision', 'recall', 'ndcg', 'map', 'mrr'} <= set(summary)
+    assert set(summary.method) == {'hybrid_risk'}
+    assert not list(output.glob('day_*/seed_*/learned*'))
+    config = json.loads((output / 'manifest.json').read_text(encoding='utf-8'))
+    assert config['primary_contrast'] is None
+    weights = pd.read_csv(output / 'day_14/seed_42/hybrid_weights.csv')
+    np.testing.assert_allclose(weights[['preference_weight', 'calendar_weight', 'engagement_weight']].sum(axis=1), 1.)
     endpoints = pd.read_csv(output / 'course_outcome_metrics.csv')
     assert set(endpoints.endpoint) == {'risk', 'success'}
     assert {'pr_auc', 'precision', 'recall', 'f1', 'brier'} <= set(endpoints)

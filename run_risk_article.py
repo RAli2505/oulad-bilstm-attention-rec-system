@@ -88,6 +88,11 @@ def logging_only_resume_compatible(previous, identity, output):
     return True
 
 
+def system_model_names():
+    """Only the deployed risk system; no comparative models or ablations."""
+    return ['proposed', 'lstm', 'lightgbm', 'ensemble_lstm_attention_lgbm_weighted']
+
+
 def main():
     configure_utf8_output()
     parser = argparse.ArgumentParser(description=__doc__)
@@ -110,11 +115,14 @@ def main():
     parser.add_argument('--prepare-only', action='store_true')
     parser.add_argument('--check', action='store_true')
     parser.add_argument('--improved', action='store_true', help='Rich features, inner-only tuning and four ensemble variants')
+    parser.add_argument('--system-only', action='store_true', help='Only LSTM, BiLSTM Attention, LightGBM and their weighted ensemble')
     parser.add_argument('--basic-features', action='store_true', help='Feature ablation: tune the original features with the same inner protocol')
     parser.add_argument('--tuning-trials', type=int, default=4)
     parser.add_argument('--screen-epochs', type=int, default=15)
     parser.add_argument('--smoke', action='store_true', help='Synthetic data, one epoch, selected evaluation scheme; not for publication')
     args = parser.parse_args()
+    if args.system_only and not args.improved:
+        parser.error('--system-only requires --improved')
     if not 1 <= args.tuning_trials <= 6 or args.screen_epochs < 1:
         parser.error('Use 1..6 tuning trials and positive screening epochs')
     if (min(args.windows) < 1 or args.epochs < 1 or args.patience < 1 or args.batch_size < 2 or
@@ -176,7 +184,8 @@ def main():
               'improved': args.improved, 'feature_profile': 'rich' if args.improved and not args.basic_features else 'basic',
               'tuning_trials': min(2, args.tuning_trials) if args.smoke else args.tuning_trials,
               'screen_epochs': 1 if args.smoke else args.screen_epochs,
-              'models': list(MODELS) + list(ENSEMBLES) if args.improved else list(MODELS),
+              'models': system_model_names() if args.system_only else list(MODELS) + list(ENSEMBLES) if args.improved else list(MODELS),
+              'system_only': args.system_only,
               'protocol': 'oulad_risk_nested_tuning_v2' if args.improved else 'oulad_landmark_composite_risk_bce_cox_v1'}
     print(f"Device: {torch.cuda.get_device_name(0) if device == 'cuda' else 'CPU'}", flush=True)
     print(f"{len(config['models'])} methods; windows {config['windows']}; {config['split_scheme']}; seeds {config['seeds']}; FP32.", flush=True)
@@ -220,7 +229,8 @@ def main():
     write_json(output / 'environment.json', environment)
     manifest = {**identity, 'signature': signature, 'status': 'running', 'command': sys.argv,
                 'output': str(output), 'started_utc': datetime.now(timezone.utc).isoformat(),
-                'primary_contrast': 'proposed vs no_cox on 2013 validation; external 2014 test disabled',
+                'primary_contrast': ('system-only descriptive ensemble validation; no comparator trained; external 2014 test disabled'
+                                     if args.system_only else 'proposed vs no_cox on 2013 validation; external 2014 test disabled'),
                 'score_availability_assumption': 'Scores omitted in primary analysis. Optional proxy=max(submission_date, due_date)+score_lag; not an observed release timestamp.',
                 'cox_objective': 'minibatch partial likelihood, Breslow ties, lambda=cox_weight; event=withdrawal only',
                 'selection': ('inner-only screening/refinement, matched ablations, separate calibration; outer held never selects settings'
@@ -230,7 +240,9 @@ def main():
         '# OULAD BCE + Cox experiment\n\n'
         'Primary endpoint: Fail + Withdrawn vs Pass + Distinction. Survival event: withdrawal.\n\n'
         'Learner-disjoint 2013 training/validation only. External 2014 test disabled. '
-        'Primary contrast: proposed vs no_cox at the predeclared primary day. '
+        + ('System-only evaluation at the predeclared primary day; no comparator or ablation trained. '
+           if args.system_only else 'Primary contrast: proposed vs no_cox at the predeclared primary day. ')
+        +
         'Numerical assessment scores are omitted unless an availability proxy was explicitly requested.\n\n'
         'Resolved settings:\n\n```json\n' + json.dumps(config, indent=2) + '\n```\n\n'
         'See run_manifest.json, environment.json, source/, day_*/cohort_audit.json, '

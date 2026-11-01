@@ -44,3 +44,14 @@
 - Final full suite: 101 passed, 15 joblib/NumPy deprecation warnings, PYTEST_EXIT_CODE=0. The outer command again reported exit 1 after test completion; this process-exit discrepancy is recorded rather than presented as a clean shell exit. The session-only normal-permission tmp_path fixture was used as in the earlier recommendation implementation; existing test code was not changed for that workaround.
 - Final real pilot after the exact-fit popularity fix completed at test-artifacts/recommendation-metrics-final-pilot-585e103dc38a4d55bf2809744512acfd: day56, seed42, maximum 12 learners per split, bootstrap25. Artifacts and outcome/recommendation reports generated successfully; this is not an estimate of full-cohort recommendation quality.
 - Protected forecast/data/archive paths have an empty diff against 56d0a9f. All full-retraining work remains unlaunched; the user requested the command.
+
+## User revision: system only, seed42, nine windows including day21
+
+- User excluded the 18-model comparative study. The wrapper now always requests --system-only, with proposed/BiLSTM Attention, LSTM, LightGBM and exactly one weighted ensemble. Core architectures, objectives, feature transforms, inner search and calibration were not changed.
+- Default seed is now 42; windows are 7/14/21/28/56/84/112/140/168.
+- Recommendation evaluation selects only hybrid_risk. No comparative rankers or ablations train, no missing-baseline contrast is computed, and the unnecessary no_decay profile is skipped.
+- Preference profiles update analytically from observed histories; the working ranking rule remains fixed. Only its independent interaction-probability calibration is fitted. Do not describe this as training a new recommendation neural network or validating a separate component's contribution.
+- Per-query hybrid_weights.csv records the actual preference/calendar/engagement weights and original forecast.
+- RED tests verified missing mode, incorrect scope/default seed and absent weight export; GREEN final suite: 102 passed, 15 dependency deprecation warnings, printed PYTEST_EXIT_CODE=0. Outer wrapper still reported exit1; same documented environment discrepancy.
+- Non-training preflight printed 4 methods (three components plus their ensemble), exact nine windows, seed42, CUDA auto/FP32. No full experiment or real model training launched.
+- Independent read-only review found no substantive scope or runtime-safety issue. No source models, raw data, archived predictions or results were overwritten.

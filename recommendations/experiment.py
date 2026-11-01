@@ -108,7 +108,7 @@ def reconstructed_risk(day_dir, seed, indices):
     return result, {r: expit(scores[r]) for r in ROLES}, config
 
 
-def make_candidates(resources, events, frame, indices, day, horizon, courses, max_learners=None):
+def make_candidates(resources, events, frame, indices, day, horizon, courses, max_learners=None, include_no_decay=True):
     """One shared candidate universe and label vector for every method/seed."""
     event_groups = events.groupby(ENROLLMENT, sort=False).indices
     catalog_groups = {key: group for key, group in resources.groupby(['code_module', 'code_presentation'], sort=False)}
@@ -137,7 +137,8 @@ def make_candidates(resources, events, frame, indices, day, horizon, courses, ma
             started = time.perf_counter()
             agent = RecommendationAgent(catalog, observed)
             snapshot = agent.recommend(key, day, .5, n=1, include_candidates=True)
-            static = PreferenceModel(half_life_days=1e12).profile(observed, catalog, key, day)
+            static = (PreferenceModel(half_life_days=1e12).profile(observed, catalog, key, day)
+                      if include_no_decay else None)
             candidates = snapshot['candidates']
             future = set(observed.loc[(observed.date >= day) & (observed.date < day + horizon) & (observed.sum_click > 0), 'id_site'].astype(int))
             eligible = {c['item_id'] for c in candidates}
@@ -151,7 +152,7 @@ def make_candidates(resources, events, frame, indices, day, horizon, courses, ma
                 records.append({'query': query_id, 'item': item, 'kind': candidate['activity_type'],
                                 'label': int(item in available_truth), **signals,
                                 'popularity': popularity, 'confidence': snapshot['profile']['confidence'],
-                                'no_decay': static['preferences'].get(candidate['activity_type'], 0.)})
+                                'no_decay': static['preferences'].get(candidate['activity_type'], 0.) if static else signals['preference']})
             queries.append({'query': query_id, **dict(zip(ENROLLMENT, key)), 'role': role,
                             'forecast_position': int(row.forecast_position), 'start': offset, 'stop': len(records),
                             'n_future_all': len(future), 'n_relevant': len(available_truth),
@@ -302,8 +303,12 @@ def evaluate_method(name, score, probability, data, queries, ks, repeats, seed, 
     return summary, row_frame
 
 
-def run_recommendations(risk_run, output, windows, seeds, *, horizon=7, ks=(5, 10, 20), bootstrap=1000, threads=6, max_learners=None, raw=None):
+def run_recommendations(risk_run, output, windows, seeds, *, horizon=7, ks=(5, 10, 20), bootstrap=1000, threads=6, max_learners=None, raw=None, methods=None):
     risk_run, output = Path(risk_run).resolve(), Path(output).resolve()
+    methods = list(METHODS) if methods is None else list(methods)
+    if not methods or len(methods) != len(set(methods)) or set(methods) - set(METHODS):
+        raise ValueError('Select unique known recommendation methods')
+    has_contrast = {'hybrid_risk', 'hybrid_no_risk'}.issubset(methods)
     manifest = json.loads((risk_run / 'run_manifest.json').read_text(encoding='utf-8'))
     if manifest.get('status') != 'completed':
         raise ValueError('Source forecast run must be completed')
@@ -327,7 +332,8 @@ def run_recommendations(risk_run, output, windows, seeds, *, horizon=7, ks=(5, 1
     config = {'risk_source': str(risk_run), 'windows': windows, 'seeds': seeds, 'horizon': horizon,
               'ks': list(ks), 'bootstrap': bootstrap, 'threads': threads, 'max_learners_per_split': max_learners,
               'pilot_not_for_publication': max_learners is not None, 'external_test_used': False,
-              'primary_day': 56, 'primary_metric': 'NDCG@10', 'primary_contrast': 'hybrid_risk minus hybrid_no_risk',
+              'primary_day': 56, 'primary_metric': 'NDCG@10',
+              'methods': methods, 'primary_contrast': 'hybrid_risk minus hybrid_no_risk' if has_contrast else None,
               'source_manifest_sha256': sha256(risk_run / 'run_manifest.json'),
               'raw_source': str(raw), 'verified_raw_sha256': verified_raw,
               'source_code_sha256': {str(p.relative_to(root)): sha256(p) for p in [*Path(__file__).parent.glob('*.py'), root / 'run_system_experiment.py']},
@@ -348,7 +354,8 @@ def run_recommendations(risk_run, output, windows, seeds, *, horizon=7, ks=(5, 1
                 destination.mkdir()
                 frame, indices = source_splits(day_dir)
                 with ResourceMonitor() as features_monitor:
-                    data, queries, splits, latency = make_candidates(resources, events, frame, indices, day, horizon, courses, max_learners)
+                    data, queries, splits, latency = make_candidates(resources, events, frame, indices, day, horizon, courses,
+                                                                      max_learners, include_no_decay='no_decay' in methods)
                 if not len(data) or any(not (queries.role == role).any() for role in ROLES):
                     raise ValueError('Each split needs eligible recommendation queries')
                 data.to_parquet(destination / 'candidate_features_and_labels.parquet', index=False)
@@ -373,6 +380,12 @@ def run_recommendations(risk_run, output, windows, seeds, *, horizon=7, ks=(5, 1
                                 _, bins = probability_metrics(target if endpoint == 'risk' else 1 - target, p if endpoint == 'risk' else 1 - p)
                                 bins_rows.extend({'task': 'course_outcome', 'day': day, 'seed': seed, 'role': role, 'endpoint': endpoint, 'stage': stage, **b} for b in bins)
                     query_risk = {q.query: risk[q.role][q.forecast_position] for q in queries.itertuples()}
+                    query_weights = queries[['query', *ENROLLMENT, 'role']].copy()
+                    query_weights['forecast_probability'] = query_weights['query'].map(query_risk)
+                    query_weights['preference_weight'] = .5
+                    query_weights['calendar_weight'] = .2 + .2 * query_weights.forecast_probability
+                    query_weights['engagement_weight'] = .3 - .2 * query_weights.forecast_probability
+                    query_weights.to_csv(seed_dir / 'hybrid_weights.csv', index=False)
                     r = data['query'].map(query_risk).to_numpy(dtype=float)
                     fixed = .5 * x[:, 0] + .3 * x[:, 1] + .2 * x[:, 2]
                     hybrid = .5 * x[:, 0] + (.2 + .2 * r) * x[:, 1] + (.3 - .2 * r) * x[:, 2]
@@ -380,7 +393,7 @@ def run_recommendations(risk_run, output, windows, seeds, *, horizon=7, ks=(5, 1
                               'no_decay': data.no_decay.to_numpy(), 'hybrid_no_risk': fixed,
                               'hybrid_risk': hybrid, 'hybrid_no_diversity': hybrid}
                     method_frames, saved_predictions = {}, {}
-                    for name in METHODS:
+                    for name in methods:
                         method_dir = seed_dir / name
                         method_dir.mkdir()
                         with ResourceMonitor() as method_monitor:
@@ -415,12 +428,13 @@ def run_recommendations(risk_run, output, windows, seeds, *, horizon=7, ks=(5, 1
                                                  'fit_minus_held': by_role['fit'][metric] - by_role['held'][metric],
                                                  'note': 'descriptive generalization gap; not an independent significance test'})
                     np.savez_compressed(seed_dir / 'candidate_predictions_held.npz', labels=y[roles == 'held'], **saved_predictions)
-                    a, b = [method_frames[m].loc[(method_frames[m].role == 'held') & (method_frames[m].k == 10)].set_index('query') for m in ['hybrid_risk', 'hybrid_no_risk']]
-                    delta = a.ndcg - b.ndcg
-                    write_json(seed_dir / 'paired_primary_contrast.json', {'contrast': 'hybrid_risk minus hybrid_no_risk',
-                               'metric': 'NDCG@10', 'day': day, 'primary_day': day == 56,
-                               **cluster_interval(delta.to_numpy(), a.id_student.to_numpy(), bootstrap, seed),
-                               'other_windows_exploratory': True})
+                    if has_contrast:
+                        a, b = [method_frames[m].loc[(method_frames[m].role == 'held') & (method_frames[m].k == 10)].set_index('query') for m in ['hybrid_risk', 'hybrid_no_risk']]
+                        delta = a.ndcg - b.ndcg
+                        write_json(seed_dir / 'paired_primary_contrast.json', {'contrast': 'hybrid_risk minus hybrid_no_risk',
+                                   'metric': 'NDCG@10', 'day': day, 'primary_day': day == 56,
+                                   **cluster_interval(delta.to_numpy(), a.id_student.to_numpy(), bootstrap, seed),
+                                   'other_windows_exploratory': True})
                     print(f'Recommendation day {day}, seed {seed}: complete', flush=True)
                 pd.DataFrame(all_summary).to_csv(output / 'ranking_summary.csv', index=False)
                 pd.DataFrame(risk_rows).to_csv(output / 'course_outcome_metrics.csv', index=False)
@@ -483,9 +497,11 @@ def write_report(output, summary, outcome):
         fig.tight_layout()
         fig.savefig(plots / f'course_{endpoint}.png', dpi=160)
         plt.close(fig)
+    config = json.loads((output / 'manifest.json').read_text(encoding='utf-8'))
     text = ['# OULAD: обучение и validation гибридной системы', '',
             'Test 2014 не использовался. Все результаты относятся к 2013 году.',
-            'Основная точка — 56 дней; основной рекомендательный контраст — hybrid_risk против hybrid_no_risk по NDCG@10.',
+            ('Основная точка — 56 дней; основной рекомендательный контраст — hybrid_risk против hybrid_no_risk по NDCG@10.'
+             if config['primary_contrast'] else 'Основная точка — 56 дней; оценивается только система, без сравнительных моделей и абляций.'),
             'Сводки по другим окнам и метрикам исследовательские; опубликованная validation уже просматривалась.', '',
             '## Прогноз завершения курса', '',
             'risk: Fail/Withdrawn; success: Pass/Distinction. Success probability = 1 − risk probability.',
@@ -507,7 +523,8 @@ def write_report(output, summary, outcome):
              '## Диагностика и артефакты', '',
              '- generalization_gaps.csv и forecast_generalization_gaps.csv: описательные train–selection/held разрывы.',
              '- recommendation_probability_metrics.csv, course_outcome_metrics.csv, reliability_bins.csv: калибровка, ошибки и матрицы ошибок.',
-             '- seed_*/METHOD/weights.json и inner_search.csv: веса обучаемых ранжировщиков, C, итерации, предупреждения сходимости.',
+             '- seed_*/hybrid_weights.csv: фактические веса предпочтений, календаря и поведения для каждого запроса.',
+             '- seed_*/METHOD/weights.json и inner_search.csv создаются только при отдельном запуске дополнительных обучаемых ранжировщиков.',
              '- original_ensemble_weights.json: исходные веса ансамбля; рекалибровка ансамбля не выполнялась.',
              '- candidate_features_and_labels.parquet, queries.csv, split_membership.csv: воспроизводимые кандидаты, метки и разбиения.',
              '- candidate_predictions_held.npz: полные кандидатные validation-прогнозы; порядок совпадает с held-строками общего feature-файла.',
@@ -519,6 +536,7 @@ def write_report(output, summary, outcome):
              'Ненаблюдавшийся клик — proxy negative, а не доказанная нерелевантность. Нет логов показов и рандомизированных вмешательств.',
              'Оценка не доказывает улучшение обучения. Веса выбираются только на selection, калибровка — только на calibration.',
              'CI по студентам описывают фиксированный запуск; устойчивость обучения по seed представлена отдельно в across_seeds.csv.',
-             'Основной risk-контраст и его CI находятся в paired_primary_contrast.json; остальные сравнения не являются подтверждающими тестами.',
+             ('Основной risk-контраст и его CI находятся в paired_primary_contrast.json; остальные сравнения не являются подтверждающими тестами.'
+              if config['primary_contrast'] else 'Сравнительные модели не запускались; парный контраст с отсутствующей базовой моделью не вычисляется.'),
              'Рекомендационные модели обучаются на CPU; GPU-память равна 0. Нейросетевые ресурсы измерены отдельным процессом прогнозирования.']
     (output / 'REPORT_RU.md').write_text('\n'.join(text) + '\n', encoding='utf-8')

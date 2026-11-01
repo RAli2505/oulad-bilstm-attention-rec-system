@@ -91,7 +91,10 @@ rtk proxy py -3.12 -m data.oulad_loader --data-dir data/oulad/raw --build
 [docs/RECOMMENDATIONS_RU.md](docs/RECOMMENDATIONS_RU.md).
 
 Полный новый запуск прогноза и оценки рекомендаций: `rtk proxy py -3.12 -X utf8 -u run_system_experiment.py`.
-Ровно девять окон 7/14/21/28/56/84/112/140/168, пять seed по умолчанию (для одного: `--seeds 42`), train/validation 2013;
+Ровно девять окон 7/14/21/28/56/84/112/140/168, один seed 42 по умолчанию, train/validation 2013;
 test 2014 отключён. Два исхода обучения (успех/неуспех), PR-AUC, Precision/Recall/F1,
-рекомендационные Precision/Recall/NDCG@5/10/20, абляции, независимая калибровка,
+рекомендационные Precision/Recall/NDCG@5/10/20, независимая калибровка,
 train gaps, веса, CI, время и память описаны в [протоколе полного эксперимента](docs/SYSTEM_EXPERIMENT_RU.md).
+Команда обучает только LSTM, BiLSTM Attention и LightGBM, подбирает веса
+их ансамбля и оценивает основной адаптивный рекомендательный модуль.
+Остальные сравнительные модели и абляции не запускаются.
