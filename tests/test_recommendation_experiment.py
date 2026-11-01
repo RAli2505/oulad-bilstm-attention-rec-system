@@ -75,6 +75,70 @@ def test_system_forecast_scope_is_only_three_components_and_one_ensemble():
     assert system_model_names() == ['proposed', 'lstm', 'lightgbm', 'ensemble_lstm_attention_lgbm_weighted']
 
 
+def test_native_exit_does_not_accept_incomplete_forecast(tmp_path):
+    import json
+    from run_system_experiment import build_parser, check_forecast_exit
+    args = build_parser().parse_args([])
+    (tmp_path / 'run_manifest.json').write_text(json.dumps({'status': 'running'}), encoding='utf-8')
+    with pytest.raises(RuntimeError, match='completed'):
+        check_forecast_exit(3221226505, tmp_path, args)
+    with pytest.raises(RuntimeError, match='3221225786'):
+        check_forecast_exit(3221225786, tmp_path, args)
+
+
+def completed_forecast_fixture(directory):
+    import json
+    import pandas as pd
+    from recommendations.experiment import sha256
+    from run_risk_article import system_model_names
+    from run_system_experiment import build_parser
+    args = build_parser().parse_args([])
+    config = {k: getattr(args, k) for k in ['windows', 'seeds', 'epochs', 'patience', 'batch_size',
+              'threads', 'tuning_trials', 'screen_epochs', 'bootstrap', 'permutations']}
+    config.update(models=system_model_names(), system_only=True, evaluate_test=False,
+                  split_scheme='holdout', synthetic=False, device='cuda', precision='FP32',
+                  deterministic=True, score_policy='omit', improved=True)
+    (directory / 'run_manifest.json').write_text(json.dumps({'status': 'completed', 'signature': 'sig', 'config': config}), encoding='utf-8')
+    for day in args.windows:
+        base = directory / f'day_{day}'
+        base.mkdir()
+        (base / 'status.json').write_text(json.dumps({'status': 'completed', 'signature': 'sig'}), encoding='utf-8')
+        pd.DataFrame([dict(id_student=i, code_module='AAA', code_presentation='2013J', target=i % 2) for i in range(4)]).to_csv(base / 'cohort_and_folds.csv', index=False)
+        fold = base / 'fold_1'
+        fold.mkdir()
+        np.savez_compressed(fold / 'indices.npz', fit=[0], validation=[1], calibration=[2], held=[3], external_test=np.array([], dtype=int))
+        pd.DataFrame({'model': config['models'], 'roc_auc': [.8] * 4}).to_csv(base / 'summary.csv', index=False)
+        pd.DataFrame({'id_student': [3], 'code_module': ['AAA'], 'code_presentation': ['2013J'], 'target': [1]}).to_csv(base / 'validation_2013_predictions.csv', index=False)
+        for model in config['models']:
+            job = fold / 'seed_42' / model
+            job.mkdir(parents=True)
+            np.savez_compressed(job / 'predictions.npz', held_probability=[.8], held_score=[1.], val_score=[1.], calibration_score=[1.], fit_score=[1.])
+            (job / 'training.json').write_text('{}', encoding='utf-8')
+            (job / 'calibration.joblib').write_bytes(b'fixture-calibration')
+            hashes = {name: sha256(job / name) for name in ['predictions.npz', 'training.json', 'calibration.joblib']}
+            (job / 'status.json').write_text(json.dumps({'status': 'completed', 'signature': 'sig', 'artifacts_sha256': hashes}), encoding='utf-8')
+    return args
+
+
+def test_verified_forecasts_survive_post_completion_native_exit(tmp_path):
+    from run_system_experiment import check_forecast_exit
+    args = completed_forecast_fixture(tmp_path)
+    result = check_forecast_exit(3221226505, tmp_path, args)
+    assert result['recovered_after_verified_completion'] is True
+    assert result['verified_model_jobs'] == 36
+    assert result['exit_code'] == 3221226505
+    assert result['warning']
+
+
+def test_native_exit_recovery_rejects_corrupted_checkpoint(tmp_path):
+    from run_system_experiment import check_forecast_exit
+    args = completed_forecast_fixture(tmp_path)
+    target = tmp_path / 'day_7/fold_1/seed_42/lstm/training.json'
+    target.write_text('{"corrupted": true}', encoding='utf-8')
+    with pytest.raises(RuntimeError, match='checksum'):
+        check_forecast_exit(3221226505, tmp_path, args)
+
+
 def test_probability_validation_rejects_nonfinite_and_out_of_range():
     from recommendations.experiment_metrics import probability_metrics
     for p in [[np.nan], [1.1], [-.1]]:

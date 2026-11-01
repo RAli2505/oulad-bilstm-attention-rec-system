@@ -52,6 +52,82 @@ def risk_command(args):
     return command
 
 
+def check_forecast_exit(code, risk_run, args):
+    """Recover only known native shutdown failure with fully verified outputs.
+
+    Exit 0xC0000409 is never treated as success on its own. A completed run,
+    matching configuration, every window/job, saved hashes and finite aligned
+    forecasts are required. Cancellation and other exit codes remain failures.
+    """
+    if code == 0:
+        return {'exit_code': 0, 'recovered_after_verified_completion': False}
+    if code & 0xFFFFFFFF != 0xC0000409:
+        raise RuntimeError(f'Forecast stage failed with exit {code}; see forecast_stage.log')
+    from recommendations.experiment import sha256, source_splits
+    from run_risk_article import system_model_names
+    import numpy as np
+    import pandas as pd
+    root = Path(risk_run).resolve()
+    manifest = json.loads((root / 'run_manifest.json').read_text(encoding='utf-8'))
+    if manifest.get('status') != 'completed':
+        raise RuntimeError('Native exit: forecast manifest is not completed; refusing recovery')
+    config = manifest['config']
+    expected = {name: getattr(args, name) for name in ['windows', 'seeds', 'threads', 'epochs', 'patience',
+                'batch_size', 'tuning_trials', 'screen_epochs', 'bootstrap', 'permutations']}
+    expected.update(models=system_model_names(), system_only=True, evaluate_test=False,
+                    split_scheme='holdout', synthetic=False, precision='FP32', deterministic=True,
+                    score_policy='omit', improved=True)
+    if args.device != 'auto':
+        expected['device'] = args.device
+    if any(config.get(name) != value for name, value in expected.items()):
+        raise RuntimeError('Native exit: forecast configuration differs from requested run; refusing recovery')
+    signature = manifest['signature']
+    verified_jobs, verified_files, verified_bytes = 0, 0, 0
+    for day in args.windows:
+        day_dir = root / f'day_{day}'
+        status = json.loads((day_dir / 'status.json').read_text(encoding='utf-8'))
+        if status.get('status') != 'completed' or status.get('signature') != signature:
+            raise RuntimeError(f'Native exit: day {day} is not completed')
+        frame, indices = source_splits(day_dir)
+        published = pd.read_csv(day_dir / 'validation_2013_predictions.csv')
+        keys = ['id_student', 'code_module', 'code_presentation', 'target']
+        if not published[keys].reset_index(drop=True).equals(frame.iloc[indices['held']][keys].reset_index(drop=True)):
+            raise RuntimeError(f'Native exit: day {day} validation identity mismatch')
+        summary = pd.read_csv(day_dir / 'summary.csv')
+        if len(summary) != len(config['models']) or set(summary.model) != set(config['models']):
+            raise RuntimeError(f'Native exit: day {day} summary is incomplete')
+        for seed in args.seeds:
+            for model in config['models']:
+                job = day_dir / f'fold_1/seed_{seed}' / model
+                record = json.loads((job / 'status.json').read_text(encoding='utf-8'))
+                hashes = record.get('artifacts_sha256', {})
+                required = {'predictions.npz', 'training.json', 'calibration.joblib'}
+                if record.get('status') != 'completed' or record.get('signature') != signature or not required.issubset(hashes):
+                    raise RuntimeError(f'Native exit: incomplete checkpoint {job}')
+                for relative, digest in hashes.items():
+                    artifact = (job / relative).resolve()
+                    if not artifact.is_relative_to(job.resolve()) or not artifact.is_file() or sha256(artifact) != digest:
+                        raise RuntimeError(f'Native exit: checkpoint checksum mismatch: {artifact}')
+                    verified_files += 1
+                    verified_bytes += artifact.stat().st_size
+                with np.load(job / 'predictions.npz', allow_pickle=False) as saved:
+                    fields = {'held_probability': 'held', 'held_score': 'held', 'val_score': 'selection', 'calibration_score': 'calibration'}
+                    if model != 'ensemble_lstm_attention_lgbm_weighted':
+                        fields['fit_score'] = 'fit'
+                    for name, role in fields.items():
+                        values = saved[name]
+                        if values.shape != (len(indices[role]),) or not np.isfinite(values).all():
+                            raise RuntimeError(f'Native exit: invalid saved predictions: {job}/{name}')
+                    p = saved['held_probability']
+                    if ((p < 0) | (p > 1)).any():
+                        raise RuntimeError(f'Native exit: invalid probability: {job}')
+                verified_jobs += 1
+    return {'exit_code': code, 'exit_hex': '0xC0000409', 'recovered_after_verified_completion': True,
+            'verified_model_jobs': verified_jobs, 'verified_artifacts': verified_files,
+            'verified_bytes': verified_bytes, 'risk_run': str(root),
+            'warning': 'Native process failed after completed forecast output; all saved checkpoints verified. Native runtime cause remains unresolved.'}
+
+
 def main(argv=None):
     parser = build_parser()
     args = parser.parse_args(argv)
@@ -102,10 +178,14 @@ def main(argv=None):
                             risk_run = Path(line.split(':', 1)[1].strip()).resolve()
                     code = process.wait()
                 write_json(output / 'forecast_process_resources.json', monitor.result)
-                if code:
-                    raise RuntimeError(f'Forecast stage failed with exit {code}; see forecast_stage.log')
                 if risk_run is None:
                     raise RuntimeError('Forecast runner did not identify its output directory')
+                audit = check_forecast_exit(code, risk_run, args)
+                write_json(output / 'forecast_completion_audit.json', audit)
+                state['forecast_exit_code'] = code
+                if audit['recovered_after_verified_completion']:
+                    state['forecast_shutdown_warning'] = audit['warning']
+                    print(f'WARNING: {audit["warning"]}', flush=True)
         state['risk_run'] = str(risk_run)
         write_json(output / 'system_manifest.json', state)
         recommendations = run_recommendations(risk_run, output / 'recommendations', args.windows, args.seeds,
