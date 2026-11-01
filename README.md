@@ -89,3 +89,9 @@ rtk proxy py -3.12 -m data.oulad_loader --data-dir data/oulad/raw --build
 изменения. Код обучения, веса и сохранённые исследовательские результаты
 не затрагиваются. Интеграция, запуск и ограничения описаны в
 [docs/RECOMMENDATIONS_RU.md](docs/RECOMMENDATIONS_RU.md).
+
+Полный новый запуск прогноза и оценки рекомендаций: `rtk proxy py -3.12 -X utf8 -u run_system_experiment.py`.
+Ровно восемь окон 7/14/28/56/84/112/140/168, пять seed, train/validation 2013;
+test 2014 отключён. Два исхода обучения (успех/неуспех), PR-AUC, Precision/Recall/F1,
+рекомендационные Precision/Recall/NDCG@5/10/20, абляции, независимая калибровка,
+train gaps, веса, CI, время и память описаны в [протоколе полного эксперимента](docs/SYSTEM_EXPERIMENT_RU.md).

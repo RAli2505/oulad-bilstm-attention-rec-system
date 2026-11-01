@@ -26,7 +26,7 @@ class RecommendationAgent:
         """
         self.interactions = interactions.copy(deep=True)
 
-    def recommend(self, enrollment, as_of_day, forecast_probability, n=5, *, allow_review=False):
+    def recommend(self, enrollment, as_of_day, forecast_probability, n=5, *, allow_review=False, include_candidates=False):
         """Read one risk forecast and rank available resources; no model writes.
 
         Refresh history using update_history (or create a new agent). Dates
@@ -69,6 +69,7 @@ class RecommendationAgent:
                 'availability_basis': 'explicit' if np.isfinite(row.available_from_day) else ('planned_week' if scheduled else 'unknown'),
             })
         # MMR-style novelty: repeat types receive a penalty; no random changes.
+        unranked = [dict(c) for c in candidates] if include_candidates else None
         selected = []
         while candidates and len(selected) < n:
             seen_types = {r['activity_type'] for r in selected}
@@ -77,7 +78,7 @@ class RecommendationAgent:
             best = min(candidates, key=lambda c: (-c['selection_score'], c['item_id']))
             selected.append(best)
             candidates.remove(best)
-        return {
+        result = {
             'enrollment': {'id_student': int(enrollment[0]), 'code_module': str(enrollment[1]), 'code_presentation': str(enrollment[2])},
             'as_of_day': int(as_of_day), 'forecast_probability': risk,
             'forecast_semantics': 'Fail_or_Withdrawn',
@@ -87,3 +88,6 @@ class RecommendationAgent:
             'limitations': ['ranking_utility_not_learning_effect', 'clicks_are_implicit_preferences',
                             'planned_week_is_not_verified_release', 'no_topic_mastery_inferred'],
         }
+        if include_candidates:
+            result['candidates'] = unranked
+        return result
