@@ -10,7 +10,7 @@ import shutil
 import subprocess
 import sys
 
-WINDOWS = [7, 14, 28, 56, 84, 112, 140, 168]
+WINDOWS = [7, 14, 21, 28, 56, 84, 112, 140, 168]
 
 
 def build_parser():
@@ -56,7 +56,7 @@ def main(argv=None):
     parser = build_parser()
     args = parser.parse_args(argv)
     if args.windows != WINDOWS:
-        parser.error('This protocol requires exactly: 7 14 28 56 84 112 140 168')
+        parser.error('This protocol requires exactly: 7 14 21 28 56 84 112 140 168')
     if args.risk_run and args.resume_risk:
         parser.error('Choose --risk-run or --resume-risk')
     if len(set(args.seeds)) != len(args.seeds) or not args.seeds or min(args.ks) < 1 or 10 not in args.ks:

@@ -62,7 +62,7 @@ def test_experiment_config_is_validation_only_and_exact_windows():
     from run_system_experiment import build_parser, risk_command
     args = build_parser().parse_args([])
     command = risk_command(args)
-    assert args.windows == [7, 14, 28, 56, 84, 112, 140, 168]
+    assert args.windows == [7, 14, 21, 28, 56, 84, 112, 140, 168]
     assert '--improved' in command
     assert '--score-policy' in command
     assert '--test' not in command
