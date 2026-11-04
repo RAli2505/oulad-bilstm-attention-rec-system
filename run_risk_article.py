@@ -88,6 +88,89 @@ def logging_only_resume_compatible(previous, identity, output):
     return True
 
 
+def legacy_full_resume_compatible(previous, identity, output):
+    """Verify the system-only addition has no effect on a legacy full run."""
+    import ast
+    if identity['config'].get('system_only', False) or previous['config'].get('system_only', False):
+        return False
+    def config_without_defaults(config):
+        return {k: v for k, v in config.items() if k not in ('seeds', 'system_only')}
+    if config_without_defaults(previous['config']) != config_without_defaults(identity['config']):
+        return False
+    if any(previous[k] != identity[k] for k in ('data_sha256', 'versions')):
+        return False
+    if set(previous['source_sha256']) != set(identity['source_sha256']):
+        return False
+
+    class FullMode(ast.NodeTransformer):
+        def visit_FunctionDef(self, node):
+            if node.name in ('logging_only_resume_compatible', 'legacy_full_resume_compatible', 'system_model_names'):
+                return None
+            return self.generic_visit(node)
+
+        def visit_Expr(self, node):
+            call = node.value
+            if (isinstance(call, ast.Call) and isinstance(call.func, ast.Attribute)
+                    and ast.unparse(call.func) == 'parser.add_argument' and call.args
+                    and isinstance(call.args[0], ast.Constant) and call.args[0].value == '--system-only'):
+                return None
+            return self.generic_visit(node)
+
+        def visit_If(self, node):
+            test = ast.unparse(node.test)
+            if test == 'args.system_only and (not args.improved)':
+                return None
+            if test == "previous['signature'] != signature":
+                node.body = [ast.Pass()]
+            return self.generic_visit(node)
+
+        def visit_IfExp(self, node):
+            if ast.unparse(node.test) in ('args.system_only', "config.get('system_only', False)"):
+                return self.visit(node.orelse)
+            return self.generic_visit(node)
+
+        def visit_Dict(self, node):
+            pairs = [(k, v) for k, v in zip(node.keys, node.values)
+                     if not (isinstance(k, ast.Constant) and k.value == 'system_only')]
+            node.keys, node.values = [k for k, _ in pairs], [v for _, v in pairs]
+            return self.generic_visit(node)
+
+        def visit_BoolOp(self, node):
+            if isinstance(node.op, ast.And):
+                node.values = [v for v in node.values if ast.unparse(v) != "not config.get('system_only', False)"]
+                if len(node.values) == 1:
+                    return self.visit(node.values[0])
+            return self.generic_visit(node)
+
+        def visit_BinOp(self, node):
+            node = self.generic_visit(node)
+            if (isinstance(node.op, ast.Add) and isinstance(node.left, ast.Constant)
+                    and isinstance(node.right, ast.Constant) and isinstance(node.left.value, str)
+                    and isinstance(node.right.value, str)):
+                return ast.Constant(node.left.value + node.right.value)
+            return node
+
+    def canonical(source):
+        return ast.dump(FullMode().visit(ast.parse(source)), include_attributes=False)
+
+    root = Path(__file__).resolve().parent
+    for relative, digest in identity['source_sha256'].items():
+        if digest == previous['source_sha256'][relative]:
+            continue
+        if relative.replace('\\', '/') not in ('run_risk_article.py', 'risk_experiments/pipeline.py'):
+            return False
+        saved, current = output / 'source' / relative, root / relative
+        if not saved.is_file() or not current.is_file():
+            return False
+        if hashlib.sha256(saved.read_bytes()).hexdigest() != previous['source_sha256'][relative]:
+            return False
+        if hashlib.sha256(current.read_bytes()).hexdigest() != digest:
+            return False
+        if canonical(saved.read_text(encoding='utf-8')) != canonical(current.read_text(encoding='utf-8')):
+            return False
+    return True
+
+
 def system_model_names():
     """Only the deployed risk system; no comparative models or ablations."""
     return ['proposed', 'lstm', 'lightgbm', 'ensemble_lstm_attention_lgbm_weighted']
@@ -205,7 +288,9 @@ def main():
     if resume:
         previous = json.loads((output / 'run_manifest.json').read_text())
         if previous['signature'] != signature:
-            if logging_only_resume_compatible(previous, identity, output):
+            if (logging_only_resume_compatible(previous, identity, output)
+                    or legacy_full_resume_compatible(previous, identity, output)):
+                print('Resume: verified compatible source changes; preserving original job signature.', flush=True)
                 signature = previous['signature']
             else:
                 raise ValueError('Cannot resume: code, data, packages, device or experiment settings differ. Use the original flags.')

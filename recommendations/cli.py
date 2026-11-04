@@ -58,6 +58,7 @@ def main(argv=None):
     parser.add_argument('--n', type=int, default=5)
     parser.add_argument('--half-life-days', type=float, default=14.)
     parser.add_argument('--allow-review', action='store_true', help='Allow resources seen during the previous seven days')
+    parser.add_argument('--agent-bundle', type=Path, help='Trained full OULAD agent bundle for this cutoff')
     parser.add_argument('--output', type=Path, required=True, help='New JSON file; existing files are never overwritten')
     args = parser.parse_args(argv)
     if args.output.exists():
@@ -77,8 +78,13 @@ def main(argv=None):
         if len(selected):
             parts.append(selected)
     events = pd.concat(parts, ignore_index=True) if parts else pd.DataFrame(columns=columns)
-    agent = RecommendationAgent(resources, events, PreferenceModel(half_life_days=args.half_life_days))
-    result = agent.recommend(enrollment, args.day, probability, args.n, allow_review=args.allow_review)
+    if args.agent_bundle:
+        from .oulad_agent import OULADRecommendationAgent
+        agent = OULADRecommendationAgent.load(args.agent_bundle, resources, events)
+        result = agent.recommend(enrollment, args.day, probability, args.n)
+    else:
+        agent = RecommendationAgent(resources, events, PreferenceModel(half_life_days=args.half_life_days))
+        result = agent.recommend(enrollment, args.day, probability, args.n, allow_review=args.allow_review)
     with args.predictions.open('rb') as source:
         source_hash = hashlib.file_digest(source, 'sha256').hexdigest()
     result['forecast_source'] = {'path': str(args.predictions.resolve()), 'sha256': source_hash,

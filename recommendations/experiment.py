@@ -109,17 +109,17 @@ def reconstructed_risk(day_dir, seed, indices):
 
 
 def make_candidates(resources, events, frame, indices, day, horizon, courses, max_learners=None, include_no_decay=True,
-                    feature_engine='batched', feature_batch_size=256, progress=False):
+                    feature_engine='batched', feature_batch_size=256, progress=False, allow_review=False):
     if feature_engine == 'batched':
         from .batch_features import make_candidates_batched
         return make_candidates_batched(resources, events, frame, indices, day, horizon, courses,
-                                       max_learners, include_no_decay, feature_batch_size, progress)
+                                       max_learners, include_no_decay, feature_batch_size, progress, allow_review)
     if feature_engine != 'reference':
         raise ValueError('Unknown feature engine')
-    return make_candidates_reference(resources, events, frame, indices, day, horizon, courses, max_learners, include_no_decay)
+    return make_candidates_reference(resources, events, frame, indices, day, horizon, courses, max_learners, include_no_decay, allow_review)
 
 
-def make_candidates_reference(resources, events, frame, indices, day, horizon, courses, max_learners=None, include_no_decay=True):
+def make_candidates_reference(resources, events, frame, indices, day, horizon, courses, max_learners=None, include_no_decay=True, allow_review=False):
     """One shared candidate universe and label vector for every method/seed."""
     event_groups = events.groupby(ENROLLMENT, sort=False).indices
     catalog_groups = {key: group for key, group in resources.groupby(['code_module', 'code_presentation'], sort=False)}
@@ -147,7 +147,7 @@ def make_candidates_reference(resources, events, frame, indices, day, horizon, c
             catalog = catalog_groups[(row.code_module, row.code_presentation)]
             started = time.perf_counter()
             agent = RecommendationAgent(catalog, observed)
-            snapshot = agent.recommend(key, day, .5, n=1, include_candidates=True)
+            snapshot = agent.recommend(key, day, .5, n=1, include_candidates=True, allow_review=allow_review)
             static = (PreferenceModel(half_life_days=1e12).profile(observed, catalog, key, day)
                       if include_no_decay else None)
             candidates = snapshot['candidates']

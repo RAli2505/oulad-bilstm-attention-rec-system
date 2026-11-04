@@ -63,7 +63,7 @@ def _profiles(observed, opportunities, day, half_life, compute_shift=True):
     return profiles[[*keys, 'preference']], query_stats
 
 
-def _batch(queries, mapped, catalog, metadata, day, horizon, include_no_decay):
+def _batch(queries, mapped, catalog, metadata, day, horizon, include_no_decay, allow_review=False):
     day = float(day)
     past = mapped.loc[mapped.date < day, ['query', 'id_site', 'date', 'sum_click']].copy()
     past['sum_click'] = numeric_column(past, 'sum_click')
@@ -86,7 +86,8 @@ def _batch(queries, mapped, catalog, metadata, day, horizon, include_no_decay):
         candidates['no_decay'] = candidates.preference
     last = observed.groupby(['query', 'id_site'], sort=True).date.max().rename('last_seen').reset_index()
     candidates = candidates.merge(last, on=['query', 'id_site'], how='left', validate='one_to_one', sort=False)
-    candidates = candidates.loc[candidates.last_seen.isna() | (day - candidates.last_seen > 7)].copy()
+    if not allow_review:
+        candidates = candidates.loc[candidates.last_seen.isna() | (day - candidates.last_seen > 7)].copy()
     age = day - candidates.last_seen.to_numpy(dtype=float)
     candidates['engagement'] = np.where(np.isnan(age), 1., np.clip(age / 28., 0., 1.))
     start = candidates.week_from.to_numpy(dtype=float) * 7
@@ -116,7 +117,7 @@ def _batch(queries, mapped, catalog, metadata, day, horizon, include_no_decay):
 
 
 def make_candidates_batched(resources, events, frame, indices, day, horizon, courses,
-                            max_learners=None, include_no_decay=True, batch_size=256, progress=False):
+                            max_learners=None, include_no_decay=True, batch_size=256, progress=False, allow_review=False):
     """Same rows and feature formulas as make_candidates_reference, in batches.
 
     Does not report per-query percentile timings: batch work is measured by
@@ -168,7 +169,7 @@ def make_candidates_batched(resources, events, frame, indices, day, horizon, cou
             batch_queries = group.iloc[start:start + batch_size]
             positions = [event_positions[q] for q in batch_queries['query'] if q in event_positions]
             batch_events = mapped.iloc[np.concatenate(positions)] if positions else mapped.iloc[:0]
-            data, stats = _batch(batch_queries, batch_events, catalog, metadata, day, horizon, include_no_decay)
+            data, stats = _batch(batch_queries, batch_events, catalog, metadata, day, horizon, include_no_decay, allow_review)
             data_parts.append(data)
             query_parts.append(stats)
             completed += len(batch_queries)

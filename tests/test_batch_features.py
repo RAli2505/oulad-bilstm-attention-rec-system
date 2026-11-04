@@ -34,15 +34,16 @@ def feature_fixture():
 
 @pytest.mark.parametrize('day', [7, 14, 56])
 @pytest.mark.parametrize('static', [False, True])
-def test_batch_engine_reproduces_reference_candidates_labels_and_features(day, static):
+@pytest.mark.parametrize('allow_review', [False, True])
+def test_batch_engine_reproduces_reference_candidates_labels_and_features(day, static, allow_review):
     from recommendations.experiment import make_candidates, rank_indices
     from recommendations.batch_features import make_candidates_batched
     resources, events, frame, indices, courses = feature_fixture()
     reference, queries, splits, _ = make_candidates(resources, events, frame, indices, day, 7, courses,
-                                                    include_no_decay=static, feature_engine='reference')
+                                                    include_no_decay=static, feature_engine='reference', allow_review=allow_review)
     for batch_size in [1, 5, 256]:
         actual, actual_queries, actual_splits, latency = make_candidates_batched(
-            resources, events, frame, indices, day, 7, courses, include_no_decay=static, batch_size=batch_size)
+            resources, events, frame, indices, day, 7, courses, include_no_decay=static, batch_size=batch_size, allow_review=allow_review)
         pd.testing.assert_frame_equal(reference, actual, check_dtype=False, atol=1e-12, rtol=1e-12)
         pd.testing.assert_frame_equal(queries, actual_queries, check_dtype=False, atol=1e-12, rtol=1e-12)
         pd.testing.assert_frame_equal(splits, actual_splits, check_dtype=False)
