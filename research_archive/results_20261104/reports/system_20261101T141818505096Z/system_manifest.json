@@ -1,0 +1,41 @@
+{
+  "windows": [
+    7,
+    14,
+    21,
+    28,
+    56,
+    84,
+    112,
+    140,
+    168
+  ],
+  "seeds": [
+    42
+  ],
+  "threads": 6,
+  "device": "auto",
+  "epochs": 100,
+  "patience": 20,
+  "batch_size": 256,
+  "tuning_trials": 4,
+  "screen_epochs": 15,
+  "bootstrap": 1000,
+  "permutations": 1000,
+  "horizon": 7,
+  "ks": [
+    5,
+    10,
+    20
+  ],
+  "feature_engine": "batched",
+  "feature_batch_size": 256,
+  "output": "C:\\Users\\user\\Documents\\Diser\\система\\oulad-bilstm-attention\\runs\\system_20261101T141818505096Z",
+  "risk_run": "C:\\Users\\user\\Documents\\Diser\\система\\oulad-bilstm-attention\\runs\\risk_20261101T123221178430Z",
+  "resume_risk": null,
+  "max_learners": null,
+  "check": false,
+  "status": "completed",
+  "external_test_used": false,
+  "recommendations": "C:\\Users\\user\\Documents\\Diser\\система\\oulad-bilstm-attention\\runs\\system_20261101T141818505096Z\\recommendations"
+}

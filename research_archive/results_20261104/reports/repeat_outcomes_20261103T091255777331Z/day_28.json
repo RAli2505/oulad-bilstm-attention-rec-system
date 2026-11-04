@@ -1,0 +1,25 @@
+{
+  "results": [
+    {
+      "day": 28,
+      "outcome": "submitted_by_deadline",
+      "adjusted_repeat_association": 0.12950972212445858,
+      "ci_low": 0.10493221354553649,
+      "ci_high": 0.15408723070338065,
+      "n": 10821,
+      "student_clusters": 10706,
+      "exposure_residual_variance": 0.11023452614026867
+    },
+    {
+      "day": 28,
+      "outcome": "score_by_deadline_zero_if_missing",
+      "adjusted_repeat_association": 9.212759094463822,
+      "ci_low": 7.442327547400183,
+      "ci_high": 10.983190641527461,
+      "n": 10821,
+      "student_clusters": 10706,
+      "exposure_residual_variance": 0.11023452614026867
+    }
+  ],
+  "cohort_sha256": "549c72aa89e7fd4114a9010800c942df44b071ef5b5640e36570f99d464cd28b"
+}

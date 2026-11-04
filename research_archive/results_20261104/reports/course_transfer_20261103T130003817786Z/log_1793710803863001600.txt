@@ -1,0 +1,480 @@
+18:00 Output: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\course_transfer_20261103T130003817786Z
+18:00 Loading data; device=cuda; epochs=100; patience=20
+18:00 Held course=AAA, day=28: training only other courses; seeds=[42]
+18:00 Day 28: development=11794, external test=0, zero-history=599
+18:00 Day 28 train/validation seed 42 proposed: training
+18:00 proposed seed 42 epoch 1/15: val_loss=0.610229; epoch_seconds=1.7; remaining_epoch_budget=14
+18:00 proposed seed 42 epoch 2/15: val_loss=0.574908; epoch_seconds=0.7; remaining_epoch_budget=13
+18:00 proposed seed 42 epoch 3/15: val_loss=0.564539; epoch_seconds=0.7; remaining_epoch_budget=12
+18:00 proposed seed 42 epoch 4/15: val_loss=0.560717; epoch_seconds=0.7; remaining_epoch_budget=11
+18:00 proposed seed 42 epoch 5/15: val_loss=0.560581; epoch_seconds=0.8; remaining_epoch_budget=10
+18:00 proposed seed 42 epoch 6/15: val_loss=0.560551; epoch_seconds=1.0; remaining_epoch_budget=9
+18:00 proposed seed 42 epoch 7/15: val_loss=0.557724; epoch_seconds=1.0; remaining_epoch_budget=8
+18:00 proposed seed 42 epoch 8/15: val_loss=0.559571; epoch_seconds=0.8; remaining_epoch_budget=7
+18:00 proposed seed 42 epoch 9/15: val_loss=0.557185; epoch_seconds=0.8; remaining_epoch_budget=6
+18:00 proposed seed 42 epoch 10/15: val_loss=0.557419; epoch_seconds=0.7; remaining_epoch_budget=5
+18:00 proposed seed 42 epoch 11/15: val_loss=0.563761; epoch_seconds=0.8; remaining_epoch_budget=4
+18:00 proposed seed 42 epoch 12/15: val_loss=0.561653; epoch_seconds=0.7; remaining_epoch_budget=3
+18:00 proposed seed 42 epoch 13/15: val_loss=0.560672; epoch_seconds=0.7; remaining_epoch_budget=2
+18:00 proposed seed 42 epoch 14/15: val_loss=0.554794; epoch_seconds=0.7; remaining_epoch_budget=1
+18:00 proposed seed 42 epoch 15/15: val_loss=0.558018; epoch_seconds=0.7; remaining_epoch_budget=0
+18:00 proposed seed 42 epoch 1/15: val_loss=0.577315; epoch_seconds=0.8; remaining_epoch_budget=14
+18:00 proposed seed 42 epoch 2/15: val_loss=0.559004; epoch_seconds=0.7; remaining_epoch_budget=13
+18:00 proposed seed 42 epoch 3/15: val_loss=0.555055; epoch_seconds=0.7; remaining_epoch_budget=12
+18:00 proposed seed 42 epoch 4/15: val_loss=0.553644; epoch_seconds=0.7; remaining_epoch_budget=11
+18:00 proposed seed 42 epoch 5/15: val_loss=0.550150; epoch_seconds=0.8; remaining_epoch_budget=10
+18:00 proposed seed 42 epoch 6/15: val_loss=0.549742; epoch_seconds=1.0; remaining_epoch_budget=9
+18:00 proposed seed 42 epoch 7/15: val_loss=0.551096; epoch_seconds=0.9; remaining_epoch_budget=8
+18:00 proposed seed 42 epoch 8/15: val_loss=0.550721; epoch_seconds=0.9; remaining_epoch_budget=7
+18:00 proposed seed 42 epoch 9/15: val_loss=0.546775; epoch_seconds=0.7; remaining_epoch_budget=6
+18:00 proposed seed 42 epoch 10/15: val_loss=0.551334; epoch_seconds=0.8; remaining_epoch_budget=5
+18:00 proposed seed 42 epoch 11/15: val_loss=0.559973; epoch_seconds=1.1; remaining_epoch_budget=4
+18:00 proposed seed 42 epoch 12/15: val_loss=0.550420; epoch_seconds=1.8; remaining_epoch_budget=3
+18:00 proposed seed 42 epoch 13/15: val_loss=0.548064; epoch_seconds=1.9; remaining_epoch_budget=2
+18:00 proposed seed 42 epoch 14/15: val_loss=0.545804; epoch_seconds=1.5; remaining_epoch_budget=1
+18:00 proposed seed 42 epoch 15/15: val_loss=0.549257; epoch_seconds=1.4; remaining_epoch_budget=0
+18:00 proposed seed 42 epoch 1/15: val_loss=0.577312; epoch_seconds=1.4; remaining_epoch_budget=14
+18:00 proposed seed 42 epoch 2/15: val_loss=0.558398; epoch_seconds=1.6; remaining_epoch_budget=13
+18:00 proposed seed 42 epoch 3/15: val_loss=0.555303; epoch_seconds=1.8; remaining_epoch_budget=12
+18:00 proposed seed 42 epoch 4/15: val_loss=0.553660; epoch_seconds=1.5; remaining_epoch_budget=11
+18:00 proposed seed 42 epoch 5/15: val_loss=0.550627; epoch_seconds=1.4; remaining_epoch_budget=10
+18:00 proposed seed 42 epoch 6/15: val_loss=0.550151; epoch_seconds=1.1; remaining_epoch_budget=9
+18:00 proposed seed 42 epoch 7/15: val_loss=0.550532; epoch_seconds=1.2; remaining_epoch_budget=8
+18:00 proposed seed 42 epoch 8/15: val_loss=0.551455; epoch_seconds=1.4; remaining_epoch_budget=7
+18:01 proposed seed 42 epoch 9/15: val_loss=0.546515; epoch_seconds=1.2; remaining_epoch_budget=6
+18:01 proposed seed 42 epoch 10/15: val_loss=0.550674; epoch_seconds=1.1; remaining_epoch_budget=5
+18:01 proposed seed 42 epoch 11/15: val_loss=0.558340; epoch_seconds=1.2; remaining_epoch_budget=4
+18:01 proposed seed 42 epoch 12/15: val_loss=0.550203; epoch_seconds=1.4; remaining_epoch_budget=3
+18:01 proposed seed 42 epoch 13/15: val_loss=0.548500; epoch_seconds=1.2; remaining_epoch_budget=2
+18:01 proposed seed 42 epoch 14/15: val_loss=0.545548; epoch_seconds=1.2; remaining_epoch_budget=1
+18:01 proposed seed 42 epoch 15/15: val_loss=0.549925; epoch_seconds=1.2; remaining_epoch_budget=0
+18:01 proposed seed 42 epoch 1/15: val_loss=0.579288; epoch_seconds=1.2; remaining_epoch_budget=14
+18:01 proposed seed 42 epoch 2/15: val_loss=0.559375; epoch_seconds=1.4; remaining_epoch_budget=13
+18:01 proposed seed 42 epoch 3/15: val_loss=0.554722; epoch_seconds=1.3; remaining_epoch_budget=12
+18:01 proposed seed 42 epoch 4/15: val_loss=0.553214; epoch_seconds=1.4; remaining_epoch_budget=11
+18:01 proposed seed 42 epoch 5/15: val_loss=0.550176; epoch_seconds=1.2; remaining_epoch_budget=10
+18:01 proposed seed 42 epoch 6/15: val_loss=0.551180; epoch_seconds=1.2; remaining_epoch_budget=9
+18:01 proposed seed 42 epoch 7/15: val_loss=0.549040; epoch_seconds=1.1; remaining_epoch_budget=8
+18:01 proposed seed 42 epoch 8/15: val_loss=0.550174; epoch_seconds=1.1; remaining_epoch_budget=7
+18:01 proposed seed 42 epoch 9/15: val_loss=0.544198; epoch_seconds=1.6; remaining_epoch_budget=6
+18:01 proposed seed 42 epoch 10/15: val_loss=0.548718; epoch_seconds=1.5; remaining_epoch_budget=5
+18:01 proposed seed 42 epoch 11/15: val_loss=0.557304; epoch_seconds=1.5; remaining_epoch_budget=4
+18:01 proposed seed 42 epoch 12/15: val_loss=0.547515; epoch_seconds=1.6; remaining_epoch_budget=3
+18:01 proposed seed 42 epoch 13/15: val_loss=0.545941; epoch_seconds=1.1; remaining_epoch_budget=2
+18:01 proposed seed 42 epoch 14/15: val_loss=0.544621; epoch_seconds=1.1; remaining_epoch_budget=1
+18:01 proposed seed 42 epoch 15/15: val_loss=0.548044; epoch_seconds=1.2; remaining_epoch_budget=0
+18:01 proposed seed 42 epoch 1/100: val_loss=0.579288; epoch_seconds=1.2; remaining_epoch_budget=99
+18:01 proposed seed 42 epoch 2/100: val_loss=0.559375; epoch_seconds=1.3; remaining_epoch_budget=98
+18:01 proposed seed 42 epoch 3/100: val_loss=0.554722; epoch_seconds=1.4; remaining_epoch_budget=97
+18:01 proposed seed 42 epoch 4/100: val_loss=0.553214; epoch_seconds=1.3; remaining_epoch_budget=96
+18:01 proposed seed 42 epoch 5/100: val_loss=0.550176; epoch_seconds=1.1; remaining_epoch_budget=95
+18:01 proposed seed 42 epoch 6/100: val_loss=0.551180; epoch_seconds=1.1; remaining_epoch_budget=94
+18:01 proposed seed 42 epoch 7/100: val_loss=0.549040; epoch_seconds=1.1; remaining_epoch_budget=93
+18:01 proposed seed 42 epoch 8/100: val_loss=0.550174; epoch_seconds=1.1; remaining_epoch_budget=92
+18:01 proposed seed 42 epoch 9/100: val_loss=0.544198; epoch_seconds=1.0; remaining_epoch_budget=91
+18:01 proposed seed 42 epoch 10/100: val_loss=0.548718; epoch_seconds=1.0; remaining_epoch_budget=90
+18:01 proposed seed 42 epoch 11/100: val_loss=0.557304; epoch_seconds=1.1; remaining_epoch_budget=89
+18:01 proposed seed 42 epoch 12/100: val_loss=0.547515; epoch_seconds=1.1; remaining_epoch_budget=88
+18:01 proposed seed 42 epoch 13/100: val_loss=0.545941; epoch_seconds=1.3; remaining_epoch_budget=87
+18:01 proposed seed 42 epoch 14/100: val_loss=0.544621; epoch_seconds=1.1; remaining_epoch_budget=86
+18:01 proposed seed 42 epoch 15/100: val_loss=0.548044; epoch_seconds=1.2; remaining_epoch_budget=85
+18:01 proposed seed 42 epoch 16/100: val_loss=0.550734; epoch_seconds=1.1; remaining_epoch_budget=84
+18:01 proposed seed 42 epoch 17/100: val_loss=0.548984; epoch_seconds=1.0; remaining_epoch_budget=83
+18:01 proposed seed 42 epoch 18/100: val_loss=0.551453; epoch_seconds=1.0; remaining_epoch_budget=82
+18:01 proposed seed 42 epoch 19/100: val_loss=0.547881; epoch_seconds=1.2; remaining_epoch_budget=81
+18:01 proposed seed 42 epoch 20/100: val_loss=0.548591; epoch_seconds=1.0; remaining_epoch_budget=80
+18:01 proposed seed 42 epoch 21/100: val_loss=0.549262; epoch_seconds=1.0; remaining_epoch_budget=79
+18:01 proposed seed 42 epoch 22/100: val_loss=0.546837; epoch_seconds=1.0; remaining_epoch_budget=78
+18:01 proposed seed 42 epoch 23/100: val_loss=0.547665; epoch_seconds=1.0; remaining_epoch_budget=77
+18:01 proposed seed 42 epoch 24/100: val_loss=0.555454; epoch_seconds=2.3; remaining_epoch_budget=76
+18:02 proposed seed 42 epoch 25/100: val_loss=0.553356; epoch_seconds=7.1; remaining_epoch_budget=75
+18:02 proposed seed 42 epoch 26/100: val_loss=0.556786; epoch_seconds=6.9; remaining_epoch_budget=74
+18:02 proposed seed 42 epoch 27/100: val_loss=0.557516; epoch_seconds=6.6; remaining_epoch_budget=73
+18:02 proposed seed 42 epoch 28/100: val_loss=0.558310; epoch_seconds=7.4; remaining_epoch_budget=72
+18:02 proposed seed 42 epoch 29/100: val_loss=0.575309; epoch_seconds=7.5; remaining_epoch_budget=71
+18:02 proposed seed 42 epoch 1/100: val_loss=0.577312; epoch_seconds=7.1; remaining_epoch_budget=99
+18:02 proposed seed 42 epoch 2/100: val_loss=0.558398; epoch_seconds=7.4; remaining_epoch_budget=98
+18:03 proposed seed 42 epoch 3/100: val_loss=0.555303; epoch_seconds=6.9; remaining_epoch_budget=97
+18:03 proposed seed 42 epoch 4/100: val_loss=0.553660; epoch_seconds=7.0; remaining_epoch_budget=96
+18:03 proposed seed 42 epoch 5/100: val_loss=0.550627; epoch_seconds=7.4; remaining_epoch_budget=95
+18:03 proposed seed 42 epoch 6/100: val_loss=0.550151; epoch_seconds=7.2; remaining_epoch_budget=94
+18:03 proposed seed 42 epoch 7/100: val_loss=0.550532; epoch_seconds=7.5; remaining_epoch_budget=93
+18:03 proposed seed 42 epoch 8/100: val_loss=0.551455; epoch_seconds=7.5; remaining_epoch_budget=92
+18:03 proposed seed 42 epoch 9/100: val_loss=0.546515; epoch_seconds=7.2; remaining_epoch_budget=91
+18:03 proposed seed 42 epoch 10/100: val_loss=0.550674; epoch_seconds=7.1; remaining_epoch_budget=90
+18:04 proposed seed 42 epoch 11/100: val_loss=0.558340; epoch_seconds=6.9; remaining_epoch_budget=89
+18:04 proposed seed 42 epoch 12/100: val_loss=0.550203; epoch_seconds=7.1; remaining_epoch_budget=88
+18:04 proposed seed 42 epoch 13/100: val_loss=0.548500; epoch_seconds=6.9; remaining_epoch_budget=87
+18:04 proposed seed 42 epoch 14/100: val_loss=0.545548; epoch_seconds=7.0; remaining_epoch_budget=86
+18:04 proposed seed 42 epoch 15/100: val_loss=0.549925; epoch_seconds=6.8; remaining_epoch_budget=85
+18:04 proposed seed 42 epoch 16/100: val_loss=0.552404; epoch_seconds=7.4; remaining_epoch_budget=84
+18:04 proposed seed 42 epoch 17/100: val_loss=0.550505; epoch_seconds=7.0; remaining_epoch_budget=83
+18:04 proposed seed 42 epoch 18/100: val_loss=0.554461; epoch_seconds=7.6; remaining_epoch_budget=82
+18:04 proposed seed 42 epoch 19/100: val_loss=0.551635; epoch_seconds=7.3; remaining_epoch_budget=81
+18:05 proposed seed 42 epoch 20/100: val_loss=0.552247; epoch_seconds=7.2; remaining_epoch_budget=80
+18:05 proposed seed 42 epoch 21/100: val_loss=0.556845; epoch_seconds=7.2; remaining_epoch_budget=79
+18:05 proposed seed 42 epoch 22/100: val_loss=0.552545; epoch_seconds=7.1; remaining_epoch_budget=78
+18:05 proposed seed 42 epoch 23/100: val_loss=0.553508; epoch_seconds=8.0; remaining_epoch_budget=77
+18:05 proposed seed 42 epoch 24/100: val_loss=0.555881; epoch_seconds=7.3; remaining_epoch_budget=76
+18:05 proposed seed 42 epoch 25/100: val_loss=0.559838; epoch_seconds=7.0; remaining_epoch_budget=75
+18:05 proposed seed 42 epoch 26/100: val_loss=0.561988; epoch_seconds=7.4; remaining_epoch_budget=74
+18:05 proposed seed 42 epoch 27/100: val_loss=0.557968; epoch_seconds=7.2; remaining_epoch_budget=73
+18:06 proposed seed 42 epoch 28/100: val_loss=0.565142; epoch_seconds=6.8; remaining_epoch_budget=72
+18:06 proposed seed 42 epoch 29/100: val_loss=0.574117; epoch_seconds=7.3; remaining_epoch_budget=71
+18:06 proposed seed 42 epoch 30/100: val_loss=0.566490; epoch_seconds=8.3; remaining_epoch_budget=70
+18:06 proposed seed 42 epoch 31/100: val_loss=0.571470; epoch_seconds=7.4; remaining_epoch_budget=69
+18:06 proposed seed 42 epoch 32/100: val_loss=0.558985; epoch_seconds=7.2; remaining_epoch_budget=68
+18:06 proposed seed 42 epoch 33/100: val_loss=0.561956; epoch_seconds=8.3; remaining_epoch_budget=67
+18:06 proposed seed 42 epoch 34/100: val_loss=0.567978; epoch_seconds=7.6; remaining_epoch_budget=66
+18:06   completed in 401.4s
+18:06 Day 28 train/validation seed 42 lstm: training
+18:07 lstm seed 42 epoch 1/15: val_loss=0.581381; epoch_seconds=3.1; remaining_epoch_budget=14
+18:07 lstm seed 42 epoch 2/15: val_loss=0.559212; epoch_seconds=4.6; remaining_epoch_budget=13
+18:07 lstm seed 42 epoch 3/15: val_loss=0.557371; epoch_seconds=4.1; remaining_epoch_budget=12
+18:07 lstm seed 42 epoch 4/15: val_loss=0.552631; epoch_seconds=4.2; remaining_epoch_budget=11
+18:07 lstm seed 42 epoch 5/15: val_loss=0.551221; epoch_seconds=3.8; remaining_epoch_budget=10
+18:07 lstm seed 42 epoch 6/15: val_loss=0.550464; epoch_seconds=4.1; remaining_epoch_budget=9
+18:07 lstm seed 42 epoch 7/15: val_loss=0.553423; epoch_seconds=4.0; remaining_epoch_budget=8
+18:07 lstm seed 42 epoch 8/15: val_loss=0.548629; epoch_seconds=3.3; remaining_epoch_budget=7
+18:07 lstm seed 42 epoch 9/15: val_loss=0.544556; epoch_seconds=4.4; remaining_epoch_budget=6
+18:07 lstm seed 42 epoch 10/15: val_loss=0.549979; epoch_seconds=4.3; remaining_epoch_budget=5
+18:07 lstm seed 42 epoch 11/15: val_loss=0.554882; epoch_seconds=3.5; remaining_epoch_budget=4
+18:07 lstm seed 42 epoch 12/15: val_loss=0.553320; epoch_seconds=4.3; remaining_epoch_budget=3
+18:07 lstm seed 42 epoch 13/15: val_loss=0.552420; epoch_seconds=4.3; remaining_epoch_budget=2
+18:07 lstm seed 42 epoch 14/15: val_loss=0.555077; epoch_seconds=4.4; remaining_epoch_budget=1
+18:08 lstm seed 42 epoch 15/15: val_loss=0.557752; epoch_seconds=4.2; remaining_epoch_budget=0
+18:08 lstm seed 42 epoch 1/15: val_loss=0.581917; epoch_seconds=3.8; remaining_epoch_budget=14
+18:08 lstm seed 42 epoch 2/15: val_loss=0.558344; epoch_seconds=4.4; remaining_epoch_budget=13
+18:08 lstm seed 42 epoch 3/15: val_loss=0.557177; epoch_seconds=4.1; remaining_epoch_budget=12
+18:08 lstm seed 42 epoch 4/15: val_loss=0.552948; epoch_seconds=4.2; remaining_epoch_budget=11
+18:08 lstm seed 42 epoch 5/15: val_loss=0.550361; epoch_seconds=4.3; remaining_epoch_budget=10
+18:08 lstm seed 42 epoch 6/15: val_loss=0.550382; epoch_seconds=4.4; remaining_epoch_budget=9
+18:08 lstm seed 42 epoch 7/15: val_loss=0.552112; epoch_seconds=4.3; remaining_epoch_budget=8
+18:08 lstm seed 42 epoch 8/15: val_loss=0.548938; epoch_seconds=3.5; remaining_epoch_budget=7
+18:08 lstm seed 42 epoch 9/15: val_loss=0.543690; epoch_seconds=4.4; remaining_epoch_budget=6
+18:08 lstm seed 42 epoch 10/15: val_loss=0.547901; epoch_seconds=4.2; remaining_epoch_budget=5
+18:08 lstm seed 42 epoch 11/15: val_loss=0.553578; epoch_seconds=4.4; remaining_epoch_budget=4
+18:08 lstm seed 42 epoch 12/15: val_loss=0.545204; epoch_seconds=4.5; remaining_epoch_budget=3
+18:08 lstm seed 42 epoch 13/15: val_loss=0.545245; epoch_seconds=3.9; remaining_epoch_budget=2
+18:09 lstm seed 42 epoch 14/15: val_loss=0.543932; epoch_seconds=4.3; remaining_epoch_budget=1
+18:09 lstm seed 42 epoch 15/15: val_loss=0.552167; epoch_seconds=3.7; remaining_epoch_budget=0
+18:09 lstm seed 42 epoch 1/15: val_loss=0.583459; epoch_seconds=3.7; remaining_epoch_budget=14
+18:09 lstm seed 42 epoch 2/15: val_loss=0.564389; epoch_seconds=4.6; remaining_epoch_budget=13
+18:09 lstm seed 42 epoch 3/15: val_loss=0.562331; epoch_seconds=4.0; remaining_epoch_budget=12
+18:09 lstm seed 42 epoch 4/15: val_loss=0.557132; epoch_seconds=4.6; remaining_epoch_budget=11
+18:09 lstm seed 42 epoch 5/15: val_loss=0.557516; epoch_seconds=3.7; remaining_epoch_budget=10
+18:09 lstm seed 42 epoch 6/15: val_loss=0.556279; epoch_seconds=4.5; remaining_epoch_budget=9
+18:09 lstm seed 42 epoch 7/15: val_loss=0.555173; epoch_seconds=4.2; remaining_epoch_budget=8
+18:09 lstm seed 42 epoch 8/15: val_loss=0.554022; epoch_seconds=4.8; remaining_epoch_budget=7
+18:09 lstm seed 42 epoch 9/15: val_loss=0.548789; epoch_seconds=4.1; remaining_epoch_budget=6
+18:09 lstm seed 42 epoch 10/15: val_loss=0.553214; epoch_seconds=4.7; remaining_epoch_budget=5
+18:09 lstm seed 42 epoch 11/15: val_loss=0.555254; epoch_seconds=4.0; remaining_epoch_budget=4
+18:09 lstm seed 42 epoch 12/15: val_loss=0.554881; epoch_seconds=4.5; remaining_epoch_budget=3
+18:10 lstm seed 42 epoch 13/15: val_loss=0.549944; epoch_seconds=4.2; remaining_epoch_budget=2
+18:10 lstm seed 42 epoch 14/15: val_loss=0.550066; epoch_seconds=4.6; remaining_epoch_budget=1
+18:10 lstm seed 42 epoch 15/15: val_loss=0.550405; epoch_seconds=4.4; remaining_epoch_budget=0
+18:10 lstm seed 42 epoch 1/15: val_loss=0.628404; epoch_seconds=4.1; remaining_epoch_budget=14
+18:10 lstm seed 42 epoch 2/15: val_loss=0.585811; epoch_seconds=4.4; remaining_epoch_budget=13
+18:10 lstm seed 42 epoch 3/15: val_loss=0.570628; epoch_seconds=4.6; remaining_epoch_budget=12
+18:10 lstm seed 42 epoch 4/15: val_loss=0.562891; epoch_seconds=4.0; remaining_epoch_budget=11
+18:10 lstm seed 42 epoch 5/15: val_loss=0.560290; epoch_seconds=4.6; remaining_epoch_budget=10
+18:10 lstm seed 42 epoch 6/15: val_loss=0.556825; epoch_seconds=4.6; remaining_epoch_budget=9
+18:10 lstm seed 42 epoch 7/15: val_loss=0.554248; epoch_seconds=4.8; remaining_epoch_budget=8
+18:10 lstm seed 42 epoch 8/15: val_loss=0.556953; epoch_seconds=3.7; remaining_epoch_budget=7
+18:10 lstm seed 42 epoch 9/15: val_loss=0.550760; epoch_seconds=4.8; remaining_epoch_budget=6
+18:10 lstm seed 42 epoch 10/15: val_loss=0.551310; epoch_seconds=4.4; remaining_epoch_budget=5
+18:11 lstm seed 42 epoch 11/15: val_loss=0.557074; epoch_seconds=4.0; remaining_epoch_budget=4
+18:11 lstm seed 42 epoch 12/15: val_loss=0.550733; epoch_seconds=4.5; remaining_epoch_budget=3
+18:11 lstm seed 42 epoch 13/15: val_loss=0.549718; epoch_seconds=4.0; remaining_epoch_budget=2
+18:11 lstm seed 42 epoch 14/15: val_loss=0.549323; epoch_seconds=4.5; remaining_epoch_budget=1
+18:11 lstm seed 42 epoch 15/15: val_loss=0.547117; epoch_seconds=4.0; remaining_epoch_budget=0
+18:11 lstm seed 42 epoch 1/100: val_loss=0.581381; epoch_seconds=4.1; remaining_epoch_budget=99
+18:11 lstm seed 42 epoch 2/100: val_loss=0.559212; epoch_seconds=4.7; remaining_epoch_budget=98
+18:11 lstm seed 42 epoch 3/100: val_loss=0.557371; epoch_seconds=3.9; remaining_epoch_budget=97
+18:11 lstm seed 42 epoch 4/100: val_loss=0.552631; epoch_seconds=4.4; remaining_epoch_budget=96
+18:11 lstm seed 42 epoch 5/100: val_loss=0.551221; epoch_seconds=3.8; remaining_epoch_budget=95
+18:11 lstm seed 42 epoch 6/100: val_loss=0.550464; epoch_seconds=4.7; remaining_epoch_budget=94
+18:11 lstm seed 42 epoch 7/100: val_loss=0.553423; epoch_seconds=4.2; remaining_epoch_budget=93
+18:11 lstm seed 42 epoch 8/100: val_loss=0.548629; epoch_seconds=4.4; remaining_epoch_budget=92
+18:12 lstm seed 42 epoch 9/100: val_loss=0.544556; epoch_seconds=3.6; remaining_epoch_budget=91
+18:12 lstm seed 42 epoch 10/100: val_loss=0.549979; epoch_seconds=4.5; remaining_epoch_budget=90
+18:12 lstm seed 42 epoch 11/100: val_loss=0.554882; epoch_seconds=4.1; remaining_epoch_budget=89
+18:12 lstm seed 42 epoch 12/100: val_loss=0.553320; epoch_seconds=4.7; remaining_epoch_budget=88
+18:12 lstm seed 42 epoch 13/100: val_loss=0.552420; epoch_seconds=3.8; remaining_epoch_budget=87
+18:12 lstm seed 42 epoch 14/100: val_loss=0.555077; epoch_seconds=4.4; remaining_epoch_budget=86
+18:12 lstm seed 42 epoch 15/100: val_loss=0.557752; epoch_seconds=4.5; remaining_epoch_budget=85
+18:12 lstm seed 42 epoch 16/100: val_loss=0.562762; epoch_seconds=4.4; remaining_epoch_budget=84
+18:12 lstm seed 42 epoch 17/100: val_loss=0.558234; epoch_seconds=4.6; remaining_epoch_budget=83
+18:12 lstm seed 42 epoch 18/100: val_loss=0.567197; epoch_seconds=4.7; remaining_epoch_budget=82
+18:12 lstm seed 42 epoch 19/100: val_loss=0.569482; epoch_seconds=4.2; remaining_epoch_budget=81
+18:12 lstm seed 42 epoch 20/100: val_loss=0.577980; epoch_seconds=4.5; remaining_epoch_budget=80
+18:12 lstm seed 42 epoch 21/100: val_loss=0.588398; epoch_seconds=4.0; remaining_epoch_budget=79
+18:12 lstm seed 42 epoch 22/100: val_loss=0.569488; epoch_seconds=4.4; remaining_epoch_budget=78
+18:13 lstm seed 42 epoch 23/100: val_loss=0.617923; epoch_seconds=4.2; remaining_epoch_budget=77
+18:13 lstm seed 42 epoch 24/100: val_loss=0.596263; epoch_seconds=3.6; remaining_epoch_budget=76
+18:13 lstm seed 42 epoch 25/100: val_loss=0.590966; epoch_seconds=4.7; remaining_epoch_budget=75
+18:13 lstm seed 42 epoch 26/100: val_loss=0.654264; epoch_seconds=4.3; remaining_epoch_budget=74
+18:13 lstm seed 42 epoch 27/100: val_loss=0.629135; epoch_seconds=4.6; remaining_epoch_budget=73
+18:13 lstm seed 42 epoch 28/100: val_loss=0.646098; epoch_seconds=4.2; remaining_epoch_budget=72
+18:13 lstm seed 42 epoch 29/100: val_loss=0.650817; epoch_seconds=5.2; remaining_epoch_budget=71
+18:13 lstm seed 42 epoch 1/100: val_loss=0.581917; epoch_seconds=4.6; remaining_epoch_budget=99
+18:13 lstm seed 42 epoch 2/100: val_loss=0.558344; epoch_seconds=4.5; remaining_epoch_budget=98
+18:13 lstm seed 42 epoch 3/100: val_loss=0.557177; epoch_seconds=4.6; remaining_epoch_budget=97
+18:13 lstm seed 42 epoch 4/100: val_loss=0.552948; epoch_seconds=4.8; remaining_epoch_budget=96
+18:13 lstm seed 42 epoch 5/100: val_loss=0.550361; epoch_seconds=3.8; remaining_epoch_budget=95
+18:14 lstm seed 42 epoch 6/100: val_loss=0.550382; epoch_seconds=4.5; remaining_epoch_budget=94
+18:14 lstm seed 42 epoch 7/100: val_loss=0.552112; epoch_seconds=3.9; remaining_epoch_budget=93
+18:14 lstm seed 42 epoch 8/100: val_loss=0.548938; epoch_seconds=4.6; remaining_epoch_budget=92
+18:14 lstm seed 42 epoch 9/100: val_loss=0.543690; epoch_seconds=4.6; remaining_epoch_budget=91
+18:14 lstm seed 42 epoch 10/100: val_loss=0.547901; epoch_seconds=4.4; remaining_epoch_budget=90
+18:14 lstm seed 42 epoch 11/100: val_loss=0.553578; epoch_seconds=4.6; remaining_epoch_budget=89
+18:14 lstm seed 42 epoch 12/100: val_loss=0.545204; epoch_seconds=3.7; remaining_epoch_budget=88
+18:14 lstm seed 42 epoch 13/100: val_loss=0.545245; epoch_seconds=4.4; remaining_epoch_budget=87
+18:14 lstm seed 42 epoch 14/100: val_loss=0.543932; epoch_seconds=3.4; remaining_epoch_budget=86
+18:14 lstm seed 42 epoch 15/100: val_loss=0.552167; epoch_seconds=3.9; remaining_epoch_budget=85
+18:14 lstm seed 42 epoch 16/100: val_loss=0.546296; epoch_seconds=4.2; remaining_epoch_budget=84
+18:14 lstm seed 42 epoch 17/100: val_loss=0.547717; epoch_seconds=4.0; remaining_epoch_budget=83
+18:14 lstm seed 42 epoch 18/100: val_loss=0.551714; epoch_seconds=4.0; remaining_epoch_budget=82
+18:14 lstm seed 42 epoch 19/100: val_loss=0.547843; epoch_seconds=4.7; remaining_epoch_budget=81
+18:14 lstm seed 42 epoch 20/100: val_loss=0.552710; epoch_seconds=3.7; remaining_epoch_budget=80
+18:15 lstm seed 42 epoch 21/100: val_loss=0.551876; epoch_seconds=4.4; remaining_epoch_budget=79
+18:15 lstm seed 42 epoch 22/100: val_loss=0.544934; epoch_seconds=4.3; remaining_epoch_budget=78
+18:15 lstm seed 42 epoch 23/100: val_loss=0.555738; epoch_seconds=3.9; remaining_epoch_budget=77
+18:15 lstm seed 42 epoch 24/100: val_loss=0.555205; epoch_seconds=4.2; remaining_epoch_budget=76
+18:15 lstm seed 42 epoch 25/100: val_loss=0.550208; epoch_seconds=4.3; remaining_epoch_budget=75
+18:15 lstm seed 42 epoch 26/100: val_loss=0.560141; epoch_seconds=3.1; remaining_epoch_budget=74
+18:15 lstm seed 42 epoch 27/100: val_loss=0.556237; epoch_seconds=4.0; remaining_epoch_budget=73
+18:15 lstm seed 42 epoch 28/100: val_loss=0.561839; epoch_seconds=4.2; remaining_epoch_budget=72
+18:15 lstm seed 42 epoch 29/100: val_loss=0.563243; epoch_seconds=4.0; remaining_epoch_budget=71
+18:15   completed in 522.0s
+18:15 Day 28 train/validation seed 42 lightgbm: training
+18:16   completed in 28.3s
+18:16 Day 28 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+18:16   completed in 0.4s
+18:16 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\course_transfer_20261103T130003817786Z\held_AAA\day_28
+18:16 Held course=AAA, day=56: training only other courses; seeds=[42]
+18:16 Day 56: development=11418, external test=0, zero-history=369
+18:17 Day 56 train/validation seed 42 proposed: training
+18:17 proposed seed 42 epoch 1/15: val_loss=0.566948; epoch_seconds=7.0; remaining_epoch_budget=14
+18:17 proposed seed 42 epoch 2/15: val_loss=0.523056; epoch_seconds=7.1; remaining_epoch_budget=13
+18:17 proposed seed 42 epoch 3/15: val_loss=0.514876; epoch_seconds=7.9; remaining_epoch_budget=12
+18:17 proposed seed 42 epoch 4/15: val_loss=0.515278; epoch_seconds=7.1; remaining_epoch_budget=11
+18:17 proposed seed 42 epoch 5/15: val_loss=0.510263; epoch_seconds=7.1; remaining_epoch_budget=10
+18:17 proposed seed 42 epoch 6/15: val_loss=0.516706; epoch_seconds=7.8; remaining_epoch_budget=9
+18:17 proposed seed 42 epoch 7/15: val_loss=0.507693; epoch_seconds=8.1; remaining_epoch_budget=8
+18:18 proposed seed 42 epoch 8/15: val_loss=0.509357; epoch_seconds=8.9; remaining_epoch_budget=7
+18:18 proposed seed 42 epoch 9/15: val_loss=0.510073; epoch_seconds=9.7; remaining_epoch_budget=6
+18:18 proposed seed 42 epoch 10/15: val_loss=0.512649; epoch_seconds=8.0; remaining_epoch_budget=5
+18:18 proposed seed 42 epoch 11/15: val_loss=0.518866; epoch_seconds=6.4; remaining_epoch_budget=4
+18:18 proposed seed 42 epoch 12/15: val_loss=0.516258; epoch_seconds=5.9; remaining_epoch_budget=3
+18:18 proposed seed 42 epoch 13/15: val_loss=0.520535; epoch_seconds=6.1; remaining_epoch_budget=2
+18:18 proposed seed 42 epoch 14/15: val_loss=0.524634; epoch_seconds=6.3; remaining_epoch_budget=1
+18:18 proposed seed 42 epoch 15/15: val_loss=0.514567; epoch_seconds=7.6; remaining_epoch_budget=0
+18:19 proposed seed 42 epoch 1/15: val_loss=0.536809; epoch_seconds=7.4; remaining_epoch_budget=14
+18:19 proposed seed 42 epoch 2/15: val_loss=0.513470; epoch_seconds=7.8; remaining_epoch_budget=13
+18:19 proposed seed 42 epoch 3/15: val_loss=0.509691; epoch_seconds=7.3; remaining_epoch_budget=12
+18:19 proposed seed 42 epoch 4/15: val_loss=0.505610; epoch_seconds=7.3; remaining_epoch_budget=11
+18:19 proposed seed 42 epoch 5/15: val_loss=0.505202; epoch_seconds=6.6; remaining_epoch_budget=10
+18:19 proposed seed 42 epoch 6/15: val_loss=0.505600; epoch_seconds=8.1; remaining_epoch_budget=9
+18:19 proposed seed 42 epoch 7/15: val_loss=0.509567; epoch_seconds=7.5; remaining_epoch_budget=8
+18:20 proposed seed 42 epoch 8/15: val_loss=0.502574; epoch_seconds=8.0; remaining_epoch_budget=7
+18:20 proposed seed 42 epoch 9/15: val_loss=0.505913; epoch_seconds=7.5; remaining_epoch_budget=6
+18:20 proposed seed 42 epoch 10/15: val_loss=0.503618; epoch_seconds=6.3; remaining_epoch_budget=5
+18:20 proposed seed 42 epoch 11/15: val_loss=0.508538; epoch_seconds=6.7; remaining_epoch_budget=4
+18:20 proposed seed 42 epoch 12/15: val_loss=0.508891; epoch_seconds=6.3; remaining_epoch_budget=3
+18:20 proposed seed 42 epoch 13/15: val_loss=0.509002; epoch_seconds=7.1; remaining_epoch_budget=2
+18:20 proposed seed 42 epoch 14/15: val_loss=0.509027; epoch_seconds=6.9; remaining_epoch_budget=1
+18:20 proposed seed 42 epoch 15/15: val_loss=0.506608; epoch_seconds=7.0; remaining_epoch_budget=0
+18:20 proposed seed 42 epoch 1/15: val_loss=0.536911; epoch_seconds=7.6; remaining_epoch_budget=14
+18:21 proposed seed 42 epoch 2/15: val_loss=0.512848; epoch_seconds=7.5; remaining_epoch_budget=13
+18:21 proposed seed 42 epoch 3/15: val_loss=0.509433; epoch_seconds=9.9; remaining_epoch_budget=12
+18:21 proposed seed 42 epoch 4/15: val_loss=0.505447; epoch_seconds=8.5; remaining_epoch_budget=11
+18:21 proposed seed 42 epoch 5/15: val_loss=0.505263; epoch_seconds=8.5; remaining_epoch_budget=10
+18:21 proposed seed 42 epoch 6/15: val_loss=0.505464; epoch_seconds=8.7; remaining_epoch_budget=9
+18:21 proposed seed 42 epoch 7/15: val_loss=0.509076; epoch_seconds=7.8; remaining_epoch_budget=8
+18:21 proposed seed 42 epoch 8/15: val_loss=0.502687; epoch_seconds=7.8; remaining_epoch_budget=7
+18:22 proposed seed 42 epoch 9/15: val_loss=0.507780; epoch_seconds=7.6; remaining_epoch_budget=6
+18:22 proposed seed 42 epoch 10/15: val_loss=0.504724; epoch_seconds=6.8; remaining_epoch_budget=5
+18:22 proposed seed 42 epoch 11/15: val_loss=0.508859; epoch_seconds=7.5; remaining_epoch_budget=4
+18:22 proposed seed 42 epoch 12/15: val_loss=0.509526; epoch_seconds=7.1; remaining_epoch_budget=3
+18:22 proposed seed 42 epoch 13/15: val_loss=0.509836; epoch_seconds=8.0; remaining_epoch_budget=2
+18:22 proposed seed 42 epoch 14/15: val_loss=0.510891; epoch_seconds=6.9; remaining_epoch_budget=1
+18:22 proposed seed 42 epoch 15/15: val_loss=0.506906; epoch_seconds=7.0; remaining_epoch_budget=0
+18:23 proposed seed 42 epoch 1/15: val_loss=0.537919; epoch_seconds=8.0; remaining_epoch_budget=14
+18:23 proposed seed 42 epoch 2/15: val_loss=0.512765; epoch_seconds=7.5; remaining_epoch_budget=13
+18:23 proposed seed 42 epoch 3/15: val_loss=0.508539; epoch_seconds=7.5; remaining_epoch_budget=12
+18:23 proposed seed 42 epoch 4/15: val_loss=0.504164; epoch_seconds=6.6; remaining_epoch_budget=11
+18:23 proposed seed 42 epoch 5/15: val_loss=0.504886; epoch_seconds=7.1; remaining_epoch_budget=10
+18:23 proposed seed 42 epoch 6/15: val_loss=0.506243; epoch_seconds=7.4; remaining_epoch_budget=9
+18:23 proposed seed 42 epoch 7/15: val_loss=0.511777; epoch_seconds=7.6; remaining_epoch_budget=8
+18:23 proposed seed 42 epoch 8/15: val_loss=0.503344; epoch_seconds=7.7; remaining_epoch_budget=7
+18:23 proposed seed 42 epoch 9/15: val_loss=0.511140; epoch_seconds=7.4; remaining_epoch_budget=6
+18:24 proposed seed 42 epoch 10/15: val_loss=0.505962; epoch_seconds=7.1; remaining_epoch_budget=5
+18:24 proposed seed 42 epoch 11/15: val_loss=0.509251; epoch_seconds=7.5; remaining_epoch_budget=4
+18:24 proposed seed 42 epoch 12/15: val_loss=0.510627; epoch_seconds=7.4; remaining_epoch_budget=3
+18:24 proposed seed 42 epoch 13/15: val_loss=0.509617; epoch_seconds=7.1; remaining_epoch_budget=2
+18:24 proposed seed 42 epoch 14/15: val_loss=0.508897; epoch_seconds=7.6; remaining_epoch_budget=1
+18:24 proposed seed 42 epoch 15/15: val_loss=0.507143; epoch_seconds=7.2; remaining_epoch_budget=0
+18:24 proposed seed 42 epoch 1/100: val_loss=0.536809; epoch_seconds=7.9; remaining_epoch_budget=99
+18:25 proposed seed 42 epoch 2/100: val_loss=0.513470; epoch_seconds=7.5; remaining_epoch_budget=98
+18:25 proposed seed 42 epoch 3/100: val_loss=0.509691; epoch_seconds=7.8; remaining_epoch_budget=97
+18:25 proposed seed 42 epoch 4/100: val_loss=0.505610; epoch_seconds=7.5; remaining_epoch_budget=96
+18:25 proposed seed 42 epoch 5/100: val_loss=0.505202; epoch_seconds=8.6; remaining_epoch_budget=95
+18:25 proposed seed 42 epoch 6/100: val_loss=0.505600; epoch_seconds=8.5; remaining_epoch_budget=94
+18:25 proposed seed 42 epoch 7/100: val_loss=0.509567; epoch_seconds=8.0; remaining_epoch_budget=93
+18:25 proposed seed 42 epoch 8/100: val_loss=0.502574; epoch_seconds=9.2; remaining_epoch_budget=92
+18:25 proposed seed 42 epoch 9/100: val_loss=0.505913; epoch_seconds=8.6; remaining_epoch_budget=91
+18:26 proposed seed 42 epoch 10/100: val_loss=0.503618; epoch_seconds=7.7; remaining_epoch_budget=90
+18:26 proposed seed 42 epoch 11/100: val_loss=0.508538; epoch_seconds=9.0; remaining_epoch_budget=89
+18:26 proposed seed 42 epoch 12/100: val_loss=0.508891; epoch_seconds=7.2; remaining_epoch_budget=88
+18:26 proposed seed 42 epoch 13/100: val_loss=0.509002; epoch_seconds=7.2; remaining_epoch_budget=87
+18:26 proposed seed 42 epoch 14/100: val_loss=0.509027; epoch_seconds=7.0; remaining_epoch_budget=86
+18:26 proposed seed 42 epoch 15/100: val_loss=0.506608; epoch_seconds=7.0; remaining_epoch_budget=85
+18:26 proposed seed 42 epoch 16/100: val_loss=0.514056; epoch_seconds=7.8; remaining_epoch_budget=84
+18:26 proposed seed 42 epoch 17/100: val_loss=0.511266; epoch_seconds=6.5; remaining_epoch_budget=83
+18:27 proposed seed 42 epoch 18/100: val_loss=0.514043; epoch_seconds=8.3; remaining_epoch_budget=82
+18:27 proposed seed 42 epoch 19/100: val_loss=0.509172; epoch_seconds=8.1; remaining_epoch_budget=81
+18:27 proposed seed 42 epoch 20/100: val_loss=0.523381; epoch_seconds=7.2; remaining_epoch_budget=80
+18:27 proposed seed 42 epoch 21/100: val_loss=0.512751; epoch_seconds=7.4; remaining_epoch_budget=79
+18:27 proposed seed 42 epoch 22/100: val_loss=0.510640; epoch_seconds=7.1; remaining_epoch_budget=78
+18:27 proposed seed 42 epoch 23/100: val_loss=0.515744; epoch_seconds=7.9; remaining_epoch_budget=77
+18:27 proposed seed 42 epoch 24/100: val_loss=0.512282; epoch_seconds=8.0; remaining_epoch_budget=76
+18:28 proposed seed 42 epoch 25/100: val_loss=0.521597; epoch_seconds=8.2; remaining_epoch_budget=75
+18:28 proposed seed 42 epoch 26/100: val_loss=0.517275; epoch_seconds=8.4; remaining_epoch_budget=74
+18:28 proposed seed 42 epoch 27/100: val_loss=0.527008; epoch_seconds=8.5; remaining_epoch_budget=73
+18:28 proposed seed 42 epoch 28/100: val_loss=0.520151; epoch_seconds=8.4; remaining_epoch_budget=72
+18:28 proposed seed 42 epoch 1/100: val_loss=0.536911; epoch_seconds=8.0; remaining_epoch_budget=99
+18:28 proposed seed 42 epoch 2/100: val_loss=0.512848; epoch_seconds=8.4; remaining_epoch_budget=98
+18:28 proposed seed 42 epoch 3/100: val_loss=0.509433; epoch_seconds=8.1; remaining_epoch_budget=97
+18:29 proposed seed 42 epoch 4/100: val_loss=0.505447; epoch_seconds=8.1; remaining_epoch_budget=96
+18:29 proposed seed 42 epoch 5/100: val_loss=0.505263; epoch_seconds=8.4; remaining_epoch_budget=95
+18:29 proposed seed 42 epoch 6/100: val_loss=0.505464; epoch_seconds=7.5; remaining_epoch_budget=94
+18:29 proposed seed 42 epoch 7/100: val_loss=0.509076; epoch_seconds=7.8; remaining_epoch_budget=93
+18:29 proposed seed 42 epoch 8/100: val_loss=0.502687; epoch_seconds=9.2; remaining_epoch_budget=92
+18:29 proposed seed 42 epoch 9/100: val_loss=0.507780; epoch_seconds=8.6; remaining_epoch_budget=91
+18:29 proposed seed 42 epoch 10/100: val_loss=0.504724; epoch_seconds=8.6; remaining_epoch_budget=90
+18:30 proposed seed 42 epoch 11/100: val_loss=0.508859; epoch_seconds=9.7; remaining_epoch_budget=89
+18:30 proposed seed 42 epoch 12/100: val_loss=0.509526; epoch_seconds=7.9; remaining_epoch_budget=88
+18:30 proposed seed 42 epoch 13/100: val_loss=0.509836; epoch_seconds=7.5; remaining_epoch_budget=87
+18:30 proposed seed 42 epoch 14/100: val_loss=0.510891; epoch_seconds=7.1; remaining_epoch_budget=86
+18:30 proposed seed 42 epoch 15/100: val_loss=0.506906; epoch_seconds=7.4; remaining_epoch_budget=85
+18:30 proposed seed 42 epoch 16/100: val_loss=0.516038; epoch_seconds=7.7; remaining_epoch_budget=84
+18:30 proposed seed 42 epoch 17/100: val_loss=0.511412; epoch_seconds=7.4; remaining_epoch_budget=83
+18:30 proposed seed 42 epoch 18/100: val_loss=0.513758; epoch_seconds=7.6; remaining_epoch_budget=82
+18:31 proposed seed 42 epoch 19/100: val_loss=0.510636; epoch_seconds=6.9; remaining_epoch_budget=81
+18:31 proposed seed 42 epoch 20/100: val_loss=0.524725; epoch_seconds=7.2; remaining_epoch_budget=80
+18:31 proposed seed 42 epoch 21/100: val_loss=0.513988; epoch_seconds=8.2; remaining_epoch_budget=79
+18:31 proposed seed 42 epoch 22/100: val_loss=0.510347; epoch_seconds=9.4; remaining_epoch_budget=78
+18:31 proposed seed 42 epoch 23/100: val_loss=0.517455; epoch_seconds=19.6; remaining_epoch_budget=77
+18:31 proposed seed 42 epoch 24/100: val_loss=0.515181; epoch_seconds=6.4; remaining_epoch_budget=76
+18:32 proposed seed 42 epoch 25/100: val_loss=0.522529; epoch_seconds=6.2; remaining_epoch_budget=75
+18:32 proposed seed 42 epoch 26/100: val_loss=0.519901; epoch_seconds=5.9; remaining_epoch_budget=74
+18:32 proposed seed 42 epoch 27/100: val_loss=0.528551; epoch_seconds=7.2; remaining_epoch_budget=73
+18:32 proposed seed 42 epoch 28/100: val_loss=0.520687; epoch_seconds=7.5; remaining_epoch_budget=72
+18:32   completed in 924.0s
+18:32 Day 56 train/validation seed 42 lstm: training
+18:32 lstm seed 42 epoch 1/15: val_loss=0.549337; epoch_seconds=5.1; remaining_epoch_budget=14
+18:32 lstm seed 42 epoch 2/15: val_loss=0.512078; epoch_seconds=5.1; remaining_epoch_budget=13
+18:32 lstm seed 42 epoch 3/15: val_loss=0.508503; epoch_seconds=5.3; remaining_epoch_budget=12
+18:32 lstm seed 42 epoch 4/15: val_loss=0.503968; epoch_seconds=4.6; remaining_epoch_budget=11
+18:32 lstm seed 42 epoch 5/15: val_loss=0.503666; epoch_seconds=3.6; remaining_epoch_budget=10
+18:32 lstm seed 42 epoch 6/15: val_loss=0.503872; epoch_seconds=4.3; remaining_epoch_budget=9
+18:33 lstm seed 42 epoch 7/15: val_loss=0.506628; epoch_seconds=4.3; remaining_epoch_budget=8
+18:33 lstm seed 42 epoch 8/15: val_loss=0.503607; epoch_seconds=4.2; remaining_epoch_budget=7
+18:33 lstm seed 42 epoch 9/15: val_loss=0.507376; epoch_seconds=4.1; remaining_epoch_budget=6
+18:33 lstm seed 42 epoch 10/15: val_loss=0.504604; epoch_seconds=5.1; remaining_epoch_budget=5
+18:33 lstm seed 42 epoch 11/15: val_loss=0.507523; epoch_seconds=5.5; remaining_epoch_budget=4
+18:33 lstm seed 42 epoch 12/15: val_loss=0.509562; epoch_seconds=5.1; remaining_epoch_budget=3
+18:33 lstm seed 42 epoch 13/15: val_loss=0.510489; epoch_seconds=4.9; remaining_epoch_budget=2
+18:33 lstm seed 42 epoch 14/15: val_loss=0.506722; epoch_seconds=4.7; remaining_epoch_budget=1
+18:33 lstm seed 42 epoch 15/15: val_loss=0.508088; epoch_seconds=6.8; remaining_epoch_budget=0
+18:33 lstm seed 42 epoch 1/15: val_loss=0.541668; epoch_seconds=4.3; remaining_epoch_budget=14
+18:33 lstm seed 42 epoch 2/15: val_loss=0.511239; epoch_seconds=4.4; remaining_epoch_budget=13
+18:33 lstm seed 42 epoch 3/15: val_loss=0.508433; epoch_seconds=4.0; remaining_epoch_budget=12
+18:34 lstm seed 42 epoch 4/15: val_loss=0.504768; epoch_seconds=4.3; remaining_epoch_budget=11
+18:34 lstm seed 42 epoch 5/15: val_loss=0.504375; epoch_seconds=3.7; remaining_epoch_budget=10
+18:34 lstm seed 42 epoch 6/15: val_loss=0.504680; epoch_seconds=3.9; remaining_epoch_budget=9
+18:34 lstm seed 42 epoch 7/15: val_loss=0.507189; epoch_seconds=3.8; remaining_epoch_budget=8
+18:34 lstm seed 42 epoch 8/15: val_loss=0.503501; epoch_seconds=3.8; remaining_epoch_budget=7
+18:34 lstm seed 42 epoch 9/15: val_loss=0.507696; epoch_seconds=3.6; remaining_epoch_budget=6
+18:34 lstm seed 42 epoch 10/15: val_loss=0.504654; epoch_seconds=3.8; remaining_epoch_budget=5
+18:34 lstm seed 42 epoch 11/15: val_loss=0.506138; epoch_seconds=3.9; remaining_epoch_budget=4
+18:34 lstm seed 42 epoch 12/15: val_loss=0.509291; epoch_seconds=4.3; remaining_epoch_budget=3
+18:34 lstm seed 42 epoch 13/15: val_loss=0.507693; epoch_seconds=3.7; remaining_epoch_budget=2
+18:34 lstm seed 42 epoch 14/15: val_loss=0.506321; epoch_seconds=3.8; remaining_epoch_budget=1
+18:34 lstm seed 42 epoch 15/15: val_loss=0.507113; epoch_seconds=4.3; remaining_epoch_budget=0
+18:34 lstm seed 42 epoch 1/15: val_loss=0.543233; epoch_seconds=4.3; remaining_epoch_budget=14
+18:34 lstm seed 42 epoch 2/15: val_loss=0.513108; epoch_seconds=4.2; remaining_epoch_budget=13
+18:34 lstm seed 42 epoch 3/15: val_loss=0.508296; epoch_seconds=3.5; remaining_epoch_budget=12
+18:35 lstm seed 42 epoch 4/15: val_loss=0.505297; epoch_seconds=3.9; remaining_epoch_budget=11
+18:35 lstm seed 42 epoch 5/15: val_loss=0.505934; epoch_seconds=3.0; remaining_epoch_budget=10
+18:35 lstm seed 42 epoch 6/15: val_loss=0.507188; epoch_seconds=2.7; remaining_epoch_budget=9
+18:35 lstm seed 42 epoch 7/15: val_loss=0.508874; epoch_seconds=3.4; remaining_epoch_budget=8
+18:35 lstm seed 42 epoch 8/15: val_loss=0.506919; epoch_seconds=3.9; remaining_epoch_budget=7
+18:35 lstm seed 42 epoch 9/15: val_loss=0.508252; epoch_seconds=3.9; remaining_epoch_budget=6
+18:35 lstm seed 42 epoch 10/15: val_loss=0.507826; epoch_seconds=4.3; remaining_epoch_budget=5
+18:35 lstm seed 42 epoch 11/15: val_loss=0.508395; epoch_seconds=4.1; remaining_epoch_budget=4
+18:35 lstm seed 42 epoch 12/15: val_loss=0.510803; epoch_seconds=3.9; remaining_epoch_budget=3
+18:35 lstm seed 42 epoch 13/15: val_loss=0.510695; epoch_seconds=3.9; remaining_epoch_budget=2
+18:35 lstm seed 42 epoch 14/15: val_loss=0.508727; epoch_seconds=4.2; remaining_epoch_budget=1
+18:35 lstm seed 42 epoch 15/15: val_loss=0.510024; epoch_seconds=3.7; remaining_epoch_budget=0
+18:35 lstm seed 42 epoch 1/15: val_loss=0.628323; epoch_seconds=4.4; remaining_epoch_budget=14
+18:35 lstm seed 42 epoch 2/15: val_loss=0.557820; epoch_seconds=3.9; remaining_epoch_budget=13
+18:35 lstm seed 42 epoch 3/15: val_loss=0.527334; epoch_seconds=5.7; remaining_epoch_budget=12
+18:36 lstm seed 42 epoch 4/15: val_loss=0.517018; epoch_seconds=5.5; remaining_epoch_budget=11
+18:36 lstm seed 42 epoch 5/15: val_loss=0.509951; epoch_seconds=3.9; remaining_epoch_budget=10
+18:36 lstm seed 42 epoch 6/15: val_loss=0.509757; epoch_seconds=4.3; remaining_epoch_budget=9
+18:36 lstm seed 42 epoch 7/15: val_loss=0.509195; epoch_seconds=4.5; remaining_epoch_budget=8
+18:36 lstm seed 42 epoch 8/15: val_loss=0.506217; epoch_seconds=4.2; remaining_epoch_budget=7
+18:36 lstm seed 42 epoch 9/15: val_loss=0.506927; epoch_seconds=3.6; remaining_epoch_budget=6
+18:36 lstm seed 42 epoch 10/15: val_loss=0.506002; epoch_seconds=3.5; remaining_epoch_budget=5
+18:36 lstm seed 42 epoch 11/15: val_loss=0.505881; epoch_seconds=3.9; remaining_epoch_budget=4
+18:36 lstm seed 42 epoch 12/15: val_loss=0.505978; epoch_seconds=4.2; remaining_epoch_budget=3
+18:36 lstm seed 42 epoch 13/15: val_loss=0.506807; epoch_seconds=3.9; remaining_epoch_budget=2
+18:36 lstm seed 42 epoch 14/15: val_loss=0.506130; epoch_seconds=3.7; remaining_epoch_budget=1
+18:36 lstm seed 42 epoch 15/15: val_loss=0.505982; epoch_seconds=4.2; remaining_epoch_budget=0
+18:36 lstm seed 42 epoch 1/100: val_loss=0.541668; epoch_seconds=5.6; remaining_epoch_budget=99
+18:37 lstm seed 42 epoch 2/100: val_loss=0.511239; epoch_seconds=4.5; remaining_epoch_budget=98
+18:37 lstm seed 42 epoch 3/100: val_loss=0.508433; epoch_seconds=4.0; remaining_epoch_budget=97
+18:37 lstm seed 42 epoch 4/100: val_loss=0.504768; epoch_seconds=4.2; remaining_epoch_budget=96
+18:37 lstm seed 42 epoch 5/100: val_loss=0.504375; epoch_seconds=4.1; remaining_epoch_budget=95
+18:37 lstm seed 42 epoch 6/100: val_loss=0.504680; epoch_seconds=6.6; remaining_epoch_budget=94
+18:37 lstm seed 42 epoch 7/100: val_loss=0.507189; epoch_seconds=6.3; remaining_epoch_budget=93
+18:37 lstm seed 42 epoch 8/100: val_loss=0.503501; epoch_seconds=6.1; remaining_epoch_budget=92
+18:37 lstm seed 42 epoch 9/100: val_loss=0.507696; epoch_seconds=6.0; remaining_epoch_budget=91
+18:37 lstm seed 42 epoch 10/100: val_loss=0.504654; epoch_seconds=4.2; remaining_epoch_budget=90
+18:37 lstm seed 42 epoch 11/100: val_loss=0.506138; epoch_seconds=4.1; remaining_epoch_budget=89
+18:37 Traceback (most recent call last):
+18:37   File "C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\article_experiment_utils.py", line 85, in session
+18:37     yield out, config
+18:37   File "C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\run_course_transfer.py", line 117, in main
+18:37     pipeline.run_window(cohort, daily, assess, {**config, 'days': day}, directory, signature)
+18:37   File "C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\risk_experiments\pipeline.py", line 192, in run_window
+18:37     pred, report = tune_and_predict(name, partitions[0], partitions[1], calibration_partition,
+18:37                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+18:37   File "C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\risk_experiments\tuning.py", line 124, in tune_and_predict
+18:37     refined.append(trial(record['options'], 'full', i, config['epochs']))
+18:37                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+18:37   File "C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\risk_experiments\tuning.py", line 103, in trial
+18:37     pred, report = fit_predict(name, fit, selection, selection, None, path, seed, settings)
+18:37                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+18:37   File "<course-transfer-epoch-progress>", line 53, in fit_predict
+18:37   File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+18:37     return self._call_impl(*args, **kwargs)
+18:37            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+18:37   File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+18:37     return forward_call(*args, **kwargs)
+18:37            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+18:37   File "C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\risk_experiments\networks.py", line 66, in forward
+18:37     _, (hidden, _) = self.encoder(x)
+18:37                      ^^^^^^^^^^^^^^^
+18:37   File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1779, in _wrapped_call_impl
+18:37     return self._call_impl(*args, **kwargs)
+18:37            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+18:37   File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\module.py", line 1790, in _call_impl
+18:37     return forward_call(*args, **kwargs)
+18:37            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+18:37   File "C:\Users\user\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\torch\nn\modules\rnn.py", line 1169, in forward
+18:37     result = _VF.lstm(
+18:37              ^^^^^^^^^
+18:37 KeyboardInterrupt

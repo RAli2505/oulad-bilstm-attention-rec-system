@@ -1,0 +1,40 @@
+{
+  "source": "C:\\Users\\user\\Documents\\Diser\\система\\oulad-bilstm-attention\\runs\\risk_20261031T191741845697Z",
+  "manifest_sha256": "452b7283883cfc20a60b6be8fdd84d2523233f3d774471148bc64ad1c6bb78cb",
+  "windows": [
+    7,
+    14,
+    21,
+    28,
+    56,
+    112
+  ],
+  "seeds": [
+    42,
+    13,
+    7,
+    23,
+    101
+  ],
+  "capacities": [
+    0.1,
+    0.2,
+    0.3
+  ],
+  "bootstrap": 1000,
+  "student_metadata_sha256": "7e6f3e474a5eee00639d2a414a6c7e928745823c2d2c2563ca1780145f99b0d6",
+  "training": false,
+  "test_used": false,
+  "exploratory_validation": true,
+  "capacity_unit": "student-course enrollment; students taking two courses may have two records",
+  "threshold_selection": "selection only; held is diagnostic, never used to choose a threshold",
+  "script_sha256": "786b44659859f62a653d82aeba7182450e3c2981ba2f9264cfe8b6a63a6070b6",
+  "utility_sha256": "8fe588dbf0330e1b99cdeb9dc65376a87cc0d1b0de2f36a11e8a6b503c016cde",
+  "versions": {
+    "numpy": "2.5.1",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.8.0",
+    "torch": "2.11.0+cu128",
+    "lightgbm": "4.6.0"
+  }
+}

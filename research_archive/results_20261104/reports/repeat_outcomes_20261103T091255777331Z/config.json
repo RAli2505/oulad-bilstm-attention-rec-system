@@ -1,0 +1,20 @@
+{
+  "windows": [
+    7,
+    14,
+    21,
+    28
+  ],
+  "exposure_days": 7,
+  "max_outcome_days_after_landmark": 35,
+  "raw": "C:\\Users\\user\\Documents\\Diser\\\u0441\u0438\u0441\u0442\u0435\u043c\u0430\\oulad-bilstm-attention\\data\\oulad\\raw",
+  "files": {
+    "studentRegistration.csv": "0d32676285372aaf2e7a80304e5b274b4fba24313e2ca4c04317225e1ec90170",
+    "studentVle.csv": "52668253d876c5becbcb72185977152700cecab2942aca807fecc3dd54b937f0",
+    "assessments.csv": "8cc738fb88ad760571d6f2a23059bfee0ffcae3bcd830514c9cbd5c6d5a046f1",
+    "studentAssessment.csv": "fd5320786328d05af841ee7dd4b5871b9dada3b9fe9d6a3642b2f42635510a6e"
+  },
+  "script_sha256": "238fe62cf32a27c8fb4d765734b051bc2a96808f533611ad8ed113ff2b0a253a",
+  "causal_effect": false,
+  "test_2014_used": false
+}

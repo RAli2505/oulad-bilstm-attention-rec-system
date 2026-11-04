@@ -1,0 +1,578 @@
+16:07 Output: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z
+16:07 Day 7: full_refit fitting controlled fusion
+16:07   full_refit: C=0.1, fit pairs=2146173
+16:07   full_refit: C=1.0, fit pairs=2146173
+16:08   full_refit: C=10.0, fit pairs=2146173
+16:08   full_refit selection: 512/851; 974.7 queries/s; ETA=0s
+16:08   full_refit selection: 851/851; 913.3 queries/s; ETA=0s
+16:08   full_refit selection: 512/851; 1156.3 queries/s; ETA=0s
+16:08   full_refit selection: 851/851; 1117.5 queries/s; ETA=0s
+16:08   full_refit selection: 512/851; 1046.8 queries/s; ETA=0s
+16:08   full_refit selection: 851/851; 1047.0 queries/s; ETA=0s
+16:08   full_refit held: 512/3664; 595.8 queries/s; ETA=5s
+16:08   full_refit held: 1024/3664; 624.1 queries/s; ETA=4s
+16:08   full_refit held: 1536/3664; 619.5 queries/s; ETA=3s
+16:08   full_refit held: 2048/3664; 626.2 queries/s; ETA=3s
+16:08   full_refit held: 2560/3664; 618.5 queries/s; ETA=2s
+16:08   full_refit held: 3072/3664; 614.1 queries/s; ETA=1s
+16:08   full_refit held: 3584/3664; 612.5 queries/s; ETA=0s
+16:08   full_refit held: 3664/3664; 611.9 queries/s; ETA=0s
+16:08 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_7\full_refit
+16:08 Day 7: without_explicit_preference fitting controlled fusion
+16:08   without_explicit_preference: C=0.1, fit pairs=2146173
+16:08   without_explicit_preference: C=1.0, fit pairs=2146173
+16:08   without_explicit_preference: C=10.0, fit pairs=2146173
+16:08   without_explicit_preference selection: 512/851; 208.6 queries/s; ETA=2s
+16:08   without_explicit_preference selection: 851/851; 203.4 queries/s; ETA=0s
+16:08   without_explicit_preference selection: 512/851; 200.2 queries/s; ETA=2s
+16:08   without_explicit_preference selection: 851/851; 203.5 queries/s; ETA=0s
+16:08   without_explicit_preference selection: 512/851; 241.5 queries/s; ETA=1s
+16:08   without_explicit_preference selection: 851/851; 239.2 queries/s; ETA=0s
+16:08   without_explicit_preference held: 512/3664; 132.4 queries/s; ETA=24s
+16:09   without_explicit_preference held: 1024/3664; 125.8 queries/s; ETA=21s
+16:09   without_explicit_preference held: 1536/3664; 120.6 queries/s; ETA=18s
+16:09   without_explicit_preference held: 2048/3664; 117.8 queries/s; ETA=14s
+16:09   without_explicit_preference held: 2560/3664; 117.8 queries/s; ETA=9s
+16:09   without_explicit_preference held: 3072/3664; 117.2 queries/s; ETA=5s
+16:09   without_explicit_preference held: 3584/3664; 114.1 queries/s; ETA=1s
+16:09   without_explicit_preference held: 3664/3664; 113.7 queries/s; ETA=0s
+16:09 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_7\without_explicit_preference
+16:09 Day 7: without_risk fitting controlled fusion
+16:09   without_risk: C=0.1, fit pairs=2146173
+16:09   without_risk: C=1.0, fit pairs=2146173
+16:09   without_risk: C=10.0, fit pairs=2146173
+16:10   without_risk selection: 512/851; 238.3 queries/s; ETA=1s
+16:10   without_risk selection: 851/851; 229.3 queries/s; ETA=0s
+16:10   without_risk selection: 512/851; 237.4 queries/s; ETA=1s
+16:10   without_risk selection: 851/851; 225.2 queries/s; ETA=0s
+16:10   without_risk selection: 512/851; 210.0 queries/s; ETA=2s
+16:10   without_risk selection: 851/851; 206.7 queries/s; ETA=0s
+16:10   without_risk held: 512/3664; 130.0 queries/s; ETA=24s
+16:10   without_risk held: 1024/3664; 128.1 queries/s; ETA=21s
+16:10   without_risk held: 1536/3664; 124.8 queries/s; ETA=17s
+16:10   without_risk held: 2048/3664; 124.6 queries/s; ETA=13s
+16:10   without_risk held: 2560/3664; 119.8 queries/s; ETA=9s
+16:10   without_risk held: 3072/3664; 119.9 queries/s; ETA=5s
+16:10   without_risk held: 3584/3664; 121.1 queries/s; ETA=1s
+16:10   without_risk held: 3664/3664; 121.2 queries/s; ETA=0s
+16:10 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_7\without_risk
+16:10 Day 7: without_cf fitting controlled fusion
+16:10   without_cf: C=0.1, fit pairs=2146173
+16:11   without_cf: C=1.0, fit pairs=2146173
+16:11   without_cf: C=10.0, fit pairs=2146173
+16:11   without_cf selection: 512/851; 198.8 queries/s; ETA=2s
+16:11   without_cf selection: 851/851; 207.9 queries/s; ETA=0s
+16:11   without_cf selection: 512/851; 227.9 queries/s; ETA=1s
+16:11   without_cf selection: 851/851; 225.4 queries/s; ETA=0s
+16:11   without_cf selection: 512/851; 198.0 queries/s; ETA=2s
+16:11   without_cf selection: 851/851; 189.8 queries/s; ETA=0s
+16:11   without_cf held: 512/3664; 114.8 queries/s; ETA=27s
+16:11   without_cf held: 1024/3664; 113.7 queries/s; ETA=23s
+16:12   without_cf held: 1536/3664; 113.5 queries/s; ETA=19s
+16:12   without_cf held: 2048/3664; 114.5 queries/s; ETA=14s
+16:12   without_cf held: 2560/3664; 115.5 queries/s; ETA=10s
+16:12   without_cf held: 3072/3664; 114.8 queries/s; ETA=5s
+16:12   without_cf held: 3584/3664; 116.2 queries/s; ETA=1s
+16:12   without_cf held: 3664/3664; 116.4 queries/s; ETA=0s
+16:12 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_7\without_cf
+16:12 Day 7: without_content fitting controlled fusion
+16:12   without_content: C=0.1, fit pairs=2146173
+16:12   without_content: C=1.0, fit pairs=2146173
+16:12   without_content: C=10.0, fit pairs=2146173
+16:13   without_content selection: 512/851; 234.5 queries/s; ETA=1s
+16:13   without_content selection: 851/851; 227.1 queries/s; ETA=0s
+16:13   without_content selection: 512/851; 194.5 queries/s; ETA=2s
+16:13   without_content selection: 851/851; 198.7 queries/s; ETA=0s
+16:13   without_content selection: 512/851; 233.5 queries/s; ETA=1s
+16:13   without_content selection: 851/851; 228.0 queries/s; ETA=0s
+16:13   without_content held: 512/3664; 125.2 queries/s; ETA=25s
+16:13   without_content held: 1024/3664; 124.0 queries/s; ETA=21s
+16:13   without_content held: 1536/3664; 124.6 queries/s; ETA=17s
+16:13   without_content held: 2048/3664; 119.7 queries/s; ETA=13s
+16:13   without_content held: 2560/3664; 119.3 queries/s; ETA=9s
+16:13   without_content held: 3072/3664; 117.7 queries/s; ETA=5s
+16:13   without_content held: 3584/3664; 117.1 queries/s; ETA=1s
+16:13   without_content held: 3664/3664; 117.1 queries/s; ETA=0s
+16:14 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_7\without_content
+16:14 Day 7: without_sasrec fitting controlled fusion
+16:14   without_sasrec selection: 512/851; 261.4 queries/s; ETA=1s
+16:14   without_sasrec selection: 851/851; 287.0 queries/s; ETA=0s
+16:14   without_sasrec selection: 512/851; 272.2 queries/s; ETA=1s
+16:14   without_sasrec selection: 851/851; 291.2 queries/s; ETA=0s
+16:14   without_sasrec selection: 512/851; 362.5 queries/s; ETA=1s
+16:14   without_sasrec selection: 851/851; 365.0 queries/s; ETA=0s
+16:14   without_sasrec held: 512/3664; 184.5 queries/s; ETA=17s
+16:14   without_sasrec held: 1024/3664; 192.9 queries/s; ETA=14s
+16:14   without_sasrec held: 1536/3664; 243.1 queries/s; ETA=9s
+16:14   without_sasrec held: 2048/3664; 127.3 queries/s; ETA=13s
+16:14   without_sasrec held: 2560/3664; 105.0 queries/s; ETA=11s
+16:14   without_sasrec held: 3072/3664; 113.0 queries/s; ETA=5s
+16:14   without_sasrec held: 3584/3664; 120.8 queries/s; ETA=1s
+16:14   without_sasrec held: 3664/3664; 121.5 queries/s; ETA=0s
+16:14 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_7\without_sasrec
+16:14 Day 7: without_mmr fitting controlled fusion
+16:14   without_mmr selection: 512/851; 229.4 queries/s; ETA=1s
+16:14   without_mmr selection: 851/851; 238.1 queries/s; ETA=0s
+16:14   without_mmr selection: 512/851; 220.8 queries/s; ETA=2s
+16:14   without_mmr selection: 851/851; 232.9 queries/s; ETA=0s
+16:14   without_mmr selection: 512/851; 305.0 queries/s; ETA=1s
+16:14   without_mmr selection: 851/851; 262.1 queries/s; ETA=0s
+16:15   without_mmr held: 512/3664; 156.8 queries/s; ETA=20s
+16:15   without_mmr held: 1024/3664; 162.2 queries/s; ETA=16s
+16:15   without_mmr held: 1536/3664; 165.1 queries/s; ETA=13s
+16:15   without_mmr held: 2048/3664; 165.1 queries/s; ETA=10s
+16:15   without_mmr held: 2560/3664; 163.2 queries/s; ETA=7s
+16:15   without_mmr held: 3072/3664; 163.3 queries/s; ETA=4s
+16:15   without_mmr held: 3584/3664; 166.6 queries/s; ETA=0s
+16:15   without_mmr held: 3664/3664; 167.4 queries/s; ETA=0s
+16:15 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_7\without_mmr
+16:15 Day 7: frozen_profile_day7 fitting controlled fusion
+16:15   frozen_profile_day7: C=0.1, fit pairs=2146173
+16:15   frozen_profile_day7: C=1.0, fit pairs=2146173
+16:15   frozen_profile_day7: C=10.0, fit pairs=2146173
+16:15   frozen_profile_day7 selection: 512/851; 279.8 queries/s; ETA=1s
+16:16   frozen_profile_day7 selection: 851/851; 280.0 queries/s; ETA=0s
+16:16   frozen_profile_day7 selection: 512/851; 296.9 queries/s; ETA=1s
+16:16   frozen_profile_day7 selection: 851/851; 283.6 queries/s; ETA=0s
+16:16   frozen_profile_day7 selection: 512/851; 323.9 queries/s; ETA=1s
+16:16   frozen_profile_day7 selection: 851/851; 315.3 queries/s; ETA=0s
+16:16   frozen_profile_day7 held: 512/3664; 167.3 queries/s; ETA=19s
+16:16   frozen_profile_day7 held: 1024/3664; 173.6 queries/s; ETA=15s
+16:16   frozen_profile_day7 held: 1536/3664; 175.9 queries/s; ETA=12s
+16:16   frozen_profile_day7 held: 2048/3664; 179.4 queries/s; ETA=9s
+16:16   frozen_profile_day7 held: 2560/3664; 183.4 queries/s; ETA=6s
+16:16   frozen_profile_day7 held: 3072/3664; 184.3 queries/s; ETA=3s
+16:16   frozen_profile_day7 held: 3584/3664; 184.5 queries/s; ETA=0s
+16:16   frozen_profile_day7 held: 3664/3664; 184.4 queries/s; ETA=0s
+16:16 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_7\frozen_profile_day7
+16:16 Day 14: full_refit fitting controlled fusion
+16:16   full_refit: C=0.1, fit pairs=2141998
+16:16   full_refit: C=1.0, fit pairs=2141998
+16:16   full_refit: C=10.0, fit pairs=2141998
+16:16   full_refit selection: 512/845; 289.6 queries/s; ETA=1s
+16:16   full_refit selection: 845/845; 283.0 queries/s; ETA=0s
+16:17   full_refit selection: 512/845; 263.6 queries/s; ETA=1s
+16:17   full_refit selection: 845/845; 284.2 queries/s; ETA=0s
+16:17   full_refit selection: 512/845; 345.9 queries/s; ETA=1s
+16:17   full_refit selection: 845/845; 334.7 queries/s; ETA=0s
+16:17   full_refit held: 512/3631; 180.3 queries/s; ETA=17s
+16:17   full_refit held: 1024/3631; 181.0 queries/s; ETA=14s
+16:17   full_refit held: 1536/3631; 185.2 queries/s; ETA=11s
+16:17   full_refit held: 2048/3631; 180.8 queries/s; ETA=9s
+16:17   full_refit held: 2560/3631; 186.9 queries/s; ETA=6s
+16:17   full_refit held: 3072/3631; 194.1 queries/s; ETA=3s
+16:17   full_refit held: 3584/3631; 197.8 queries/s; ETA=0s
+16:17   full_refit held: 3631/3631; 198.4 queries/s; ETA=0s
+16:17 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_14\full_refit
+16:17 Day 14: without_explicit_preference fitting controlled fusion
+16:17   without_explicit_preference: C=0.1, fit pairs=2141998
+16:17   without_explicit_preference: C=1.0, fit pairs=2141998
+16:17   without_explicit_preference: C=10.0, fit pairs=2141998
+16:17   without_explicit_preference selection: 512/845; 446.9 queries/s; ETA=1s
+16:17   without_explicit_preference selection: 845/845; 454.2 queries/s; ETA=0s
+16:17   without_explicit_preference selection: 512/845; 474.4 queries/s; ETA=1s
+16:17   without_explicit_preference selection: 845/845; 487.3 queries/s; ETA=0s
+16:17   without_explicit_preference selection: 512/845; 405.7 queries/s; ETA=1s
+16:17   without_explicit_preference selection: 845/845; 405.8 queries/s; ETA=0s
+16:17   without_explicit_preference held: 512/3631; 237.9 queries/s; ETA=13s
+16:18   without_explicit_preference held: 1024/3631; 213.6 queries/s; ETA=12s
+16:18   without_explicit_preference held: 1536/3631; 210.5 queries/s; ETA=10s
+16:18   without_explicit_preference held: 2048/3631; 213.8 queries/s; ETA=7s
+16:18   without_explicit_preference held: 2560/3631; 218.0 queries/s; ETA=5s
+16:18   without_explicit_preference held: 3072/3631; 217.8 queries/s; ETA=3s
+16:18   without_explicit_preference held: 3584/3631; 215.9 queries/s; ETA=0s
+16:18   without_explicit_preference held: 3631/3631; 215.7 queries/s; ETA=0s
+16:18 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_14\without_explicit_preference
+16:18 Day 14: without_risk fitting controlled fusion
+16:18   without_risk: C=0.1, fit pairs=2141998
+16:18   without_risk: C=1.0, fit pairs=2141998
+16:18   without_risk: C=10.0, fit pairs=2141998
+16:18   without_risk selection: 512/845; 409.5 queries/s; ETA=1s
+16:18   without_risk selection: 845/845; 428.5 queries/s; ETA=0s
+16:18   without_risk selection: 512/845; 369.4 queries/s; ETA=1s
+16:18   without_risk selection: 845/845; 387.6 queries/s; ETA=0s
+16:18   without_risk selection: 512/845; 445.2 queries/s; ETA=1s
+16:18   without_risk selection: 845/845; 378.0 queries/s; ETA=0s
+16:18   without_risk held: 512/3631; 252.0 queries/s; ETA=12s
+16:18   without_risk held: 1024/3631; 252.2 queries/s; ETA=10s
+16:18   without_risk held: 1536/3631; 233.5 queries/s; ETA=9s
+16:18   without_risk held: 2048/3631; 234.8 queries/s; ETA=7s
+16:18   without_risk held: 2560/3631; 243.3 queries/s; ETA=4s
+16:19   without_risk held: 3072/3631; 237.4 queries/s; ETA=2s
+16:19   without_risk held: 3584/3631; 236.7 queries/s; ETA=0s
+16:19   without_risk held: 3631/3631; 236.1 queries/s; ETA=0s
+16:19 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_14\without_risk
+16:19 Day 14: without_cf fitting controlled fusion
+16:19   without_cf: C=0.1, fit pairs=2141998
+16:19   without_cf: C=1.0, fit pairs=2141998
+16:19   without_cf: C=10.0, fit pairs=2141998
+16:19   without_cf selection: 512/845; 387.2 queries/s; ETA=1s
+16:19   without_cf selection: 845/845; 370.7 queries/s; ETA=0s
+16:19   without_cf selection: 512/845; 383.6 queries/s; ETA=1s
+16:19   without_cf selection: 845/845; 376.1 queries/s; ETA=0s
+16:19   without_cf selection: 512/845; 361.5 queries/s; ETA=1s
+16:19   without_cf selection: 845/845; 350.2 queries/s; ETA=0s
+16:19   without_cf held: 512/3631; 199.6 queries/s; ETA=16s
+16:19   without_cf held: 1024/3631; 205.6 queries/s; ETA=13s
+16:19   without_cf held: 1536/3631; 211.4 queries/s; ETA=10s
+16:19   without_cf held: 2048/3631; 215.2 queries/s; ETA=7s
+16:20   without_cf held: 2560/3631; 207.1 queries/s; ETA=5s
+16:20   without_cf held: 3072/3631; 204.4 queries/s; ETA=3s
+16:20   without_cf held: 3584/3631; 202.4 queries/s; ETA=0s
+16:20   without_cf held: 3631/3631; 202.9 queries/s; ETA=0s
+16:20 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_14\without_cf
+16:20 Day 14: without_content fitting controlled fusion
+16:20   without_content: C=0.1, fit pairs=2141998
+16:20   without_content: C=1.0, fit pairs=2141998
+16:20   without_content: C=10.0, fit pairs=2141998
+16:20   without_content selection: 512/845; 422.5 queries/s; ETA=1s
+16:20   without_content selection: 845/845; 410.5 queries/s; ETA=0s
+16:20   without_content selection: 512/845; 341.7 queries/s; ETA=1s
+16:20   without_content selection: 845/845; 378.5 queries/s; ETA=0s
+16:20   without_content selection: 512/845; 473.8 queries/s; ETA=1s
+16:20   without_content selection: 845/845; 403.9 queries/s; ETA=0s
+16:20   without_content held: 512/3631; 262.2 queries/s; ETA=12s
+16:20   without_content held: 1024/3631; 252.9 queries/s; ETA=10s
+16:20   without_content held: 1536/3631; 246.4 queries/s; ETA=9s
+16:20   without_content held: 2048/3631; 245.5 queries/s; ETA=6s
+16:20   without_content held: 2560/3631; 250.4 queries/s; ETA=4s
+16:20   without_content held: 3072/3631; 253.3 queries/s; ETA=2s
+16:21   without_content held: 3584/3631; 246.3 queries/s; ETA=0s
+16:21   without_content held: 3631/3631; 245.7 queries/s; ETA=0s
+16:21 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_14\without_content
+16:21 Day 14: without_sasrec fitting controlled fusion
+16:21   without_sasrec selection: 512/845; 411.4 queries/s; ETA=1s
+16:21   without_sasrec selection: 845/845; 468.6 queries/s; ETA=0s
+16:21   without_sasrec selection: 512/845; 584.4 queries/s; ETA=1s
+16:21   without_sasrec selection: 845/845; 597.2 queries/s; ETA=0s
+16:21   without_sasrec selection: 512/845; 592.7 queries/s; ETA=1s
+16:21   without_sasrec selection: 845/845; 582.5 queries/s; ETA=0s
+16:21   without_sasrec held: 512/3631; 322.0 queries/s; ETA=10s
+16:21   without_sasrec held: 1024/3631; 300.5 queries/s; ETA=9s
+16:21   without_sasrec held: 1536/3631; 289.6 queries/s; ETA=7s
+16:21   without_sasrec held: 2048/3631; 300.4 queries/s; ETA=5s
+16:21   without_sasrec held: 2560/3631; 307.0 queries/s; ETA=3s
+16:21   without_sasrec held: 3072/3631; 306.7 queries/s; ETA=2s
+16:21   without_sasrec held: 3584/3631; 309.3 queries/s; ETA=0s
+16:21   without_sasrec held: 3631/3631; 308.9 queries/s; ETA=0s
+16:21 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_14\without_sasrec
+16:21 Day 14: without_mmr fitting controlled fusion
+16:21   without_mmr selection: 512/845; 330.2 queries/s; ETA=1s
+16:21   without_mmr selection: 845/845; 333.9 queries/s; ETA=0s
+16:21   without_mmr selection: 512/845; 442.3 queries/s; ETA=1s
+16:21   without_mmr selection: 845/845; 424.5 queries/s; ETA=0s
+16:21   without_mmr selection: 512/845; 418.0 queries/s; ETA=1s
+16:21   without_mmr selection: 845/845; 378.1 queries/s; ETA=0s
+16:21   without_mmr held: 512/3631; 208.7 queries/s; ETA=15s
+16:21   without_mmr held: 1024/3631; 209.4 queries/s; ETA=12s
+16:21   without_mmr held: 1536/3631; 208.1 queries/s; ETA=10s
+16:21   without_mmr held: 2048/3631; 212.9 queries/s; ETA=7s
+16:21   without_mmr held: 2560/3631; 212.5 queries/s; ETA=5s
+16:21   without_mmr held: 3072/3631; 206.4 queries/s; ETA=3s
+16:21   without_mmr held: 3584/3631; 209.3 queries/s; ETA=0s
+16:21   without_mmr held: 3631/3631; 208.7 queries/s; ETA=0s
+16:21 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_14\without_mmr
+16:21 Day 14: frozen_profile_day7 fitting controlled fusion
+16:21   frozen_profile_day7: C=0.1, fit pairs=2141998
+16:22   frozen_profile_day7: C=1.0, fit pairs=2141998
+16:22   frozen_profile_day7: C=10.0, fit pairs=2141998
+16:22   frozen_profile_day7 selection: 512/845; 459.7 queries/s; ETA=1s
+16:22   frozen_profile_day7 selection: 845/845; 441.3 queries/s; ETA=0s
+16:22   frozen_profile_day7 selection: 512/845; 359.2 queries/s; ETA=1s
+16:22   frozen_profile_day7 selection: 845/845; 353.8 queries/s; ETA=0s
+16:22   frozen_profile_day7 selection: 512/845; 352.9 queries/s; ETA=1s
+16:22   frozen_profile_day7 selection: 845/845; 371.4 queries/s; ETA=0s
+16:22   frozen_profile_day7 held: 512/3631; 233.3 queries/s; ETA=13s
+16:22   frozen_profile_day7 held: 1024/3631; 229.7 queries/s; ETA=11s
+16:22   frozen_profile_day7 held: 1536/3631; 227.6 queries/s; ETA=9s
+16:22   frozen_profile_day7 held: 2048/3631; 220.8 queries/s; ETA=7s
+16:22   frozen_profile_day7 held: 2560/3631; 223.1 queries/s; ETA=5s
+16:22   frozen_profile_day7 held: 3072/3631; 223.6 queries/s; ETA=3s
+16:22   frozen_profile_day7 held: 3584/3631; 225.5 queries/s; ETA=0s
+16:22   frozen_profile_day7 held: 3631/3631; 225.4 queries/s; ETA=0s
+16:22 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_14\frozen_profile_day7
+16:22 Day 21: full_refit fitting controlled fusion
+16:22   full_refit: C=0.1, fit pairs=2141665
+16:22   full_refit: C=1.0, fit pairs=2141665
+16:23   full_refit: C=10.0, fit pairs=2141665
+16:23   full_refit selection: 512/839; 367.8 queries/s; ETA=1s
+16:23   full_refit selection: 839/839; 358.7 queries/s; ETA=0s
+16:23   full_refit selection: 512/839; 389.8 queries/s; ETA=1s
+16:23   full_refit selection: 839/839; 373.1 queries/s; ETA=0s
+16:23   full_refit selection: 512/839; 310.1 queries/s; ETA=1s
+16:23   full_refit selection: 839/839; 299.6 queries/s; ETA=0s
+16:23   full_refit held: 512/3612; 218.7 queries/s; ETA=14s
+16:23   full_refit held: 1024/3612; 195.8 queries/s; ETA=13s
+16:23   full_refit held: 1536/3612; 190.6 queries/s; ETA=11s
+16:23   full_refit held: 2048/3612; 185.6 queries/s; ETA=8s
+16:23   full_refit held: 2560/3612; 181.0 queries/s; ETA=6s
+16:23   full_refit held: 3072/3612; 177.9 queries/s; ETA=3s
+16:23   full_refit held: 3584/3612; 175.1 queries/s; ETA=0s
+16:23   full_refit held: 3612/3612; 174.9 queries/s; ETA=0s
+16:23 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_21\full_refit
+16:23 Day 21: without_explicit_preference fitting controlled fusion
+16:23   without_explicit_preference: C=0.1, fit pairs=2141665
+16:23   without_explicit_preference: C=1.0, fit pairs=2141665
+16:24   without_explicit_preference: C=10.0, fit pairs=2141665
+16:24   without_explicit_preference selection: 512/839; 283.0 queries/s; ETA=1s
+16:24   without_explicit_preference selection: 839/839; 301.8 queries/s; ETA=0s
+16:24   without_explicit_preference selection: 512/839; 330.0 queries/s; ETA=1s
+16:24   without_explicit_preference selection: 839/839; 324.2 queries/s; ETA=0s
+16:24   without_explicit_preference selection: 512/839; 269.0 queries/s; ETA=1s
+16:24   without_explicit_preference selection: 839/839; 270.7 queries/s; ETA=0s
+16:24   without_explicit_preference held: 512/3612; 205.3 queries/s; ETA=15s
+16:24   without_explicit_preference held: 1024/3612; 207.8 queries/s; ETA=12s
+16:24   without_explicit_preference held: 1536/3612; 189.3 queries/s; ETA=11s
+16:24   without_explicit_preference held: 2048/3612; 193.3 queries/s; ETA=8s
+16:24   without_explicit_preference held: 2560/3612; 192.9 queries/s; ETA=5s
+16:24   without_explicit_preference held: 3072/3612; 187.7 queries/s; ETA=3s
+16:24   without_explicit_preference held: 3584/3612; 188.5 queries/s; ETA=0s
+16:24   without_explicit_preference held: 3612/3612; 188.3 queries/s; ETA=0s
+16:24 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_21\without_explicit_preference
+16:24 Day 21: without_risk fitting controlled fusion
+16:24   without_risk: C=0.1, fit pairs=2141665
+16:24   without_risk: C=1.0, fit pairs=2141665
+16:25   without_risk: C=10.0, fit pairs=2141665
+16:25   without_risk selection: 512/839; 313.1 queries/s; ETA=1s
+16:25   without_risk selection: 839/839; 318.6 queries/s; ETA=0s
+16:25   without_risk selection: 512/839; 335.7 queries/s; ETA=1s
+16:25   without_risk selection: 839/839; 302.6 queries/s; ETA=0s
+16:25   without_risk selection: 512/839; 436.2 queries/s; ETA=1s
+16:25   without_risk selection: 839/839; 439.0 queries/s; ETA=0s
+16:25   without_risk held: 512/3612; 267.8 queries/s; ETA=12s
+16:25   without_risk held: 1024/3612; 254.1 queries/s; ETA=10s
+16:25   without_risk held: 1536/3612; 257.8 queries/s; ETA=8s
+16:25   without_risk held: 2048/3612; 219.9 queries/s; ETA=7s
+16:25   without_risk held: 2560/3612; 198.7 queries/s; ETA=5s
+16:25   without_risk held: 3072/3612; 191.8 queries/s; ETA=3s
+16:25   without_risk held: 3584/3612; 200.1 queries/s; ETA=0s
+16:25   without_risk held: 3612/3612; 199.1 queries/s; ETA=0s
+16:25 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_21\without_risk
+16:25 Day 21: without_cf fitting controlled fusion
+16:25   without_cf: C=0.1, fit pairs=2141665
+16:25   without_cf: C=1.0, fit pairs=2141665
+16:26   without_cf: C=10.0, fit pairs=2141665
+16:26   without_cf selection: 512/839; 339.9 queries/s; ETA=1s
+16:26   without_cf selection: 839/839; 326.3 queries/s; ETA=0s
+16:26   without_cf selection: 512/839; 297.5 queries/s; ETA=1s
+16:26   without_cf selection: 839/839; 298.3 queries/s; ETA=0s
+16:26   without_cf selection: 512/839; 439.7 queries/s; ETA=1s
+16:26   without_cf selection: 839/839; 372.9 queries/s; ETA=0s
+16:26   without_cf held: 512/3612; 159.7 queries/s; ETA=19s
+16:26   without_cf held: 1024/3612; 175.8 queries/s; ETA=15s
+16:26   without_cf held: 1536/3612; 183.2 queries/s; ETA=11s
+16:26   without_cf held: 2048/3612; 185.5 queries/s; ETA=8s
+16:26   without_cf held: 2560/3612; 183.9 queries/s; ETA=6s
+16:26   without_cf held: 3072/3612; 179.6 queries/s; ETA=3s
+16:26   without_cf held: 3584/3612; 177.2 queries/s; ETA=0s
+16:26   without_cf held: 3612/3612; 177.3 queries/s; ETA=0s
+16:26 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_21\without_cf
+16:26 Day 21: without_content fitting controlled fusion
+16:26   without_content: C=0.1, fit pairs=2141665
+16:26   without_content: C=1.0, fit pairs=2141665
+16:27   without_content: C=10.0, fit pairs=2141665
+16:27   without_content selection: 512/839; 328.0 queries/s; ETA=1s
+16:27   without_content selection: 839/839; 327.6 queries/s; ETA=0s
+16:27   without_content selection: 512/839; 345.2 queries/s; ETA=1s
+16:27   without_content selection: 839/839; 357.6 queries/s; ETA=0s
+16:27   without_content selection: 512/839; 394.2 queries/s; ETA=1s
+16:27   without_content selection: 839/839; 382.4 queries/s; ETA=0s
+16:27   without_content held: 512/3612; 172.6 queries/s; ETA=18s
+16:27   without_content held: 1024/3612; 185.0 queries/s; ETA=14s
+16:27   without_content held: 1536/3612; 183.8 queries/s; ETA=11s
+16:27   without_content held: 2048/3612; 184.5 queries/s; ETA=8s
+16:27   without_content held: 2560/3612; 189.6 queries/s; ETA=6s
+16:27   without_content held: 3072/3612; 182.5 queries/s; ETA=3s
+16:27   without_content held: 3584/3612; 183.1 queries/s; ETA=0s
+16:27   without_content held: 3612/3612; 183.1 queries/s; ETA=0s
+16:27 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_21\without_content
+16:27 Day 21: without_sasrec fitting controlled fusion
+16:27   without_sasrec selection: 512/839; 630.0 queries/s; ETA=1s
+16:27   without_sasrec selection: 839/839; 572.2 queries/s; ETA=0s
+16:27   without_sasrec selection: 512/839; 547.1 queries/s; ETA=1s
+16:27   without_sasrec selection: 839/839; 572.2 queries/s; ETA=0s
+16:27   without_sasrec selection: 512/839; 536.9 queries/s; ETA=1s
+16:27   without_sasrec selection: 839/839; 531.8 queries/s; ETA=0s
+16:27   without_sasrec held: 512/3612; 218.2 queries/s; ETA=14s
+16:27   without_sasrec held: 1024/3612; 226.0 queries/s; ETA=11s
+16:28   without_sasrec held: 1536/3612; 211.5 queries/s; ETA=10s
+16:28   without_sasrec held: 2048/3612; 218.6 queries/s; ETA=7s
+16:28   without_sasrec held: 2560/3612; 223.3 queries/s; ETA=5s
+16:28   without_sasrec held: 3072/3612; 226.6 queries/s; ETA=2s
+16:28   without_sasrec held: 3584/3612; 234.9 queries/s; ETA=0s
+16:28   without_sasrec held: 3612/3612; 234.8 queries/s; ETA=0s
+16:28 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_21\without_sasrec
+16:28 Day 21: without_mmr fitting controlled fusion
+16:28   without_mmr selection: 512/839; 389.5 queries/s; ETA=1s
+16:28   without_mmr selection: 839/839; 359.4 queries/s; ETA=0s
+16:28   without_mmr selection: 512/839; 347.3 queries/s; ETA=1s
+16:28   without_mmr selection: 839/839; 340.2 queries/s; ETA=0s
+16:28   without_mmr selection: 512/839; 204.7 queries/s; ETA=2s
+16:28   without_mmr selection: 839/839; 216.9 queries/s; ETA=0s
+16:28   without_mmr held: 512/3612; 42.2 queries/s; ETA=74s
+16:28   without_mmr held: 1024/3612; 63.2 queries/s; ETA=41s
+16:28   without_mmr held: 1536/3612; 79.6 queries/s; ETA=26s
+16:28   without_mmr held: 2048/3612; 90.4 queries/s; ETA=17s
+16:28   without_mmr held: 2560/3612; 93.5 queries/s; ETA=11s
+16:28   without_mmr held: 3072/3612; 98.3 queries/s; ETA=5s
+16:28   without_mmr held: 3584/3612; 102.6 queries/s; ETA=0s
+16:28   without_mmr held: 3612/3612; 102.8 queries/s; ETA=0s
+16:28 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_21\without_mmr
+16:28 Day 21: frozen_profile_day7 fitting controlled fusion
+16:29   frozen_profile_day7: C=0.1, fit pairs=2141665
+16:29   frozen_profile_day7: C=1.0, fit pairs=2141665
+16:29   frozen_profile_day7: C=10.0, fit pairs=2141665
+16:29   frozen_profile_day7 selection: 512/839; 311.0 queries/s; ETA=1s
+16:29   frozen_profile_day7 selection: 839/839; 307.5 queries/s; ETA=0s
+16:29   frozen_profile_day7 selection: 512/839; 203.1 queries/s; ETA=2s
+16:29   frozen_profile_day7 selection: 839/839; 235.3 queries/s; ETA=0s
+16:29   frozen_profile_day7 selection: 512/839; 194.2 queries/s; ETA=2s
+16:29   frozen_profile_day7 selection: 839/839; 126.5 queries/s; ETA=0s
+16:30   frozen_profile_day7 held: 512/3612; 67.6 queries/s; ETA=46s
+16:30   frozen_profile_day7 held: 1024/3612; 93.7 queries/s; ETA=28s
+16:30   frozen_profile_day7 held: 1536/3612; 103.4 queries/s; ETA=20s
+16:30   frozen_profile_day7 held: 2048/3612; 111.0 queries/s; ETA=14s
+16:30   frozen_profile_day7 held: 2560/3612; 117.1 queries/s; ETA=9s
+16:30   frozen_profile_day7 held: 3072/3612; 123.2 queries/s; ETA=4s
+16:30   frozen_profile_day7 held: 3584/3612; 129.1 queries/s; ETA=0s
+16:30   frozen_profile_day7 held: 3612/3612; 129.3 queries/s; ETA=0s
+16:30 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_21\frozen_profile_day7
+16:30 Day 28: full_refit fitting controlled fusion
+16:30   full_refit: C=0.1, fit pairs=2102521
+16:30   full_refit: C=1.0, fit pairs=2102521
+16:30   full_refit: C=10.0, fit pairs=2102521
+16:31   full_refit selection: 512/825; 362.9 queries/s; ETA=1s
+16:31   full_refit selection: 825/825; 341.5 queries/s; ETA=0s
+16:31   full_refit selection: 512/825; 378.7 queries/s; ETA=1s
+16:31   full_refit selection: 825/825; 301.2 queries/s; ETA=0s
+16:31   full_refit selection: 512/825; 312.0 queries/s; ETA=1s
+16:31   full_refit selection: 825/825; 300.5 queries/s; ETA=0s
+16:31   full_refit held: 512/3544; 148.1 queries/s; ETA=20s
+16:31   full_refit held: 1024/3544; 168.7 queries/s; ETA=15s
+16:31   full_refit held: 1536/3544; 170.3 queries/s; ETA=12s
+16:31   full_refit held: 2048/3544; 181.9 queries/s; ETA=8s
+16:31   full_refit held: 2560/3544; 187.5 queries/s; ETA=5s
+16:31   full_refit held: 3072/3544; 189.1 queries/s; ETA=2s
+16:31   full_refit held: 3544/3544; 195.1 queries/s; ETA=0s
+16:31 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_28\full_refit
+16:31 Day 28: without_explicit_preference fitting controlled fusion
+16:31   without_explicit_preference: C=0.1, fit pairs=2102521
+16:31   without_explicit_preference: C=1.0, fit pairs=2102521
+16:31   without_explicit_preference: C=10.0, fit pairs=2102521
+16:32   without_explicit_preference selection: 512/825; 322.4 queries/s; ETA=1s
+16:32   without_explicit_preference selection: 825/825; 327.3 queries/s; ETA=0s
+16:32   without_explicit_preference selection: 512/825; 266.6 queries/s; ETA=1s
+16:32   without_explicit_preference selection: 825/825; 278.0 queries/s; ETA=0s
+16:32   without_explicit_preference selection: 512/825; 368.1 queries/s; ETA=1s
+16:32   without_explicit_preference selection: 825/825; 331.7 queries/s; ETA=0s
+16:32   without_explicit_preference held: 512/3544; 208.8 queries/s; ETA=15s
+16:32   without_explicit_preference held: 1024/3544; 220.7 queries/s; ETA=11s
+16:32   without_explicit_preference held: 1536/3544; 225.1 queries/s; ETA=9s
+16:32   without_explicit_preference held: 2048/3544; 227.4 queries/s; ETA=7s
+16:32   without_explicit_preference held: 2560/3544; 227.9 queries/s; ETA=4s
+16:32   without_explicit_preference held: 3072/3544; 224.6 queries/s; ETA=2s
+16:32   without_explicit_preference held: 3544/3544; 224.7 queries/s; ETA=0s
+16:32 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_28\without_explicit_preference
+16:32 Day 28: without_risk fitting controlled fusion
+16:32   without_risk: C=0.1, fit pairs=2102521
+16:32   without_risk: C=1.0, fit pairs=2102521
+16:32   without_risk: C=10.0, fit pairs=2102521
+16:33   without_risk selection: 512/825; 413.0 queries/s; ETA=1s
+16:33   without_risk selection: 825/825; 408.2 queries/s; ETA=0s
+16:33   without_risk selection: 512/825; 438.5 queries/s; ETA=1s
+16:33   without_risk selection: 825/825; 438.0 queries/s; ETA=0s
+16:33   without_risk selection: 512/825; 420.1 queries/s; ETA=1s
+16:33   without_risk selection: 825/825; 417.3 queries/s; ETA=0s
+16:33   without_risk held: 512/3544; 244.7 queries/s; ETA=12s
+16:33   without_risk held: 1024/3544; 218.2 queries/s; ETA=12s
+16:33   without_risk held: 1536/3544; 213.7 queries/s; ETA=9s
+16:33   without_risk held: 2048/3544; 214.8 queries/s; ETA=7s
+16:33   without_risk held: 2560/3544; 214.5 queries/s; ETA=5s
+16:33   without_risk held: 3072/3544; 212.2 queries/s; ETA=2s
+16:33   without_risk held: 3544/3544; 211.1 queries/s; ETA=0s
+16:33 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_28\without_risk
+16:33 Day 28: without_cf fitting controlled fusion
+16:33   without_cf: C=0.1, fit pairs=2102521
+16:33   without_cf: C=1.0, fit pairs=2102521
+16:33   without_cf: C=10.0, fit pairs=2102521
+16:34   without_cf selection: 512/825; 499.0 queries/s; ETA=1s
+16:34   without_cf selection: 825/825; 502.0 queries/s; ETA=0s
+16:34   without_cf selection: 512/825; 497.1 queries/s; ETA=1s
+16:34   without_cf selection: 825/825; 473.7 queries/s; ETA=0s
+16:34   without_cf selection: 512/825; 358.0 queries/s; ETA=1s
+16:34   without_cf selection: 825/825; 395.3 queries/s; ETA=0s
+16:34   without_cf held: 512/3544; 275.6 queries/s; ETA=11s
+16:34   without_cf held: 1024/3544; 278.1 queries/s; ETA=9s
+16:34   without_cf held: 1536/3544; 275.3 queries/s; ETA=7s
+16:34   without_cf held: 2048/3544; 274.0 queries/s; ETA=5s
+16:34   without_cf held: 2560/3544; 267.1 queries/s; ETA=4s
+16:34   without_cf held: 3072/3544; 261.2 queries/s; ETA=2s
+16:34   without_cf held: 3544/3544; 263.1 queries/s; ETA=0s
+16:34 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_28\without_cf
+16:34 Day 28: without_content fitting controlled fusion
+16:34   without_content: C=0.1, fit pairs=2102521
+16:34   without_content: C=1.0, fit pairs=2102521
+16:34   without_content: C=10.0, fit pairs=2102521
+16:34   without_content selection: 512/825; 354.6 queries/s; ETA=1s
+16:34   without_content selection: 825/825; 370.7 queries/s; ETA=0s
+16:34   without_content selection: 512/825; 502.5 queries/s; ETA=1s
+16:34   without_content selection: 825/825; 490.3 queries/s; ETA=0s
+16:34   without_content selection: 512/825; 501.6 queries/s; ETA=1s
+16:34   without_content selection: 825/825; 491.6 queries/s; ETA=0s
+16:34   without_content held: 512/3544; 265.9 queries/s; ETA=11s
+16:35   without_content held: 1024/3544; 272.5 queries/s; ETA=9s
+16:35   without_content held: 1536/3544; 250.8 queries/s; ETA=8s
+16:35   without_content held: 2048/3544; 255.6 queries/s; ETA=6s
+16:35   without_content held: 2560/3544; 252.4 queries/s; ETA=4s
+16:35   without_content held: 3072/3544; 252.7 queries/s; ETA=2s
+16:35   without_content held: 3544/3544; 256.4 queries/s; ETA=0s
+16:35 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_28\without_content
+16:35 Day 28: without_sasrec fitting controlled fusion
+16:35   without_sasrec selection: 512/825; 516.9 queries/s; ETA=1s
+16:35   without_sasrec selection: 825/825; 544.2 queries/s; ETA=0s
+16:35   without_sasrec selection: 512/825; 765.0 queries/s; ETA=0s
+16:35   without_sasrec selection: 825/825; 759.5 queries/s; ETA=0s
+16:35   without_sasrec selection: 512/825; 785.4 queries/s; ETA=0s
+16:35   without_sasrec selection: 825/825; 775.1 queries/s; ETA=0s
+16:35   without_sasrec held: 512/3544; 385.6 queries/s; ETA=8s
+16:35   without_sasrec held: 1024/3544; 391.8 queries/s; ETA=6s
+16:35   without_sasrec held: 1536/3544; 387.0 queries/s; ETA=5s
+16:35   without_sasrec held: 2048/3544; 371.7 queries/s; ETA=4s
+16:35   without_sasrec held: 2560/3544; 354.8 queries/s; ETA=3s
+16:35   without_sasrec held: 3072/3544; 323.4 queries/s; ETA=1s
+16:35   without_sasrec held: 3544/3544; 311.2 queries/s; ETA=0s
+16:35 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_28\without_sasrec
+16:35 Day 28: without_mmr fitting controlled fusion
+16:35   without_mmr selection: 512/825; 394.2 queries/s; ETA=1s
+16:35   without_mmr selection: 825/825; 392.5 queries/s; ETA=0s
+16:35   without_mmr selection: 512/825; 397.2 queries/s; ETA=1s
+16:35   without_mmr selection: 825/825; 413.9 queries/s; ETA=0s
+16:35   without_mmr selection: 512/825; 346.9 queries/s; ETA=1s
+16:35   without_mmr selection: 825/825; 276.7 queries/s; ETA=0s
+16:35   without_mmr held: 512/3544; 243.8 queries/s; ETA=12s
+16:35   without_mmr held: 1024/3544; 226.4 queries/s; ETA=11s
+16:35   without_mmr held: 1536/3544; 217.6 queries/s; ETA=9s
+16:35   without_mmr held: 2048/3544; 217.7 queries/s; ETA=7s
+16:35   without_mmr held: 2560/3544; 211.7 queries/s; ETA=5s
+16:35   without_mmr held: 3072/3544; 203.7 queries/s; ETA=2s
+16:35   without_mmr held: 3544/3544; 205.8 queries/s; ETA=0s
+16:35 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_28\without_mmr
+16:35 Day 28: frozen_profile_day7 fitting controlled fusion
+16:36   frozen_profile_day7: C=0.1, fit pairs=2102521
+16:36   frozen_profile_day7: C=1.0, fit pairs=2102521
+16:36   frozen_profile_day7: C=10.0, fit pairs=2102521
+16:36   frozen_profile_day7 selection: 512/825; 409.9 queries/s; ETA=1s
+16:36   frozen_profile_day7 selection: 825/825; 390.9 queries/s; ETA=0s
+16:36   frozen_profile_day7 selection: 512/825; 355.2 queries/s; ETA=1s
+16:36   frozen_profile_day7 selection: 825/825; 348.8 queries/s; ETA=0s
+16:36   frozen_profile_day7 selection: 512/825; 385.5 queries/s; ETA=1s
+16:36   frozen_profile_day7 selection: 825/825; 381.1 queries/s; ETA=0s
+16:36   frozen_profile_day7 held: 512/3544; 230.8 queries/s; ETA=13s
+16:36   frozen_profile_day7 held: 1024/3544; 226.1 queries/s; ETA=11s
+16:36   frozen_profile_day7 held: 1536/3544; 217.9 queries/s; ETA=9s
+16:36   frozen_profile_day7 held: 2048/3544; 218.8 queries/s; ETA=7s
+16:36   frozen_profile_day7 held: 2560/3544; 213.8 queries/s; ETA=5s
+16:36   frozen_profile_day7 held: 3072/3544; 204.9 queries/s; ETA=2s
+16:36   frozen_profile_day7 held: 3544/3544; 202.3 queries/s; ETA=0s
+16:36 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z\day_28\frozen_profile_day7
+16:37 Finished: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\recommendation_controls_20261103T110750297269Z

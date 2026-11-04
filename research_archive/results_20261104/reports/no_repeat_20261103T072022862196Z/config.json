@@ -1,0 +1,22 @@
+{
+  "source": "C:\\Users\\user\\Documents\\Diser\\\u0441\u0438\u0441\u0442\u0435\u043c\u0430\\oulad-bilstm-attention\\runs\\full_agent_20261102T190210371601Z",
+  "windows": [
+    7,
+    14,
+    21,
+    28
+  ],
+  "seed": 42,
+  "ks": [
+    5,
+    10,
+    20
+  ],
+  "bootstrap": 1000,
+  "script_sha256": "d1da5d05be4c35a870dae7047de77c678a9c1e9d5454461c370da039f63701f4",
+  "ranking_sha256": "0a89b116de96763e38616b3dd0f563a5c7bf653062ca3561e1d95fa427966856",
+  "policy": "exclude every item with positive historical resource_days before cutoff",
+  "primary_truth": "same full available-catalog future relevance for both policies",
+  "training": false,
+  "test_used": false
+}

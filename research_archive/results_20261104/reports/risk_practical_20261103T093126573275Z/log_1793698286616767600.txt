@@ -1,0 +1,14 @@
+14:31 Output: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\risk_practical_20261103T093126573275Z
+14:31 Day 7: reconstructing fixed per-seed forecasts and selection-only thresholds
+14:31 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\risk_practical_20261103T093126573275Z\day_7
+14:31 Day 14: reconstructing fixed per-seed forecasts and selection-only thresholds
+14:31 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\risk_practical_20261103T093126573275Z\day_14
+14:31 Day 21: reconstructing fixed per-seed forecasts and selection-only thresholds
+14:31 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\risk_practical_20261103T093126573275Z\day_21
+14:31 Day 28: reconstructing fixed per-seed forecasts and selection-only thresholds
+14:31 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\risk_practical_20261103T093126573275Z\day_28
+14:31 Day 56: reconstructing fixed per-seed forecasts and selection-only thresholds
+14:31 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\risk_practical_20261103T093126573275Z\day_56
+14:31 Day 112: reconstructing fixed per-seed forecasts and selection-only thresholds
+14:32 Checkpoint saved: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\risk_practical_20261103T093126573275Z\day_112
+14:32 Finished: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\risk_practical_20261103T093126573275Z

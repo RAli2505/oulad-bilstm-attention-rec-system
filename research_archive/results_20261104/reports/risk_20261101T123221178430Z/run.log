@@ -1,0 +1,82 @@
+Output: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\risk_20261101T123221178430Z
+Day 7: development=12175, external test=0, zero-history=2362
+Day 7 train/validation seed 42 proposed: training
+  completed in 128.3s
+Day 7 train/validation seed 42 lstm: training
+  completed in 74.8s
+Day 7 train/validation seed 42 lightgbm: training
+  completed in 4.8s
+Day 7 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.3s
+Day 14: development=12068, external test=0, zero-history=1291
+Day 14 train/validation seed 42 proposed: training
+  completed in 108.0s
+Day 14 train/validation seed 42 lstm: training
+  completed in 54.0s
+Day 14 train/validation seed 42 lightgbm: training
+  completed in 13.5s
+Day 14 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.4s
+Day 21: development=12004, external test=0, zero-history=826
+Day 21 train/validation seed 42 proposed: training
+  completed in 131.7s
+Day 21 train/validation seed 42 lstm: training
+  completed in 39.0s
+Day 21 train/validation seed 42 lightgbm: training
+  completed in 4.7s
+Day 21 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.2s
+Day 28: development=11794, external test=0, zero-history=599
+Day 28 train/validation seed 42 proposed: training
+  completed in 184.8s
+Day 28 train/validation seed 42 lstm: training
+  completed in 44.6s
+Day 28 train/validation seed 42 lightgbm: training
+  completed in 4.8s
+Day 28 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.3s
+Day 56: development=11418, external test=0, zero-history=369
+Day 56 train/validation seed 42 proposed: training
+  completed in 141.8s
+Day 56 train/validation seed 42 lstm: training
+  completed in 125.2s
+Day 56 train/validation seed 42 lightgbm: training
+  completed in 22.1s
+Day 56 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.3s
+Day 84: development=11123, external test=0, zero-history=303
+Day 84 train/validation seed 42 proposed: training
+  completed in 164.4s
+Day 84 train/validation seed 42 lstm: training
+  completed in 63.8s
+Day 84 train/validation seed 42 lightgbm: training
+  completed in 4.6s
+Day 84 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.2s
+Day 112: development=10767, external test=0, zero-history=269
+Day 112 train/validation seed 42 proposed: training
+  completed in 221.7s
+Day 112 train/validation seed 42 lstm: training
+  completed in 107.3s
+Day 112 train/validation seed 42 lightgbm: training
+  completed in 17.9s
+Day 112 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.5s
+Day 140: development=10504, external test=0, zero-history=253
+Day 140 train/validation seed 42 proposed: training
+  completed in 320.9s
+Day 140 train/validation seed 42 lstm: training
+  completed in 133.0s
+Day 140 train/validation seed 42 lightgbm: training
+  completed in 18.3s
+Day 140 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.7s
+Day 168: development=10237, external test=0, zero-history=244
+Day 168 train/validation seed 42 proposed: training
+  completed in 312.8s
+Day 168 train/validation seed 42 lstm: training
+  completed in 143.5s
+Day 168 train/validation seed 42 lightgbm: training
+  completed in 18.0s
+Day 168 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.6s

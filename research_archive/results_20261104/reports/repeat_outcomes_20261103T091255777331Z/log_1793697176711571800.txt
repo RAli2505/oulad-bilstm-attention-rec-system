@@ -1,0 +1,32 @@
+14:12 Loading 2013 registrations and assessments
+14:12 Loading activity chunk 1
+14:12 Loading activity chunk 2
+14:12 Loading activity chunk 3
+14:12 Loading activity chunk 4
+14:12 Loading activity chunk 5
+14:13 Loading activity chunk 6
+14:13 Loading activity chunk 7
+14:13 Loading activity chunk 8
+14:13 Loading activity chunk 9
+14:13 Loading activity chunk 10
+14:13 Loading activity chunk 11
+14:13 Loading activity chunk 12
+14:13 Loading activity chunk 13
+14:13 Loading activity chunk 14
+14:13 Loading activity chunk 15
+14:13 Loading activity chunk 16
+14:13 Loading activity chunk 17
+14:13 Loading activity chunk 18
+14:13 Loading activity chunk 19
+14:13 Loading activity chunk 20
+14:13 Loading activity chunk 21
+14:13 Loading activity chunk 22
+14:13 Day 7: exposure and subsequent assessment cohorts
+14:13 Day 7: checkpoint saved; n=10700
+14:13 Day 14: exposure and subsequent assessment cohorts
+14:13 Day 14: checkpoint saved; n=10549
+14:13 Day 21: exposure and subsequent assessment cohorts
+14:13 Day 21: checkpoint saved; n=11052
+14:13 Day 28: exposure and subsequent assessment cohorts
+14:13 Day 28: checkpoint saved; n=10821
+14:13 Finished observational analysis: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\repeat_outcomes_20261103T091255777331Z
