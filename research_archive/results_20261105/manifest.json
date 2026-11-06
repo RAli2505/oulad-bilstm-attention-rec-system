@@ -23,6 +23,13 @@
       "bytes": 266805,
       "files": 48,
       "inventory": "research_archive/results_20261105/artifacts/repeat_discovery_rankmix_v2.inventory.json"
+    },
+    {
+      "path": "research_archive/results_20261105/artifacts/repeat_discovery_runtime.zip",
+      "sha256": "bee3b400c8ffe94fe91c1021dd953fab5e224e20bbe5c2c93267da663345bb96",
+      "bytes": 14344,
+      "files": 40,
+      "inventory": "research_archive/results_20261105/artifacts/repeat_discovery_runtime.inventory.json"
     }
   ]
 }
