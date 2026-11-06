@@ -1,0 +1,28 @@
+{
+  "date_local": "2026-11-05",
+  "timezone": "Asia/Qyzylorda",
+  "scope": "Completed aggregate results, experiment settings and diagnostic summaries. Excludes per-student predictions, query-level metrics, models, features, intermediate checkpoints and full logs.",
+  "archives": [
+    {
+      "path": "research_archive/results_20261105/artifacts/full_agent_20261102T190210371601Z.zip",
+      "sha256": "ff19e5364b9d6a34a15675437892a09a9ee3aeb80e7e93c999a566e19cf8f7b5",
+      "bytes": 2394207,
+      "files": 1564,
+      "inventory": "research_archive/results_20261105/artifacts/full_agent_20261102T190210371601Z.inventory.json"
+    },
+    {
+      "path": "research_archive/results_20261105/artifacts/repeat_discovery_balance_v1.zip",
+      "sha256": "5ee23ad517da7e34a6213cd7a8d1ad0c26e69efd4d4cd8d79cf9a5cf9958091c",
+      "bytes": 152289,
+      "files": 30,
+      "inventory": "research_archive/results_20261105/artifacts/repeat_discovery_balance_v1.inventory.json"
+    },
+    {
+      "path": "research_archive/results_20261105/artifacts/repeat_discovery_rankmix_v2.zip",
+      "sha256": "7360d0abc52cb106a6f294d58a289342bb3a177de01464a70e70b23c354e5cdc",
+      "bytes": 266805,
+      "files": 48,
+      "inventory": "research_archive/results_20261105/artifacts/repeat_discovery_rankmix_v2.inventory.json"
+    }
+  ]
+}
