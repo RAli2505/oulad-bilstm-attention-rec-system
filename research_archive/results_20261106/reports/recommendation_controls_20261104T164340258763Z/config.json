@@ -1,0 +1,70 @@
+{
+  "source": "C:\\Users\\user\\Documents\\Diser\\система\\oulad-bilstm-attention\\runs\\full_agent_20261102T190210371601Z",
+  "inputs": {
+    "day_7\\candidate_features_and_labels.parquet": "4f9ff17dd0f993a6ba51ae7c661921c1a5aa9be978b60efe747ba19f550ff242",
+    "day_7\\queries.csv": "c89a711304f77cf2dbef1b22240265314e2a704e9135c5fbc6fcaac38df1658d",
+    "day_7\\seed_101\\full_candidate_features.npy": "ca3c5f4aa55b6118cf633a31a2c49fd995462a2a1ce9aa6e7dfb5a228d8bf5f1",
+    "day_7\\seed_101\\candidate_utilities.npz": "e617d2d88722cf1f6f93019315ec0480f4e2f148fdede885f0c6192b9f8006b0",
+    "day_7\\seed_101\\query_strategy_diagnostics.csv": "cf1c6495969637455e469bdf6e6b9af94c0b034a19f674ae8ff642ec5d8288cc",
+    "day_7\\seed_101\\agent_bundle\\bundle.json": "ae92613d096db49caccc0e0796b06e6359634e34e0bd8aada2b16e9b696fb375",
+    "day_14\\candidate_features_and_labels.parquet": "3431e4933043b65a4888f9283357e92d3107a59295b6752f6fc625cb3726a8a3",
+    "day_14\\queries.csv": "95a47a9414e41df724418b335aba61ea526f5a0a853330d3ecc4c39ac97069c4",
+    "day_14\\seed_101\\full_candidate_features.npy": "53c70c0695c4fb22b1b39fd77afa348da327ad71f228213092e2e5c608ba832f",
+    "day_14\\seed_101\\candidate_utilities.npz": "f1e23dd1c43154e655eaed7cb45742b92ad3e94389795c99f0be9a85d418f704",
+    "day_14\\seed_101\\query_strategy_diagnostics.csv": "ded04b9a59cd7d14179d1ab1972be2e938479c05382c6d136c651e755566775f",
+    "day_14\\seed_101\\agent_bundle\\bundle.json": "a6c25014715a7e759103f80b104ab53657fd3bea93cbb27cf0b03f48418969b9",
+    "day_21\\candidate_features_and_labels.parquet": "49bb5c0f1099dfcf576fcc53c6d8136c4fb54495eeca7c5a676a2ba4ad5072ac",
+    "day_21\\queries.csv": "f1eb00d137085d94945932cfc43061d032c8497bf8dbf242193b9bf8b55c3224",
+    "day_21\\seed_101\\full_candidate_features.npy": "945673df9a4f84a0c95ecb5afc7bb15e73f42cc6f3bd0684fbc2e6e011327441",
+    "day_21\\seed_101\\candidate_utilities.npz": "6179c74fb8ef3c58ff5ebb642d61d291a4c3f3c0268358fcbc8ba0210e1f14d6",
+    "day_21\\seed_101\\query_strategy_diagnostics.csv": "c82aa37fdb49f1797382eadcac7b0bcde429ac57916c065add2bad8b2df0d537",
+    "day_21\\seed_101\\agent_bundle\\bundle.json": "205f9ea024294edb7eb4e1712a329a2b5d7be114db8aa506b4e8399df8daa036",
+    "day_28\\candidate_features_and_labels.parquet": "eaf5496445f0fa55adac361ac0a7b853609920d30d59d46c66bc7a4417bf3172",
+    "day_28\\queries.csv": "20c13b25d3dbeafe9746ad4f5512b22a5adf0b918b706ed051cd2d15739ff9f7",
+    "day_28\\seed_101\\full_candidate_features.npy": "01409333986de98aaa7a78e15c5328355ca3494c8bf71ba70aea14d4279b7fb1",
+    "day_28\\seed_101\\candidate_utilities.npz": "6373d6a502e5b1d3ced9004a0ca4a1860bf4a117196ce8c618bcf8bbf5a035a9",
+    "day_28\\seed_101\\query_strategy_diagnostics.csv": "c3f4a9a4796feb973cc0f79d26f102b49ea0551efacd60fb77a43080fc9d7b28",
+    "day_28\\seed_101\\agent_bundle\\bundle.json": "57d38999462bd3c198c53216f5444e5219dc1bb2e6bbcf9dd3733802f89c3c26"
+  },
+  "windows": [
+    7,
+    14,
+    21,
+    28
+  ],
+  "seed": 101,
+  "variants": [
+    "full_refit",
+    "without_explicit_preference",
+    "without_risk",
+    "without_cf",
+    "without_content",
+    "without_sasrec",
+    "without_mmr",
+    "frozen_profile_day7"
+  ],
+  "ks": [
+    5,
+    10,
+    20
+  ],
+  "bootstrap": 1000,
+  "test_used": false,
+  "exploratory_validation": true,
+  "intervals": "unadjusted learner-cluster bootstrap; multiple contrasts exploratory",
+  "protocol": "refit fusion on fit; select C by selection NDCG@10 then recall; evaluate held",
+  "preference_comparison": "profile frozen at day 7 versus current profile; all other histories stay current",
+  "training": "fusion only; frozen SASRec/SVD/risk reused",
+  "cold_frozen_preferences": "zero signal if student/type absent on day7",
+  "candidate_policy": "same full available catalog and repeat eligibility for every variant",
+  "ranking_source_sha256": "0a89b116de96763e38616b3dd0f563a5c7bf653062ca3561e1d95fa427966856",
+  "script_sha256": "6ee6d0d6b3c8232629a40da374330965db988311a71ce0443f1f9c1f2816c072",
+  "utility_sha256": "8fe588dbf0330e1b99cdeb9dc65376a87cc0d1b0de2f36a11e8a6b503c016cde",
+  "versions": {
+    "numpy": "2.5.1",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.8.0",
+    "torch": "2.11.0+cu128",
+    "lightgbm": "4.6.0"
+  }
+}

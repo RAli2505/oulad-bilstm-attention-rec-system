@@ -1,0 +1,138 @@
+{
+  "scope": "Supplemental aggregate research results. Earlier snapshots retain previously published files. Includes completed non-synthetic runs and two completed observational/ablation analyses. Excludes per-student predictions, model files, candidate features and intermediate checkpoints.",
+  "full_agent_days": [
+    7,
+    14,
+    21,
+    28,
+    35,
+    42,
+    49,
+    56,
+    63,
+    70,
+    77,
+    84,
+    91,
+    98,
+    105,
+    112,
+    119,
+    126,
+    133,
+    140,
+    147,
+    154,
+    161,
+    168
+  ],
+  "full_agent_seeds": [
+    42,
+    13,
+    7,
+    23,
+    101
+  ],
+  "full_agent_completed_jobs": 120,
+  "coverage": [
+    {
+      "run": "course_transfer_20261103T130003817786Z",
+      "new_files": 0,
+      "previously_indexed_files": 726
+    },
+    {
+      "run": "full_agent_20261102T190210371601Z",
+      "new_files": 0,
+      "previously_indexed_files": 1711
+    },
+    {
+      "run": "no_repeat_20261103T072022862196Z",
+      "new_files": 0,
+      "previously_indexed_files": 8
+    },
+    {
+      "run": "outcomes_20261102T111845643026Z",
+      "new_files": 0,
+      "previously_indexed_files": 5
+    },
+    {
+      "run": "recommendation_controls_20261103T110750297269Z",
+      "new_files": 0,
+      "previously_indexed_files": 101
+    },
+    {
+      "run": "recommendation_controls_20261104T145612818829Z",
+      "new_files": 68,
+      "previously_indexed_files": 0
+    },
+    {
+      "run": "recommendation_controls_20261104T153712273789Z",
+      "new_files": 68,
+      "previously_indexed_files": 0
+    },
+    {
+      "run": "recommendation_controls_20261104T160717271943Z",
+      "new_files": 68,
+      "previously_indexed_files": 0
+    },
+    {
+      "run": "recommendation_controls_20261104T164340258763Z",
+      "new_files": 68,
+      "previously_indexed_files": 0
+    },
+    {
+      "run": "repeat_discovery_balance_v1",
+      "new_files": 60,
+      "previously_indexed_files": 30
+    },
+    {
+      "run": "repeat_discovery_rankmix_v2",
+      "new_files": 60,
+      "previously_indexed_files": 48
+    },
+    {
+      "run": "repeat_outcomes_20261103T091255777331Z",
+      "new_files": 0,
+      "previously_indexed_files": 12
+    },
+    {
+      "run": "risk_20261031T132513013959Z",
+      "new_files": 840,
+      "previously_indexed_files": 0
+    },
+    {
+      "run": "risk_20261031T162709361455Z",
+      "new_files": 544,
+      "previously_indexed_files": 0
+    },
+    {
+      "run": "risk_20261031T191741845697Z",
+      "new_files": 0,
+      "previously_indexed_files": 13439
+    },
+    {
+      "run": "risk_20261101T123221178430Z",
+      "new_files": 0,
+      "previously_indexed_files": 362
+    },
+    {
+      "run": "risk_practical_20261103T093126573275Z",
+      "new_files": 0,
+      "previously_indexed_files": 23
+    },
+    {
+      "run": "system_20261101T141818505096Z",
+      "new_files": 0,
+      "previously_indexed_files": 66
+    }
+  ],
+  "archives": [
+    {
+      "path": "research_archive/results_20261106/artifacts/supplemental_results.zip",
+      "sha256": "81ce1ea5162af7e309060068e0d101f58234d92b408913a11e6c15b0fb74b117",
+      "bytes": 3306396,
+      "files": 1776,
+      "inventory": "research_archive/results_20261106/artifacts/supplemental_results.inventory.json"
+    }
+  ]
+}

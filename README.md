@@ -48,6 +48,7 @@ The repeat-versus-discovery experiment uses artifacts from the full recommender 
 
 | Location | Contents |
 | --- | --- |
+| [All-window results index](research_archive/results_20261106/manifest.json) | Coverage of 24 days and five seeds for the full recommender, a directly readable ranking table, and supplementary aggregate results, including all five recommendation ablation runs |
 | [November 5, 2026 snapshot](research_archive/results_20261105/) | Completed full recommender, `balance_v1`, and `rankmix_v2` runs. See `reports/` for summaries and `artifacts/` for metrics, settings, runtime, and memory measurements |
 | [November 4, 2026 snapshot](research_archive/results_20261104/) | Risk prediction, cross-course evaluation, recommendation ablations, and additional analyses |
 | [Historical reports](research_archive/snapshot_20261101/reports/) | Tables from earlier experiments |

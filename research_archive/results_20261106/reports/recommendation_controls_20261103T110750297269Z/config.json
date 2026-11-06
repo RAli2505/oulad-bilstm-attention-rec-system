@@ -1,0 +1,70 @@
+{
+  "source": "C:\\Users\\user\\Documents\\Diser\\система\\oulad-bilstm-attention\\runs\\full_agent_20261102T190210371601Z",
+  "inputs": {
+    "day_7\\candidate_features_and_labels.parquet": "4f9ff17dd0f993a6ba51ae7c661921c1a5aa9be978b60efe747ba19f550ff242",
+    "day_7\\queries.csv": "c89a711304f77cf2dbef1b22240265314e2a704e9135c5fbc6fcaac38df1658d",
+    "day_7\\seed_42\\full_candidate_features.npy": "43e6fd69e34e8af270015d9b93a4b122faaca21036c4147f0bdef3f3208fe807",
+    "day_7\\seed_42\\candidate_utilities.npz": "42874c87a74d41e965c3fe9309c469197d6554d9e0116d2421cc1eccdb19fd2a",
+    "day_7\\seed_42\\query_strategy_diagnostics.csv": "cf1c6495969637455e469bdf6e6b9af94c0b034a19f674ae8ff642ec5d8288cc",
+    "day_7\\seed_42\\agent_bundle\\bundle.json": "8b740eeabfb9c69f0bb7427925ab7c83670a314c126014e98a9bdf87055e0e99",
+    "day_14\\candidate_features_and_labels.parquet": "3431e4933043b65a4888f9283357e92d3107a59295b6752f6fc625cb3726a8a3",
+    "day_14\\queries.csv": "95a47a9414e41df724418b335aba61ea526f5a0a853330d3ecc4c39ac97069c4",
+    "day_14\\seed_42\\full_candidate_features.npy": "e8188bb9ee165bc80599ba4fba61223ec010b0e6d5d0d48a0985e5fcc6bc4023",
+    "day_14\\seed_42\\candidate_utilities.npz": "3580bd23ff21f1a7a8d509b82ac4d65ca28338f75f0d676b96071d98d5012382",
+    "day_14\\seed_42\\query_strategy_diagnostics.csv": "ded04b9a59cd7d14179d1ab1972be2e938479c05382c6d136c651e755566775f",
+    "day_14\\seed_42\\agent_bundle\\bundle.json": "43d4b98f23150f351c8051a56fc9890bf099b55d1e152d005ed739d494b5016f",
+    "day_21\\candidate_features_and_labels.parquet": "49bb5c0f1099dfcf576fcc53c6d8136c4fb54495eeca7c5a676a2ba4ad5072ac",
+    "day_21\\queries.csv": "f1eb00d137085d94945932cfc43061d032c8497bf8dbf242193b9bf8b55c3224",
+    "day_21\\seed_42\\full_candidate_features.npy": "e83eb1763ad6e611a079e0b0da116beb8c226d07a07c34d8e12fb874ebf79014",
+    "day_21\\seed_42\\candidate_utilities.npz": "da80ab945637b60356a60f6e3cf77f9eef993233c8d8d52c75a43c5cc9918cf3",
+    "day_21\\seed_42\\query_strategy_diagnostics.csv": "c82aa37fdb49f1797382eadcac7b0bcde429ac57916c065add2bad8b2df0d537",
+    "day_21\\seed_42\\agent_bundle\\bundle.json": "90e860d9dc7a7e221eb28e5f75e04b582daa97a0c3711f245ab1a826f820ba02",
+    "day_28\\candidate_features_and_labels.parquet": "eaf5496445f0fa55adac361ac0a7b853609920d30d59d46c66bc7a4417bf3172",
+    "day_28\\queries.csv": "20c13b25d3dbeafe9746ad4f5512b22a5adf0b918b706ed051cd2d15739ff9f7",
+    "day_28\\seed_42\\full_candidate_features.npy": "70685296e121052a62986e402701003b700dfc00c4684cfbe842f45a31446f1e",
+    "day_28\\seed_42\\candidate_utilities.npz": "3b5bc9d2aa3ffca9cc54b40bb4b3073b9a492eed4bf2a335380328ed9132432e",
+    "day_28\\seed_42\\query_strategy_diagnostics.csv": "c3f4a9a4796feb973cc0f79d26f102b49ea0551efacd60fb77a43080fc9d7b28",
+    "day_28\\seed_42\\agent_bundle\\bundle.json": "2e516907dc1b681aef16db8a185ceb0120faefc2548babe7192316d63a47d5f4"
+  },
+  "windows": [
+    7,
+    14,
+    21,
+    28
+  ],
+  "seed": 42,
+  "variants": [
+    "full_refit",
+    "without_explicit_preference",
+    "without_risk",
+    "without_cf",
+    "without_content",
+    "without_sasrec",
+    "without_mmr",
+    "frozen_profile_day7"
+  ],
+  "ks": [
+    5,
+    10,
+    20
+  ],
+  "bootstrap": 1000,
+  "test_used": false,
+  "exploratory_validation": true,
+  "intervals": "unadjusted learner-cluster bootstrap; multiple contrasts exploratory",
+  "protocol": "refit fusion on fit; select C by selection NDCG@10 then recall; evaluate held",
+  "preference_comparison": "profile frozen at day 7 versus current profile; all other histories stay current",
+  "training": "fusion only; frozen SASRec/SVD/risk reused",
+  "cold_frozen_preferences": "zero signal if student/type absent on day7",
+  "candidate_policy": "same full available catalog and repeat eligibility for every variant",
+  "ranking_source_sha256": "0a89b116de96763e38616b3dd0f563a5c7bf653062ca3561e1d95fa427966856",
+  "script_sha256": "6ee6d0d6b3c8232629a40da374330965db988311a71ce0443f1f9c1f2816c072",
+  "utility_sha256": "8fe588dbf0330e1b99cdeb9dc65376a87cc0d1b0de2f36a11e8a6b503c016cde",
+  "versions": {
+    "numpy": "2.5.1",
+    "pandas": "3.0.1",
+    "scikit-learn": "1.8.0",
+    "torch": "2.11.0+cu128",
+    "lightgbm": "4.6.0"
+  }
+}
