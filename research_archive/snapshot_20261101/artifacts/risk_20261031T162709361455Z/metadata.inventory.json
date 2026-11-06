@@ -1,0 +1,102 @@
+[
+  {
+    "path": "environment.json",
+    "bytes": 10426,
+    "sha256": "83b5e7d00ee09daf088997552e4d8f9c8f5374b10f2c85a99f0445c716f80dcb"
+  },
+  {
+    "path": "experiment_card.md",
+    "bytes": 1882,
+    "sha256": "3158c462bb885e8766e75092f09e3fc4ea4a2c31b3a8281660832f204ff43a0b"
+  },
+  {
+    "path": "protocol.md",
+    "bytes": 13245,
+    "sha256": "606cf2c15845463af9e1a9af099a74796901d52fbbe9e7f539791e853f3dedf0"
+  },
+  {
+    "path": "RESULTS_REVIEW_RU.md",
+    "bytes": 6004,
+    "sha256": "39720520550dbc911dd3d66e4b008dee4d1057303f8b7c7e653b548f6811d399"
+  },
+  {
+    "path": "run.log",
+    "bytes": 11722,
+    "sha256": "b1a2a609a32e51b4b5435b49428e3ba715fcefcfae05a89ce81230c9d25d03ec"
+  },
+  {
+    "path": "run_manifest.json",
+    "bytes": 5003,
+    "sha256": "ac48526576cfacccae340bc336683bb3b3ab6b65b185abb94484b607338c6a47"
+  },
+  {
+    "path": "source/data/oulad_loader.py",
+    "bytes": 8364,
+    "sha256": "bdfe112f0d847ac5e15c5a8343c287cdf3f6807a41ce02eb2858126a466d5529"
+  },
+  {
+    "path": "source/evaluation_metrics.py",
+    "bytes": 3630,
+    "sha256": "f979d438ef9d604e9b1916cf9a8a68faddac10db4e8b1ee6b307dbcd0a56958f"
+  },
+  {
+    "path": "source/models/oulad_hybrid_attention.py",
+    "bytes": 3806,
+    "sha256": "e343c453c94e099c0cd29ed92b49bef8f3a7d60cbe587128db926080b37a596d"
+  },
+  {
+    "path": "source/models/pred_oulad.py",
+    "bytes": 47233,
+    "sha256": "934b61c7d5fafd79b3f36a1539bf07add1593d229f8d7ccf0f6d24b1992dd5d3"
+  },
+  {
+    "path": "source/risk_experiments/__init__.py",
+    "bytes": 79,
+    "sha256": "12851a11d6a08796bf0629b029cb4757940ae51a38249b68aebc6c3caf8372e7"
+  },
+  {
+    "path": "source/risk_experiments/enhanced_features.py",
+    "bytes": 6003,
+    "sha256": "1a914b51802093f923adbbac23bc5d309081fbad7012183ef34baaf78ceb87ac"
+  },
+  {
+    "path": "source/risk_experiments/features.py",
+    "bytes": 9603,
+    "sha256": "ad1f94d8f4a406c94d0ee06a40e06b61db13b1d6a8b0748a20ac889691df3e3c"
+  },
+  {
+    "path": "source/risk_experiments/metrics.py",
+    "bytes": 4741,
+    "sha256": "1a4c7f79e427c24c440f37264b969461d5186254ace905afada37f55ca1f2f7f"
+  },
+  {
+    "path": "source/risk_experiments/networks.py",
+    "bytes": 4285,
+    "sha256": "e0b8aa2e9b4b3ebaed4fa3373892acefc9a28d2622f2690a25dee1b1160ab5c8"
+  },
+  {
+    "path": "source/risk_experiments/pipeline.py",
+    "bytes": 20546,
+    "sha256": "f380cbeaa23484530355e7bd37e348d93c4da4d472a1c659bb60280fd011f717"
+  },
+  {
+    "path": "source/risk_experiments/training.py",
+    "bytes": 17792,
+    "sha256": "11587ed801c6447ba1ad49954223299c32cd8c7d1fef2bab94ad5a72cc829220"
+  },
+  {
+    "path": "source/risk_experiments/tuning.py",
+    "bytes": 13708,
+    "sha256": "0d5c78c27162ad276d916ca90208cb3b5d3a8796df4603f4d08ab47759839509"
+  },
+  {
+    "path": "source/run_improved_article.py",
+    "bytes": 246,
+    "sha256": "435e24c65ed951f4abbc1d90a419ec39c5430e3821722e2411db821cc5312359"
+  },
+  {
+    "path": "source/run_risk_article.py",
+    "bytes": 15702,
+    "sha256": "09a6a52495a900bf8e1cd3ea5dc0e407c254f3011706a8f3bcc0189dd2ed9f75"
+  }
+]

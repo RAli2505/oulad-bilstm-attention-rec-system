@@ -1,0 +1,17 @@
+{
+  "input_enrollments": 13529,
+  "eligible": 11418,
+  "unknown_withdrawal_time": 3,
+  "not_active_at_landmark": 2099,
+  "not_registered_at_landmark": 22,
+  "course_ended": 0,
+  "days": 56,
+  "score_lag": 7,
+  "score_policy": "omit",
+  "zero_history_enrollments": 369,
+  "development": 11418,
+  "external_test": 0,
+  "test_removed_repeated_2013_students": 0,
+  "2013_prevalence": 0.42476791031704325,
+  "external_test_evaluated": false
+}

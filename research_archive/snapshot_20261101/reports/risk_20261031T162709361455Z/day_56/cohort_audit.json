@@ -1,0 +1,23 @@
+{
+  "input_enrollments": 13529,
+  "eligible": 11418,
+  "unknown_withdrawal_time": 3,
+  "not_active_at_landmark": 2099,
+  "not_registered_at_landmark": 22,
+  "course_ended": 0,
+  "days": 56,
+  "score_lag": 7,
+  "score_policy": "omit",
+  "zero_history_enrollments": 369,
+  "feature_profile": "behavior_deadlines_context_v2",
+  "schedule_assumption": "Published course deadlines and weights are known at prediction time",
+  "development": 11418,
+  "external_test": 0,
+  "test_removed_repeated_2013_students": 0,
+  "2013_prevalence": 0.42476791031704325,
+  "split_scheme": "single_grouped_holdout",
+  "evaluation_validation_records": 3426,
+  "actual_validation_fraction": 0.3000525486074619,
+  "nominal_validation_fraction": 0.3,
+  "external_test_evaluated": false
+}

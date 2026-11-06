@@ -1,0 +1,101 @@
+{
+  "config": {
+    "windows": [
+      28,
+      56,
+      112
+    ],
+    "primary_day": 56,
+    "seeds": [
+      42
+    ],
+    "epochs": 100,
+    "patience": 20,
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "cox_weight": 1.0,
+    "score_lag": 7,
+    "score_policy": "omit",
+    "bootstrap": 1000,
+    "permutations": 1000,
+    "threads": 6,
+    "device": "cuda",
+    "split_seed": 42,
+    "folds": 5,
+    "min_delta": 0.0001,
+    "precision": "FP32",
+    "deterministic": true,
+    "inference_batch_size": 512,
+    "train_probe_max_rows": 512,
+    "optimizer": "Adam",
+    "optimizer_fused": true,
+    "evaluate_test": false,
+    "mlp_iterations": 200,
+    "synthetic": false,
+    "models": [
+      "lr",
+      "rf",
+      "svm",
+      "xgboost",
+      "lightgbm",
+      "mlp",
+      "proposed",
+      "lstm",
+      "bilstm",
+      "transformer",
+      "no_attention",
+      "no_static",
+      "no_cox",
+      "paper_hybrid"
+    ],
+    "protocol": "oulad_landmark_composite_risk_bce_cox_v1"
+  },
+  "data_sha256": {
+    "assessments.csv": "8cc738fb88ad760571d6f2a23059bfee0ffcae3bcd830514c9cbd5c6d5a046f1",
+    "courses.csv": "4f16eee7454b15e109b0a21a0e43be820e6846ed6f9301bb7feb5ab5ad737a75",
+    "studentAssessment.csv": "fd5320786328d05af841ee7dd4b5871b9dada3b9fe9d6a3642b2f42635510a6e",
+    "studentInfo.csv": "7e6f3e474a5eee00639d2a414a6c7e928745823c2d2c2563ca1780145f99b0d6",
+    "studentRegistration.csv": "0d32676285372aaf2e7a80304e5b274b4fba24313e2ca4c04317225e1ec90170",
+    "studentVle.csv": "52668253d876c5becbcb72185977152700cecab2942aca807fecc3dd54b937f0",
+    "vle.csv": "d1b28303dea802ad87b4484e1196e878e06824850b9a4fe8aa34693439fe87e9"
+  },
+  "source_sha256": {
+    "run_risk_article.py": "57f0a6be4fc80085d68524e34da010c4f179c17a1a9381ba89f586608a040636",
+    "risk_experiments\\features.py": "f39e5e1c929425f1cd024ea28843710067912b5cc1551391b3272b0b2e2be214",
+    "risk_experiments\\metrics.py": "1a4c7f79e427c24c440f37264b969461d5186254ace905afada37f55ca1f2f7f",
+    "risk_experiments\\networks.py": "e0b8aa2e9b4b3ebaed4fa3373892acefc9a28d2622f2690a25dee1b1160ab5c8",
+    "risk_experiments\\pipeline.py": "cdf83f210286c46428d594a5ffe00c7f1d8436f4559cd4924fb9709419c498c9",
+    "risk_experiments\\training.py": "d380818a27d8e0e8e2807516660d1a1f2f8e57dd6206f59b2f8289804396d419",
+    "risk_experiments\\__init__.py": "12851a11d6a08796bf0629b029cb4757940ae51a38249b68aebc6c3caf8372e7",
+    "models\\pred_oulad.py": "934b61c7d5fafd79b3f36a1539bf07add1593d229f8d7ccf0f6d24b1992dd5d3",
+    "models\\oulad_hybrid_attention.py": "e343c453c94e099c0cd29ed92b49bef8f3a7d60cbe587128db926080b37a596d",
+    "data\\oulad_loader.py": "bdfe112f0d847ac5e15c5a8343c287cdf3f6807a41ce02eb2858126a466d5529",
+    "evaluation_metrics.py": "f979d438ef9d604e9b1916cf9a8a68faddac10db4e8b1ee6b307dbcd0a56958f"
+  },
+  "versions": {
+    "numpy": "2.5.1",
+    "pandas": "3.0.1",
+    "pyarrow": "23.0.1",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.8.0",
+    "torch": "2.11.0+cu128",
+    "xgboost": "3.2.0",
+    "lightgbm": "4.6.0",
+    "joblib": "1.5.3",
+    "matplotlib": "3.10.8",
+    "threadpoolctl": "3.6.0"
+  },
+  "signature": "d36573675111c8e1a02d5c4ede29a07cf9acd4cea27caebac8f8218cd9050b2f",
+  "status": "completed",
+  "command": [
+    "C:\\Users\\user\\Documents\\Diser\\\u0441\u0438\u0441\u0442\u0435\u043c\u0430\\oulad-bilstm-attention\\run_risk_article.py"
+  ],
+  "output": "C:\\Users\\user\\Documents\\Diser\\\u0441\u0438\u0441\u0442\u0435\u043c\u0430\\oulad-bilstm-attention\\runs\\risk_20261031T132513013959Z",
+  "started_utc": "2026-10-31T13:25:17.310401+00:00",
+  "primary_contrast": "proposed vs no_cox on development OOF; external 2014 test disabled",
+  "score_availability_assumption": "Scores omitted in primary analysis. Optional proxy=max(submission_date, due_date)+score_lag; not an observed release timestamp.",
+  "cox_objective": "minibatch partial likelihood, Breslow ties, lambda=cox_weight; event=withdrawal only",
+  "selection": "fixed hyperparameters; neural early stop on inner validation raw BCE; no test-driven model selection",
+  "wall_seconds": 5799.269799299975,
+  "finished_utc": "2026-10-31T15:01:56.616948+00:00"
+}

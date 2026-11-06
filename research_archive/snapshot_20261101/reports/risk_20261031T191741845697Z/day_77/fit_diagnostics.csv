@@ -1,0 +1,91 @@
+model,fold,seed,val_minus_train_log_loss,train_minus_val_auc,null_train_log_loss,training_log_loss_improvement_over_null,training_beats_null_log_loss,epochs_ran,epoch_budget_exhausted,best_epoch,best_epoch_at_budget,last_val_minus_best_val_log_loss,mlp_iteration_budget_exhausted,optimizer_iterations,interpretation
+proposed,1,42,0.01925662953765761,0.02377926964652799,0.6777181064780571,0.2202041438246078,True,28.0,False,8.0,False,0.03405470319943177,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+lr,1,42,0.014405430175402134,0.01626956808661917,0.6777181064780571,0.20175403556080168,True,,,,,,,[33],"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+rf,1,42,0.17848128108214506,0.15657375323916534,0.6777181064780571,0.3752474181205071,True,,,,,,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+svm,1,42,0.06607106561945747,0.10357485229959706,0.6777181064780571,0.2293779990876869,True,,,,,,,[5709],"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+xgboost,1,42,0.048103729109980065,0.05024158742299245,0.6777181064780571,0.24646351064223554,True,,,,,,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+lightgbm,1,42,0.1370912699015221,0.121120273946694,0.6777181064780571,0.33363337460108994,True,,,,,,,300,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+mlp,1,42,0.015065413850061993,0.021248386113394302,0.6777181064780571,0.1926768215963629,True,,,,,,False,66,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+lstm,1,42,0.01637457739910947,0.018458875696636623,0.6777181064780571,0.2164972437906591,True,31.0,False,11.0,False,0.010622754243926669,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+bilstm,1,42,0.008479992368166989,0.014982266174243142,0.6777181064780571,0.21042581952235512,True,28.0,False,8.0,False,0.007571388104014365,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+transformer,1,42,0.013130393029654575,0.01537670462152696,0.6777181064780571,0.21477803187417882,True,26.0,False,6.0,False,0.06852270249346454,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+no_attention,1,42,0.017518808697178923,0.021760111817289318,0.6777181064780571,0.21835066346332999,True,28.0,False,8.0,False,0.023334467528775105,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+no_static,1,42,0.04472978498709956,0.03462693667524852,0.6777181064780571,0.15232019271974595,True,50.0,False,30.0,False,0.04500651917287224,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+no_cox,1,42,0.019049371152457528,0.0234444868407232,0.6777181064780571,0.2203470638011244,True,28.0,False,8.0,False,0.03805157597933878,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+paper_hybrid,1,42,0.0168677959753209,0.02013669471126911,0.6777181064780571,0.21783952063116546,True,31.0,False,11.0,False,0.011136470143797927,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+ensemble_equal,1,42,,,,,,,,,,,,,
+ensemble_inner_weighted,1,42,,,,,,,,,,,,,
+ensemble_lstm_attention_lgbm_equal,1,42,,,,,,,,,,,,,
+ensemble_lstm_attention_lgbm_weighted,1,42,,,,,,,,,,,,,
+proposed,1,13,2.9743294107542617e-05,0.006236780655075824,0.6777181064780571,0.2016564031316399,True,24.0,False,4.0,False,0.02860471830012956,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+lr,1,13,0.014405430175402134,0.01626956808661917,0.6777181064780571,0.20175403556080168,True,,,,,,,[33],"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+rf,1,13,0.15247130997041236,0.14742924471667074,0.6777181064780571,0.34923506461234455,True,,,,,,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+svm,1,13,0.06607106561945747,0.10357485229959706,0.6777181064780571,0.2293779990876869,True,,,,,,,[5709],"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+xgboost,1,13,0.049376788810384764,0.05094062892387097,0.6777181064780571,0.24647157283791582,True,,,,,,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+lightgbm,1,13,0.1368309944557468,0.1175625754829337,0.6777181064780571,0.33404399383556416,True,,,,,,,300,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+mlp,1,13,0.014686342054804513,0.019993947119571587,0.6777181064780571,0.19505431387484568,True,,,,,,False,55,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+lstm,1,13,0.008665233295741093,0.012679762795425153,0.6777181064780571,0.20837580189303617,True,34.0,False,14.0,False,0.012052989863153452,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+bilstm,1,13,0.002647060764798481,0.008348068830475452,0.6777181064780571,0.20266343969188189,True,24.0,False,4.0,False,0.04946939553926771,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+transformer,1,13,0.016673095828261764,0.018596156981109613,0.6777181064780571,0.2133839069576005,True,26.0,False,6.0,False,0.08144984238743835,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+no_attention,1,13,-0.00015522248152349816,0.0061493408593193966,0.6777181064780571,0.20170108988636587,True,24.0,False,4.0,False,0.021415106154507146,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+no_static,1,13,0.03699964472057615,0.03170137805681916,0.6777181064780571,0.1440485795149492,True,42.0,False,22.0,False,0.04530705643682453,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+no_cox,1,13,-8.711300516417442e-05,0.0064770647189925645,0.6777181064780571,0.20168631836287915,True,24.0,False,4.0,False,0.027570877232678315,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+paper_hybrid,1,13,0.010240026364836341,0.016347693254052165,0.6777181064780571,0.21183448358501467,True,29.0,False,9.0,False,0.012077279308914335,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+ensemble_equal,1,13,,,,,,,,,,,,,
+ensemble_inner_weighted,1,13,,,,,,,,,,,,,
+ensemble_lstm_attention_lgbm_equal,1,13,,,,,,,,,,,,,
+ensemble_lstm_attention_lgbm_weighted,1,13,,,,,,,,,,,,,
+proposed,1,7,0.008815778337695146,0.01368736523318681,0.6777181064780571,0.20712127762767835,True,25.0,False,5.0,False,0.021031135731435002,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+lr,1,7,0.014405430175402134,0.01626956808661917,0.6777181064780571,0.20175403556080168,True,,,,,,,[33],"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+rf,1,7,0.22362527793188142,0.1689676682047372,0.6777181064780571,0.42065233389694495,True,,,,,,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+svm,1,7,0.06607106561945747,0.10357485229959706,0.6777181064780571,0.2293779990876869,True,,,,,,,[5709],"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+xgboost,1,7,0.0532809058749813,0.05412785501193984,0.6777181064780571,0.2536531182369115,True,,,,,,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+lightgbm,1,7,0.2323285212899946,0.16208603000997257,0.6777181064780571,0.423233923462311,True,,,,,,,300,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+mlp,1,7,0.015644311548536127,0.0199169073822707,0.6777181064780571,0.19491719500658472,True,,,,,,False,77,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+lstm,1,7,0.007027238674983671,0.01219580711521584,0.6777181064780571,0.2100117811319312,True,28.0,False,8.0,False,0.01770956182296357,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+bilstm,1,7,0.0066104405014214,0.012542806862809841,0.6777181064780571,0.20929805802792034,True,28.0,False,8.0,False,0.018234477666825233,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+transformer,1,7,0.0017120995780675607,0.007145764560734236,0.6777181064780571,0.2049262081716568,True,26.0,False,6.0,False,0.0135120605092508,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+no_attention,1,7,0.007847606536507346,0.01353580693413603,0.6777181064780571,0.20635579383134978,True,25.0,False,5.0,False,0.026066464768475295,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+no_static,1,7,0.03459894762146665,0.03746660763131171,0.6777181064780571,0.13874261895690176,True,41.0,False,21.0,False,0.06991183885105323,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+no_cox,1,7,0.009591500364017402,0.014426958798111511,0.6777181064780571,0.20830266677177417,True,25.0,False,5.0,False,0.020209376916072497,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+paper_hybrid,1,7,0.0085433441682774,0.013993354116713985,0.6777181064780571,0.20993319990608433,True,26.0,False,6.0,False,0.02499305450156747,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+ensemble_equal,1,7,,,,,,,,,,,,,
+ensemble_inner_weighted,1,7,,,,,,,,,,,,,
+ensemble_lstm_attention_lgbm_equal,1,7,,,,,,,,,,,,,
+ensemble_lstm_attention_lgbm_weighted,1,7,,,,,,,,,,,,,
+proposed,1,23,-0.0018805530749314014,0.0038970546018732843,0.6777181064780571,0.19891315216097916,True,24.0,False,4.0,False,0.014196972149782217,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+lr,1,23,0.014405430175402134,0.01626956808661917,0.6777181064780571,0.20175403556080168,True,,,,,,,[33],"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+rf,1,23,0.22408664827580155,0.16987851517223473,0.6777181064780571,0.41994781842487366,True,,,,,,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+svm,1,23,0.06607106561945747,0.10357485229959706,0.6777181064780571,0.2293779990876869,True,,,,,,,[5709],"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+xgboost,1,23,0.052126013172170804,0.05203979008905146,0.6777181064780571,0.25289173915970914,True,,,,,,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+lightgbm,1,23,0.13890632145957932,0.1215089286679838,0.6777181064780571,0.3337391868901082,True,,,,,,,300,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+mlp,1,23,0.015047376851610283,0.019484650726036223,0.6777181064780571,0.19622651506028832,True,,,,,,False,107,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+lstm,1,23,0.004070568182775958,0.00958217457695476,0.6777181064780571,0.2052833157672252,True,25.0,False,5.0,False,0.03930503007301828,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+bilstm,1,23,0.0038877978157513815,0.010372598224741458,0.6777181064780571,0.2057015992631896,True,26.0,False,6.0,False,0.008033363924616344,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+transformer,1,23,0.006972123361349003,0.012696095267357155,0.6777181064780571,0.20635240848597136,True,27.0,False,7.0,False,0.0124134459617678,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+no_attention,1,23,-0.0020610023329349914,0.0036173106658596854,0.6777181064780571,0.19901244405834145,True,24.0,False,4.0,False,0.01686249664829942,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+no_static,1,23,0.04037996205868699,0.03793696400386248,0.6777181064780571,0.140530545265115,True,41.0,False,21.0,False,0.04658450781416701,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+no_cox,1,23,-0.0010337898859016925,0.0042851024952113015,0.6777181064780571,0.2007918711920259,True,24.0,False,4.0,False,0.02958717506827807,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+paper_hybrid,1,23,0.007281359253179243,0.013892300632532883,0.6777181064780571,0.20802758002547883,True,27.0,False,7.0,False,0.013882080041596412,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+ensemble_equal,1,23,,,,,,,,,,,,,
+ensemble_inner_weighted,1,23,,,,,,,,,,,,,
+ensemble_lstm_attention_lgbm_equal,1,23,,,,,,,,,,,,,
+ensemble_lstm_attention_lgbm_weighted,1,23,,,,,,,,,,,,,
+proposed,1,101,0.010325493506403605,0.015087707527608019,0.6777181064780571,0.21063981621561,True,26.0,False,6.0,False,0.01867799964881328,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+lr,1,101,0.014405430175402134,0.01626956808661917,0.6777181064780571,0.20175403556080168,True,,,,,,,[33],"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+rf,1,101,0.1514196854425387,0.14619400359330115,0.6777181064780571,0.34935002080338523,True,,,,,,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+svm,1,101,0.06607106561945747,0.10357485229959706,0.6777181064780571,0.2293779990876869,True,,,,,,,[5709],"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+xgboost,1,101,0.055617153485551685,0.05749198595310523,0.6777181064780571,0.25388057476245973,True,,,,,,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+lightgbm,1,101,0.13919470711770582,0.12152659519226794,0.6777181064780571,0.3334726025950894,True,,,,,,,300,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+mlp,1,101,0.014525835060924197,0.02124302117372512,0.6777181064780571,0.19389795948303307,True,,,,,,False,43,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+lstm,1,101,0.0042317368752050055,0.01087233979406288,0.6777181064780571,0.2093452536401582,True,26.0,False,6.0,False,0.03148580910660198,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+bilstm,1,101,0.00970832832879609,0.014212163590589078,0.6777181064780571,0.21330051705379788,True,26.0,False,6.0,False,0.04379492033540028,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+transformer,1,101,0.008296988417238027,0.011816239950567353,0.6777181064780571,0.21285325424240753,True,28.0,False,8.0,False,0.017659436454393773,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+no_attention,1,101,0.007814391969158785,0.0134829008796159,0.6777181064780571,0.2090510535138848,True,26.0,False,6.0,False,0.017433405022348303,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+no_static,1,101,0.02616462568260214,0.02543771221377611,0.6777181064780571,0.13885367601578957,True,40.0,False,20.0,False,0.06591126373182432,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+no_cox,1,101,0.010197303668842028,0.01487132608763464,0.6777181064780571,0.21035965190042583,True,26.0,False,6.0,False,0.020509611496560665,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+paper_hybrid,1,101,0.009400051729569925,0.014614242252941723,0.6777181064780571,0.21064436037912748,True,28.0,False,8.0,False,0.014626185265866953,,,"Measured gaps and budget flags are evidence, not automatic diagnoses of over/underfitting."
+ensemble_equal,1,101,,,,,,,,,,,,,
+ensemble_inner_weighted,1,101,,,,,,,,,,,,,
+ensemble_lstm_attention_lgbm_equal,1,101,,,,,,,,,,,,,
+ensemble_lstm_attention_lgbm_weighted,1,101,,,,,,,,,,,,,

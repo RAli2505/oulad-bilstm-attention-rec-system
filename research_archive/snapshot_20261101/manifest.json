@@ -1,0 +1,441 @@
+{
+  "created_utc": "2026-11-01T10:17:35.933496+00:00",
+  "scope": "All files of three scientific runs, including search checkpoints; raw OULAD CSV inputs. No training or evaluation performed.",
+  "archives": [
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T132513013959Z/day_112.zip",
+      "sha256": "9cfce6e0f25e51593b650bc0f1dd396efae835147935f2f91f49bf3c2619e42a",
+      "bytes": 145138171,
+      "files": 678,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T132513013959Z/day_112.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T132513013959Z/day_28.zip",
+      "sha256": "50774051642bbc68ebef21a4d501529af45631a014f5a8b3267e75496c2303e2",
+      "bytes": 162219932,
+      "files": 678,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T132513013959Z/day_28.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T132513013959Z/day_56.zip",
+      "sha256": "867e6206ee234dd449f317996e5cba25cc8196b469bd3b5e18127b2ef2cf6867",
+      "bytes": 155786925,
+      "files": 678,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T132513013959Z/day_56.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T132513013959Z/metadata.zip",
+      "sha256": "14561458e7589150db0611f21a77302ec730a91f28a458f0b4edbf3ca5455f58",
+      "bytes": 62624,
+      "files": 16,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T132513013959Z/metadata.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/day_112.zip",
+      "sha256": "b0ee2bbdf1d062b1262cd20afd653c5e7fc7263f76b9d790b2c271a0490b1ee9",
+      "bytes": 106271176,
+      "files": 694,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/day_112.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/day_14.zip",
+      "sha256": "9c140b0f0e8e53eab4c347222f22719096f707ff67e9055d7b20fbd1b416f26f",
+      "bytes": 120065192,
+      "files": 694,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/day_14.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/day_140.zip",
+      "sha256": "653b7d904c276d474f62279572f0a4005b182b9831cd307033c48248c329594b",
+      "bytes": 103632576,
+      "files": 694,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/day_140.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/day_168.zip",
+      "sha256": "ff9b32487448ddbc4f67872a2e462f888ba4fd9a323b19aedc8f84f1350d42a5",
+      "bytes": 99941119,
+      "files": 694,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/day_168.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/day_28.zip",
+      "sha256": "378b8798756a3b21f466080d370ea4e9c836e00f5b3215fe1653e425fdd7ee87",
+      "bytes": 117266167,
+      "files": 694,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/day_28.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/day_56.zip",
+      "sha256": "60ef0bbd7fd40ba088d11af1477ccdd7f2c8fb787c1133c78279c95b38ddf43c",
+      "bytes": 113774936,
+      "files": 694,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/day_56.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/day_7.zip",
+      "sha256": "ef0a87855fb94c88c3c7a58eb4ff004d56998dddf74b5d7e94d130d7e0212bf5",
+      "bytes": 121062411,
+      "files": 694,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/day_7.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/day_84.zip",
+      "sha256": "b26dcc765ce0c0e1df4d81160ff81b4f89cf329a7d1f9a3b06975ff0caa80b10",
+      "bytes": 110522570,
+      "files": 694,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/day_84.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/metadata.zip",
+      "sha256": "d3b2d0b2b1ffd060168d3fbc5dc0261967d4b360602e2854ead15f026487ecff",
+      "bytes": 73317,
+      "files": 20,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T162709361455Z/metadata.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_14.zip",
+      "sha256": "a8bdb2f65cff8a9ebab6daa709d37b9d2be824abe1b99091e10a63ea188ccd99",
+      "bytes": 593635968,
+      "files": 3386,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_14.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_21.zip",
+      "sha256": "91b930b25addfcaaf3d168ac1881ca0a581e2e2aab30f73a0c34975d6aba8ddc",
+      "bytes": 604316137,
+      "files": 3386,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_21.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_28.zip",
+      "sha256": "0476fea1f4df880ec0ee176b4c61e5abac239a0b64d09879eb8ebbe66d215121",
+      "bytes": 577229959,
+      "files": 3386,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_28.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_35.zip",
+      "sha256": "53b0fe82503e34950857dd1cc84e30805486e6fc4144e8f4bc29e2c2c99fcea7",
+      "bytes": 576397683,
+      "files": 3386,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_35.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_42.zip",
+      "sha256": "b2bb8024480166ee656d7c6b991dca20e046735e4bf04202e4cb561934e0985c",
+      "bytes": 595089261,
+      "files": 3386,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_42.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_49.zip",
+      "sha256": "c8799fb638b79cbbaa8f979dc79209edcb183984676490973474e81b6a2bb819",
+      "bytes": 567053097,
+      "files": 3386,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_49.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_56.zip",
+      "sha256": "815d8eca4b1c00a25694485f1d0a4a9f71e127612e59d5171311086fec9be6e8",
+      "bytes": 570262194,
+      "files": 3386,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_56.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_63.zip",
+      "sha256": "3b527dfab45ee602a8781e9fb4dd2e7f23f83dd6f166ec0070fbc600e2894621",
+      "bytes": 567287959,
+      "files": 3386,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_63.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_7.zip",
+      "sha256": "55c330fe00476b70265bc17a350a092d8b64ae5a9228e478eba5aee089d2d5dd",
+      "bytes": 590639090,
+      "files": 3386,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_7.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_70.zip",
+      "sha256": "a591fe318b6009be1de4e7533d35f7602856fadcf817606c3f2ba349dfd36b2b",
+      "bytes": 550855901,
+      "files": 3386,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_70.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_77.zip",
+      "sha256": "268e0b67734d3b160e958c3be3cce7220dc1551f705e78a6c58837f66647dd55",
+      "bytes": 553786292,
+      "files": 3386,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_77.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_84.zip",
+      "sha256": "d2bb3f3c3e5aa6bd23a99475b88adf7272c3bf252f0a0c95c382072a61bcf4cf",
+      "bytes": 545671875,
+      "files": 3386,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_84.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_91.zip",
+      "sha256": "18dc2c7c84dd73bf86508377dc17ee6f3c7526c358d703b49e2db9f564a5e84b",
+      "bytes": 546995493,
+      "files": 3386,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_91.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_98.zip",
+      "sha256": "6fddafb016874bf74c3d3a8aed906fb530da70ac84b6cfb532e3c35d8c4ffb71",
+      "bytes": 179851674,
+      "files": 1097,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/day_98.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/metadata.zip",
+      "sha256": "fe56af0ffa2f862e2c6ec4f5feb20af6551db357324b23eb929f9902a8391982",
+      "bytes": 78419,
+      "files": 19,
+      "inventory": "research_archive/snapshot_20261101/artifacts/risk_20261031T191741845697Z/metadata.inventory.json"
+    },
+    {
+      "path": "research_archive/snapshot_20261101/artifacts/oulad_raw.zip",
+      "sha256": "a1dd00f95be4217b09a67c2a9a52a236f98bcfc8ae55a524fc21efb3a1a3f31c",
+      "bytes": 61702792,
+      "files": 7,
+      "inventory": "research_archive/snapshot_20261101/artifacts/oulad_raw.inventory.json"
+    }
+  ],
+  "runs": [
+    {
+      "run": "risk_20261031T132513013959Z",
+      "status": "completed",
+      "jobs": {
+        "completed": 210
+      },
+      "config": {
+        "windows": [
+          28,
+          56,
+          112
+        ],
+        "primary_day": 56,
+        "seeds": [
+          42
+        ],
+        "epochs": 100,
+        "patience": 20,
+        "batch_size": 256,
+        "learning_rate": 0.001,
+        "cox_weight": 1.0,
+        "score_lag": 7,
+        "score_policy": "omit",
+        "bootstrap": 1000,
+        "permutations": 1000,
+        "threads": 6,
+        "device": "cuda",
+        "split_seed": 42,
+        "folds": 5,
+        "min_delta": 0.0001,
+        "precision": "FP32",
+        "deterministic": true,
+        "inference_batch_size": 512,
+        "train_probe_max_rows": 512,
+        "optimizer": "Adam",
+        "optimizer_fused": true,
+        "evaluate_test": false,
+        "mlp_iterations": 200,
+        "synthetic": false,
+        "models": [
+          "lr",
+          "rf",
+          "svm",
+          "xgboost",
+          "lightgbm",
+          "mlp",
+          "proposed",
+          "lstm",
+          "bilstm",
+          "transformer",
+          "no_attention",
+          "no_static",
+          "no_cox",
+          "paper_hybrid"
+        ],
+        "protocol": "oulad_landmark_composite_risk_bce_cox_v1"
+      },
+      "signature": "d36573675111c8e1a02d5c4ede29a07cf9acd4cea27caebac8f8218cd9050b2f"
+    },
+    {
+      "run": "risk_20261031T162709361455Z",
+      "status": "completed",
+      "jobs": {
+        "completed": 144
+      },
+      "config": {
+        "windows": [
+          7,
+          14,
+          28,
+          56,
+          84,
+          112,
+          140,
+          168
+        ],
+        "primary_day": 56,
+        "seeds": [
+          42
+        ],
+        "epochs": 100,
+        "patience": 20,
+        "batch_size": 256,
+        "learning_rate": 0.001,
+        "cox_weight": 1.0,
+        "score_lag": 7,
+        "score_policy": "omit",
+        "bootstrap": 1000,
+        "permutations": 1000,
+        "threads": 6,
+        "device": "cuda",
+        "split_seed": 42,
+        "folds": 1,
+        "split_scheme": "holdout",
+        "train_pool_fraction": 0.7,
+        "validation_fraction": 0.3,
+        "min_delta": 0.0001,
+        "precision": "FP32",
+        "deterministic": true,
+        "inference_batch_size": 512,
+        "train_probe_max_rows": 512,
+        "optimizer": "Adam",
+        "optimizer_fused": true,
+        "evaluate_test": false,
+        "mlp_iterations": 200,
+        "synthetic": false,
+        "improved": true,
+        "feature_profile": "rich",
+        "tuning_trials": 4,
+        "screen_epochs": 15,
+        "models": [
+          "lr",
+          "rf",
+          "svm",
+          "xgboost",
+          "lightgbm",
+          "mlp",
+          "proposed",
+          "lstm",
+          "bilstm",
+          "transformer",
+          "no_attention",
+          "no_static",
+          "no_cox",
+          "paper_hybrid",
+          "ensemble_equal",
+          "ensemble_inner_weighted",
+          "ensemble_lstm_attention_lgbm_equal",
+          "ensemble_lstm_attention_lgbm_weighted"
+        ],
+        "protocol": "oulad_risk_nested_tuning_v2"
+      },
+      "signature": "82798183ddb7ee05550e4e6f76514a5ba4cf0fc3456fa54e3af35ab0c1548f93"
+    },
+    {
+      "run": "risk_20261031T191741845697Z",
+      "status": "failed",
+      "jobs": {
+        "completed": 1196,
+        "running": 1
+      },
+      "config": {
+        "windows": [
+          7,
+          14,
+          21,
+          28,
+          35,
+          42,
+          49,
+          56,
+          63,
+          70,
+          77,
+          84,
+          91,
+          98,
+          105,
+          112,
+          119,
+          126,
+          133,
+          140,
+          147,
+          154,
+          161,
+          168
+        ],
+        "primary_day": 56,
+        "seeds": [
+          42,
+          13,
+          7,
+          23,
+          101
+        ],
+        "epochs": 100,
+        "patience": 20,
+        "batch_size": 256,
+        "learning_rate": 0.001,
+        "cox_weight": 1.0,
+        "score_lag": 7,
+        "score_policy": "omit",
+        "bootstrap": 1000,
+        "permutations": 1000,
+        "threads": 6,
+        "device": "cuda",
+        "split_seed": 42,
+        "folds": 1,
+        "split_scheme": "holdout",
+        "train_pool_fraction": 0.7,
+        "validation_fraction": 0.3,
+        "min_delta": 0.0001,
+        "precision": "FP32",
+        "deterministic": true,
+        "inference_batch_size": 512,
+        "train_probe_max_rows": 512,
+        "optimizer": "Adam",
+        "optimizer_fused": true,
+        "evaluate_test": false,
+        "mlp_iterations": 200,
+        "synthetic": false,
+        "improved": true,
+        "feature_profile": "rich",
+        "tuning_trials": 4,
+        "screen_epochs": 15,
+        "models": [
+          "lr",
+          "rf",
+          "svm",
+          "xgboost",
+          "lightgbm",
+          "mlp",
+          "proposed",
+          "lstm",
+          "bilstm",
+          "transformer",
+          "no_attention",
+          "no_static",
+          "no_cox",
+          "paper_hybrid",
+          "ensemble_equal",
+          "ensemble_inner_weighted",
+          "ensemble_lstm_attention_lgbm_equal",
+          "ensemble_lstm_attention_lgbm_weighted"
+        ],
+        "protocol": "oulad_risk_nested_tuning_v2"
+      },
+      "signature": "a51408bb35aacb7bc2f0ad211c6aa7745c36a2e2ec4d46d5b40faeee6571be65"
+    }
+  ]
+}

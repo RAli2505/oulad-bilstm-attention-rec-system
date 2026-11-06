@@ -1,0 +1,32 @@
+{
+  "archives": 29,
+  "archived_files": 52763,
+  "archive_bytes": 9036670910,
+  "source_file_coverage": "exact match for all three runs",
+  "raw_data_sha256": "matches all three original run manifests",
+  "per_file_zip_sha256": "verified during archive creation and resume",
+  "planned_vs_completed": [
+    {
+      "run": "risk_20261031T132513013959Z",
+      "planned_jobs": 210,
+      "saved_jobs": {
+        "completed": 210
+      }
+    },
+    {
+      "run": "risk_20261031T162709361455Z",
+      "planned_jobs": 144,
+      "saved_jobs": {
+        "completed": 144
+      }
+    },
+    {
+      "run": "risk_20261031T191741845697Z",
+      "planned_jobs": 2160,
+      "saved_jobs": {
+        "completed": 1196,
+        "running": 1
+      }
+    }
+  ]
+}

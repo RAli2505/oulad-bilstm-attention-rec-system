@@ -1,0 +1,10 @@
+role,code_module,code_presentation,enrollments,students,positive_outcomes,withdrawals,zero_history
+development_2013,AAA,2013J,365,365,87,42.0,0
+development_2013,BBB,2013B,1469,1469,667,209.0,69
+development_2013,BBB,2013J,1785,1785,713,194.0,80
+development_2013,DDD,2013B,1082,1082,572,214.0,25
+development_2013,DDD,2013J,1574,1574,746,321.0,28
+development_2013,EEE,2013J,905,905,296,96.0,20
+development_2013,FFF,2013B,1406,1406,624,204.0,23
+development_2013,FFF,2013J,1914,1914,819,309.0,28
+development_2013,GGG,2013J,918,918,326,32.0,96

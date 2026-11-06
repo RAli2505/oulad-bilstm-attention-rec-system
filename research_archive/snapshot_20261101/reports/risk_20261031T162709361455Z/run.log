@@ -1,0 +1,297 @@
+Output: C:\Users\user\Documents\Diser\система\oulad-bilstm-attention\runs\risk_20261031T162709361455Z
+Day 7: development=12175, external test=0, zero-history=2362
+Day 7 train/validation seed 42 proposed: training
+  completed in 233.8s
+Day 7 train/validation seed 42 lr: training
+  completed in 5.1s
+Day 7 train/validation seed 42 rf: training
+  completed in 50.6s
+Day 7 train/validation seed 42 svm: training
+  completed in 140.7s
+Day 7 train/validation seed 42 xgboost: training
+  completed in 7.8s
+Day 7 train/validation seed 42 lightgbm: training
+  completed in 8.5s
+Day 7 train/validation seed 42 mlp: training
+  completed in 57.7s
+Day 7 train/validation seed 42 lstm: training
+  completed in 30.4s
+Day 7 train/validation seed 42 bilstm: training
+  completed in 34.3s
+Day 7 train/validation seed 42 transformer: training
+  completed in 54.0s
+Day 7 train/validation seed 42 no_attention: training
+  completed in 15.4s
+Day 7 train/validation seed 42 no_static: training
+  completed in 15.1s
+Day 7 train/validation seed 42 no_cox: training
+  completed in 10.9s
+Day 7 train/validation seed 42 paper_hybrid: training
+  completed in 33.1s
+Day 7 train/validation seed 42 ensemble_equal: training
+  completed in 0.2s
+Day 7 train/validation seed 42 ensemble_inner_weighted: training
+  completed in 0.3s
+Day 7 train/validation seed 42 ensemble_lstm_attention_lgbm_equal: training
+  completed in 0.2s
+Day 7 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.2s
+Day 14: development=12068, external test=0, zero-history=1291
+Day 14 train/validation seed 42 proposed: training
+  completed in 62.5s
+Day 14 train/validation seed 42 lr: training
+  completed in 2.8s
+Day 14 train/validation seed 42 rf: training
+  completed in 26.2s
+Day 14 train/validation seed 42 svm: training
+  completed in 83.8s
+Day 14 train/validation seed 42 xgboost: training
+  completed in 4.0s
+Day 14 train/validation seed 42 lightgbm: training
+  completed in 4.1s
+Day 14 train/validation seed 42 mlp: training
+  completed in 29.5s
+Day 14 train/validation seed 42 lstm: training
+  completed in 32.9s
+Day 14 train/validation seed 42 bilstm: training
+  completed in 43.6s
+Day 14 train/validation seed 42 transformer: training
+  completed in 61.9s
+Day 14 train/validation seed 42 no_attention: training
+  completed in 12.8s
+Day 14 train/validation seed 42 no_static: training
+  completed in 12.6s
+Day 14 train/validation seed 42 no_cox: training
+  completed in 9.9s
+Day 14 train/validation seed 42 paper_hybrid: training
+  completed in 39.6s
+Day 14 train/validation seed 42 ensemble_equal: training
+  completed in 0.1s
+Day 14 train/validation seed 42 ensemble_inner_weighted: training
+  completed in 0.2s
+Day 14 train/validation seed 42 ensemble_lstm_attention_lgbm_equal: training
+  completed in 0.2s
+Day 14 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.2s
+Day 28: development=11794, external test=0, zero-history=599
+Day 28 train/validation seed 42 proposed: training
+  completed in 75.4s
+Day 28 train/validation seed 42 lr: training
+  completed in 2.7s
+Day 28 train/validation seed 42 rf: training
+  completed in 30.8s
+Day 28 train/validation seed 42 svm: training
+  completed in 79.8s
+Day 28 train/validation seed 42 xgboost: training
+  completed in 4.3s
+Day 28 train/validation seed 42 lightgbm: training
+  completed in 4.6s
+Day 28 train/validation seed 42 mlp: training
+  completed in 24.6s
+Day 28 train/validation seed 42 lstm: training
+  completed in 34.4s
+Day 28 train/validation seed 42 bilstm: training
+  completed in 54.5s
+Day 28 train/validation seed 42 transformer: training
+  completed in 45.2s
+Day 28 train/validation seed 42 no_attention: training
+  completed in 19.0s
+Day 28 train/validation seed 42 no_static: training
+  completed in 30.8s
+Day 28 train/validation seed 42 no_cox: training
+  completed in 15.2s
+Day 28 train/validation seed 42 paper_hybrid: training
+  completed in 32.9s
+Day 28 train/validation seed 42 ensemble_equal: training
+  completed in 0.1s
+Day 28 train/validation seed 42 ensemble_inner_weighted: training
+  completed in 0.2s
+Day 28 train/validation seed 42 ensemble_lstm_attention_lgbm_equal: training
+  completed in 0.2s
+Day 28 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.2s
+Day 56: development=11418, external test=0, zero-history=369
+Day 56 train/validation seed 42 proposed: training
+  completed in 118.8s
+Day 56 train/validation seed 42 lr: training
+  completed in 3.2s
+Day 56 train/validation seed 42 rf: training
+  completed in 32.1s
+Day 56 train/validation seed 42 svm: training
+  completed in 78.6s
+Day 56 train/validation seed 42 xgboost: training
+  completed in 4.6s
+Day 56 train/validation seed 42 lightgbm: training
+  completed in 4.9s
+Day 56 train/validation seed 42 mlp: training
+  completed in 27.3s
+Day 56 train/validation seed 42 lstm: training
+  completed in 46.6s
+Day 56 train/validation seed 42 bilstm: training
+  completed in 93.2s
+Day 56 train/validation seed 42 transformer: training
+  completed in 64.1s
+Day 56 train/validation seed 42 no_attention: training
+  completed in 25.9s
+Day 56 train/validation seed 42 no_static: training
+  completed in 41.4s
+Day 56 train/validation seed 42 no_cox: training
+  completed in 22.5s
+Day 56 train/validation seed 42 paper_hybrid: training
+  completed in 34.8s
+Day 56 train/validation seed 42 ensemble_equal: training
+  completed in 0.1s
+Day 56 train/validation seed 42 ensemble_inner_weighted: training
+  completed in 0.2s
+Day 56 train/validation seed 42 ensemble_lstm_attention_lgbm_equal: training
+  completed in 0.2s
+Day 56 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.2s
+Day 84: development=11123, external test=0, zero-history=303
+Day 84 train/validation seed 42 proposed: training
+  completed in 149.9s
+Day 84 train/validation seed 42 lr: training
+  completed in 2.9s
+Day 84 train/validation seed 42 rf: training
+  completed in 29.7s
+Day 84 train/validation seed 42 svm: training
+  completed in 65.4s
+Day 84 train/validation seed 42 xgboost: training
+  completed in 4.7s
+Day 84 train/validation seed 42 lightgbm: training
+  completed in 5.0s
+Day 84 train/validation seed 42 mlp: training
+  completed in 29.7s
+Day 84 train/validation seed 42 lstm: training
+  completed in 62.5s
+Day 84 train/validation seed 42 bilstm: training
+  completed in 124.9s
+Day 84 train/validation seed 42 transformer: training
+  completed in 91.2s
+Day 84 train/validation seed 42 no_attention: training
+  completed in 34.2s
+Day 84 train/validation seed 42 no_static: training
+  completed in 54.9s
+Day 84 train/validation seed 42 no_cox: training
+  completed in 31.2s
+Day 84 train/validation seed 42 paper_hybrid: training
+  completed in 29.7s
+Day 84 train/validation seed 42 ensemble_equal: training
+  completed in 0.2s
+Day 84 train/validation seed 42 ensemble_inner_weighted: training
+  completed in 0.2s
+Day 84 train/validation seed 42 ensemble_lstm_attention_lgbm_equal: training
+  completed in 0.2s
+Day 84 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.2s
+Day 112: development=10767, external test=0, zero-history=269
+Day 112 train/validation seed 42 proposed: training
+  completed in 188.6s
+Day 112 train/validation seed 42 lr: training
+  completed in 2.5s
+Day 112 train/validation seed 42 rf: training
+  completed in 28.3s
+Day 112 train/validation seed 42 svm: training
+  completed in 54.9s
+Day 112 train/validation seed 42 xgboost: training
+  completed in 4.8s
+Day 112 train/validation seed 42 lightgbm: training
+  completed in 4.8s
+Day 112 train/validation seed 42 mlp: training
+  completed in 30.5s
+Day 112 train/validation seed 42 lstm: training
+  completed in 75.5s
+Day 112 train/validation seed 42 bilstm: training
+  completed in 165.3s
+Day 112 train/validation seed 42 transformer: training
+  completed in 119.1s
+Day 112 train/validation seed 42 no_attention: training
+  completed in 40.9s
+Day 112 train/validation seed 42 no_static: training
+  completed in 38.3s
+Day 112 train/validation seed 42 no_cox: training
+  completed in 37.8s
+Day 112 train/validation seed 42 paper_hybrid: training
+  completed in 31.9s
+Day 112 train/validation seed 42 ensemble_equal: training
+  completed in 0.2s
+Day 112 train/validation seed 42 ensemble_inner_weighted: training
+  completed in 0.2s
+Day 112 train/validation seed 42 ensemble_lstm_attention_lgbm_equal: training
+  completed in 0.2s
+Day 112 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.2s
+Day 140: development=10504, external test=0, zero-history=253
+Day 140 train/validation seed 42 proposed: training
+  completed in 250.2s
+Day 140 train/validation seed 42 lr: training
+  completed in 2.8s
+Day 140 train/validation seed 42 rf: training
+  completed in 28.8s
+Day 140 train/validation seed 42 svm: training
+  completed in 46.4s
+Day 140 train/validation seed 42 xgboost: training
+  completed in 4.8s
+Day 140 train/validation seed 42 lightgbm: training
+  completed in 4.9s
+Day 140 train/validation seed 42 mlp: training
+  completed in 26.7s
+Day 140 train/validation seed 42 lstm: training
+  completed in 110.4s
+Day 140 train/validation seed 42 bilstm: training
+  completed in 219.5s
+Day 140 train/validation seed 42 transformer: training
+  completed in 161.0s
+Day 140 train/validation seed 42 no_attention: training
+  completed in 64.1s
+Day 140 train/validation seed 42 no_static: training
+  completed in 107.4s
+Day 140 train/validation seed 42 no_cox: training
+  completed in 62.7s
+Day 140 train/validation seed 42 paper_hybrid: training
+  completed in 32.5s
+Day 140 train/validation seed 42 ensemble_equal: training
+  completed in 0.2s
+Day 140 train/validation seed 42 ensemble_inner_weighted: training
+  completed in 0.3s
+Day 140 train/validation seed 42 ensemble_lstm_attention_lgbm_equal: training
+  completed in 0.2s
+Day 140 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.3s
+Day 168: development=10237, external test=0, zero-history=244
+Day 168 train/validation seed 42 proposed: training
+  completed in 247.8s
+Day 168 train/validation seed 42 lr: training
+  completed in 2.5s
+Day 168 train/validation seed 42 rf: training
+  completed in 29.4s
+Day 168 train/validation seed 42 svm: training
+  completed in 38.8s
+Day 168 train/validation seed 42 xgboost: training
+  completed in 5.0s
+Day 168 train/validation seed 42 lightgbm: training
+  completed in 5.0s
+Day 168 train/validation seed 42 mlp: training
+  completed in 18.9s
+Day 168 train/validation seed 42 lstm: training
+  completed in 123.6s
+Day 168 train/validation seed 42 bilstm: training
+  completed in 432.8s
+Day 168 train/validation seed 42 transformer: training
+  completed in 1433.6s
+Day 168 train/validation seed 42 no_attention: training
+  completed in 131.2s
+Day 168 train/validation seed 42 no_static: training
+  completed in 160.9s
+Day 168 train/validation seed 42 no_cox: training
+  completed in 79.8s
+Day 168 train/validation seed 42 paper_hybrid: training
+  completed in 141.5s
+Day 168 train/validation seed 42 ensemble_equal: training
+  completed in 0.1s
+Day 168 train/validation seed 42 ensemble_inner_weighted: training
+  completed in 0.2s
+Day 168 train/validation seed 42 ensemble_lstm_attention_lgbm_equal: training
+  completed in 0.2s
+Day 168 train/validation seed 42 ensemble_lstm_attention_lgbm_weighted: training
+  completed in 0.2s

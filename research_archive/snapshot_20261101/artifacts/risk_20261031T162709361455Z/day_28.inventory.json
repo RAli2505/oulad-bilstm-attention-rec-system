@@ -1,0 +1,3472 @@
+[
+  {
+    "path": "day_28/calibration_before_after.csv",
+    "bytes": 4964,
+    "sha256": "9607f2bf437825deb66731a478144e30c73deccc79a7e9360c1500756b1ff30a"
+  },
+  {
+    "path": "day_28/cohort_and_folds.csv",
+    "bytes": 574312,
+    "sha256": "2db16bf57e40bbc697065a73c9eb36225f1aee14ea726e38c9e46fb4c0310bbe"
+  },
+  {
+    "path": "day_28/cohort_audit.json",
+    "bytes": 783,
+    "sha256": "a112ac8f7ed2b62d22d2e3515480931ee7ecb88fff444deb6b9b8902603663c1"
+  },
+  {
+    "path": "day_28/cohort_characteristics.csv",
+    "bytes": 960,
+    "sha256": "c83b317fe5e214f99c6131a44bfdaf646dabce19885d51686cf8626d70ff01d0"
+  },
+  {
+    "path": "day_28/fit_diagnostics.csv",
+    "bytes": 3591,
+    "sha256": "0e0dc39af492de4e38f3e3f7aa49b9df6e21a732e4e275eaadc56848c5c966c3"
+  },
+  {
+    "path": "day_28/fold_1/features.json",
+    "bytes": 9627,
+    "sha256": "5f4c12c1e459c80c4c9d3fadc3ee0f0de3bcc78fae4144544c353612823ac897"
+  },
+  {
+    "path": "day_28/fold_1/indices.npz",
+    "bytes": 19331,
+    "sha256": "2edfbd2db224fd6b43994145c5030f2804a2548a656c8488b32aff04172ffc7b"
+  },
+  {
+    "path": "day_28/fold_1/preprocessing.joblib",
+    "bytes": 15698,
+    "sha256": "4286accb0f418bc01cebf93a1afcb898627ee2f7872530cfc4285e47aaed02ea"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "92f3f6ebc676c52f9c2c2d605622ae57c6cf2f88fb68c49a24b3acd5ad1c3693"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/calibration_bins.csv",
+    "bytes": 5604,
+    "sha256": "d8621c7ee68ba82f6ad0440522ec9eea5c7bd57db645f40fdc49adc8c5a47ec7"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/calibration_metrics.csv",
+    "bytes": 1024,
+    "sha256": "75fc3d279a30740767a0a4218f21f8daaf574d5296147c9eef9bc80d00b32ff6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/fit_diagnostics.json",
+    "bytes": 1532,
+    "sha256": "0a23cfd290ecb14fb277c6f2ad5dc875b063309966fba53309e6c679700626dd"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/inner_search.csv",
+    "bytes": 5198,
+    "sha256": "646de311b33f9ec084fdbd9ecf14e2350829b06593e06d52ccaa020a2f79ca49"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/learning_curve.csv",
+    "bytes": 4186,
+    "sha256": "2dbf339f8b08f0d40ec1b1f8eed486963e01bbdf536284a5a8829183d7cf1e08"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/learning_curve.png",
+    "bytes": 94294,
+    "sha256": "cdc48b3b3915443c401ecbcde979ac88ad5ab21b22ea5bccbad5ad7b10bf3224"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/model.pt",
+    "bytes": 2355212,
+    "sha256": "99418af65160b7d34cb2548880cc3693a41d74fe194ed299e74439672eee4000"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/predictions.npz",
+    "bytes": 74447,
+    "sha256": "4e5a7581b4c98d78dc85f6c52de6a576e13f4560ebe5cbc358cb562c3b01ac1e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "815d14848a2231a4934e010378e9f8ac97912f26af7974a17042163b9789d356"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_0/calibration_bins.csv",
+    "bytes": 3873,
+    "sha256": "50a56ca177fa6caf6f64660989376ab544f0c7a86b2984b8411b0569121ae1b2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_0/calibration_metrics.csv",
+    "bytes": 755,
+    "sha256": "60a3b75359f108d9660e015b2f9bf0fe841d22187fbceef8155c59265af94425"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_0/fit_diagnostics.json",
+    "bytes": 1532,
+    "sha256": "0a23cfd290ecb14fb277c6f2ad5dc875b063309966fba53309e6c679700626dd"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_0/learning_curve.csv",
+    "bytes": 4186,
+    "sha256": "2dbf339f8b08f0d40ec1b1f8eed486963e01bbdf536284a5a8829183d7cf1e08"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_0/learning_curve.png",
+    "bytes": 94294,
+    "sha256": "cdc48b3b3915443c401ecbcde979ac88ad5ab21b22ea5bccbad5ad7b10bf3224"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_0/model.pt",
+    "bytes": 2355212,
+    "sha256": "99418af65160b7d34cb2548880cc3693a41d74fe194ed299e74439672eee4000"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_0/predictions.npz",
+    "bytes": 40228,
+    "sha256": "e04bc478635eb6bb6df78f234abfa81847fcda4a9f7b234c784352145c98e08d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_0/training.json",
+    "bytes": 16698,
+    "sha256": "1f6693b54723e16115923df5d352cf4ddfadf78172f91804f8aa6fb513d18f21"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_0/trial_complete.json",
+    "bytes": 916,
+    "sha256": "fad7c6f396cb46c000b7493c0a2dc86b897f522257cee089535c4c9b148397a6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_1/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "031a1ad10b6aec99d8d06625bf8f6431dc8412266bb4325f0fed699857eeb38e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_1/calibration_bins.csv",
+    "bytes": 3969,
+    "sha256": "80fe7a3c71cc5191cda5823855cf16d6fc35fdf976da4202ac81624bc52229f4"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_1/calibration_metrics.csv",
+    "bytes": 763,
+    "sha256": "c432010c21a1cbd18b2b5547edc21f2940024ab92e6d553dd597c33dafb3f412"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_1/fit_diagnostics.json",
+    "bytes": 1533,
+    "sha256": "84f5faabf9525261b6273cd68146633c26772921850cd781d1765918313f1120"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_1/learning_curve.csv",
+    "bytes": 4198,
+    "sha256": "d159a17c405646005617777697e30acae5cb0724a758490435bb7911b4633f6b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_1/learning_curve.png",
+    "bytes": 97486,
+    "sha256": "b2c2349fba18b4087e8bacca729e3a96ed72c280446437170cb67555cac407e7"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_1/model.pt",
+    "bytes": 2355148,
+    "sha256": "eecddb329be2fcb21164dbc25539e1659738842956afad93148bf979079b1d8d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_1/predictions.npz",
+    "bytes": 40239,
+    "sha256": "f218d0379ac2b32b2ac97837e507ff4d88bbb57253f11975e490648c8fa8c7c8"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_1/training.json",
+    "bytes": 16704,
+    "sha256": "8b8e531367698957b7d29be6860d30bfcd6b860a2fc3d057b9532dcf6f19ebbd"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/full_1/trial_complete.json",
+    "bytes": 916,
+    "sha256": "975c77b65e16b048eac5ebd2c1d1638b3087a7934a9b74774751fe943cbbb013"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "264463b2da5237e0779bceddb87cb983d8a59fab377321ee240ad3b452a3b5b5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_0/calibration_bins.csv",
+    "bytes": 3988,
+    "sha256": "1d119be0ba0a53b7f1d88a8dacb00b633e2b563f963847f26bb7897c7a532e86"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_0/calibration_metrics.csv",
+    "bytes": 768,
+    "sha256": "66103575f76c5e66cfca06c33774c74a00d26ae2844154347121968adf39213c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_0/fit_diagnostics.json",
+    "bytes": 1530,
+    "sha256": "d3bc5c81266b9895159dd9a0f219ff4e90599dfd6a9dc5d176169d4833cdf57b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_0/learning_curve.csv",
+    "bytes": 2311,
+    "sha256": "945aa814127779dabb89be91d7b28d8d8ae9da631b51a76164978738f1f3af54"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_0/model.pt",
+    "bytes": 2355148,
+    "sha256": "d2b589044a35a84a390635f59f97441d6411da961c415272e4a16720ab5fb161"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_0/predictions.npz",
+    "bytes": 40258,
+    "sha256": "e3e7622e87dcd1d7cd9e6cff65d091bd2614a89ce6c8b931e4c67a6688a24552"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_0/training.json",
+    "bytes": 11354,
+    "sha256": "3b7041372fdaaa5cc4cc460dc18d4e578dec76c761002e7b6b0dac0a61c29e40"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_0/trial_complete.json",
+    "bytes": 825,
+    "sha256": "8181f1344e9710c2094a0f9e49229b845f1a9f5b7b57708e7d118780ac8b6b98"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_1/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "031a1ad10b6aec99d8d06625bf8f6431dc8412266bb4325f0fed699857eeb38e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_1/calibration_bins.csv",
+    "bytes": 3969,
+    "sha256": "80fe7a3c71cc5191cda5823855cf16d6fc35fdf976da4202ac81624bc52229f4"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_1/calibration_metrics.csv",
+    "bytes": 763,
+    "sha256": "c432010c21a1cbd18b2b5547edc21f2940024ab92e6d553dd597c33dafb3f412"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_1/fit_diagnostics.json",
+    "bytes": 1533,
+    "sha256": "986511ecca8bbb02e7a3b080b9bbf0fed918dc6cbd2fe7117263947e7c5f796a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_1/learning_curve.csv",
+    "bytes": 2308,
+    "sha256": "776cf63b00b14d948e266e2e41f125d9d3684cb182c58129ea7884e69cbbc18c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_1/model.pt",
+    "bytes": 2355148,
+    "sha256": "a2cbf8b26f1207e504402fd27427ad595f12cda69b8d63f6c9da1fbb76b720e3"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_1/predictions.npz",
+    "bytes": 40239,
+    "sha256": "f218d0379ac2b32b2ac97837e507ff4d88bbb57253f11975e490648c8fa8c7c8"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_1/training.json",
+    "bytes": 11355,
+    "sha256": "bb283516c84ae82c38c0b41d58859610451058050df4d996662982ce9414de69"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_1/trial_complete.json",
+    "bytes": 828,
+    "sha256": "0e65aa29f277a11ce95d8414d3c856c3be118a9bf6a573be23b0b10f22277c55"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_2/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "815d14848a2231a4934e010378e9f8ac97912f26af7974a17042163b9789d356"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_2/calibration_bins.csv",
+    "bytes": 3873,
+    "sha256": "50a56ca177fa6caf6f64660989376ab544f0c7a86b2984b8411b0569121ae1b2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_2/calibration_metrics.csv",
+    "bytes": 755,
+    "sha256": "60a3b75359f108d9660e015b2f9bf0fe841d22187fbceef8155c59265af94425"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_2/fit_diagnostics.json",
+    "bytes": 1533,
+    "sha256": "c002ab4b61d7b68359b5c7f912e055ba634744305bc6c4dfddb5a081aaaec335"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_2/learning_curve.csv",
+    "bytes": 2301,
+    "sha256": "6b7f2878177541ef9d42177fba532fe3960ab7ae2901892697016e2af0bd79bb"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_2/model.pt",
+    "bytes": 2355212,
+    "sha256": "4685d4385b7425e0f4f693cab4c37c0b5ece3f8602a0c5bbdd04c99b6ae0c3ca"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_2/predictions.npz",
+    "bytes": 40228,
+    "sha256": "e04bc478635eb6bb6df78f234abfa81847fcda4a9f7b234c784352145c98e08d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_2/training.json",
+    "bytes": 11354,
+    "sha256": "70d016b0682935756bcdcfe756964916b50448fa468d89a937f0d54d871aa40e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_2/trial_complete.json",
+    "bytes": 828,
+    "sha256": "22adf2bfad4e04949d6fd2636a69eeb5ac24bde8e46ac63f2d057968fd8f1500"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_3/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "8cec7b6903ac64da8746d6cb17a8da8e9a6916bdfd86eb2048cb2e493f1265de"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_3/calibration_bins.csv",
+    "bytes": 3887,
+    "sha256": "4822365149607e0f3796f97830b05f53f53faa46f4011b7a27f4fc947e9e1a06"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_3/calibration_metrics.csv",
+    "bytes": 763,
+    "sha256": "54b7ff64ca8c95c4212f46608dfcf3301588cb5bec275dab2d32964b7e0dcc65"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_3/fit_diagnostics.json",
+    "bytes": 1536,
+    "sha256": "db1196a8616e77a827a255db9bcc97e48ce36b10328072682881c753233816e6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_3/learning_curve.csv",
+    "bytes": 2305,
+    "sha256": "9e46d1193867b5300ffca6053905a7bce707d7852357ae99ef334f33fdf3a141"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_3/model.pt",
+    "bytes": 2355148,
+    "sha256": "ab7473a894c5160f2668f6b9468a8e7560a159a34a6eaca6af7686b8751480b5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_3/predictions.npz",
+    "bytes": 40284,
+    "sha256": "c9c325893100432a5eb5309ee68e9b63ab55a8162066734ae8c56c8518211693"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_3/training.json",
+    "bytes": 11355,
+    "sha256": "64f8eea4ccd719db2692d1f566def6378defc343938a880aae2e3fe83ba952ff"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/search/screen_3/trial_complete.json",
+    "bytes": 829,
+    "sha256": "1b429272e3453e2c806210033ff1753c65e6cda5e4c72f63fe0b5fb2198385b5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/status.json",
+    "bytes": 7210,
+    "sha256": "18ce231a5093ffb14e106f892f44a2304f9e4cd98e2869ce0c7f1136e6bf42c8"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/bilstm/training.json",
+    "bytes": 19447,
+    "sha256": "3dfba3a7c1a4b03799e3da4edab18f7d25a6e02c6a9d94ced66076275a821ba9"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_equal/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "7f8d42fa7ea98483349ec47c33c5ae87d8f2c49f83c9bccc1c2541359107950c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_equal/calibration_bins.csv",
+    "bytes": 1348,
+    "sha256": "4fa4a59b41ea022877fdc55bfc7065cc3421c3c8e002068530bf9b55fc8919c7"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_equal/calibration_metrics.csv",
+    "bytes": 299,
+    "sha256": "43c039ebb08bd2d22faac7bd3e2de006f2f01c38370346740328282708ab24a7"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_equal/predictions.npz",
+    "bytes": 68172,
+    "sha256": "84e77fffabfeecbfd3d1da3bdef889c653e5c50dc106d84f28f93f5c1bfb73ba"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_equal/status.json",
+    "bytes": 617,
+    "sha256": "1edceb28d29be71804c916a7cdc2d553751f288b857a539506f1cbb5e8e45714"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_equal/training.json",
+    "bytes": 514,
+    "sha256": "2b18b0e55660885c692f79d6b56438cd2a591cb4f470de412ba6c48c7ba78443"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_inner_weighted/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "7eceb31f76dd8838c57735121271b2cf33ccdbd99cf7313e1def482b93cf8b84"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_inner_weighted/calibration_bins.csv",
+    "bytes": 1324,
+    "sha256": "ce0f98df623dbd5cce820f01fe718258438346b15a5e043f66df0e49a9f39762"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_inner_weighted/calibration_metrics.csv",
+    "bytes": 301,
+    "sha256": "697c0f7e293ac96fd824fde4b1581464ba6bce93c758ea728678b2d7ab41db10"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_inner_weighted/predictions.npz",
+    "bytes": 68156,
+    "sha256": "ddd14c924c6c5690fc1ab0ff7a489d209e135cae4c32332ef71d158942c7ee84"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_inner_weighted/status.json",
+    "bytes": 617,
+    "sha256": "6276485439693a96334141a0a33fcb3ac177158d72081ca58335a9b2c4c789fc"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_inner_weighted/training.json",
+    "bytes": 524,
+    "sha256": "93472950acdb9c92032d004b9882450eaee08563f389d574a93bad51cfe4f65b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_lstm_attention_lgbm_equal/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "0866cf157f40fecdfbc1dc1b6993a96e9b1d71a94ef7d2b1756d111498156032"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_lstm_attention_lgbm_equal/calibration_bins.csv",
+    "bytes": 1324,
+    "sha256": "ab89dc2b616a366ec492ba6e2535f16c1d62df66320bf760a49eb484908b5f90"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_lstm_attention_lgbm_equal/calibration_metrics.csv",
+    "bytes": 299,
+    "sha256": "a67807109532dfd5bbae268b61fcd3772fd9a3c0cc53c9b8530e1012a03d9789"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_lstm_attention_lgbm_equal/predictions.npz",
+    "bytes": 68145,
+    "sha256": "3f6739bd72a4bdb149e016177677f3813413df502157b3b9f0263c24ea393298"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_lstm_attention_lgbm_equal/status.json",
+    "bytes": 617,
+    "sha256": "9b016f69b2a0caebc0d460edc0767131c6472c1c60674ffe0ccb13ff4ddf2220"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_lstm_attention_lgbm_equal/training.json",
+    "bytes": 529,
+    "sha256": "c1a626ca9fce7cbe9734855b10514c7ee7e75d590584ad0b69eb02119848da4a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_lstm_attention_lgbm_weighted/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "b8d0460887fba0225493bf37cc11a4b8bc1e75844e1c0c310a0cb0b925348e2a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_lstm_attention_lgbm_weighted/calibration_bins.csv",
+    "bytes": 1348,
+    "sha256": "f0bd9a52be34ac65d9d331f1454bf16b855d2ccb50373cb7f851b03eabeb6517"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_lstm_attention_lgbm_weighted/calibration_metrics.csv",
+    "bytes": 301,
+    "sha256": "a400d6ec586dfd9ed10137eea7ae3d29e845146f3159278694f6a0d45bc53367"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_lstm_attention_lgbm_weighted/predictions.npz",
+    "bytes": 68115,
+    "sha256": "9d9ab872a3e96097a911a1ba7a406d254d8a37535cf4755eabbe8e1224ec246f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_lstm_attention_lgbm_weighted/status.json",
+    "bytes": 617,
+    "sha256": "8596333bc18c15448ddcd3d7febe395eda8d1e354578f24e5dadb4c0c0bd2d44"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/ensemble_lstm_attention_lgbm_weighted/training.json",
+    "bytes": 532,
+    "sha256": "886306d3fe4b869f9be12f80b4322fd62dd164802450e65316b16320cc6451da"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "823f15f3cb7d7e91cb3c8ab8af43e1ff1223d591ab155860c1c727d1bda29de4"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/calibration_bins.csv",
+    "bytes": 5624,
+    "sha256": "bbe84de9c4c8722e550e0b5015e8acea7b5815c6930eb88ef46130abd6bcc817"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/calibration_metrics.csv",
+    "bytes": 1034,
+    "sha256": "8cab4d47e6773d76b4b12ab469082d412dd4eeeae21e5a39f30eea27ee8864e0"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/fit_diagnostics.json",
+    "bytes": 1517,
+    "sha256": "0e25d43f334c6d126b1bed98704b07c4a361feabdd359e0f1915526e2e75aca6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/inner_search.csv",
+    "bytes": 3949,
+    "sha256": "1ba5ff0a47f8959a5816f00aac1fbe488f0c609a6b60a436be8a8e8521a48629"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/model.joblib",
+    "bytes": 547844,
+    "sha256": "00f497781438bcd8e3e27bd9df8055f9a85abad855469b30ea2f2b0288c394d5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/predictions.npz",
+    "bytes": 122129,
+    "sha256": "9cc0a9dc46589ae595a1e5259e355ec34917106800139277369d360fc5039295"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "ac35a45c72bb171e0898a665438ed1c0e0614b95032a11f4b61bbc55baa31fac"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_0/calibration_bins.csv",
+    "bytes": 3834,
+    "sha256": "d30dd1ee78858ca72351549247a60fb98bb590acaea63a9192f73a4c3d496ef4"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_0/calibration_metrics.csv",
+    "bytes": 759,
+    "sha256": "766d67d471307a70ee80258f3f2633275029035390abf450b4bf95bc34ff5035"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_0/fit_diagnostics.json",
+    "bytes": 1517,
+    "sha256": "b09eca5b9cd5cd4a868781f7eb875bb42345d14996f13d1c68174ef6620598f5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_0/model.joblib",
+    "bytes": 544724,
+    "sha256": "81932ae679e3157e1d7e96ea8b7aefb394b144106cf7c849a66b16852815efb2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_0/predictions.npz",
+    "bytes": 73476,
+    "sha256": "e2714fbc8deb696d5a2f7b3c8f6402001004ad904691a981eba23073e185248a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_0/training.json",
+    "bytes": 3312,
+    "sha256": "885b896fdfc98fbaf2444966d4d3cb6ba832dea1b414f006b894dfeb898066fc"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_0/trial_complete.json",
+    "bytes": 774,
+    "sha256": "a926ea4ddfc43524661123e43703727434bdb9316e078f72db946ba917b83867"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_1/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "741525afbcc925e0f27ddd99fcb2deb395b94f8fac74565afe42201021694a01"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_1/calibration_bins.csv",
+    "bytes": 3898,
+    "sha256": "ba5ce3b2e3f0afae4cb9fc9a3d31d83d92141922a3561f32194de34b516c5f33"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_1/calibration_metrics.csv",
+    "bytes": 756,
+    "sha256": "c81e7982df83e8b64bded00b1f7734832eb3353d251378ab889f753b903a310d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_1/fit_diagnostics.json",
+    "bytes": 1517,
+    "sha256": "0ade2ce5a605aa0ff835c745a2730bf2dc20cd33d4c88555d41d54fac254da90"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_1/model.joblib",
+    "bytes": 1063348,
+    "sha256": "878699df044e355c29bac576da13f09ed28b81141969713dbab3679361a8a81b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_1/predictions.npz",
+    "bytes": 73671,
+    "sha256": "9d83daa3bdbde2b72aff5c5975df0276a3c18e3e4c837a783df4a0e2eb2b923f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_1/training.json",
+    "bytes": 3312,
+    "sha256": "c95839790417f6ee7b73b5dc7521c61bc488b650d680a0b9206ac0e936aa3a7a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_1/trial_complete.json",
+    "bytes": 774,
+    "sha256": "b914b03d19d7169c60d92460778d19cd174ae19784b0a4b4759fde1ba353cbbd"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_2/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "cecf9d8c9328c52620c76a56475b97f4b95d29575eee7e32ee3da86c0860f4e0"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_2/calibration_bins.csv",
+    "bytes": 3888,
+    "sha256": "f46568898032bac7ea442a0db8b130551adb04bb3617cb674d9a3b05d725b575"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_2/calibration_metrics.csv",
+    "bytes": 767,
+    "sha256": "7c904dba7c0a635a11904bd902c9f587486e57d6a1b664908d1394eb93f25fd4"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_2/fit_diagnostics.json",
+    "bytes": 1517,
+    "sha256": "0e25d43f334c6d126b1bed98704b07c4a361feabdd359e0f1915526e2e75aca6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_2/model.joblib",
+    "bytes": 547844,
+    "sha256": "00f497781438bcd8e3e27bd9df8055f9a85abad855469b30ea2f2b0288c394d5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_2/predictions.npz",
+    "bytes": 73519,
+    "sha256": "d626e6c0e79eb2d6516f17f0c77f6ef431e0ebd8192ecf750adb4d7025797004"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_2/training.json",
+    "bytes": 3314,
+    "sha256": "fd548f81fb8248d0f00ef681065f0c87aa9a8300c5677d9ac299a219ea3b767e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_2/trial_complete.json",
+    "bytes": 774,
+    "sha256": "93c4fed1d52cc2cbc858d10aa867722d49c8575f9e4aefd96ab5d5d66e104548"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_3/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "d3d76e3ea67437db66997ffb38bc230df51d4d562a123a9ab0901d00883b1ee1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_3/calibration_bins.csv",
+    "bytes": 3864,
+    "sha256": "252736c0e30873ddc41c2c039a2605aece0c77937242afc965b8474c56602778"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_3/calibration_metrics.csv",
+    "bytes": 759,
+    "sha256": "09fd302058ca81ea4773f163e9de7edd8e22699e6d3549246e7a827c79c69b11"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_3/fit_diagnostics.json",
+    "bytes": 1516,
+    "sha256": "11790c1a068ba2ec526300d3f05a2ce74aabe1bf75b26794da698699169d088d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_3/model.joblib",
+    "bytes": 1069428,
+    "sha256": "4d8e7d253292cd23aa6a415848802799ab3704b6e8b69f88340ef4a008ede82e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_3/predictions.npz",
+    "bytes": 73668,
+    "sha256": "ba912e6c1a213ec2076c5e7a404a72f547863c5e4665cbd1fde56216258ce666"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_3/training.json",
+    "bytes": 3311,
+    "sha256": "b242cdc5ca5cb27f46c401c712e83a86a7a7237bc2e65e839a1e93264b5b4f24"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/search/full_3/trial_complete.json",
+    "bytes": 775,
+    "sha256": "9a3289a470a5e5a7afd042f751ede351557adfdb63dc7a2bc6f744d5c5ab0301"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/status.json",
+    "bytes": 4368,
+    "sha256": "2d03af2667c49a2f20469e97d3e3ca0457042dc60b3c434b069c22dda663f1b3"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lightgbm/training.json",
+    "bytes": 6300,
+    "sha256": "0f109fc9d1f0a91367f8920a5dfea5017f4cfe579aa7588928ee9425d5e77bda"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "fd7ffd7bb604d2ba18daee51d33ff8928961a7940d1940d384df5789bf9521b6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/calibration_bins.csv",
+    "bytes": 5666,
+    "sha256": "239f824b72ef99c9fac6463911196330714385cade538824858f65c11b3b97ea"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/calibration_metrics.csv",
+    "bytes": 1032,
+    "sha256": "b09532b89cee263c4812000cf9e78cd69c06a62a86c8c35dac552fe1cf88ea64"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/fit_diagnostics.json",
+    "bytes": 1530,
+    "sha256": "0dbd442aa4b9ee357c68f563e8ff38a3b3b6b924d442844f83e6bfafbf29fce6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/inner_search.csv",
+    "bytes": 3616,
+    "sha256": "aa008bebad5bcbfca4c4be99393bd0d3757c4e4ee643872152ffc71c50d569bb"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/model.joblib",
+    "bytes": 2495,
+    "sha256": "5fa6b517ee6499aae6e9ebd57834288bb6d2b1c31a7c56cba330500588471361"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/predictions.npz",
+    "bytes": 122023,
+    "sha256": "290bcbf90fd9c4da6b510cb0e6828ce00d48257ed07883722f352ec383850c35"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "fa8292ef327f29f6354a22ae0076b64c371b72920730d1c2e0835b503ed55e5b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_0/calibration_bins.csv",
+    "bytes": 4030,
+    "sha256": "c14ecf810697cdd38b3f0672bc4fd26c8bd66a28edaca51c17815be2eea07c0b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_0/calibration_metrics.csv",
+    "bytes": 773,
+    "sha256": "cf2f004333684c980b3c04945b17aa5a8634455211ad1164777e625d15242564"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_0/fit_diagnostics.json",
+    "bytes": 1530,
+    "sha256": "0dbd442aa4b9ee357c68f563e8ff38a3b3b6b924d442844f83e6bfafbf29fce6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_0/model.joblib",
+    "bytes": 2495,
+    "sha256": "5fa6b517ee6499aae6e9ebd57834288bb6d2b1c31a7c56cba330500588471361"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_0/predictions.npz",
+    "bytes": 73480,
+    "sha256": "d25c65f2ad1be0a65e1e9952e610d78e9f4bd9e052dc457a287110dfc7eb06b9"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_0/training.json",
+    "bytes": 3071,
+    "sha256": "477ea27555b0ebca5fada8f8e41ec910ec70ab959cb760020e9f118647aa88ec"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_0/trial_complete.json",
+    "bytes": 699,
+    "sha256": "0b3c01027c847ebce1808c94158ae9ea304b219c2ae52a5889e3a60e91056a43"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_1/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "99babe21011f039789d2d09212ba46f11c39351967f1ea346fce04c2c8318f7a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_1/calibration_bins.csv",
+    "bytes": 3920,
+    "sha256": "b9062146bd9d7b4757978eb64da834f41e70eaa1b7d9015367bce07227646d1f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_1/calibration_metrics.csv",
+    "bytes": 763,
+    "sha256": "d54e1636cee842339d69c406bad116cf254d1f2f2e37918ac1ef450c0112dc9f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_1/fit_diagnostics.json",
+    "bytes": 1532,
+    "sha256": "03d31bd8b85a8d798a321a163c97d33dada39b747ff8e868ff93127e2f8340f2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_1/model.joblib",
+    "bytes": 2495,
+    "sha256": "595b52c76eb70dda9774edf74b7862dcfee8e1cfb8c1786c1c1698d814dad6ba"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_1/predictions.npz",
+    "bytes": 73514,
+    "sha256": "5e0ccafdd748c3ba41260982646288101bff917b606b80ee8a88e5db1f90600a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_1/training.json",
+    "bytes": 3069,
+    "sha256": "85ba271c26f5e80e341587412ef24cfce4cc8606c15fcd201ef44e45cd448016"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_1/trial_complete.json",
+    "bytes": 698,
+    "sha256": "e970f088828ded4a12c57626f74cb32a11c1b0f4cee556a19348535f7c7dda39"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_2/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "f80a7387f1af0ce55c617a54225a2c5918618aeac803cf6c118251bea6d01235"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_2/calibration_bins.csv",
+    "bytes": 3888,
+    "sha256": "55785ce6d48e053d35287c7079ddb4456483f38bebe14a8cafd2ded54399a9c9"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_2/calibration_metrics.csv",
+    "bytes": 769,
+    "sha256": "6b68ecf01fc45e8fbb830adaa0e7a206c4497a689422adabd6203188eb235861"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_2/fit_diagnostics.json",
+    "bytes": 1503,
+    "sha256": "a9214c0e9526bbfd8168e17bab1d4feaacde3e7681099ee0cb9790347b9973f3"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_2/model.joblib",
+    "bytes": 2495,
+    "sha256": "b0564b43acb2059db91c06dd4b41d7782e4dde932c50703460093234740df6f2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_2/predictions.npz",
+    "bytes": 73485,
+    "sha256": "1c255c07909acf0a17137794de86f0bc6a4a056d3316a330ef603373d7964606"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_2/training.json",
+    "bytes": 3045,
+    "sha256": "851dea14c9fdeff40cb6b4da18ada77a99494b5a4c2f2ea967420c93ee3526ac"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_2/trial_complete.json",
+    "bytes": 698,
+    "sha256": "01cda8480bee0acd77e5947697319c8e91c64782fc55584d7cc4511c9c7718da"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_3/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "3221389dbe4cae027a23f71adbed6e0c8bda280329d8608edeada8ffd46b15d8"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_3/calibration_bins.csv",
+    "bytes": 4002,
+    "sha256": "c570eafd3e6b54c99f3413ec0c04b26078077d6fc376c07650a9fe0231faf432"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_3/calibration_metrics.csv",
+    "bytes": 770,
+    "sha256": "6a40813992b3fb34cca27305e6b1ab49c71c1253dcb466c3dba0e0ec7a723d67"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_3/fit_diagnostics.json",
+    "bytes": 1518,
+    "sha256": "b9e87802bb59cdc8e795d83d47563dc6f2c4f50dad39cedd80a2d63314c168b1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_3/model.joblib",
+    "bytes": 2495,
+    "sha256": "744ce4b22250f56270e1801d94c2666a68b0b640be9c14ed51a1147b36521e8f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_3/predictions.npz",
+    "bytes": 73477,
+    "sha256": "eb10fa240955de96ec3392e86afb8f5b642bbc4af0769664513e163db79ca233"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_3/training.json",
+    "bytes": 3058,
+    "sha256": "89cb3917dfe4e33449ff0fce7f7c14dd20da91b05d4da9e41379a75db9b8f375"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/search/full_3/trial_complete.json",
+    "bytes": 699,
+    "sha256": "4d309cf0c3be17d24cdd248e99cd53a53ca82ea2932811f224b1f47b2098620e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/status.json",
+    "bytes": 4368,
+    "sha256": "48b6cf77f042042e23a912781c49d4fa30d0fe5682f85e920ded63a7a7eac7b8"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lr/training.json",
+    "bytes": 5737,
+    "sha256": "1d2a32abf923fbcd36af98009eea7af8822d01f6e0ab304310d543f089ba9ccb"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "80882807475098046da583ae4976118d1eb3afc102364f3c80cab83a876d3e97"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/calibration_bins.csv",
+    "bytes": 5570,
+    "sha256": "4fd920deceba7ba42a9fcb2b32b3cdf321b9f8feee2e719a7b8c7c76e36c69cc"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/calibration_metrics.csv",
+    "bytes": 1027,
+    "sha256": "3875aa779abae8d93bfbc59ed70fd5140ac41dff5ca0a9ec70b94e9e45c2e93e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/fit_diagnostics.json",
+    "bytes": 1520,
+    "sha256": "6e093a17d9d5a7f57699b8c74c88c790d32c1b34c34b9978ea5cd3b73206e8e2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/inner_search.csv",
+    "bytes": 5178,
+    "sha256": "27a852d0688d0fb3f3bac74d332a72a66af928619b77d140036e74479fb75dda"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/learning_curve.csv",
+    "bytes": 5498,
+    "sha256": "d947d4972d069149b90b0c2c9847645a21e84e96b87ab16683ed7477b5f423e6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/learning_curve.png",
+    "bytes": 90584,
+    "sha256": "2cfbb37ee0fda5b153536a9c21ff9f8186db6d1737220a0712d594b4cbdd909e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/model.pt",
+    "bytes": 966244,
+    "sha256": "1d826690325a5c28ffb6949ab72cfa038a3c58fb560dca322f2921a379622d1b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/predictions.npz",
+    "bytes": 74573,
+    "sha256": "f7c58f986348984ecda47bcb75c0f6f3a2ef2cd336bdb14b9530a8db58c0a0e0"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "d3b315c4afeb9ffb8553aabd576445bdf9c8f4b82987c19236792bcad168a6ed"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_0/calibration_bins.csv",
+    "bytes": 3940,
+    "sha256": "2c95ffe5f75ce37db6309e293ebcef10fce06ab939babff4a53751d431553a2e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_0/calibration_metrics.csv",
+    "bytes": 760,
+    "sha256": "cb2e3b1d0f7a1db1914f9fadf753b24abee49255dd23856f8f6af78f0280cd81"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_0/fit_diagnostics.json",
+    "bytes": 1520,
+    "sha256": "6e093a17d9d5a7f57699b8c74c88c790d32c1b34c34b9978ea5cd3b73206e8e2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_0/learning_curve.csv",
+    "bytes": 5498,
+    "sha256": "d947d4972d069149b90b0c2c9847645a21e84e96b87ab16683ed7477b5f423e6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_0/learning_curve.png",
+    "bytes": 90584,
+    "sha256": "2cfbb37ee0fda5b153536a9c21ff9f8186db6d1737220a0712d594b4cbdd909e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_0/model.pt",
+    "bytes": 966244,
+    "sha256": "1d826690325a5c28ffb6949ab72cfa038a3c58fb560dca322f2921a379622d1b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_0/predictions.npz",
+    "bytes": 40281,
+    "sha256": "2c8e5592b5b7f9b04ff6bda31dc68c576913c454966d428a497ab806fe78eb0a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_0/training.json",
+    "bytes": 20369,
+    "sha256": "2c359143c027f45a5848b84cecb4b928a26de4e339a15b7b9111a02e608066be"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_0/trial_complete.json",
+    "bytes": 916,
+    "sha256": "6b0ea7eb84109cf50f129a512e3efe75efc9779b354829d10cc2a0c40d1784f0"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_1/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "c69d3da5369d11706eed4e9c01d90ec57b9e3e52a58bc40be05d0c05a4767922"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_1/calibration_bins.csv",
+    "bytes": 3980,
+    "sha256": "4b8f67e7b7a6c2df6c35eff63b25eaf39151d4672cd99fc6bcfd8d5567cb6c35"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_1/calibration_metrics.csv",
+    "bytes": 766,
+    "sha256": "f81300d6da68cc0a18f7fde0c1efe6430eadfe317b6db1638336a48a3a9f611c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_1/fit_diagnostics.json",
+    "bytes": 1535,
+    "sha256": "9ccf4d01561b32eed313ea76c28553530772d41644f8894a672ed1574e1560a8"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_1/learning_curve.csv",
+    "bytes": 3769,
+    "sha256": "d3a29252880622c7546f16d229b86d4665b6f8b8e1b115149d61f17ae7e49570"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_1/learning_curve.png",
+    "bytes": 93847,
+    "sha256": "ff6e3d7482c2236b549cb243046425af82bc518c0134169bc34e14f1425c68d3"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_1/model.pt",
+    "bytes": 966244,
+    "sha256": "b35a3b59bd1eb964d8e73d5cfe8813c5a2e93a3cad93d48f0963486b1b043674"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_1/predictions.npz",
+    "bytes": 40252,
+    "sha256": "d893290404d04bb52c26d61903b0d4e151e64d3ae575d0e85a01cc82de59b3bc"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_1/training.json",
+    "bytes": 15453,
+    "sha256": "3a4fcc815c57e975f2dfe3b7bae6fec2350b714b24c68826211dcaa4f73408e3"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/full_1/trial_complete.json",
+    "bytes": 913,
+    "sha256": "10e6bd8d26c927814b6e2df1cce33921dcd7bcdab745e17b07c0cc4bd1caf6f6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "c69d3da5369d11706eed4e9c01d90ec57b9e3e52a58bc40be05d0c05a4767922"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_0/calibration_bins.csv",
+    "bytes": 3980,
+    "sha256": "4b8f67e7b7a6c2df6c35eff63b25eaf39151d4672cd99fc6bcfd8d5567cb6c35"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_0/calibration_metrics.csv",
+    "bytes": 766,
+    "sha256": "f81300d6da68cc0a18f7fde0c1efe6430eadfe317b6db1638336a48a3a9f611c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_0/fit_diagnostics.json",
+    "bytes": 1533,
+    "sha256": "c467bc28293bbdfb43b321afac77ed61d3d83c4e968d58ef75b08a8256fc9040"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_0/learning_curve.csv",
+    "bytes": 2307,
+    "sha256": "18452265d85285baf13e351ceb198832406adb0c009b3a8673ce78278928052c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_0/model.pt",
+    "bytes": 966244,
+    "sha256": "21d20b08e19800d428299dc6f32e1bea1883b989eae61110d5aa2c49c341b081"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_0/predictions.npz",
+    "bytes": 40252,
+    "sha256": "d893290404d04bb52c26d61903b0d4e151e64d3ae575d0e85a01cc82de59b3bc"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_0/training.json",
+    "bytes": 11327,
+    "sha256": "c7ca4afc1ba41458f2f0feaa7ef348d34d3481be6e58aa60208c39b3537f24f8"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_0/trial_complete.json",
+    "bytes": 825,
+    "sha256": "19b147f1ee90b604c235681b53adbb8217a3035db552d7c4e2ace0fda65aedcf"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_1/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "b5057210e39ad287429e3259e3406c7ebc64a221621d029969c60307e30a7143"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_1/calibration_bins.csv",
+    "bytes": 3944,
+    "sha256": "0a0b8789dd0a53d670be2b0a2b4bc998eb6b7a96a1ce3ae8752e6ef549e84c26"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_1/calibration_metrics.csv",
+    "bytes": 754,
+    "sha256": "8b0a72349ac1470ac95c8f93fb1b92a14c7bc4a1e5ac5fd36f26492ba4475448"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_1/fit_diagnostics.json",
+    "bytes": 1528,
+    "sha256": "9e4ab23b298cc085b5c309d23176557b264bcc6bf79eef0f40fb12fcc2bff964"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_1/learning_curve.csv",
+    "bytes": 2304,
+    "sha256": "b42de31ea886b8cb3fae31643daa54d3033fc0e023c744878af986472aa89765"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_1/model.pt",
+    "bytes": 966244,
+    "sha256": "af93500a1b9eeec3d454aa95c0b3153f132c9d476030b073c23af148a352eac2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_1/predictions.npz",
+    "bytes": 40211,
+    "sha256": "6caa354047e4b6311f4ade6778e62dba8fadb4fdcc562df059c793996d0624be"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_1/training.json",
+    "bytes": 11323,
+    "sha256": "6341385cf86d8bfcd73374a930ee9710bb319ebb20888dc0b5e033299ca2a88f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_1/trial_complete.json",
+    "bytes": 828,
+    "sha256": "c4d3722f2fced13132a460e3a23eeb770b7ab14351f502db1f9bfae6a9a088a4"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_2/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "0456c3ca6b932c728ce0ffcda277339cde23761996cda945b7cd6dd69c2b5b5d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_2/calibration_bins.csv",
+    "bytes": 3944,
+    "sha256": "ad583783308de32d240adaaf22416c30543c4d579fca0b6adb8413d9bc89727b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_2/calibration_metrics.csv",
+    "bytes": 760,
+    "sha256": "349f1268aaa0a60cabedf156d4d070ac6589836d70560a98f141aab49b9971b1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_2/fit_diagnostics.json",
+    "bytes": 1533,
+    "sha256": "70a4f079704281ba7795386f21ffa2a8df9ec72960091d52f2b61a524197e2ec"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_2/learning_curve.csv",
+    "bytes": 2315,
+    "sha256": "ab155174a494a483b94dc83560e9cd0676c230eb18e6a703069ae8998f29ce70"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_2/model.pt",
+    "bytes": 966244,
+    "sha256": "74323817071c8ba47015d1da4d82e33b42159fbee401e2e3fdaacfcd401fac78"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_2/predictions.npz",
+    "bytes": 40220,
+    "sha256": "ca7903d05a85259d16297b15c0288851f65494e984455f42aa885528b5450617"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_2/training.json",
+    "bytes": 11345,
+    "sha256": "923acf2170c2a3d9908790141b26524e8c00381554c2203f86959debe1151855"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_2/trial_complete.json",
+    "bytes": 828,
+    "sha256": "d616718a56db3f4ddebc53413b8b44b52c124ccc1d053f2f2ea4cda9acb88df0"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_3/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "f8d097fd5b491b78356dedff5517b28f8b6f1310f157fe59fd3634b87993ac48"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_3/calibration_bins.csv",
+    "bytes": 3879,
+    "sha256": "75dd480c6cf5a30d97d08d6f74a60937a6db066008e14c9c5e905410fc07a4f5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_3/calibration_metrics.csv",
+    "bytes": 760,
+    "sha256": "cf230582d332c2b0330b361d3bc7829d5573a6884c372f70f82588174e047608"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_3/fit_diagnostics.json",
+    "bytes": 1531,
+    "sha256": "d530834de56705d9c27dd5c6285008e40a4fa740d066b7685e78f5c60abd689c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_3/learning_curve.csv",
+    "bytes": 2312,
+    "sha256": "9071c0bb5b56cccd0e5789aaf6393ce9c2e87b40eca1328b0c19157c0d6c9e96"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_3/model.pt",
+    "bytes": 966244,
+    "sha256": "dc7483a0a53ba8d1208694f07e6b3d03b133a296fa2b5e5aba0aec5839630f06"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_3/predictions.npz",
+    "bytes": 40228,
+    "sha256": "238866bcd2e27c8ce82230a45e1bf130e8ba58a8ac4bf4bf6f7aff1d4cfa4a10"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_3/training.json",
+    "bytes": 11336,
+    "sha256": "33a34fb3f707297d90e233a870525cf8879751ff53092a384e3e813c430ede39"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/search/screen_3/trial_complete.json",
+    "bytes": 829,
+    "sha256": "26549442dba04e0e13e44b6bdd228e8ec38109109ca0a3c093478946c697fcfb"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/status.json",
+    "bytes": 7210,
+    "sha256": "cff51cadb6edfd89df62e861dab261e93e6eab12b2f5aab694228abb155d739b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/lstm/training.json",
+    "bytes": 23118,
+    "sha256": "db309266a13fcb357da23fc70f1f6944321b48859f0b70cf32b4a24057a79650"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "774ed8e363913671469c030cc90002aaae5f881fd1bb8f7319a88444f8aa7175"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/calibration_bins.csv",
+    "bytes": 5527,
+    "sha256": "d93d5f23293a4fa11df2004360e46c90a10b36cef1cc842062cdae1a5f34a0b7"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/calibration_metrics.csv",
+    "bytes": 1022,
+    "sha256": "41968b2218013c36e8a56f8a249fa4b405525f835d6bdb731b8eacaa96f93515"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/fit_diagnostics.json",
+    "bytes": 1516,
+    "sha256": "f89dde7eb505405b90c3e3ab2232f1f49dc7a703bb3ca743e9c03c8a0480d200"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/inner_search.csv",
+    "bytes": 3933,
+    "sha256": "2e14ef1a712862c2635734a19f8272608824df50b2c4c2553593086d94187bf9"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/learning_curve.csv",
+    "bytes": 1402,
+    "sha256": "7e8288c01e6ec53ad1831eb24e94e6a9422e7383492bb5e3af3c389b4f7c12ad"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/model.joblib",
+    "bytes": 560292,
+    "sha256": "1fe470a4934a6a4a8a8e635bceaad9a5429b17aee0242c9609b0afe2b0fccd80"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/predictions.npz",
+    "bytes": 74432,
+    "sha256": "031d8a3cb31fc9497b44b5dd4bfbc210a90d04b503d43837338cb8c5457ab8bc"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "4c571c524df6f3833a072e3792efd6dc863361cf7c03db6ceb6d9cff32a15063"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_0/calibration_bins.csv",
+    "bytes": 3303,
+    "sha256": "38d76e029af5de30be5dad8ab99be76fd9a7b6f992ea37ac89e22cb6eb1cc9cf"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_0/calibration_metrics.csv",
+    "bytes": 761,
+    "sha256": "226d18fa5494a1ead643b6cbef7de32684c2fadb105cb0bf1e0e5a02a85638e0"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_0/fit_diagnostics.json",
+    "bytes": 1504,
+    "sha256": "6a4bdd1bda187dad4815d82a52f37983633918534ae2783041bf8912ca512b51"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_0/learning_curve.csv",
+    "bytes": 2768,
+    "sha256": "c1e5d836cb2b3da3f43df5ca2da369b6e6806a540ac72cf9c6e502ebdcac2cd6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_0/model.joblib",
+    "bytes": 561300,
+    "sha256": "dd6bc2ccdf0fd1eb552fb3e8f6535f363a86d8ee7f2ec2a1a14a48f9d0612f21"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_0/predictions.npz",
+    "bytes": 36477,
+    "sha256": "57486446f4c84a8f29fbe366333c169944b4fd2a36d54a7a0c4e77190c7917c0"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_0/training.json",
+    "bytes": 11779,
+    "sha256": "1238f56867f530262791987b7c31607c279e5a0fc4fabe0a93fd420be9d3230d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_0/trial_complete.json",
+    "bytes": 855,
+    "sha256": "78adeb28acf3c78b5ffab3a85f303e38b19cee236acc3fd86acb70f68ec447f6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_1/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "191335f3fd0b23fef31f357ea5f7a75bf95ef719c3eb4277910f0da47d0446ef"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_1/calibration_bins.csv",
+    "bytes": 3415,
+    "sha256": "e24d79d4d902014554e72b5dd90c75c3eed860d7760f9ed0532429b1e1a86853"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_1/calibration_metrics.csv",
+    "bytes": 760,
+    "sha256": "4c2ee84c8db0c73490ea9621711f24f63d3a9138a626491f66d00a0cff44b4ca"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_1/fit_diagnostics.json",
+    "bytes": 1504,
+    "sha256": "e18065c084447e98cb078ad10c39b6adb30a00d08aab9ad4534ffb7dfc422539"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_1/learning_curve.csv",
+    "bytes": 2137,
+    "sha256": "7b83d5daacab4cc0406942c576ef754f604724d97b4d740bc9e7cc7591c1d23f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_1/model.joblib",
+    "bytes": 560836,
+    "sha256": "1b1d01ff3b63c669971a63bff13b93fcdef33059aabdc26e88cfdfde8d943b91"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_1/predictions.npz",
+    "bytes": 38560,
+    "sha256": "e57a267980288f929355901033bbe0166e1d5fba62eab5318bf2ca135dfbc464"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_1/training.json",
+    "bytes": 9947,
+    "sha256": "e2b80641b92fe7679ce45cf6a8faa4a9a0925594ea8dfdc4e32ab1b02277cd54"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_1/trial_complete.json",
+    "bytes": 854,
+    "sha256": "be371808a5dd48de6008f9b4d4088f6b75525e2c4f028eadeeb874c5c41cf672"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_2/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "5a04de44cac1cd82b0132fc5129136a507df1dc5cd17456ac5bcd3b689c0c0af"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_2/calibration_bins.csv",
+    "bytes": 3665,
+    "sha256": "36c1307a32d1911fd76eaef3f5d8872f12bb6be4643fb2b45ca2f183e5966279"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_2/calibration_metrics.csv",
+    "bytes": 763,
+    "sha256": "91786f5bd92b45edeb398a4cf334d297b859e117565e9998031d8898c5bec537"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_2/fit_diagnostics.json",
+    "bytes": 1519,
+    "sha256": "68d12b7479cfd5b2cd02dc3f1596422b55d78c8552330995404bf7fba69818ae"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_2/learning_curve.csv",
+    "bytes": 2567,
+    "sha256": "4b39d7940dfa4adec37c3167fb9b06921a5265029fd98d1641150b67e013f2be"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_2/model.joblib",
+    "bytes": 561204,
+    "sha256": "50b831cf2e68b6c1187abdb2b836fdbb7a0333e62b7498436d6baef33cb8e51f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_2/predictions.npz",
+    "bytes": 39942,
+    "sha256": "8550b1766c63e8854bfd8513334b6a68450d2e366c6651539d5b5052b65cd9ea"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_2/training.json",
+    "bytes": 11343,
+    "sha256": "447c99d3f783d765625cdfb0c1ee9dc61ebc907eff0b3d8154c14988d548a1e3"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_2/trial_complete.json",
+    "bytes": 854,
+    "sha256": "dc4e768e5c0e7d9bd686161d2b7fdd7bc5226e053247adf3aa750ef1a9a1c43f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_3/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "a22d96dbd926d35c73a5d1df21488753fc61dcf14712800ffb999c83eb733e45"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_3/calibration_bins.csv",
+    "bytes": 3853,
+    "sha256": "a61cd5c0b767d671906300b7fa2bed1a88c2dafe0ff9b79bd9e787eed8fab56e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_3/calibration_metrics.csv",
+    "bytes": 760,
+    "sha256": "c4f52334d47940920882f30a745c0d019f785bdd8a9ce8d4b83a3de4d0fdb2ab"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_3/fit_diagnostics.json",
+    "bytes": 1516,
+    "sha256": "f89dde7eb505405b90c3e3ab2232f1f49dc7a703bb3ca743e9c03c8a0480d200"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_3/learning_curve.csv",
+    "bytes": 1402,
+    "sha256": "7e8288c01e6ec53ad1831eb24e94e6a9422e7383492bb5e3af3c389b4f7c12ad"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_3/model.joblib",
+    "bytes": 560292,
+    "sha256": "1fe470a4934a6a4a8a8e635bceaad9a5429b17aee0242c9609b0afe2b0fccd80"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_3/predictions.npz",
+    "bytes": 40196,
+    "sha256": "3aa1e0cb0b2a734eec2c80c2600c6d2c7cb3fa17977f96f0a9ae9cc9b2cbf356"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_3/training.json",
+    "bytes": 7778,
+    "sha256": "3fdec538762ccc8f7017e3b4ecf1c9506e71a3cb120431f55d22e159b4a9840c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/search/full_3/trial_complete.json",
+    "bytes": 855,
+    "sha256": "5f68827fc5b6fe80f450e7b8f119c971a37198d03b448a5b7904fd07b9dfcae7"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/status.json",
+    "bytes": 4899,
+    "sha256": "721a9b6166c2c8aa9fe6c4fa9898bc5c2ef79e08ca8b2dff0fd5534a9268bf6e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/mlp/training.json",
+    "bytes": 10808,
+    "sha256": "d1a65a2c72a826a80ec3a57b1078f0d0491b9a125a1fe72cdd1ada7c694b8fbb"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "1c9bae35c6c7dea8f3e7765d4c35692556fbc630eb32b248051ff2b08c5d6208"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/calibration_bins.csv",
+    "bytes": 5569,
+    "sha256": "9b072928aac1d3527b7842d6b3cebfd29521361298a25b9f3889d909076f148c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/calibration_metrics.csv",
+    "bytes": 1027,
+    "sha256": "d18088db5a26f624c44e1a82ecb79dbbec20940d93a2c96236cf8a584473e89b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/fit_diagnostics.json",
+    "bytes": 1532,
+    "sha256": "100fb260656372213b1b060e4facc9c6818e43001f456b29a1273614165515d1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/inner_search.csv",
+    "bytes": 1684,
+    "sha256": "24182ac8171cc3781553f9aae30b601c4f0348990e48c32b6a0a67897430b661"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/learning_curve.csv",
+    "bytes": 4900,
+    "sha256": "e7248fca61cb925704d7611e3eab2523c7d5ddd766891d9205c8c3721580ece0"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/learning_curve.png",
+    "bytes": 96552,
+    "sha256": "ebad67db4bdb5df7e698bc05e41345864c139f08b90cea4713a3488f52a61c70"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/model.pt",
+    "bytes": 2356038,
+    "sha256": "d0d82b1b072dd8b5c2dacfed73de2ebb9170c518d1024dd01baada70ff63a5f4"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/predictions.npz",
+    "bytes": 87766,
+    "sha256": "dc21909c3e3a9fcab5292fb4b75285dd7ed894ffbe665e11e242bd47570f23d1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/search/full_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "b88d543566ed799838ba94af2895e840c047285af033d5769b1ca44578de965f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/search/full_0/calibration_bins.csv",
+    "bytes": 3886,
+    "sha256": "1822ec3cb159d0d0e74529e152d81ace70ee53299a312b4d114a98857aa6b157"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/search/full_0/calibration_metrics.csv",
+    "bytes": 764,
+    "sha256": "86438476a3686628eb37cec5089ebdd36b8e0f641cba0bc54666dea45aa61314"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/search/full_0/fit_diagnostics.json",
+    "bytes": 1532,
+    "sha256": "100fb260656372213b1b060e4facc9c6818e43001f456b29a1273614165515d1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/search/full_0/learning_curve.csv",
+    "bytes": 4900,
+    "sha256": "e7248fca61cb925704d7611e3eab2523c7d5ddd766891d9205c8c3721580ece0"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/search/full_0/learning_curve.png",
+    "bytes": 96552,
+    "sha256": "ebad67db4bdb5df7e698bc05e41345864c139f08b90cea4713a3488f52a61c70"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/search/full_0/model.pt",
+    "bytes": 2356038,
+    "sha256": "d0d82b1b072dd8b5c2dacfed73de2ebb9170c518d1024dd01baada70ff63a5f4"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/search/full_0/predictions.npz",
+    "bytes": 43509,
+    "sha256": "68b0980d5a614e1b6432871017adc6c9bcf6e65c5e3dcc9e32368fc0d1b5be0b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/search/full_0/training.json",
+    "bytes": 18129,
+    "sha256": "55aeb84be3d0d5d1cdac18bf664fba50d1ebf25989585203dc75eb664937b91a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/search/full_0/trial_complete.json",
+    "bytes": 937,
+    "sha256": "e297b0667d50fa1a28b8f73df5ffaf3ca628ca47edbefd61ded20ddaf00964c6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/status.json",
+    "bytes": 2164,
+    "sha256": "da2bd1791a6182bc7adc51bc99918278923509b5705459baf6aaefb492081df7"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_attention/training.json",
+    "bytes": 20945,
+    "sha256": "3e8fda389b5218efaabcdb5b69b25ba927f48c7d19be7ee850f750e6b31062ec"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "717f411540c70a5e3fba6d10fdc0e5132e98f2523582162ba7d898e8de47e465"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/calibration_bins.csv",
+    "bytes": 5579,
+    "sha256": "82f5604de807a381aa72958f238c689a7221476a3c9880d79e2d28cd56d72465"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/calibration_metrics.csv",
+    "bytes": 1029,
+    "sha256": "f2fea4c026b0e10990d914f4ac16c8691984a2b744c1c2e72d8ca2571faec91b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/fit_diagnostics.json",
+    "bytes": 1531,
+    "sha256": "d17de5aab93cb94209f770b1b6e8f8fe8b75d2d24c56d90f66a177843855070a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/inner_search.csv",
+    "bytes": 1678,
+    "sha256": "b50e20f5a20044dafa3507d6b569bd7a7a7d5ecec4b5832bfa6f74d6f34c4bbf"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/learning_curve.csv",
+    "bytes": 4484,
+    "sha256": "fd19d3b58e65ab319b7b11353fd4d8567dafd1ab43bad418714f0e327051f414"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/learning_curve.png",
+    "bytes": 99842,
+    "sha256": "205c541c7d620b51646d9700d69aa295ad890c3f887336ef32756de46db5e47d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/model.pt",
+    "bytes": 2488957,
+    "sha256": "9dbc5d6a4cbc59cc9dbb4f84a542fe4f69ec397755dee0ffbfe9789e960d3cf6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/predictions.npz",
+    "bytes": 74437,
+    "sha256": "cd28f4bc33286af70988488d4a1bb706ee46c66c866bf4345318a19a56bd299a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/search/full_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "f43cf0f62b1d54c20aaba84b61e1309552ac61691e1d0941d85a018415a76a8f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/search/full_0/calibration_bins.csv",
+    "bytes": 3830,
+    "sha256": "1d4c25d077cc2916db48c8a394e941507008e97af5e95a9a0fbb833500acac97"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/search/full_0/calibration_metrics.csv",
+    "bytes": 764,
+    "sha256": "91cb5afbdd79fc1e4a8bff344a178e4c7b2ae7cfab40ed5d772f9a5a317568fd"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/search/full_0/fit_diagnostics.json",
+    "bytes": 1531,
+    "sha256": "d17de5aab93cb94209f770b1b6e8f8fe8b75d2d24c56d90f66a177843855070a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/search/full_0/learning_curve.csv",
+    "bytes": 4484,
+    "sha256": "fd19d3b58e65ab319b7b11353fd4d8567dafd1ab43bad418714f0e327051f414"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/search/full_0/learning_curve.png",
+    "bytes": 99842,
+    "sha256": "205c541c7d620b51646d9700d69aa295ad890c3f887336ef32756de46db5e47d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/search/full_0/model.pt",
+    "bytes": 2488957,
+    "sha256": "9dbc5d6a4cbc59cc9dbb4f84a542fe4f69ec397755dee0ffbfe9789e960d3cf6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/search/full_0/predictions.npz",
+    "bytes": 40200,
+    "sha256": "d2358676efc725aa078d8a9f93ac9f51ab435308ba7ece2e8fa8eab0b3bfb83f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/search/full_0/training.json",
+    "bytes": 17646,
+    "sha256": "25ee59b4f970a8983db03186ae130ce54557cdbded7399df352a313c371b7602"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/search/full_0/trial_complete.json",
+    "bytes": 937,
+    "sha256": "aed23346e9348ef1c92c1e315b72f11503bc7d3f24ce346460299dec8a2b1601"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/status.json",
+    "bytes": 2164,
+    "sha256": "024fe7f66b9a223063757d67c00923c01da0327f62af01aeb43ce85822485cda"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_cox/training.json",
+    "bytes": 20457,
+    "sha256": "e719a15ade540395ceea791e53f1a72455f0031e8ea8c00849dce765fd5b461d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "a8d6f5341097502427cc2d85d5a6e596398dc7828ad44bfce8c6f3536ebde41c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/calibration_bins.csv",
+    "bytes": 5310,
+    "sha256": "bd7ba368cfb8c2f5fbd8bbaa7173fd1803c8fa4c9261c24b81ce1ab665e351e2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/calibration_metrics.csv",
+    "bytes": 1022,
+    "sha256": "156c6b36f223cd6e43de7a57f364797c0341e175a80b5725048004989cbe7189"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/fit_diagnostics.json",
+    "bytes": 1533,
+    "sha256": "daa840ceb237abf14087eadc408297712a7466ebb3773c0bf119d8ce23e875a1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/inner_search.csv",
+    "bytes": 1681,
+    "sha256": "69ee88714d67038135201c6d8efaf753058f7c22ff7d5e4f70b70d2260e1443d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/learning_curve.csv",
+    "bytes": 7877,
+    "sha256": "34c35f86640c6a5cadc405b166c6ec04ebf075338178c7fa67437131f1be1e56"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/learning_curve.png",
+    "bytes": 113643,
+    "sha256": "dc7f8174addf0bad2913a6e56c088a675522cf5bced396ee6de116767f173f15"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/model.pt",
+    "bytes": 2391128,
+    "sha256": "863ea349989ea8e64755ef682c516caec69603260e8bed6f0b4e12fccf9a3986"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/predictions.npz",
+    "bytes": 84848,
+    "sha256": "9dc3d0a9e814833720c16b4c9d2cfa5d8a5cc64b21351e233c88aeac3e0ae916"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/search/full_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "6c8f2ffea07f88186acf6b546483ff3817608cc1d8a1f5d55f42aa0a9dd4bcad"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/search/full_0/calibration_bins.csv",
+    "bytes": 3688,
+    "sha256": "7a50d0c171ce48602c116727d6c55e0b2a48db31bec20cd6e2566c674f46918f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/search/full_0/calibration_metrics.csv",
+    "bytes": 757,
+    "sha256": "7d6d26b53f4aff83a3843c6c5acde07817445bfd0986426fae324389f2f9f91a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/search/full_0/fit_diagnostics.json",
+    "bytes": 1533,
+    "sha256": "daa840ceb237abf14087eadc408297712a7466ebb3773c0bf119d8ce23e875a1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/search/full_0/learning_curve.csv",
+    "bytes": 7877,
+    "sha256": "34c35f86640c6a5cadc405b166c6ec04ebf075338178c7fa67437131f1be1e56"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/search/full_0/learning_curve.png",
+    "bytes": 113643,
+    "sha256": "dc7f8174addf0bad2913a6e56c088a675522cf5bced396ee6de116767f173f15"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/search/full_0/model.pt",
+    "bytes": 2391128,
+    "sha256": "863ea349989ea8e64755ef682c516caec69603260e8bed6f0b4e12fccf9a3986"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/search/full_0/predictions.npz",
+    "bytes": 42118,
+    "sha256": "558a35308d0ba714729a51ad07858b3181d0c12542e33c50ebd9e55a5c7b5dd6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/search/full_0/training.json",
+    "bytes": 25900,
+    "sha256": "d3755c332be90f51bab5bb03020dafca8f634aacf0fc3fab4b8d281436cba485"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/search/full_0/trial_complete.json",
+    "bytes": 937,
+    "sha256": "0c4ee524af0b2e30dd9354269a674cb01acfe72bab81a5e642a62afde576dcb4"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/status.json",
+    "bytes": 2164,
+    "sha256": "78f3863d5d65d4c1f21cfb9ac31d32a6687158808d017ce4d9501d1067d0dbc0"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/no_static/training.json",
+    "bytes": 28712,
+    "sha256": "7b9b561d56b52c89f1497cc3d18c905a782b7bf79c625945f7f009473ad09c17"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "ea6f1f749d6453c410e6948ef63eeadacd99918d5224bde893c79bd0d599c03c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/calibration_bins.csv",
+    "bytes": 5568,
+    "sha256": "26636c4f77d07fc58ee0e27ebc74cfedad9e2eb97a888e0dcea725ae24a006cb"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/calibration_metrics.csv",
+    "bytes": 1029,
+    "sha256": "7da0c1c98e8cf3c7cac4fce32dfb1911562846c325b435c9cf5607d28b82e726"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/fit_diagnostics.json",
+    "bytes": 1531,
+    "sha256": "16e858c64f519b588bbf67a126b93d0323614758b9db7743e68cd496463ebc71"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/inner_search.csv",
+    "bytes": 5228,
+    "sha256": "c001f18c3783174356628ad4d75615edb15c09f1cf6fa7b00ebda1d0f5019ccf"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/learning_curve.csv",
+    "bytes": 3758,
+    "sha256": "2778dd6ccca8782474956d5194222fee7212d5e6aecd9b50187798b0fc9a6bf3"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/learning_curve.png",
+    "bytes": 93705,
+    "sha256": "6b99750c81e9e8d7646235cd58899c0d41d4e078e684fd30b5a391a1a19e8f0c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/model.pt",
+    "bytes": 708099,
+    "sha256": "a1a3871f1a7f98a0619d33e488a0c609a25879e785d2feb0a8e00bd58995d238"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/predictions.npz",
+    "bytes": 74437,
+    "sha256": "cb5a00b32e713106fbc97158092ff0ddcc02598f37e2172984cd6f1b8b799593"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "b977285b749215236e03adf279bb248c6eb77b6f3b8e5313b0621993f15b6f49"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_0/calibration_bins.csv",
+    "bytes": 3896,
+    "sha256": "16f318eff42b39f04f1c3ba3fbba7f45a559444bb46974b2bbb7ccc525216751"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_0/calibration_metrics.csv",
+    "bytes": 761,
+    "sha256": "49fcb9dcb22f1067be10f2d3ceba4676184ec5d2f1ea065976e32f12454ffb0c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_0/fit_diagnostics.json",
+    "bytes": 1531,
+    "sha256": "16e858c64f519b588bbf67a126b93d0323614758b9db7743e68cd496463ebc71"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_0/learning_curve.csv",
+    "bytes": 3758,
+    "sha256": "2778dd6ccca8782474956d5194222fee7212d5e6aecd9b50187798b0fc9a6bf3"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_0/learning_curve.png",
+    "bytes": 93705,
+    "sha256": "6b99750c81e9e8d7646235cd58899c0d41d4e078e684fd30b5a391a1a19e8f0c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_0/model.pt",
+    "bytes": 708099,
+    "sha256": "a1a3871f1a7f98a0619d33e488a0c609a25879e785d2feb0a8e00bd58995d238"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_0/predictions.npz",
+    "bytes": 40206,
+    "sha256": "de4411e8165cd7a975d628a5822218cf21cc0efce616d709e7d8a19618d0fde6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_0/training.json",
+    "bytes": 15540,
+    "sha256": "86f5a4ef24437309a34be5435c5932bee1f02423b54dc1d958b4af5a4dde04d6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_0/trial_complete.json",
+    "bytes": 916,
+    "sha256": "81d82de84884826081944c34a11f38ac6e9b995c4249e1cc1f4b38997f27d273"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_1/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "7710c24b16b594055e938b867d73812b5784774add191b6433fbc97fe5ef5f83"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_1/calibration_bins.csv",
+    "bytes": 3988,
+    "sha256": "42e94d5b949855f876bd3cb97676783002f666d8796e33a87678e23bf910e18b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_1/calibration_metrics.csv",
+    "bytes": 770,
+    "sha256": "1d7c83108048cc8fc567a0e6fb4d522b4ec24abbcff1da0bf467d3ba7cb61644"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_1/fit_diagnostics.json",
+    "bytes": 1534,
+    "sha256": "3f4d6b6afa1f3e6b36323713a0df180e2eccf9549c312d87f9b70e99834ec8a9"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_1/learning_curve.csv",
+    "bytes": 3761,
+    "sha256": "d5455bc68f85e68c786e68f79a3115bf79e88d05d75cda0db8b9578632944cdb"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_1/learning_curve.png",
+    "bytes": 94691,
+    "sha256": "4a9baf7c0466e185a6a1bb663749cfd84b9bfd7f3566f2751a175a144bb1c372"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_1/model.pt",
+    "bytes": 708099,
+    "sha256": "fa50a3aa39e15ee3ff8b89f62b5a4d25c5d68552a0bc351dd9f75b7925ba1bcd"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_1/predictions.npz",
+    "bytes": 40217,
+    "sha256": "db2a8927ca94e70e701919bd062dc91e6fe9427167ed4b61b6a37a202e9a2177"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_1/training.json",
+    "bytes": 15543,
+    "sha256": "8f44f140ab7eaa6d275db2e58ad7878ffd898c0d8e870dbfaef26b5ed22c1955"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/full_1/trial_complete.json",
+    "bytes": 913,
+    "sha256": "d2884c19f3662ffad821b6d374a6cc456cb3290f9f1a66f67334d5c0e9fce664"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "7710c24b16b594055e938b867d73812b5784774add191b6433fbc97fe5ef5f83"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_0/calibration_bins.csv",
+    "bytes": 3988,
+    "sha256": "42e94d5b949855f876bd3cb97676783002f666d8796e33a87678e23bf910e18b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_0/calibration_metrics.csv",
+    "bytes": 770,
+    "sha256": "1d7c83108048cc8fc567a0e6fb4d522b4ec24abbcff1da0bf467d3ba7cb61644"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_0/fit_diagnostics.json",
+    "bytes": 1533,
+    "sha256": "c6a2193a50328c7e664a4ef74c343016a4f952d83d964b00e9a82494733257b5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_0/learning_curve.csv",
+    "bytes": 2311,
+    "sha256": "91792c365a71cb5933d0efc48ad1b589f57c0c2293ec8420b27598105d95dfb1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_0/model.pt",
+    "bytes": 708099,
+    "sha256": "59e940ce03d8c6763c81ed7456ca16167f49dcd84e89bf5814612724fced4b58"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_0/predictions.npz",
+    "bytes": 40217,
+    "sha256": "db2a8927ca94e70e701919bd062dc91e6fe9427167ed4b61b6a37a202e9a2177"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_0/training.json",
+    "bytes": 11432,
+    "sha256": "7e6ec7f61a932cecc0b576d6935a8ab26755633ab6326c8d893243b5ac1dc742"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_0/trial_complete.json",
+    "bytes": 825,
+    "sha256": "85f369755a0d8305422fa41fd211b8ec9c773a6651740f4b6ca847c7f7119607"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_1/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "b977285b749215236e03adf279bb248c6eb77b6f3b8e5313b0621993f15b6f49"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_1/calibration_bins.csv",
+    "bytes": 3896,
+    "sha256": "16f318eff42b39f04f1c3ba3fbba7f45a559444bb46974b2bbb7ccc525216751"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_1/calibration_metrics.csv",
+    "bytes": 761,
+    "sha256": "49fcb9dcb22f1067be10f2d3ceba4676184ec5d2f1ea065976e32f12454ffb0c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_1/fit_diagnostics.json",
+    "bytes": 1530,
+    "sha256": "f17c6d1552d92cda236d4f929129dc5406f453166ebb2d7559627886b2700047"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_1/learning_curve.csv",
+    "bytes": 2304,
+    "sha256": "4e99bd7472e3d6d916e1d5fc70c231466a5edeb1d873b650ab3278fa9aa08106"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_1/model.pt",
+    "bytes": 708099,
+    "sha256": "e83e1a3ce55178cbf8968094b7de5e1826f96b63ea5f9b3942e16f9300b5b940"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_1/predictions.npz",
+    "bytes": 40206,
+    "sha256": "de4411e8165cd7a975d628a5822218cf21cc0efce616d709e7d8a19618d0fde6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_1/training.json",
+    "bytes": 11425,
+    "sha256": "fff70b0137d19ca565a340d968efe8359a515019007e219ad4c1460b2fc6f80f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_1/trial_complete.json",
+    "bytes": 828,
+    "sha256": "3cb673873aed5c8a5882e115d1a11c7402fccb30a7d2d8ae561ada69c29002cd"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_2/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "3abf6aba9fbc3fd160d7df5fe0dbd39cc7a5713f55c9a6568522a022cd075119"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_2/calibration_bins.csv",
+    "bytes": 3878,
+    "sha256": "b388d0657bfc2ee4fde925c8b33c9e7d3db4e302cff62dc077bcad815456bd75"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_2/calibration_metrics.csv",
+    "bytes": 757,
+    "sha256": "a3d4428923a572feab9d5ed829318205abf5e399235aefe32a784b8c0f45e4bb"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_2/fit_diagnostics.json",
+    "bytes": 1534,
+    "sha256": "4411de0703d14c7bbc9bbffa9ba897194d0071ecb7bed0f3a64512761f4b21f1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_2/learning_curve.csv",
+    "bytes": 2303,
+    "sha256": "680fd76a0a360c26361cd9b36ab51ed5fe6fd43ce8da19695ddb57c76d3deff1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_2/model.pt",
+    "bytes": 708099,
+    "sha256": "5ecfef4b6d98c4a4fa14c482ebfc2bf9d3ec8f5028d02d5143373db3a7896d1a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_2/predictions.npz",
+    "bytes": 40189,
+    "sha256": "4a2e9428318505cc49a79db4992f6201295e7552b5cc8e9c017d94481d47f406"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_2/training.json",
+    "bytes": 11432,
+    "sha256": "f1a996df69305e3d67495b3f493d3f107cf4e310460aa9fd88ca49ce9d87fb23"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_2/trial_complete.json",
+    "bytes": 828,
+    "sha256": "a77ce7483063b3a42ad1e5a0fd4b68f870c46ffb6dce207c4a48669af2272cef"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_3/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "110f04403f187fecbed59d5fab2a75cd1f44e40aad472ff47be8618bfe1846c7"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_3/calibration_bins.csv",
+    "bytes": 3855,
+    "sha256": "631fe71adadf8ca7e03c03d0771ccc562646eb3e667b69c5abd772a6c8daa777"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_3/calibration_metrics.csv",
+    "bytes": 761,
+    "sha256": "33d314a8199761d1999e932d99041ba084df73f8094996049a4de5b203a4d423"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_3/fit_diagnostics.json",
+    "bytes": 1514,
+    "sha256": "c440e047727ef4ba865edc9d3ff17cae57caa6cf2f29d3c71b90e57568fe3d1b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_3/learning_curve.csv",
+    "bytes": 2305,
+    "sha256": "af3cca00e740ebd4e8d44ecbb80cb4f512cc864218829a424ad522014e620a4f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_3/model.pt",
+    "bytes": 708099,
+    "sha256": "2100e9fc692fdf347ae0ed482097eaa0b93c18779d449c39fcf501a213a89afc"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_3/predictions.npz",
+    "bytes": 40176,
+    "sha256": "8e7adf173fd5a5e34d6945b0977da4298169b96405dc9f52eb1c4482bd4f1787"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_3/training.json",
+    "bytes": 11414,
+    "sha256": "0380b69a70f93f2f2757887da76e2271bc72f6b0f4422375bb599ba4648c1672"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/search/screen_3/trial_complete.json",
+    "bytes": 829,
+    "sha256": "c4a71d82648f38d7272db28792e6c5557d856b58b275001b2110ace970665e80"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/status.json",
+    "bytes": 7210,
+    "sha256": "f0305eab461533c64ff5d8bf68b7440e2e7a062506566974888e5c7d4bf403cf"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/paper_hybrid/training.json",
+    "bytes": 18298,
+    "sha256": "c35fff6f7d3bbb287bbfcf995a0f6bbbd4f0c83ae7a5ea45cf327a3d7e03009b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "fdf0ccb8471f49705b6071bc4aa5f6bdc2b134874e2372893c295fc9c4749a95"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/calibration_bins.csv",
+    "bytes": 5579,
+    "sha256": "9955c3c9ffccd48bf0094717a1ddc837530bbe161cbf44d7d339d7e719451d85"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/calibration_metrics.csv",
+    "bytes": 1028,
+    "sha256": "be4e682c9f2d588711c476d49660228a5d80ec2c670aa793564a4e920283b92a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/fit_diagnostics.json",
+    "bytes": 1534,
+    "sha256": "83841ce09f6dfe84abe4046ce2c4674831aa3c7c18d40b476e1753c0b3336a4e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/inner_search.csv",
+    "bytes": 5261,
+    "sha256": "f10e26504b5b5ded7c98130326bc4ab55a1954a5e66682e34f5cd4b37d03c4d3"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/learning_curve.csv",
+    "bytes": 4407,
+    "sha256": "e8493c7759ff0c617ea1e3822c0c94e8de8b657b1fc9ec82f84961259a82abf1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/learning_curve.png",
+    "bytes": 107945,
+    "sha256": "fc9ceb947b98427f3b3af817088aba08ccba758f673477c3440fea9191e041c2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/model.pt",
+    "bytes": 2489085,
+    "sha256": "c45d32457f38e612349c7823e8246bfe42eadac8bc69d0f3a4af279b4c44e85f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/predictions.npz",
+    "bytes": 87833,
+    "sha256": "255f4729e6816f4a073941bac30cbaf5fcfa099faa84b92159d322654708dacc"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "b6b5cda63b3639a04b16dcd0a609ee0f161943b3071adaac3fa891ddef40aa49"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_0/calibration_bins.csv",
+    "bytes": 3896,
+    "sha256": "23e8525c2f87a7d8c64a42a3a28ea4af2f9900b962675e81e17d1c06ad75050e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_0/calibration_metrics.csv",
+    "bytes": 765,
+    "sha256": "a616ad817dd66b8bf2306f5a4cbbe0cd382fbe03d1078e6d2b64c456e0d1ef97"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_0/fit_diagnostics.json",
+    "bytes": 1534,
+    "sha256": "83841ce09f6dfe84abe4046ce2c4674831aa3c7c18d40b476e1753c0b3336a4e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_0/learning_curve.csv",
+    "bytes": 4407,
+    "sha256": "e8493c7759ff0c617ea1e3822c0c94e8de8b657b1fc9ec82f84961259a82abf1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_0/learning_curve.png",
+    "bytes": 107945,
+    "sha256": "fc9ceb947b98427f3b3af817088aba08ccba758f673477c3440fea9191e041c2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_0/model.pt",
+    "bytes": 2489085,
+    "sha256": "c45d32457f38e612349c7823e8246bfe42eadac8bc69d0f3a4af279b4c44e85f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_0/predictions.npz",
+    "bytes": 43559,
+    "sha256": "4dacbaee64ecdfdc9edaf808ca2dab96b8d612ba188e2c9a0cb1d0287ad49ace"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_0/training.json",
+    "bytes": 16871,
+    "sha256": "d3336fa17538c9554823de1f1a350de2eb2ff42850d08f68988e15100c629fe0"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_0/trial_complete.json",
+    "bytes": 937,
+    "sha256": "049cf521cd4cc3e0debbe0a7e0873eeeb001871cacc4c750c4b567db005f5752"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_1/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "bd3a4a38a6b20489c3e554921187f850e2d161069ee5b4f8d1b29d3e849e1ba8"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_1/calibration_bins.csv",
+    "bytes": 3836,
+    "sha256": "9fae6a4414ae4c595a49139c3db077266ee401520b7f11458ca8ee34f9955b93"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_1/calibration_metrics.csv",
+    "bytes": 767,
+    "sha256": "83e2d00148ccc47f98b461e9d5c12bfae1d3115d81567a3ecce5fa0020fd7973"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_1/fit_diagnostics.json",
+    "bytes": 1534,
+    "sha256": "848485fd8107d1f0e6d708db0d6c77c536a7a694222452d78bc4fa0ca22ca3e0"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_1/learning_curve.csv",
+    "bytes": 4412,
+    "sha256": "1204e308dc9b89cf1e4683a7a343a8dddbf3bc449cf2022f8f6968d8484802a8"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_1/learning_curve.png",
+    "bytes": 105257,
+    "sha256": "8d04d6d82bc75fa1c1466309afc38cabe764ce7d969e0eb9d59094887057945f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_1/model.pt",
+    "bytes": 2489085,
+    "sha256": "eaed1d4cacbf4956b452d5ace5f1da996119d036782e2a1457737409f1c843ae"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_1/predictions.npz",
+    "bytes": 43585,
+    "sha256": "d31777f22d6357d92c661d260748e59e637bedbc21408dba843b9063c0644f0f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_1/training.json",
+    "bytes": 16874,
+    "sha256": "85040c85450382d3389a751f48b9227efecd66ff3ccb1abdba6196df89cf98b1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/full_1/trial_complete.json",
+    "bytes": 936,
+    "sha256": "cc3e160aacf78208e26460a6b0594ad94ced18c8f192eb1da963ff6bfae2e7c6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "a47d69d4f16931311d79b1a5bfd0419a5bdb17e30b152bb2741ea89dca24d8a5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_0/calibration_bins.csv",
+    "bytes": 3855,
+    "sha256": "ee2026af660ae2c3557958aa7ea039acb878d7eccf6edde7c10ef087cbef4dcd"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_0/calibration_metrics.csv",
+    "bytes": 762,
+    "sha256": "42855950cfcbc5a5631ab45891bdf81eea914ba0790ca50cc8a3f0e0b08fd797"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_0/fit_diagnostics.json",
+    "bytes": 1533,
+    "sha256": "ac41688c591e360ecec69f276bad64007dfcee133a46aa706db3b2f928b6fdc8"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_0/learning_curve.csv",
+    "bytes": 2495,
+    "sha256": "4a95f497c828fe1fec2bd94c302f43ff388412d07bab3a5beb05c8a011888840"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_0/model.pt",
+    "bytes": 2489085,
+    "sha256": "55b0c0ad5a907bc2726e21bb93153002f2dc147a2f53f1f57e40366e9ffed77a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_0/predictions.npz",
+    "bytes": 43427,
+    "sha256": "7efa00cdf14826432a5c9e6537a0cc0c1098d8136ccc211068f5e0d9fb19fb19"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_0/training.json",
+    "bytes": 11759,
+    "sha256": "736fd3c620bd4cbf66e5e97eb2ab61f5b232d09fd273b0bc158c6d54b67e982b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_0/trial_complete.json",
+    "bytes": 844,
+    "sha256": "02227e02b5acbfa54c5b1332c205393b4e82cae0211db349a7410da13e3a303e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_1/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "b6b5cda63b3639a04b16dcd0a609ee0f161943b3071adaac3fa891ddef40aa49"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_1/calibration_bins.csv",
+    "bytes": 3896,
+    "sha256": "23e8525c2f87a7d8c64a42a3a28ea4af2f9900b962675e81e17d1c06ad75050e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_1/calibration_metrics.csv",
+    "bytes": 765,
+    "sha256": "a616ad817dd66b8bf2306f5a4cbbe0cd382fbe03d1078e6d2b64c456e0d1ef97"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_1/fit_diagnostics.json",
+    "bytes": 1533,
+    "sha256": "fa0c71330d95c063786100d8e4fdfbf25058a2985e7aa39f8654b33b1dd238ef"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_1/learning_curve.csv",
+    "bytes": 2504,
+    "sha256": "597404aaa21d0dccaf2c397b2502635287314b0c98255fb6113213c7e215060a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_1/model.pt",
+    "bytes": 2489085,
+    "sha256": "62971e5b34bcdf4bc4aafa37765661d8b4e30d89e18fe2ff02f318076e4e860a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_1/predictions.npz",
+    "bytes": 43559,
+    "sha256": "4dacbaee64ecdfdc9edaf808ca2dab96b8d612ba188e2c9a0cb1d0287ad49ace"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_1/training.json",
+    "bytes": 11773,
+    "sha256": "11d36fd812cd1de787984e8d739d97d3c0b56b9c06a77fdd3b03ca11dba2e385"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_1/trial_complete.json",
+    "bytes": 849,
+    "sha256": "b7d3464b94e0d4c0ff0cf4c4a691bb6e7c899a5a9c62da1527ce0fedcd753d8d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_2/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "bd3a4a38a6b20489c3e554921187f850e2d161069ee5b4f8d1b29d3e849e1ba8"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_2/calibration_bins.csv",
+    "bytes": 3836,
+    "sha256": "9fae6a4414ae4c595a49139c3db077266ee401520b7f11458ca8ee34f9955b93"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_2/calibration_metrics.csv",
+    "bytes": 767,
+    "sha256": "83e2d00148ccc47f98b461e9d5c12bfae1d3115d81567a3ecce5fa0020fd7973"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_2/fit_diagnostics.json",
+    "bytes": 1534,
+    "sha256": "6e15a724633d3b7e515c7393b934abecc8ad652617c25dbd6d74786472793288"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_2/learning_curve.csv",
+    "bytes": 2509,
+    "sha256": "a1c8fe119ff278af992c66696862e0ec67553598b2ed45753270f90f6724d597"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_2/model.pt",
+    "bytes": 2489085,
+    "sha256": "cd4f578e23a788eb0da24c74b0f1520faa0386b4c2c5f7a209edb31d892c533a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_2/predictions.npz",
+    "bytes": 43585,
+    "sha256": "d31777f22d6357d92c661d260748e59e637bedbc21408dba843b9063c0644f0f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_2/training.json",
+    "bytes": 11779,
+    "sha256": "2f5719fa15b58df39e114f3aaeb331507a01bf8bc4464b1360303174b21d7509"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_2/trial_complete.json",
+    "bytes": 848,
+    "sha256": "992f8fc7a61c91f74421c397a662064122de5ea06686e43aba700dd1f93343ac"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_3/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "c4bfe160a83904f5b7b7ad0b4db828c4f36d3bd0cfe93b6341c66b14361098ad"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_3/calibration_bins.csv",
+    "bytes": 3875,
+    "sha256": "437bffdad3a2534ecd9662f8c44f7707281478a461e1320bc3d5dd8381fd20e9"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_3/calibration_metrics.csv",
+    "bytes": 759,
+    "sha256": "72a16c9bd61abbe587d3974a05b48e47f2a18fdab2e2f72aeee51ee2afb86ae7"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_3/fit_diagnostics.json",
+    "bytes": 1531,
+    "sha256": "0363a130365268ec3f1446e4fe717f1696c8b76844b31cf8b09f6faa9de63e19"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_3/learning_curve.csv",
+    "bytes": 2501,
+    "sha256": "7ded05b3e976167f58dc22b1b5c0ab795a40cb23e6d9dce9d95e4687b6ebaaf2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_3/model.pt",
+    "bytes": 2489085,
+    "sha256": "9d234679be980db962f9a42163ff4684995b8765bb23dbb28257a77192e3aef4"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_3/predictions.npz",
+    "bytes": 43528,
+    "sha256": "59bf0848367b7cc4f5e19eea5f31c3605c46efcf4581cac709797e8d10e5cf2b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_3/training.json",
+    "bytes": 11765,
+    "sha256": "43db25d1a395455a24325e94e5cec5553bb8a50cd3c6c3d09b176f04e4a89762"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/search/screen_3/trial_complete.json",
+    "bytes": 847,
+    "sha256": "3746005b92be999652917bf8f7cafaa92c39324b5f8ab33552ef1e0dbb90edf8"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/status.json",
+    "bytes": 7210,
+    "sha256": "518774e02240ebf5359b72946142af49e0c625612c768c5dd0ec56d014e43f1b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/proposed/training.json",
+    "bytes": 19681,
+    "sha256": "d53cb8f5c162b9948af4df81910d804af69576ed44a0e4e578db7e29d8adfd14"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "5d56b8c5abb717e6175b45e41976903f631bcd23bbccc40dc36ecb7efcbd9c15"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/calibration_bins.csv",
+    "bytes": 5557,
+    "sha256": "348f79ef82c11bd707089ef94f06ed129b5569b4cbd90edc184c85fcd34472be"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/calibration_metrics.csv",
+    "bytes": 1023,
+    "sha256": "c57d568e43836324a305f317fef5ce6972fca8f329f3ac003a45348cc94090c2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/fit_diagnostics.json",
+    "bytes": 1518,
+    "sha256": "078f9f6155668378b0b8856eeebc0c3d09fb3f6e4c6694aff48fbe1261376a9e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/inner_search.csv",
+    "bytes": 3810,
+    "sha256": "8e991810767e30a4395ef1d9d2e78e996d3fe2a7c4d760ef8dae1e852485538f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/model.joblib",
+    "bytes": 13240297,
+    "sha256": "85bf3de776b0afd27bd71ecf59c9c16f06b64d658a87d1a1a7ef91d0644095ae"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/predictions.npz",
+    "bytes": 121950,
+    "sha256": "226ffa14430afe524e211007c8bb41406a540bf0452c5273c14a2bd19c4798bc"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "3ab0a131982ff2197f60b124ee9c690af973051b584fd076f1d890a756f608a4"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_0/calibration_bins.csv",
+    "bytes": 3740,
+    "sha256": "75fd0f91d81b3417e0794bdeb831b8fc861cecc7d764085d88331c8a06fbf097"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_0/calibration_metrics.csv",
+    "bytes": 755,
+    "sha256": "be8aee668aae825cc3e112ab474f61f15cdf1f5cdfffde7fbe72fad22861ac84"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_0/fit_diagnostics.json",
+    "bytes": 1518,
+    "sha256": "f7903978936d9cf493f01719495eb0e919ba6a749ef0bca6960d5ecb4df58fbb"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_0/model.joblib",
+    "bytes": 43028793,
+    "sha256": "c1a6cc719c366352e3c6cf9887757235505e668de3f6761837af53ffadddd7e5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_0/predictions.npz",
+    "bytes": 70922,
+    "sha256": "3d3a80d69f55e9d6b5cab95c7ac67f7a690429d6cbf78f80f69116b4475b430d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_0/training.json",
+    "bytes": 3227,
+    "sha256": "ad538b8aa277bf8f35491de552d8a161f92e0ce8a6715329d3b4c7ecb5c35e38"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_0/trial_complete.json",
+    "bytes": 754,
+    "sha256": "1b3159c26d2a181e8226ecb33b7b9730e55f2e0193cf197d493c54fd0369cbe2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_1/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "7bef3e7cf85e8e7990f8254496d0963c2f91bbaf60d510d73b58f4fc99a25fcb"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_1/calibration_bins.csv",
+    "bytes": 3833,
+    "sha256": "14ab460ddce00b4c659ca62e6394c1c4fbc3c979e64926a78d1ba2eea13c22e7"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_1/calibration_metrics.csv",
+    "bytes": 755,
+    "sha256": "3e21f28e5c3d88ab9f0c94ab99a2322a389643dd617525cd32c2827918a68367"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_1/fit_diagnostics.json",
+    "bytes": 1515,
+    "sha256": "40a5971d1f74548b561d0c12263cf5ba24940c16a521eb3d1cbc4d8164d305d4"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_1/model.joblib",
+    "bytes": 21360777,
+    "sha256": "d73363f4fcd28106a9547fb44c3ff1060b4a03b0cad1d874ddce656f8608def2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_1/predictions.npz",
+    "bytes": 73535,
+    "sha256": "19e4ffbc299fddf729e97217c332ba0593d824f30d462710186899d3a758700f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_1/training.json",
+    "bytes": 3222,
+    "sha256": "74c4ceb15c0f25ee7f49d493118d1fc8854fa0128acf74a61c09c036ae79bded"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_1/trial_complete.json",
+    "bytes": 751,
+    "sha256": "29fb01a0ebc31d632f9a3770a6fe25ae393d048372587e16a4c539d80d2d4d64"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_2/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "53de26330c2727b9eff55decce7c59124dac495058d4eb769aa24a6eb45c43fd"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_2/calibration_bins.csv",
+    "bytes": 3813,
+    "sha256": "2df5858625a5c6afba398db9d8abebb342557afd32758589c5f7b4aeb12f6d9e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_2/calibration_metrics.csv",
+    "bytes": 755,
+    "sha256": "0a87ca4c32535d15fde65886f784a09ea59d69393dc03af5e0ed9692703bd01b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_2/fit_diagnostics.json",
+    "bytes": 1518,
+    "sha256": "078f9f6155668378b0b8856eeebc0c3d09fb3f6e4c6694aff48fbe1261376a9e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_2/model.joblib",
+    "bytes": 13240297,
+    "sha256": "85bf3de776b0afd27bd71ecf59c9c16f06b64d658a87d1a1a7ef91d0644095ae"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_2/predictions.npz",
+    "bytes": 73452,
+    "sha256": "0bad71d326eaf079d87d18ad3dcb57ce8ba465822e4a4d8da31520ee2dcfdf86"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_2/training.json",
+    "bytes": 3225,
+    "sha256": "5f7e69dcef09182df37fe481c104cab972d85a5f96bba38fb51063f970479478"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_2/trial_complete.json",
+    "bytes": 752,
+    "sha256": "8795d2e9d0c02d654031da754fd77c7fe7187c53d78f80739af7060f2f683b5c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_3/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "fd4dce59edb7785c57c3ba7f9e707689fcf948c397fc7649cea2c35b4b3a00ab"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_3/calibration_bins.csv",
+    "bytes": 3897,
+    "sha256": "4d7f611fa4446a8e81b4974744eb4a0a279015bfa45f3b2e5ed6477031e286db"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_3/calibration_metrics.csv",
+    "bytes": 757,
+    "sha256": "5b48480729b1c0cfbf64d0033dbacdd1f990fcdef366f6a63f2df1d7283df362"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_3/fit_diagnostics.json",
+    "bytes": 1514,
+    "sha256": "58bd202748a8082e675edeb2c499195595032e9e0aed4d4a58d9998608be9267"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_3/model.joblib",
+    "bytes": 12746857,
+    "sha256": "d3ccea46d4d5edfc026017f31940be7dcffeb0bbb2af464916a7c84aacc9b3c7"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_3/predictions.npz",
+    "bytes": 73375,
+    "sha256": "81388ecf220bdafab0d7f255bbef6af16f5fc31a40fe0302d14c389bae212ec3"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_3/training.json",
+    "bytes": 3219,
+    "sha256": "4ed9b28f7f60a06d9dd4e8bf34bac0336b1a06e5f3b10eb609f0172e70ecc0ba"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/search/full_3/trial_complete.json",
+    "bytes": 749,
+    "sha256": "3cfb05065fc287d91e008acd6068dd0daee5fed898666124cf75a3e816bf7093"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/status.json",
+    "bytes": 4368,
+    "sha256": "f66d95b45a91432aeb8e665d4510aeb3ade53d2a635bd7c3b74de59cd0ae147b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/rf/training.json",
+    "bytes": 6114,
+    "sha256": "d3e935896966be70c182fbf44c041376eb8875e3b8d62e80889b31e6500a54f5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "ebe264031472434f1f186f9260b308bcd4820266be3c13a9376c40def84bdd76"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/calibration_bins.csv",
+    "bytes": 5115,
+    "sha256": "1116867aa0ac2ebfe2c3d241ceedc3b230dd2a613b4bcebba5caec0df971ed78"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/calibration_metrics.csv",
+    "bytes": 1024,
+    "sha256": "60cb1113cd62b23592275cd8dbd25517b7b959ca4315ebbbfcdc8e2034e95d70"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/fit_diagnostics.json",
+    "bytes": 1518,
+    "sha256": "07d6ea6a639bbd289f5729a6b19a58f8c72f9aa48ef2ddaa3dac665b426f93fb"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/inner_search.csv",
+    "bytes": 3722,
+    "sha256": "cdea5e0c0c6d0f50bb94f3ec644d26b0642e12b3a029b0dc51ab22811a75a791"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/model.joblib",
+    "bytes": 8303867,
+    "sha256": "d4067220b9fc030eacd9f1c57cc7635a9c173b2ab0b39f719b921e1ad0fdd0af"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/predictions.npz",
+    "bytes": 121123,
+    "sha256": "7d63918519790221a22ba7db031b24211d4dbbaa8f43ed58a296c0bbc58abd95"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "fde769902f8eae06731a31e5771821680be7927afd6bcd9ae355ece141384e72"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_0/calibration_bins.csv",
+    "bytes": 3548,
+    "sha256": "7890aa8fdb3bd0eb62530a05675b14cce775bf497d1d03ae32850e3e4ebaad33"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_0/calibration_metrics.csv",
+    "bytes": 753,
+    "sha256": "8f5da0723989082592bfe19dd4bc4a43ef13ecb0dad0598ca904ada5b5bc0967"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_0/fit_diagnostics.json",
+    "bytes": 1518,
+    "sha256": "07d6ea6a639bbd289f5729a6b19a58f8c72f9aa48ef2ddaa3dac665b426f93fb"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_0/model.joblib",
+    "bytes": 8303867,
+    "sha256": "d4067220b9fc030eacd9f1c57cc7635a9c173b2ab0b39f719b921e1ad0fdd0af"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_0/predictions.npz",
+    "bytes": 72836,
+    "sha256": "d7fa4cb28192f1e69284718e4c684954a0cdd4e2c776538ebe21e3f8822972b4"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_0/training.json",
+    "bytes": 3082,
+    "sha256": "4624cb73a3c3533ec6dd65fd6261f43a24fdd844c4c7fb1e70c9f2577bf0ecb7"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_0/trial_complete.json",
+    "bytes": 716,
+    "sha256": "3b5e696962a5f28725001cfe5ac3e712e06468e777396f4984978df116c20e04"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_1/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "a90e20c1afe312dd29394f445929fbd32ba8de211f9921cfcccd3a4a6cd8b890"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_1/calibration_bins.csv",
+    "bytes": 3625,
+    "sha256": "a5f188b8ad245847eac29262f55a41ba8b25a01bcaafa61130ed32a11e6b957b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_1/calibration_metrics.csv",
+    "bytes": 755,
+    "sha256": "fa52f1d049afa2acd9a634c77cbe0aee3907aa4a5a7e2e105a198cbf86b075df"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_1/fit_diagnostics.json",
+    "bytes": 1531,
+    "sha256": "5420f5395bd33301a335342c12e703c8356539067f4afb2a9894f5105fb81973"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_1/model.joblib",
+    "bytes": 7886299,
+    "sha256": "c275b59de123fd6cce69e4da0bfca9a96e89078a672ca6054358134e996ba853"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_1/predictions.npz",
+    "bytes": 72518,
+    "sha256": "05c5c525be4bbc1d494a18781de0f389c42f992536181c8e694b32920727bdbe"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_1/training.json",
+    "bytes": 3093,
+    "sha256": "a169171015c37dfd6c621b217cdd1c94e16a994ccc7d66a4e9a392b63e334ba2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_1/trial_complete.json",
+    "bytes": 716,
+    "sha256": "4b7ce5dde3652c61b50341109a1135258ec8f948362b0818f6c4f68afc9d074c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_2/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "d059b6a195a1c69f8e2601e0bb8cc47087a88715d078310cd2c9eda20bea339c"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_2/calibration_bins.csv",
+    "bytes": 3853,
+    "sha256": "48f47242bebae88bc916b39ff9a6f28e162403fb1550be669808dffcbb726ad7"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_2/calibration_metrics.csv",
+    "bytes": 761,
+    "sha256": "de8c4d90082210d2598da54d65ee189e6dc59f4d9d50d3389de39d13e8bee027"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_2/fit_diagnostics.json",
+    "bytes": 1529,
+    "sha256": "d1a3b1b7cc43ca126272ccf5f3bef82658be2155beaecb04ee9d13a8456dc6b8"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_2/model.joblib",
+    "bytes": 8277563,
+    "sha256": "05cdaea5974252cd2da81c85b1a2370c082264f0937476e6fb1d55b4c4942405"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_2/predictions.npz",
+    "bytes": 69896,
+    "sha256": "1260f7a5a60b95628e4c44d33990df172afaecf1f37772b6566b87c58bf6889e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_2/training.json",
+    "bytes": 3095,
+    "sha256": "66fdec23bd3ea5c0e5d85f736042a20bb193d34d8f213a1eebeffb24dc36ab72"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_2/trial_complete.json",
+    "bytes": 717,
+    "sha256": "7872e8824c19e19011efe121ffbf8a687df5d4d540c01fb0bbf60ec17fe4b62d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_3/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "48081544120178ee5262f8fb78588dd3ea3b7cafe716d661007d7090a4846c12"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_3/calibration_bins.csv",
+    "bytes": 3809,
+    "sha256": "ca299fb4f3a9528a8f162fb772bc1cb35021cbddf23b57fde8592478a495baa0"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_3/calibration_metrics.csv",
+    "bytes": 763,
+    "sha256": "4ce8ab2087fff91c26985c5dd39ca8c96451b4879cfa08c7cfdea0c251670adb"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_3/fit_diagnostics.json",
+    "bytes": 1532,
+    "sha256": "93381cfd5687a64390e7ca764237538792589b30240263ba2581fb539417375a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_3/model.joblib",
+    "bytes": 8150987,
+    "sha256": "71e65ac64543ca86f1ed3efef18892016b9e0555fb72f0930d83def5f9c6cd27"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_3/predictions.npz",
+    "bytes": 71623,
+    "sha256": "da2047d80be6a95e64745eb7d521166a464d73d9ab3a7c0ce4b06798289521f0"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_3/training.json",
+    "bytes": 3096,
+    "sha256": "a8edc98802dbc4c940a51b3bca825e4176e6303b806f0494ab79af696d3199c4"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/search/full_3/trial_complete.json",
+    "bytes": 716,
+    "sha256": "0cb0255a27a88ad2b200e6d794879edd910ee83ed8646db2edbec6acb9fadde5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/status.json",
+    "bytes": 4368,
+    "sha256": "437997b585a5ec548a0ac42303e3e4ca9db182dd09eab8916d0ac0951f9eb90b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/svm/training.json",
+    "bytes": 5831,
+    "sha256": "4b74e01437780c133b2005f1f67564a6bad48e2dd67a907b2974aec9bd93e9c2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "735307a74e112ec05d7f24605e12a69e0447e51e6ce462558a7c1e1836bf6f3a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/calibration_bins.csv",
+    "bytes": 5659,
+    "sha256": "5f2082617aeda0a15d4384b08498ef694297402b0a8373025b6f1655f5b57b6f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/calibration_metrics.csv",
+    "bytes": 1025,
+    "sha256": "62dd24b4e37893d5e528072ccf08a771fbf731b89874d3a931bb140d89a46895"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/fit_diagnostics.json",
+    "bytes": 1536,
+    "sha256": "1fb2ff7228f4a0ac842666e9a00582a75e6f35b45e53f56aab60959a1595b275"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/inner_search.csv",
+    "bytes": 5222,
+    "sha256": "ca7d3624cb340a7e4612a71424f361a36a2890085a4fedd0f911e0c3210c4986"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/learning_curve.csv",
+    "bytes": 4046,
+    "sha256": "db54f2e33aa1cbd29bc984b48569ff31ce8af3d5a3d1334126fccc0303bcaecf"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/learning_curve.png",
+    "bytes": 102263,
+    "sha256": "485e37e90d83f7a791e0ee1846540fd25d81a10d5553bbb42a28ebc9ffd27eae"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/model.pt",
+    "bytes": 1226731,
+    "sha256": "bf03a2a522a5b0f3677a8458a97d087cc7eaafd088f69a669243f94da01a3239"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/predictions.npz",
+    "bytes": 74587,
+    "sha256": "c2d4e4836237bfcf527fbd071ec79fef3ec2c6df5f25b8c061d4a7eb96c88682"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "249fb7a19c245c955f3a3b95482d927b485ca04369b6f9d0a6116568f707c86a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_0/calibration_bins.csv",
+    "bytes": 3972,
+    "sha256": "462fae52666514bbf7f1bf2fa6c6991efcca226c2172c541c175cbb61767d7ab"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_0/calibration_metrics.csv",
+    "bytes": 765,
+    "sha256": "78b7498199ffcfe4966815ac19b7a57a6dd0299066fa041ccb3ac0d51d3ce939"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_0/fit_diagnostics.json",
+    "bytes": 1536,
+    "sha256": "1fb2ff7228f4a0ac842666e9a00582a75e6f35b45e53f56aab60959a1595b275"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_0/learning_curve.csv",
+    "bytes": 4046,
+    "sha256": "db54f2e33aa1cbd29bc984b48569ff31ce8af3d5a3d1334126fccc0303bcaecf"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_0/learning_curve.png",
+    "bytes": 102263,
+    "sha256": "485e37e90d83f7a791e0ee1846540fd25d81a10d5553bbb42a28ebc9ffd27eae"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_0/model.pt",
+    "bytes": 1226731,
+    "sha256": "bf03a2a522a5b0f3677a8458a97d087cc7eaafd088f69a669243f94da01a3239"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_0/predictions.npz",
+    "bytes": 40292,
+    "sha256": "64523a80acf7bc426a417efefd0c73138a9515812aab08e8d168f5bf0ec36726"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_0/training.json",
+    "bytes": 16988,
+    "sha256": "bd24ddea681eee965e0ef36528661224fc40b48c2175a947319e12f2c8e36be1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_0/trial_complete.json",
+    "bytes": 913,
+    "sha256": "a5c2ee20340d07a9d1b289e9d7d552124f110b57c2a977badfea0a2ed2fbb157"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_1/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "b8c82c812ef5821b4a7c81c8b28788e0ddf08b5bb26e1f2debc38dcd17f88b8e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_1/calibration_bins.csv",
+    "bytes": 3909,
+    "sha256": "a44289e3e50269e9936a57e1a3d23c206ad69ab5aa3527d8ad69d7b3159ec8a5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_1/calibration_metrics.csv",
+    "bytes": 763,
+    "sha256": "d6250ca14dfbdf258ee983f3905067578b841b3ee82b85b54e78f9be4930d39e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_1/fit_diagnostics.json",
+    "bytes": 1532,
+    "sha256": "596a10389965f8153e6789403d16c7cfd20eaf0a43eb8a5d38ffbe8e55d26564"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_1/learning_curve.csv",
+    "bytes": 3758,
+    "sha256": "6e54ed4f523b2b46780511a587ae167344dc1ae0ae6046a70e3a96c7844beca6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_1/learning_curve.png",
+    "bytes": 107322,
+    "sha256": "06703b5483e77466943318aaaa609f7466cbc3b89b9b15d9a881c1ec95d2a2e6"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_1/model.pt",
+    "bytes": 1226731,
+    "sha256": "a77e24f573eb4a72dccd636b7c1f897ee396c6d76b42ea7ecdef8119dfa6aded"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_1/predictions.npz",
+    "bytes": 40302,
+    "sha256": "bc6e123471278fd28ebece3e52587696832bf2bfd735eda9a0779b41ce155c69"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_1/training.json",
+    "bytes": 16168,
+    "sha256": "8ff9e53df8b615d96499c1bad9ccbf0b491145e1badb3e5c778192658ba454db"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/full_1/trial_complete.json",
+    "bytes": 916,
+    "sha256": "2c45c4481a6f9af4b580b9a530cbd4233455d866c118298147937c2ffba420b8"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "249fb7a19c245c955f3a3b95482d927b485ca04369b6f9d0a6116568f707c86a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_0/calibration_bins.csv",
+    "bytes": 3972,
+    "sha256": "462fae52666514bbf7f1bf2fa6c6991efcca226c2172c541c175cbb61767d7ab"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_0/calibration_metrics.csv",
+    "bytes": 765,
+    "sha256": "78b7498199ffcfe4966815ac19b7a57a6dd0299066fa041ccb3ac0d51d3ce939"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_0/fit_diagnostics.json",
+    "bytes": 1536,
+    "sha256": "affba5edc3e5dbda0124a051b97ed55daf75c94e0676b502321870df05abad57"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_0/learning_curve.csv",
+    "bytes": 2304,
+    "sha256": "cc0c00a141d1ec2251d968cc36e1568afa96128f1bbef51aec2f62f86093cb08"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_0/model.pt",
+    "bytes": 1226731,
+    "sha256": "9cfc00f74bf24dc73ca0f002d1a404d7e1db2acdb09bec19964e655c9b0a670a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_0/predictions.npz",
+    "bytes": 40292,
+    "sha256": "64523a80acf7bc426a417efefd0c73138a9515812aab08e8d168f5bf0ec36726"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_0/training.json",
+    "bytes": 12053,
+    "sha256": "4174667d7dc659ebd09411cc08df0a02228abfa1cd516360bb799c75d8917503"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_0/trial_complete.json",
+    "bytes": 825,
+    "sha256": "c0d4dbdf1f63f06142d733b0501280220ddbbc61da15d49d78f40d7a69082c13"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_1/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "b8c82c812ef5821b4a7c81c8b28788e0ddf08b5bb26e1f2debc38dcd17f88b8e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_1/calibration_bins.csv",
+    "bytes": 3909,
+    "sha256": "a44289e3e50269e9936a57e1a3d23c206ad69ab5aa3527d8ad69d7b3159ec8a5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_1/calibration_metrics.csv",
+    "bytes": 763,
+    "sha256": "d6250ca14dfbdf258ee983f3905067578b841b3ee82b85b54e78f9be4930d39e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_1/fit_diagnostics.json",
+    "bytes": 1532,
+    "sha256": "9787762f2fdcc80127cbc768c6e0110d7e60dbd329684a330b6f8fb8dd1bc11a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_1/learning_curve.csv",
+    "bytes": 2303,
+    "sha256": "7664331de49b5c9246e9d4f6d0f423ac4c86dab12febc9f5b14ec5a7f3f0c0c5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_1/model.pt",
+    "bytes": 1226731,
+    "sha256": "c559362e036cd8ba9b3dd2ba95ea44c99f2b7ad53a68c9c9ba843ae4f23a7493"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_1/predictions.npz",
+    "bytes": 40302,
+    "sha256": "bc6e123471278fd28ebece3e52587696832bf2bfd735eda9a0779b41ce155c69"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_1/training.json",
+    "bytes": 12052,
+    "sha256": "9919a6076ebca0d93e90316bdf5541566edf1fdf2292b752d74439ad0410a41f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_1/trial_complete.json",
+    "bytes": 828,
+    "sha256": "fd5809275592f56fa1503b765d0afee7f1510aceb3fdf8707e342591e32768ef"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_2/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "4e898f477e5d8f4c3d30a3b115fd97ec6b35f3c629ef04afe60c6ce52e7cb76a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_2/calibration_bins.csv",
+    "bytes": 3851,
+    "sha256": "57d636b6e468434507bdf58dfae2337f333841b38cbbb3f96163287b68287d03"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_2/calibration_metrics.csv",
+    "bytes": 763,
+    "sha256": "0b41e1aef634261182fb3df98a75aa497fa16794591ed446d77cb4b7f0709551"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_2/fit_diagnostics.json",
+    "bytes": 1532,
+    "sha256": "e6797af42116e8830a86df90e430f86a888fe49866b0250b52412a4aac982c4f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_2/learning_curve.csv",
+    "bytes": 2310,
+    "sha256": "33c17d200becdb387f289528b08c2c9a4825f32353224ec90cb19f8e44173f71"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_2/model.pt",
+    "bytes": 1226731,
+    "sha256": "b1091fc6344e0ec144bfbb27c2b38d23bd5798d5f998967d8f2c7f4c55e803d2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_2/predictions.npz",
+    "bytes": 40228,
+    "sha256": "61de1210272fa4f024c45448d6c298910bcce33123a9eeee7606ef435669b4ea"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_2/training.json",
+    "bytes": 12068,
+    "sha256": "0f0adacaa2a00f63b1a83f1ead00ee0019117f7db797908f99823986d406ee97"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_2/trial_complete.json",
+    "bytes": 828,
+    "sha256": "7cb04d468f78e3d2ef0f3c160c3602c4ccd107b32e9130ee0cce4203b9586551"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_3/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "edf1b652d3bcf50d49cb5dc34a1e52991cc14ce613c4612319900a9fd38b8c2a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_3/calibration_bins.csv",
+    "bytes": 3937,
+    "sha256": "0ca4d3c725d82db488b529309884cf508f07667f2f0becc1ab864ce45e955b4d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_3/calibration_metrics.csv",
+    "bytes": 761,
+    "sha256": "5d6851d0bf5d4649f228586187fa2f5f9d6d0760d5c9c8cb10ffdabf776ead98"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_3/fit_diagnostics.json",
+    "bytes": 1532,
+    "sha256": "c3e01636a29c70934bed4c186c5b26af296f9895f70e7994108b0e9507a6e779"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_3/learning_curve.csv",
+    "bytes": 2291,
+    "sha256": "815e6857458f5783328f0639f3baa1d679c1354faee35b166209344ecacea3bf"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_3/model.pt",
+    "bytes": 1226731,
+    "sha256": "1810bf5fee0db9282fa8c34093bfbc69c6680349dd00cdaae5dd2e68a29e379f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_3/predictions.npz",
+    "bytes": 40271,
+    "sha256": "5648908360ad21fe347864ab0a44facb859d929505f5ee9c779876271eb5aeef"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_3/training.json",
+    "bytes": 12042,
+    "sha256": "abeac306a29761202973ebbced060ba9bd7505256a3e918b2a6635684f5230df"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/search/screen_3/trial_complete.json",
+    "bytes": 829,
+    "sha256": "02999b20a8191ea3fe9a283ba6073385386ae5cbfe7ea195a470f32971425562"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/status.json",
+    "bytes": 7210,
+    "sha256": "7a688160383d856e6ef862ce74ef65f3ff5164b44da26c83872913ae28ee6210"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/transformer/training.json",
+    "bytes": 19738,
+    "sha256": "ce8cfd80a1d90fb534f1a545bda8f9a88fafaddbdad68588c2161c54e661b76a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "658143a8747681955d6eda00983a394fc92cd2e8fa0ce2e9a8f54cc2e68c069a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/calibration_bins.csv",
+    "bytes": 5587,
+    "sha256": "6cc0574db153f1cc299945e5f88e1c9fa1a8790101e3b73ab76e65037f77d1a3"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/calibration_metrics.csv",
+    "bytes": 1025,
+    "sha256": "711cc2778ac5612d9d0413fd8503a43eb9361b32ea2d79429d6305bfcdf24819"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/fit_diagnostics.json",
+    "bytes": 1519,
+    "sha256": "1003896363a78063f3d864a9af6e9870df9b69cd682a2f4c263b0012827a73bc"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/inner_search.csv",
+    "bytes": 4033,
+    "sha256": "0b3d3d45b2dc0880a2d4b488255aa39a50865c576a1a095611379dfd959978aa"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/model.joblib",
+    "bytes": 339446,
+    "sha256": "a82bb06fb9ec27dc4dc880a037a4e082e7ebd53751a0240137fe90227ff97fa5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/predictions.npz",
+    "bytes": 74707,
+    "sha256": "44b9ad1af53e1e75074b9389678445390a6a999c947145e5e652991a1ea81289"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_0/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "c635491e75e165623bfef8643cb14bee55cfead3a524dfeea209a18b400dee6a"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_0/calibration_bins.csv",
+    "bytes": 3918,
+    "sha256": "d273069d575f68572bdcff005203bea87e5b1a0d9a5cd7565c801ddabefe058d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_0/calibration_metrics.csv",
+    "bytes": 760,
+    "sha256": "21c34470011e3dd3a798423d2d866715d9c9768fc5c1af6d08391171f0d8ee88"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_0/fit_diagnostics.json",
+    "bytes": 1518,
+    "sha256": "569f9914d327e93f2dcdb5137146ce313849947bd2d01ae828314f097004f103"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_0/model.joblib",
+    "bytes": 345159,
+    "sha256": "853b443be5ed909d5d3f30331bccaeb251d508c83b9abe26b06399f6c85161e0"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_0/predictions.npz",
+    "bytes": 40361,
+    "sha256": "51ba61f56c4f4a57f5bf4bcd7a4546a4d5f25cf225156aff03b03b0001283196"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_0/training.json",
+    "bytes": 3847,
+    "sha256": "17ab12c0410b5c4223f9eb03fe242f9cfdb683903999d7479b2e6bd5f9ae1a2e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_0/trial_complete.json",
+    "bytes": 789,
+    "sha256": "5b14fe83b61db99ae2f119c2292e69c810558d46d7d9fd5ac6e22fff5d1a082d"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_1/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "9a97759293aa68a5c0d2095fb582570f22a54125c955e0e97904b29728f30618"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_1/calibration_bins.csv",
+    "bytes": 3863,
+    "sha256": "c5a74ff9a7f47c464b6a29bd93062fa45bd0c0f18965c0a78e3ba3330c145e2f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_1/calibration_metrics.csv",
+    "bytes": 769,
+    "sha256": "b9a51c901ccedb7006ed2f35c9b4cb8c15b847526dbdf8851768ef14696e533b"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_1/fit_diagnostics.json",
+    "bytes": 1520,
+    "sha256": "ba1201f68d0fa6150cb23e07fccaf6d6109605eee8958ae194935036d6846891"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_1/model.joblib",
+    "bytes": 454787,
+    "sha256": "80cf4898c3797153be7ed76da909eac653a43cea8913274fbd86e7e958f114e1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_1/predictions.npz",
+    "bytes": 40409,
+    "sha256": "a2ca4635bbbbf887254cd28ac01aea338e024c640cf56ebdb2d57009567115bd"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_1/training.json",
+    "bytes": 3848,
+    "sha256": "69a16b8573700d6f257b55e238ce64d47ba8ca1e2114e8d7c1a2a9967657a6b2"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_1/trial_complete.json",
+    "bytes": 789,
+    "sha256": "e3652236bb2c2c6ebb4c8f71d3ed546cf0da2b6f1084f360af9f26edd7bb7d61"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_2/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "6611336e474cac8a748cc07d8f66a964bfa2e1d0f9c5a718b7a57a6850d255e1"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_2/calibration_bins.csv",
+    "bytes": 3888,
+    "sha256": "a29f486296afdc8eac29b241730e8bb9bb19c63b30346b2280052e1153df7ff8"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_2/calibration_metrics.csv",
+    "bytes": 760,
+    "sha256": "6105c1cddf90392296cfcf4705924e016b1acb0a4eb8efac222b1482c128c5ad"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_2/fit_diagnostics.json",
+    "bytes": 1521,
+    "sha256": "f3a3236bb3bf2b8546eda8e1ba4d402bf9055ac8567889c7154a84d3ff7c2535"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_2/model.joblib",
+    "bytes": 826955,
+    "sha256": "630a7078097c4f572a1de9abbb73db38f73bf0622f74a8e5943f9fb79cbb0b90"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_2/predictions.npz",
+    "bytes": 40439,
+    "sha256": "aa7aaff0bb8b3230b673516349a125cb382064ece09ed527ed215a1b2375e307"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_2/training.json",
+    "bytes": 3849,
+    "sha256": "585c3bfdd7b41ef0a37f1c6457aff72b68b99b9816e9bc4dce20052be495d585"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_2/trial_complete.json",
+    "bytes": 790,
+    "sha256": "c16dbfcab1a398484122b066ac4e08c3e2049d1751e09ed5a502e53b7617861e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_3/calibration.joblib",
+    "bytes": 1322,
+    "sha256": "5628feb46fe66df4e6c35d5ea7c6f4702c30abee76bef09a37b53aadfe7e1c11"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_3/calibration_bins.csv",
+    "bytes": 3936,
+    "sha256": "1e5e727a1b18387b686929823a8c9cb080085a1f649f94063f4f27c15346644f"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_3/calibration_metrics.csv",
+    "bytes": 761,
+    "sha256": "122de996a57b7c67f4f1c464264ae5d0faa1120f182486afd7e7abc5da0758c4"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_3/fit_diagnostics.json",
+    "bytes": 1519,
+    "sha256": "1003896363a78063f3d864a9af6e9870df9b69cd682a2f4c263b0012827a73bc"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_3/model.joblib",
+    "bytes": 339446,
+    "sha256": "a82bb06fb9ec27dc4dc880a037a4e082e7ebd53751a0240137fe90227ff97fa5"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_3/predictions.npz",
+    "bytes": 40386,
+    "sha256": "48bd0d04241cd080922c6c1f540d4c798a7c164ef6907423fccbc3a4217b6157"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_3/training.json",
+    "bytes": 3850,
+    "sha256": "1b2ca34022166fedc5ce9495f0e2b4cbbb6a7891ef3974689ba038be56aa8eac"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/search/full_3/trial_complete.json",
+    "bytes": 791,
+    "sha256": "35faedf4193d19b51ba5e82a33a1d9b66cbafb928b6c21c19365f1a776c3daa3"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/status.json",
+    "bytes": 4368,
+    "sha256": "1e63a0287c5572f364a02ae0f3640f3889b190a9e37e18ea7832870f9b00856e"
+  },
+  {
+    "path": "day_28/fold_1/seed_42/xgboost/training.json",
+    "bytes": 6915,
+    "sha256": "2399f0b57beeaf62838d8084f4211cddb0a0a80509d6b5c3ecc60b5911a0faab"
+  },
+  {
+    "path": "day_28/fold_metrics.csv",
+    "bytes": 5048,
+    "sha256": "53e2a264d3cca4365470c746d12107e027eacd5ec17a28aded3221a1dd66f287"
+  },
+  {
+    "path": "day_28/missingness.csv",
+    "bytes": 1100,
+    "sha256": "7f864365039f03001b8cae1b43310437ad8b5e4197fbddd22e96ce910f95d542"
+  },
+  {
+    "path": "day_28/numeric_descriptives.csv",
+    "bytes": 412,
+    "sha256": "e50143b90e26a51824f476f1ec6751cb7e8af698b2af5def878680cc69721372"
+  },
+  {
+    "path": "day_28/paired_comparisons.csv",
+    "bytes": 1816,
+    "sha256": "5df5f7e1b8a1f5fb1bd2e3260ecb4e988fab69401ae041f1052e2812e1c2836b"
+  },
+  {
+    "path": "day_28/reliability_bins.csv",
+    "bytes": 31057,
+    "sha256": "86662456803488993f20ec386ff1fef227d6977816e5ce20674e5a1c28efa3ed"
+  },
+  {
+    "path": "day_28/selection_on_development.json",
+    "bytes": 11507,
+    "sha256": "4ec1bd7808d80362bd7cb0c8bd836242113c30c61232df80fc45799ab89613e5"
+  },
+  {
+    "path": "day_28/status.json",
+    "bytes": 113,
+    "sha256": "7292c1546ebd64ef38e113b85b13fda648e810b162452bface09154c05b39721"
+  },
+  {
+    "path": "day_28/summary.csv",
+    "bytes": 4974,
+    "sha256": "078285ecb27d15cbd9dbca03f3bf3bc6724137124072450924277880ab76afe3"
+  },
+  {
+    "path": "day_28/validation_2013/calibration.png",
+    "bytes": 258304,
+    "sha256": "1cb9ca1db4660dc1beb25d70023595e0691dc96f965b7c5922947fac25500794"
+  },
+  {
+    "path": "day_28/validation_2013/pr.png",
+    "bytes": 229081,
+    "sha256": "0769a6c384deb72ed24bc1b4bf3d95774634ca0504b820df5ee861d07650e502"
+  },
+  {
+    "path": "day_28/validation_2013/roc.png",
+    "bytes": 162331,
+    "sha256": "2353790f4d6f8bcde598e0644dd62733053fb40a476a0b4a3573795706966b57"
+  },
+  {
+    "path": "day_28/validation_2013_predictions.csv",
+    "bytes": 2774996,
+    "sha256": "c365583738814728dd30cb37cdbc1eb6b9cd526beacac274f0f6bb8abc0e6102"
+  },
+  {
+    "path": "day_28/validation_across_seeds.csv",
+    "bytes": 1750,
+    "sha256": "69dc7a1b675366b55499a5d0e8df575f9dd2068911aeed6ead64cd9980ef41e1"
+  }
+]
