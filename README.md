@@ -13,7 +13,7 @@ cd oulad-bilstm-attention-rec-system
 rtk proxy py -3.12 -m pip install -r requirements.txt psutil
 ```
 
-Download the seven CSV files from the [official OULAD dataset page](https://research.stem.open.ac.uk/ouanalyse/open-dataset-more/) and extract them into `data/oulad/raw/`. See [data attribution](research_archive/DATA_ATTRIBUTION.md) for the dataset citation and license.
+Download the seven CSV files from the [official OULAD dataset page](https://research.stem.open.ac.uk/ouanalyse/open-dataset-more/) and extract them into `data/oulad/raw/`. OULAD is distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Cite Kuzilek, J., Hlosta, M. & Zdrahal, Z. (2017), Open University Learning Analytics dataset, Scientific Data 4, 170171. [DOI](https://doi.org/10.1038/sdata.2017.171)
 
 From the repository root, check the environment and inputs, then run the system experiment with seed 42:
 
@@ -30,7 +30,7 @@ To evaluate the full recommender, supply the **completed forecast run** that con
 rtk proxy py -3.12 -X utf8 -u run_oulad_agent_experiment.py --risk-run "runs/RISK_RUN_DIRECTORY" --windows 56 --seeds 42 --device auto
 ```
 
-The repeat-versus-discovery experiment uses artifacts from the full recommender for matching days and seeds. See the [full recommender protocol](docs/OULAD_FULL_AGENT_DESIGN_RU.md), the [repeat-versus-discovery protocol](REPEAT_DISCOVERY_EXPERIMENT_RU.md), and the [commands for ablations, subgroup analysis, and cross-course evaluation](docs/ARTICLE_FOLLOWUP_COMMANDS_RU.md). These detailed notes are in Russian.
+The repeat-versus-discovery experiment uses artifacts from the full recommender for matching days and seeds. Use the script with --help to list its inputs and options. The result archives include configurations and protocols from the published runs.
 
 ## Source code
 
@@ -56,4 +56,4 @@ The repeat-versus-discovery experiment uses artifacts from the full recommender 
 
 The [day 56, seed 42 model bundle](research_archive/results_20261105/artifacts/models_day56_seed42.zip) contains trained risk models, preprocessing, calibration, ensemble coefficients, and the full recommender bundle. If the ZIP files contain Git LFS pointers, run `rtk git lfs pull`. To resume an interrupted experiment, use its original run directory and checkpoints.
 
-Risk prediction reports ROC-AUC, PR-AUC, precision, recall, F1, and calibration. Recommendation evaluation reports Precision@K, Recall@K, NDCG@K, MAP@K, and MRR@K. Observed future visits serve as a proxy for relevance. The published results use exploratory validation on 2013 data. The external 2014 split was held out. See the [risk prediction protocol](docs/RISK_ARTICLE_PROTOCOL_RU.md) for architecture attribution and evaluation details.
+Risk prediction reports ROC-AUC, PR-AUC, precision, recall, F1, and calibration. Recommendation evaluation reports Precision@K, Recall@K, NDCG@K, MAP@K, and MRR@K. Observed future visits serve as a proxy for relevance. The published results use exploratory validation on 2013 data. The external 2014 split was held out. The comparison experiment under experiments/hybrid-attention/ reproduces the BiLSTM, attention, and MLP architecture from Omarbekova et al. (2026). [DOI](https://doi.org/10.3389/frai.2026.1811886)
