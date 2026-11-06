@@ -1,62 +1,58 @@
-# OULAD — прогноз учебного риска и рекомендации материалов
+# OULAD: Academic Risk Prediction and Learning Resource Recommendations
 
-Проект оценивает риск неуспешного завершения курса и рекомендует студенту материалы из каталога его курса. Для прогноза используется ансамбль LSTM, BiLSTM с attention и LightGBM. Рекомендательный модуль использует историю обращений, предпочтения, учебный календарь и последовательную модель SASRec.
+This research project uses the Open University Learning Analytics Dataset (OULAD) to estimate a student's risk of not completing a course successfully and rank learning resources from that student's course. The risk ensemble combines LSTM, BiLSTM with attention, and LightGBM. The full recommender combines activity history, resource preferences, the course calendar, and a SASRec-based sequence model.
 
-## Быстрый старт
+## Quick start
 
-Команды ниже рассчитаны на PowerShell и Python 3.12. Префикс `rtk proxy` можно опустить, если RTK не установлен.
+These commands use PowerShell, Python 3.12, and Git LFS. The `rtk` and `rtk proxy` prefixes are optional wrappers.
 
 ```powershell
 rtk git lfs install
-rtk git clone https://github.com/RAli2505/oulad-bilstm-attention-rec-system.git
+rtk git clone --branch master https://github.com/RAli2505/oulad-bilstm-attention-rec-system.git
 cd oulad-bilstm-attention-rec-system
 rtk proxy py -3.12 -m pip install -r requirements.txt psutil
 ```
 
-Скачайте семь CSV из [официального набора OULAD](https://research.stem.open.ac.uk/ouanalyse/open-dataset-more/) и распакуйте их в `data/oulad/raw/`. Лицензия данных и библиографическая ссылка указаны в [DATA_ATTRIBUTION.md](research_archive/DATA_ATTRIBUTION.md).
+Download the seven CSV files from the [official OULAD dataset page](https://research.stem.open.ac.uk/ouanalyse/open-dataset-more/) and extract them into `data/oulad/raw/`. See [data attribution](research_archive/DATA_ATTRIBUTION.md) for the dataset citation and license.
 
-Проверьте окружение и входные файлы, затем выполните эксперимент на девяти окнах и одном seed:
+From the repository root, check the environment and inputs, then run the system experiment with seed 42:
 
 ```powershell
 rtk proxy py -3.12 -X utf8 -u run_system_experiment.py --seeds 42 --check
 rtk proxy py -3.12 -X utf8 -u run_system_experiment.py --seeds 42 --device auto
 ```
 
-Первая команда проверяет входы. Вторая обучает ансамбль и оценивает базовый адаптивный модуль. Пути к запускам печатаются в консоли. Для полного рекомендательного агента передайте каталог **завершённого прогнозного запуска** с нужными окнами и seed:
+The system experiment trains the risk ensemble and evaluates the baseline adaptive recommender at course days 7, 14, 21, 28, 56, 84, 112, 140, and 168. The console prints the paths to the forecast and system runs.
+
+To evaluate the full recommender, supply the **completed forecast run** that contains the requested day and seed. Replace `RISK_RUN_DIRECTORY` with the actual directory name printed by the preceding run.
 
 ```powershell
-rtk proxy py -3.12 -X utf8 -u run_oulad_agent_experiment.py --risk-run runs/ИМЯ_ПРОГНОЗНОГО_ЗАПУСКА --windows 56 --seeds 42 --device auto
+rtk proxy py -3.12 -X utf8 -u run_oulad_agent_experiment.py --risk-run "runs/RISK_RUN_DIRECTORY" --windows 56 --seeds 42 --device auto
 ```
 
-Для эксперимента по балансу повторных и новых материалов нужен полный запуск агента с соответствующими окнами и seed. Описания входов и параметров находятся в [протоколе полного агента](docs/OULAD_FULL_AGENT_DESIGN_RU.md) и [протоколе повторов](REPEAT_DISCOVERY_EXPERIMENT_RU.md).
+The repeat-versus-discovery experiment uses artifacts from the full recommender for matching days and seeds. See the [full recommender protocol](docs/OULAD_FULL_AGENT_DESIGN_RU.md), the [repeat-versus-discovery protocol](REPEAT_DISCOVERY_EXPERIMENT_RU.md), and the [commands for ablations, subgroup analysis, and cross-course evaluation](docs/ARTICLE_FOLLOWUP_COMMANDS_RU.md). These detailed notes are in Russian.
 
-## Где код
+## Source code
 
-| Путь | Назначение |
+| Path | Purpose |
 | --- | --- |
-| `data/oulad_loader.py` | Загрузка и подготовка OULAD |
-| `models/`, `risk_experiments/` | Модели прогноза, разбиения, обучение, калибровка и оценка |
-| `recommendations/` | Предпочтения, извлечение кандидатов, SASRec и ранжирование |
-| `run_system_experiment.py` | Общий запуск прогноза и базовых рекомендаций |
-| `run_oulad_agent_experiment.py` | Обучение и оценка полного рекомендательного модуля |
-| `run_repeat_discovery_experiment.py` | Сравнение правил выбора повторных и новых материалов |
-| `tests/` | Автоматические проверки |
+| [`data/oulad_loader.py`](data/oulad_loader.py) | Load and prepare OULAD data |
+| [`models/`](models/) and [`risk_experiments/`](risk_experiments/) | Risk models, learner splits, training, calibration, and evaluation |
+| [`recommendations/`](recommendations/) | Preference profiles, candidate retrieval, SASRec, and ranking |
+| [`run_system_experiment.py`](run_system_experiment.py) | Run risk prediction and baseline recommendation evaluation |
+| [`run_oulad_agent_experiment.py`](run_oulad_agent_experiment.py) | Train and evaluate the full recommender |
+| [`run_repeat_discovery_experiment.py`](run_repeat_discovery_experiment.py) | Compare policies for recommending previously visited and new resources |
+| [`tests/`](tests/) | Automated checks |
 
-Команды для абляций, анализа подгрупп и переноса между курсами собраны в [документации экспериментов](docs/ARTICLE_FOLLOWUP_COMMANDS_RU.md).
+## Results and trained weights
 
-## Где результаты
-
-| Путь | Содержимое |
+| Location | Contents |
 | --- | --- |
-| [Снимок 5 ноября](research_archive/results_20261105/manifest.json) | Завершённый полный агент, `balance_v1` и `rankmix_v2`. В `reports/` лежат сводки, в `artifacts/` — таблицы, настройки, время и память |
-| [Снимок 4 ноября](research_archive/results_20261104/manifest.json) | Прогноз риска, перенос между курсами, абляции и другие анализы |
-| [Исторические отчёты](research_archive/snapshot_20261101/reports/) | Таблицы ранних экспериментов |
-| `runs/` | Выход новых локальных запусков: журналы, метрики и контрольные точки |
+| [November 5, 2026 snapshot](research_archive/results_20261105/) | Completed full recommender, `balance_v1`, and `rankmix_v2` runs. See `reports/` for summaries and `artifacts/` for metrics, settings, runtime, and memory measurements |
+| [November 4, 2026 snapshot](research_archive/results_20261104/) | Risk prediction, cross-course evaluation, recommendation ablations, and additional analyses |
+| [Historical reports](research_archive/snapshot_20261101/reports/) | Tables from earlier experiments |
+| `runs/` | Local output from new runs, including logs, metrics, and checkpoints |
 
-Архив models_day56_seed42.zip содержит обученные модели ансамбля и комплект рекомендательного агента для дня 56, seed 42. В нём также сохранены предобработка, калибровка и коэффициенты ансамбля.
+The [day 56, seed 42 model bundle](research_archive/results_20261105/artifacts/models_day56_seed42.zip) contains trained risk models, preprocessing, calibration, ensemble coefficients, and the full recommender bundle. If the ZIP files contain Git LFS pointers, run `rtk git lfs pull`. To resume an interrupted experiment, use its original run directory and checkpoints.
 
-Если вместо ZIP получены текстовые указатели, выполните `rtk git lfs pull`. Опубликованные архивы содержат агрегаты для анализа. Для нового обучения нужны исходные CSV, а для продолжения прерванного обучения — оригинальные контрольные точки.
-
-Прогноз оценивается по ROC-AUC, PR-AUC, Precision, Recall, F1 и калибровке. Для рекомендаций сохраняются Precision, Recall, NDCG, MAP и MRR на разных размерах списка. Источником релевантности служат будущие обращения к материалам. Опубликованные результаты относятся к исследовательской оценке на данных 2013 года и измеряют качество прогноза и ранжирования. Внешняя выборка 2014 в этих результатах не использовалась.
-
-Атрибуция архитектуры, использованной для сравнительного воспроизведения, приведена в [протоколе прогноза](docs/RISK_ARTICLE_PROTOCOL_RU.md).
+Risk prediction reports ROC-AUC, PR-AUC, precision, recall, F1, and calibration. Recommendation evaluation reports Precision@K, Recall@K, NDCG@K, MAP@K, and MRR@K. Observed future visits serve as a proxy for relevance. The published results use exploratory validation on 2013 data. The external 2014 split was held out. See the [risk prediction protocol](docs/RISK_ARTICLE_PROTOCOL_RU.md) for architecture attribution and evaluation details.
