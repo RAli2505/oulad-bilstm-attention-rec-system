@@ -1,7 +1,7 @@
 {
   "date_local": "2026-11-05",
   "timezone": "Asia/Qyzylorda",
-  "scope": "Completed aggregate results, experiment settings and diagnostic summaries. Excludes per-student predictions, query-level metrics, models, features, intermediate checkpoints and full logs.",
+  "scope": "Completed aggregate results, experiment settings and diagnostic summaries. Excludes per-student predictions, query-level metrics, models, features, intermediate checkpoints and full logs. One trained model example for day 56 / seed 42 is archived separately.",
   "archives": [
     {
       "path": "research_archive/results_20261105/artifacts/full_agent_20261102T190210371601Z.zip",
@@ -30,6 +30,13 @@
       "bytes": 14344,
       "files": 40,
       "inventory": "research_archive/results_20261105/artifacts/repeat_discovery_runtime.inventory.json"
+    },
+    {
+      "path": "research_archive/results_20261105/artifacts/models_day56_seed42.zip",
+      "sha256": "ffda468e35d1aea5c867ace8bbf4c89f76db56d103a69fed49562e726cef57a5",
+      "bytes": 7005418,
+      "files": 17,
+      "inventory": "research_archive/results_20261105/artifacts/models_day56_seed42.inventory.json"
     }
   ]
 }
